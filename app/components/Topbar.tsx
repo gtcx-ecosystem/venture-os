@@ -1,4 +1,10 @@
+"use client";
+
+import { useWorkspace } from "./WorkspaceProvider";
+
 export function Topbar(props: { title?: string }) {
+  const { setCommandPaletteOpen } = useWorkspace();
+
   return (
     <header className="topbar">
       <div className="tabs" role="tablist" aria-label="Open workspaces">
@@ -10,6 +16,9 @@ export function Topbar(props: { title?: string }) {
         </button>
       </div>
       <div className="topbar-actions">
+        <button className="ghost-button" type="button" onClick={() => setCommandPaletteOpen(true)}>
+          ⌘K
+        </button>
         <button className="ghost-button" type="button">
           Share
         </button>
@@ -20,4 +29,3 @@ export function Topbar(props: { title?: string }) {
     </header>
   );
 }
-

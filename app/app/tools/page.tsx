@@ -1,7 +1,7 @@
 import { AppShell } from "@/components/AppShell";
 import dataset from "@/lib/tool-registry/dataset/tools.v1.json";
 import { parseToolDataset } from "@/lib/tool-registry/schema";
-import { ToolTable } from "./ToolTable";
+import { ToolsWorkspace } from "./ToolsWorkspace";
 
 export default function ToolsPage() {
   const parsed = parseToolDataset(dataset);
@@ -12,10 +12,10 @@ export default function ToolsPage() {
         <div className="hero-copy">
           <div className="eyebrow">Integrations</div>
           <h1>FOSS-first tool registry with explainable ranking.</h1>
-          <p>Inspect metadata, pricing bands, API coverage, and quality scores for workflow selection.</p>
+          <p>Inspect metadata, rank by workflow, and log selection receipts for audit replay.</p>
         </div>
       </section>
-      <ToolTable tools={parsed.tools} />
+      <ToolsWorkspace tools={parsed.tools} />
     </AppShell>
   );
 }

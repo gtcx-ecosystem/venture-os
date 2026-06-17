@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { CommandPalette } from "./CommandPalette";
 import { Sidebar } from "./Sidebar";
 import { Topbar } from "./Topbar";
 import { WorkspaceProvider } from "./WorkspaceProvider";
@@ -13,6 +14,7 @@ export function AppShell(props: { children: ReactNode; topbarTitle?: string }) {
           {props.children}
         </main>
       </div>
+      <CommandPalette />
     </WorkspaceProvider>
   );
 }

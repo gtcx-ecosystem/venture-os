@@ -1,6 +1,7 @@
 "use client";
 
-import { createContext, useContext, useMemo, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from "react";
+import type { SelectionReceipt } from "@/lib/tool-registry/receipts";
 
 type WorkspaceContextValue = {
   search: string;
@@ -9,6 +10,13 @@ type WorkspaceContextValue = {
   setActiveFilter: (value: string) => void;
   selectedClientId: string;
   setSelectedClientId: (value: string) => void;
+  receipts: SelectionReceipt[];
+  appendReceipt: (receipt: SelectionReceipt) => void;
+  commandPaletteOpen: boolean;
+  setCommandPaletteOpen: (open: boolean) => void;
+  approvalsDrawerOpen: boolean;
+  setApprovalsDrawerOpen: (open: boolean) => void;
+  requestApprovalsDrawer: () => void;
 };
 
 const WorkspaceContext = createContext<WorkspaceContextValue | null>(null);
@@ -17,10 +25,46 @@ export function WorkspaceProvider(props: { children: ReactNode }) {
   const [search, setSearch] = useState("");
   const [activeFilter, setActiveFilter] = useState("all");
   const [selectedClientId, setSelectedClientId] = useState("terra_os");
+  const [receipts, setReceipts] = useState<SelectionReceipt[]>([]);
+  const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
+  const [approvalsDrawerOpen, setApprovalsDrawerOpen] = useState(false);
+
+  const appendReceipt = useCallback((receipt: SelectionReceipt) => {
+    setReceipts((prev) => [receipt, ...prev].slice(0, 50));
+  }, []);
+
+  const requestApprovalsDrawer = useCallback(() => {
+    setApprovalsDrawerOpen(true);
+  }, []);
+
   const value = useMemo(
-    () => ({ search, setSearch, activeFilter, setActiveFilter, selectedClientId, setSelectedClientId }),
-    [search, activeFilter, selectedClientId],
+    () => ({
+      search,
+      setSearch,
+      activeFilter,
+      setActiveFilter,
+      selectedClientId,
+      setSelectedClientId,
+      receipts,
+      appendReceipt,
+      commandPaletteOpen,
+      setCommandPaletteOpen,
+      approvalsDrawerOpen,
+      setApprovalsDrawerOpen,
+      requestApprovalsDrawer,
+    }),
+    [
+      search,
+      activeFilter,
+      selectedClientId,
+      receipts,
+      appendReceipt,
+      commandPaletteOpen,
+      approvalsDrawerOpen,
+      requestApprovalsDrawer,
+    ],
   );
+
   return <WorkspaceContext.Provider value={value}>{props.children}</WorkspaceContext.Provider>;
 }
 
