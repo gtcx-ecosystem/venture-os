@@ -333,3 +333,76 @@ export const FILTER_OPTIONS = [
   { id: "visibility", label: "Visibility" },
   { id: "collateral", label: "Collateral" },
 ] as const;
+
+export type CalendarEvent = {
+  id: string;
+  clientId: string;
+  day: string;
+  title: string;
+  detail: string;
+};
+
+export type ApprovalItem = {
+  id: string;
+  clientId: string;
+  kind: string;
+  status: string;
+  body: string;
+  highlighted?: boolean;
+};
+
+export const CALENDAR_EVENTS: CalendarEvent[] = [
+  {
+    id: "terra-call",
+    clientId: "terra_os",
+    day: "Wed",
+    title: "DFI program officer call",
+    detail: "15:00 · prep approvals",
+  },
+  {
+    id: "terra-deadline",
+    clientId: "terra_os",
+    day: "Fri",
+    title: "Concept note v1 deadline",
+    detail: "Send after claims proof",
+  },
+  {
+    id: "terra-intros",
+    clientId: "terra_os",
+    day: "Mon",
+    title: "Warm intros (5)",
+    detail: "Partner mapping complete",
+  },
+  {
+    id: "markets-pilot-review",
+    clientId: "markets_os",
+    day: "Thu",
+    title: "Refiner pilot scoping call",
+    detail: "Commercial terms review",
+  },
+];
+
+export const APPROVAL_ITEMS: ApprovalItem[] = [
+  {
+    id: "claims",
+    clientId: "terra_os",
+    kind: "Claims review",
+    status: "Needs proof",
+    body: "Three statements require evidence links before outbound use.",
+    highlighted: true,
+  },
+  {
+    id: "outreach",
+    clientId: "terra_os",
+    kind: "Outreach email",
+    status: "Ready",
+    body: "DFI program officer intro — approve wording and send.",
+  },
+  {
+    id: "press",
+    clientId: "terminal_os",
+    kind: "Press draft",
+    status: "Review",
+    body: "Launch post for intelligence surface — needs approval.",
+  },
+];

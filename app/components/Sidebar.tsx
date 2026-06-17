@@ -7,6 +7,7 @@ import { SIDEBAR_CLIENTS } from "../lib/clients";
 
 const NAV = [
   { href: "/", icon: "C", label: "Command Center" },
+  { href: "/brief", icon: "B", label: "Rolling Brief" },
   { href: "/capital", icon: "K", label: "Capital Desk" },
   { href: "/growth", icon: "G", label: "Growth Desk" },
   { href: "/visibility", icon: "V", label: "Visibility Desk" },
