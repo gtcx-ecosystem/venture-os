@@ -1,0 +1,32 @@
+{
+  "$schema": "gtcx://docs/sor/v1",
+  "schema": "gtcx.docs.sor.v1",
+  "repo": "venture-os",
+  "repoKind": "product",
+  "updated": "2026-06-17",
+  "narrativeRoot": "docs/",
+  "upstream": {
+    "constitution": {
+      "repo": "canon-os",
+      "path": "../canon-os",
+      "manifest": "../canon-os/config/ecosystem-central-sor.json",
+      "role": "protocols and audit-engine specs — read-only"
+    },
+    "platform": {
+      "repo": "bridge-os",
+      "path": "../bridge-os",
+      "layoutContract": "../bridge-os/config/ecosystem-layout-contract.json",
+      "role": "fleet layout and rollout — read-only"
+    },
+    "runtime": {
+      "repo": "baseline-os",
+      "path": "../baseline-os",
+      "role": "session, MCP, ACR — read-only"
+    }
+  },
+  "allowedTopLevel": ["overview", "operations", "reference", "strategy"],
+  "narrativePointersOnly": ["assurance", "coordination", "gtm", "legal", "security"],
+  "forbidden": {
+    "opsDuplicatesUnderDocs": ["assurance", "attestation", "coordination", "gtm", "legal", "security", "witness"]
+  }
+}
