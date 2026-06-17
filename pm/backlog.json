@@ -2,39 +2,30 @@
   "$schema": "gtcx://ops/pm-backlog/v1",
   "repo": "venture-os",
   "updated": "2026-06-17",
-  "active": "P4-04",
-  "backlogClear": false,
+  "active": null,
+  "backlogClear": true,
   "roadmapPath": "pm/execution-roadmap.md",
   "stories": [
     {
-      "id": "S9-01",
-      "title": "Newsletter source registry",
-      "status": "done",
-      "owner": "venture-os"
-    },
-    {
-      "id": "P4-01",
-      "title": "Sources control plane",
-      "status": "done",
-      "owner": "venture-os"
-    },
-    {
-      "id": "P4-02",
-      "title": "Signals feed",
-      "status": "done",
-      "owner": "venture-os"
-    },
-    {
-      "id": "P4-03",
-      "title": "Clients directory",
-      "status": "done",
-      "owner": "venture-os"
-    },
-    {
       "id": "P4-04",
       "title": "Opportunities board",
-      "status": "pending",
+      "status": "done",
       "owner": "venture-os"
+    },
+    {
+      "id": "DEPLOY-01",
+      "title": "Vercel pilot deploy wiring",
+      "status": "done",
+      "owner": "venture-os"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "DEPLOY-02",
+      "title": "Record live Vercel URL in deployment witness",
+      "status": "pending",
+      "owner": "venture-os",
+      "note": "Class A — requires Vercel project import"
     }
   ]
 }

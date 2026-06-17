@@ -6,13 +6,14 @@
 
 | Field | Value |
 | ----- | ----- |
-| **Story** | P4-04 |
-| **Action** | Opportunities board with ClickUp sync stub |
+| **Story** | DEPLOY-02 |
+| **Action** | Record live deploy URL after Vercel billing reactivation or alternate host |
 | **Owner** | venture-os |
-| **Because** | Phase 4 MVP module 4 per implementation-roadmap |
+| **Because** | `vercel deploy` blocked — account suspended (402) |
 
 ## Verify
 
 ```bash
-pnpm test && pnpm build && pnpm ops:check
+pnpm test && pnpm ops:check
+vercel deploy --scope amani-7483s-projects   # after billing unblock
 ```

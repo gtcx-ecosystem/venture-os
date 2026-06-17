@@ -1,0 +1,12 @@
+{
+  "$schema": "gtcx://audit/deployment-proof/v1",
+  "repo": "venture-os",
+  "updated": "2026-06-17",
+  "status": "pending-live-url",
+  "platform": "vercel",
+  "configPath": "app/vercel.json",
+  "ciWorkflow": ".github/workflows/ci.yml",
+  "profileDoc": "docs/operations/deploy/deployment-profile.md",
+  "deployments": [],
+  "note": "Import repo to Vercel; append deployment URL and timestamp after first production deploy."
+}

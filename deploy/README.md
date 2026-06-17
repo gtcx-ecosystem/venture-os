@@ -1,10 +1,10 @@
 # deploy — venture-os
 
-Minimal deploy surface for PW-1-05 fleet dry-run witness.
-
 | Path | Purpose |
 | ---- | ------- |
-| [`docker/`](./docker/README.md) | Local app container scaffold (Next.js) |
-| GitHub Pages / Vercel | Primary publish path for the Venture OS marketing app — see [`app/`](../app/) |
+| [`docker/`](./docker/README.md) | Optional container scaffold |
+| [`app/vercel.json`](../app/vercel.json) | Vercel build/install commands |
+| [`docs/operations/deploy/deployment-profile.md`](../docs/operations/deploy/deployment-profile.md) | Deploy runbook |
+| [`.github/workflows/ci.yml`](../.github/workflows/ci.yml) | CI quality gates |
 
-Venture OS is a documentation + app repo; container deploy is optional for pilot releases.
+**Live URL:** not yet — import repo in Vercel per deployment profile, then record witness.

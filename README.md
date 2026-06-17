@@ -41,6 +41,8 @@ pnpm lint     # eslint
 pnpm build    # production build (all routes)
 ```
 
+**Deploy:** Vercel — see [`docs/operations/deploy/deployment-profile.md`](./docs/operations/deploy/deployment-profile.md). Live URL pending Vercel project import.
+
 **Quality gates:** `pnpm lint` and `pnpm build` must pass before merging app changes.
 
 ## Files

@@ -25,7 +25,13 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 | P4-01 | Sources control plane (`/sources`) | done |
 | P4-02 | Signals feed (`/signals`) | done |
 | P4-03 | Clients directory (`/clients`) | done |
-| P4-04 | Opportunities board (ClickUp sync stub) | pending |
+| P4-04 | Opportunities board (ClickUp sync stub) | done |
+
+### Sprint DEPLOY — Pilot publish wiring
+
+| Story | Title | Status |
+|------:|-------|--------|
+| DEPLOY-01 | Vercel + CI + deploy witness (live URL pending import) | done |
 
 ### Sprint 9 — Newsletter source registry — **sealed**
 
