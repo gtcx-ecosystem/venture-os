@@ -38,3 +38,7 @@ Fleet law: [`../canon-os/docs/governance/constitution/GTCX-CONSTITUTION.md`](../
 1. This README → `constitution.md` → fleet constitution Articles I, III, V  
 2. `vision.md` · `mission.md` · `goals.md`  
 3. `pnpm agent:next-work`
+
+## Business detail layer
+
+ICP, GTM positioning, and customer context: [`../business/`](../business/README.md)

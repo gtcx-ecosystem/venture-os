@@ -30,6 +30,9 @@ Venture OS is not a generic CRM. It is a founder-driven execution engine that
 turns messy opportunity flow into funded, visible, investable, partnership-ready
 companies.
 
+**Business layer:** [`docs/business/`](./docs/business/) — ICP, GTM positioning, and
+relationship to internal GTCX fundraising.
+
 ## Dev app
 
 The Next.js app lives in [`app/`](./app/). From repo root:

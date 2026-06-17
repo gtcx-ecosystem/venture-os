@@ -27,8 +27,8 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 | MPR-05 | Trust envelope on cards + publish gates | done | Trust & Safety |
 | MPR-03 | Command Center API wiring | done | Technical Excellence |
 | MPR-04 | Agent orchestration + receipt envelope | done | Agentic Empowerment |
-| MPR-01 | Compliance + repo hygiene closure | in_progress | Compliance |
-| MPR-02 | UX SoR scaffold (EXR + pm/ux) | todo | World-class |
+| MPR-01 | Compliance + repo hygiene closure | done | Compliance |
+| MPR-02 | UX SoR scaffold (EXR + pm/ux) | done | World-class |
 | MPR-06 | World-class polish (states, metrics, a11y) | todo | World-class |
 | MPR-07 | Fleet ecosystem integration seams | todo | Ecosystem Integration |
 | MPR-08 | E2E operator golden path | todo | Technical Excellence |
@@ -47,6 +47,7 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 | Story | Title | Status |
 |------:|-------|--------|
 | DEPLOY-01 | AWS/GCP deploy wiring (Dockerfile, EKS manifest, Cloud Run script) | done |
+| DEPLOY-02 | Staging deploy (fabric-os EKS overlay) | done |
 
 ### Sprint 9 — Newsletter source registry — **sealed**
 

@@ -2,7 +2,7 @@
   "$schema": "gtcx://ops/pm-backlog/v1",
   "repo": "venture-os",
   "updated": "2026-06-17",
-  "active": "MPR-02",
+  "active": "MPR-06",
   "backlogClear": false,
   "roadmapPath": "pm/execution-roadmap.md",
   "auditRef": "audit/evidence/venture-os-mpr-ui-audit-2026-06-17.json",
@@ -10,7 +10,7 @@
     {
       "id": "MPR-01",
       "title": "Compliance + repo hygiene closure",
-      "status": "in_progress",
+      "status": "done",
       "owner": "venture-os",
       "pillar": "compliance",
       "priority": "P1",
@@ -19,7 +19,7 @@
     {
       "id": "MPR-02",
       "title": "UX SoR scaffold (EXR + pm/ux)",
-      "status": "todo",
+      "status": "done",
       "owner": "venture-os",
       "pillar": "worldClass",
       "priority": "P1",
@@ -96,9 +96,9 @@
     {
       "id": "DEPLOY-02",
       "title": "First staging deploy (AWS EKS or GCP Cloud Run)",
-      "status": "pending",
+      "status": "done",
       "owner": "venture-os",
-      "note": "EKS origin live 2026-06-17 — CF DNS 525 pending"
+      "note": "live https://venture-staging.gtcx.trade — witness audit/evidence/deployment-proof-latest.json"
     }
   ]
 }
