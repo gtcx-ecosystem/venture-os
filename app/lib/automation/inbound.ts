@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const inboundPayloadSchema = z.object({
-  source: z.enum(["gmail", "rss", "manual", "n8n", "calendar"]),
+  source: z.enum(["gmail", "rss", "manual", "n8n", "calendar", "griot"]),
   title: z.string().min(1).max(500),
   clientId: z.string().min(1),
   kind: z.enum(["capital", "revenue", "partner", "visibility", "collateral"]).optional(),

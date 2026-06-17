@@ -56,6 +56,8 @@ pnpm build    # production build (all routes)
 | [`gtm-and-packaging.md`](./gtm-and-packaging.md) | Customer segments, packages, pricing logic, and sales motions |
 | [`pilot-onboarding.md`](./pilot-onboarding.md) | How to onboard warm clients and GTCX repos as pilots |
 | [`clients/internal-gtcx-clients.json`](./clients/internal-gtcx-clients.json) | Seed client profiles for GTCX ecosystem repos |
+| [`01-docs/05-audit/execution-roadmap.md`](./01-docs/05-audit/execution-roadmap.md) | Living execute-roadmap (sprints, numbered story specs) |
+| [`pm/execution-roadmap.md`](./pm/execution-roadmap.md) | Fleet PM SoR pointer |
 | [`schema/client.schema.json`](./schema/client.schema.json) | Machine-readable client profile contract |
 
 ## Relationship To Fundraising
