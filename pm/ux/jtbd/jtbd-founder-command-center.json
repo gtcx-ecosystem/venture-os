@@ -1,0 +1,11 @@
+{
+  "id": "jtbd-founder-command-center",
+  "job": "Triage P1 opportunities for a selected venture client and queue agent workflows with evidence visibility",
+  "persona": "founder-command",
+  "acceptanceCriteria": [
+    "Hero metrics reflect live opportunity API for selected clientId",
+    "Each opportunity card shows evidenceStatus chip",
+    "Queue workflow creates receipt visible in agent panel",
+    "Rolling brief publish requires explicit operator confirm"
+  ]
+}

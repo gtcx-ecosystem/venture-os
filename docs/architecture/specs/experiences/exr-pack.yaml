@@ -1,0 +1,23 @@
+schema: gtcx.exrPack.v1
+repo: venture-os
+tier: tier1-product
+maturity: p0
+
+spine: docs/architecture/specs/operator-journey-map.md
+iaSpec: docs/architecture/specs/ia-navigation-spec.md
+analyticsRegistry: null
+
+p0:
+  - docs/architecture/specs/experiences/EXR-001-founder-command-center.md
+
+p1: []
+
+governance:
+  protocol: canon-os/docs/governance/protocols/21-ux-documentation-ops/protocol.md
+  citationContract: '<journey> | Venture OS | <feature> | <EXR>'
+  validationCommand: pnpm agent:exr-pack:validate
+  auditCommand: pnpm ux:sor:check
+
+notes:
+  - Sprint 11 MPR-02 — Command Center operator EXR for Africa Venture OS.
+  - Design tokens inherit prototype + app/globals.css until ledger-ui handoff.

@@ -23,6 +23,9 @@
     "agent:conduct:check": "node ../bridge-os/platform/scripts/checks/check-agent-conduct-local.mjs",
     "docs:foundation:check": "node platform/scripts/docs-foundation-check.mjs",
     "docs:foundation:check:write": "node platform/scripts/docs-foundation-check.mjs --write",
+    "agent:exr-pack:validate": "node ../bridge-os/platform/scripts/evidence/validate-exr-pack.mjs",
+    "ux:sor:check": "node ../bridge-os/platform/scripts/ecosystem/check-ux-sor.mjs --repo venture-os",
+    "ux:sor:check:write": "node ../bridge-os/platform/scripts/ecosystem/check-ux-sor.mjs --repo venture-os --write",
     "agent:auto-dev:check": "node ../bridge-os/platform/scripts/checks/check-agent-auto-dev-local.mjs",
     "ops:consumption:check": "node ../bridge-os/platform/scripts/ecosystem/ops-consumption-check.mjs",
     "ops:consumption:check:write": "node ../bridge-os/platform/scripts/ecosystem/ops-consumption-check.mjs --write"
