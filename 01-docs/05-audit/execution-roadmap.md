@@ -12,23 +12,24 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 
 > **Last reconciled:** 2026-06-17 · `execute-roadmap` · Venture OS app bootstrap
 
-## Active phase: **Phase 0 — App bootstrap + prototype port**
+## Active phase: **Phase 1 — Internal pilots (GTCX repos as clients)**
 
 **Sources reviewed:**
 
 - `README.md`
 - `implementation-roadmap.md`
+- `clients/internal-gtcx-clients.json`
 - `prototype/index.html`, `prototype/styles.css`, `prototype/app.js`
 - `app/app/page.tsx`, `app/app/globals.css`
 
 ## Phases
 
-### Phase 0 — App bootstrap + prototype port (now)
+### Phase 0 — App bootstrap + prototype port (complete)
 
 - Port the static prototype into a real Next.js app surface without losing visual fidelity.
 - Establish navigation + component boundaries so subsequent design iterations are fast.
 
-### Phase 1 — Internal pilots (GTCX repos as clients)
+### Phase 1 — Internal pilots (GTCX repos as clients) (now)
 
 - Make client + opportunity views real with mock data → first live pipelines.
 
@@ -38,7 +39,7 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 
 ## Sprints (1 week)
 
-### Sprint 0 (today) — P0 unblock + shell
+### Sprint 0 — P0 unblock + shell (complete)
 
 | Story | Title | Status |
 |------:|-------|--------|
@@ -47,6 +48,16 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 | S0-03 | Componentize layout (Sidebar/Topbar) + view switch wiring | done |
 | S0-04 | Port interactive behaviors from `prototype/app.js` (search + filter + run agent queue) | done |
 | S0-05 | Add dev-quality gates (`pnpm lint`, `pnpm build`) documented in repo root | done |
+
+### Sprint 1 — GTCX client profiles + desk pipelines
+
+| Story | Title | Status |
+|------:|-------|--------|
+| S1-01 | Load GTCX client profiles from `clients/internal-gtcx-clients.json` | done |
+| S1-02 | Wire sidebar client selection into workspace context | done |
+| S1-03 | Render desk pipelines scoped to selected client | done |
+| S1-04 | Filter Command Center opportunities by selected client | done |
+| S1-05 | Expand mock pipeline coverage to 5 pilot clients | pending |
 
 ## Story details
 

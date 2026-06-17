@@ -2,20 +2,23 @@
 
 import { useMemo, useState } from "react";
 import { FILTER_OPTIONS, INITIAL_REVIEWS, OPPORTUNITIES, type ReviewCard } from "../lib/mock";
+import { getClient } from "../lib/clients";
 import { useWorkspace } from "./WorkspaceProvider";
 
 export function CommandCenterWorkspace() {
-  const { search, activeFilter, setActiveFilter } = useWorkspace();
+  const { search, activeFilter, setActiveFilter, selectedClientId } = useWorkspace();
+  const client = getClient(selectedClientId);
   const [reviews, setReviews] = useState<ReviewCard[]>(INITIAL_REVIEWS);
 
   const visibleOpportunities = useMemo(() => {
     const term = search.trim().toLowerCase();
     return OPPORTUNITIES.filter((item) => {
+      const matchesClient = item.clientId === selectedClientId;
       const matchesFilter = activeFilter === "all" || item.kind === activeFilter;
       const matchesSearch = !term || item.title.includes(term);
-      return matchesFilter && matchesSearch;
+      return matchesClient && matchesFilter && matchesSearch;
     });
-  }, [search, activeFilter]);
+  }, [search, activeFilter, selectedClientId]);
 
   function queueWorkflow() {
     setReviews((prev) => [
@@ -39,8 +42,8 @@ export function CommandCenterWorkspace() {
           <div className="eyebrow">Founder command center</div>
           <h1>Run capital, growth, visibility, and partnerships from one desk.</h1>
           <p>
-            Monitor Africa-focused opportunities, draft investor materials, coordinate agents, and approve external
-            moves without losing the operating thread.
+            {client?.positioning.one_liner ??
+              "Monitor Africa-focused opportunities, draft investor materials, coordinate agents, and approve external moves without losing the operating thread."}
           </p>
         </div>
         <div className="hero-metrics" aria-label="Pipeline summary">

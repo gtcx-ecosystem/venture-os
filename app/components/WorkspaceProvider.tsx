@@ -7,6 +7,8 @@ type WorkspaceContextValue = {
   setSearch: (value: string) => void;
   activeFilter: string;
   setActiveFilter: (value: string) => void;
+  selectedClientId: string;
+  setSelectedClientId: (value: string) => void;
 };
 
 const WorkspaceContext = createContext<WorkspaceContextValue | null>(null);
@@ -14,9 +16,10 @@ const WorkspaceContext = createContext<WorkspaceContextValue | null>(null);
 export function WorkspaceProvider(props: { children: ReactNode }) {
   const [search, setSearch] = useState("");
   const [activeFilter, setActiveFilter] = useState("all");
+  const [selectedClientId, setSelectedClientId] = useState("terra_os");
   const value = useMemo(
-    () => ({ search, setSearch, activeFilter, setActiveFilter }),
-    [search, activeFilter],
+    () => ({ search, setSearch, activeFilter, setActiveFilter, selectedClientId, setSelectedClientId }),
+    [search, activeFilter, selectedClientId],
   );
   return <WorkspaceContext.Provider value={value}>{props.children}</WorkspaceContext.Provider>;
 }

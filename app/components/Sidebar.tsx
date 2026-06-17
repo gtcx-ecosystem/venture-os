@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useWorkspace } from "./WorkspaceProvider";
+import { SIDEBAR_CLIENTS } from "../lib/clients";
 
 const NAV = [
   { href: "/", icon: "C", label: "Command Center" },
@@ -14,7 +15,7 @@ const NAV = [
 
 export function Sidebar() {
   const pathname = usePathname();
-  const { search, setSearch } = useWorkspace();
+  const { search, setSearch, selectedClientId, setSelectedClientId } = useWorkspace();
 
   return (
     <aside className="sidebar" aria-label="Workspace navigation">
@@ -55,26 +56,17 @@ export function Sidebar() {
 
       <section className="workspace-block">
         <div className="section-label">Clients</div>
-        <button className="folder-row is-selected" type="button">
-          <span className="folder-icon" />
-          TerraOS
-        </button>
-        <button className="folder-row" type="button">
-          <span className="folder-icon" />
-          Markets OS
-        </button>
-        <button className="folder-row" type="button">
-          <span className="folder-icon" />
-          ComplianceOS
-        </button>
-        <button className="folder-row" type="button">
-          <span className="folder-icon" />
-          Nyota AI
-        </button>
-        <button className="folder-row" type="button">
-          <span className="folder-icon" />
-          FIFTY-FOUR
-        </button>
+        {SIDEBAR_CLIENTS.map((client) => (
+          <button
+            key={client.client_id}
+            className={selectedClientId === client.client_id ? "folder-row is-selected" : "folder-row"}
+            type="button"
+            onClick={() => setSelectedClientId(client.client_id)}
+          >
+            <span className="folder-icon" />
+            {client.name.replace("FIFTY-FOUR / ", "")}
+          </button>
+        ))}
       </section>
     </aside>
   );
