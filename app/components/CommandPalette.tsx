@@ -46,6 +46,7 @@ export function CommandPalette() {
       { id: "nav-sources", label: "Go to Sources", hint: "/sources", action: () => router.push("/sources") },
       { id: "nav-signals", label: "Go to Signals", hint: "/signals", action: () => router.push("/signals") },
       { id: "nav-clients", label: "Go to Clients", hint: "/clients", action: () => router.push("/clients") },
+      { id: "nav-opportunities", label: "Go to Opportunities", hint: "/opportunities", action: () => router.push("/opportunities") },
       { id: "nav-capital", label: "Go to Capital Desk", hint: "/capital", action: () => router.push("/capital") },
       { id: "nav-tools", label: "Go to Tool Registry", hint: "/tools", action: () => router.push("/tools") },
       {

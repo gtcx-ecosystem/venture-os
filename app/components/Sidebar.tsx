@@ -13,6 +13,7 @@ const NAV = [
   { href: "/sources", icon: "S", label: "Sources" },
   { href: "/signals", icon: "N", label: "Signals" },
   { href: "/clients", icon: "L", label: "Clients" },
+  { href: "/opportunities", icon: "P", label: "Opportunities" },
   { href: "/capital", icon: "K", label: "Capital Desk" },
   { href: "/growth", icon: "G", label: "Growth Desk" },
   { href: "/visibility", icon: "V", label: "Visibility Desk" },

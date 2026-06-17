@@ -4,7 +4,9 @@ export type AutomationReceiptKind =
   | "dedupe_skip"
   | "agency_handoff"
   | "newsletter_dry_run"
-  | "newsletter_scheduled";
+  | "newsletter_scheduled"
+  | "clickup_sync_dry_run"
+  | "clickup_sync_scheduled";
 
 export type AutomationReceipt = {
   id: string;
