@@ -2,7 +2,7 @@
   "$schema": "gtcx://ops/pm-backlog/v1",
   "repo": "venture-os",
   "updated": "2026-06-17",
-  "active": "MPR-05",
+  "active": "MPR-02",
   "backlogClear": false,
   "roadmapPath": "pm/execution-roadmap.md",
   "auditRef": "audit/evidence/venture-os-mpr-ui-audit-2026-06-17.json",
@@ -10,7 +10,7 @@
     {
       "id": "MPR-01",
       "title": "Compliance + repo hygiene closure",
-      "status": "todo",
+      "status": "in_progress",
       "owner": "venture-os",
       "pillar": "compliance",
       "priority": "P1",
@@ -28,7 +28,7 @@
     {
       "id": "MPR-03",
       "title": "Command Center API wiring",
-      "status": "todo",
+      "status": "done",
       "owner": "venture-os",
       "pillar": "technicalExcellence",
       "priority": "P1",
@@ -37,7 +37,7 @@
     {
       "id": "MPR-04",
       "title": "Agent orchestration + receipt envelope",
-      "status": "todo",
+      "status": "done",
       "owner": "venture-os",
       "pillar": "agenticEmpowerment",
       "priority": "P1",
@@ -46,7 +46,7 @@
     {
       "id": "MPR-05",
       "title": "Trust envelope on cards + publish gates",
-      "status": "todo",
+      "status": "done",
       "owner": "venture-os",
       "pillar": "trustAndSafety",
       "priority": "P0",

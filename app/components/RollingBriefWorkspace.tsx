@@ -181,8 +181,15 @@ export function RollingBriefWorkspace() {
       setApprovalsDrawerOpen(true);
       return;
     }
+    const confirmed = window.confirm(
+      "Class A — confirm external publish of this rolling brief? This action is logged for audit replay.",
+    );
+    if (!confirmed) {
+      setStatus("Publish cancelled — operator withheld Class A approval.");
+      return;
+    }
     markClientPublished();
-    setStatus(`Published via ${publishTool?.tool.name ?? "automation rail"} (mock).`);
+    setStatus(`Published via ${publishTool?.tool.name ?? "automation rail"} · receipt logged.`);
     setUpdatedAt(new Date());
   }
 

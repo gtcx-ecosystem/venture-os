@@ -20,6 +20,7 @@ export function CommandPalette() {
     setSelectedClientId,
     requestApprovalsDrawer,
     receipts,
+    selectedClientId,
   } = useWorkspace();
   const [query, setQuery] = useState("");
 
@@ -62,7 +63,17 @@ export function CommandPalette() {
         id: "action-queue",
         label: "Queue workflow",
         hint: "command center",
-        action: () => router.push("/"),
+        action: () => {
+          void fetch("/api/venture/workflow/queue", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              clientId: selectedClientId,
+              prompt: "Queue workflow from command palette",
+            }),
+          });
+          router.push("/");
+        },
       },
     ];
 
@@ -74,7 +85,7 @@ export function CommandPalette() {
     }));
 
     return [...nav, ...clients];
-  }, [router, requestApprovalsDrawer, setSelectedClientId]);
+  }, [router, requestApprovalsDrawer, setSelectedClientId, selectedClientId]);
 
   const visible = useMemo(() => {
     const q = query.trim().toLowerCase();

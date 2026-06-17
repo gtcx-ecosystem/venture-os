@@ -24,10 +24,10 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 
 | Story | Title | Status | Pillar |
 |------:|-------|--------|--------|
-| MPR-05 | Trust envelope on cards + publish gates | todo | Trust & Safety |
-| MPR-03 | Command Center API wiring | todo | Technical Excellence |
-| MPR-04 | Agent orchestration + receipt envelope | todo | Agentic Empowerment |
-| MPR-01 | Compliance + repo hygiene closure | todo | Compliance |
+| MPR-05 | Trust envelope on cards + publish gates | done | Trust & Safety |
+| MPR-03 | Command Center API wiring | done | Technical Excellence |
+| MPR-04 | Agent orchestration + receipt envelope | done | Agentic Empowerment |
+| MPR-01 | Compliance + repo hygiene closure | in_progress | Compliance |
 | MPR-02 | UX SoR scaffold (EXR + pm/ux) | todo | World-class |
 | MPR-06 | World-class polish (states, metrics, a11y) | todo | World-class |
 | MPR-07 | Fleet ecosystem integration seams | todo | Ecosystem Integration |

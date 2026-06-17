@@ -6,7 +6,8 @@ export type AutomationReceiptKind =
   | "newsletter_dry_run"
   | "newsletter_scheduled"
   | "clickup_sync_dry_run"
-  | "clickup_sync_scheduled";
+  | "clickup_sync_scheduled"
+  | "workflow_queued";
 
 export type AutomationReceipt = {
   id: string;

@@ -1,37 +1,76 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { FILTER_OPTIONS, INITIAL_REVIEWS, OPPORTUNITIES, type ReviewCard } from "../lib/mock";
+import { useMemo, useState, useEffect, useCallback } from "react";
+import { FILTER_OPTIONS, INITIAL_REVIEWS, type ReviewCard } from "../lib/mock";
 import { getClient } from "../lib/clients";
+import { computePipelineMetrics } from "../lib/opportunities";
+import { useOpportunities } from "../lib/hooks/useOpportunities";
+import type { AutomationReceipt } from "../lib/automation/receipts";
+import { EvidenceChip } from "./EvidenceChip";
+import { AutomationReceiptLog } from "./AutomationReceiptLog";
 import { useWorkspace } from "./WorkspaceProvider";
 
 export function CommandCenterWorkspace() {
   const { search, activeFilter, setActiveFilter, selectedClientId } = useWorkspace();
   const client = getClient(selectedClientId);
+  const { opportunities, loading, error } = useOpportunities(selectedClientId);
   const [reviews, setReviews] = useState<ReviewCard[]>(INITIAL_REVIEWS);
+  const [automationReceipts, setAutomationReceipts] = useState<AutomationReceipt[]>([]);
+  const [queueError, setQueueError] = useState<string | null>(null);
+  const [queueing, setQueueing] = useState(false);
+  const [serviceHealth, setServiceHealth] = useState<"live" | "degraded" | "unknown">("unknown");
+  const [agentPrompt, setAgentPrompt] = useState(
+    "Create a TerraOS DFI concept note and route claims to proof review.",
+  );
+
+  useEffect(() => {
+    fetch("/api/health")
+      .then((r) => setServiceHealth(r.ok ? "live" : "degraded"))
+      .catch(() => setServiceHealth("degraded"));
+    fetch("/api/venture/receipts")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (data?.receipts) setAutomationReceipts(data.receipts);
+      })
+      .catch(() => undefined);
+  }, []);
 
   const visibleOpportunities = useMemo(() => {
     const term = search.trim().toLowerCase();
-    return OPPORTUNITIES.filter((item) => {
-      const matchesClient = item.clientId === selectedClientId;
+    return opportunities.filter((item) => {
       const matchesFilter = activeFilter === "all" || item.kind === activeFilter;
-      const matchesSearch = !term || item.title.includes(term);
-      return matchesClient && matchesFilter && matchesSearch;
+      const matchesSearch = !term || item.title.includes(term) || item.headline.toLowerCase().includes(term);
+      return matchesFilter && matchesSearch;
     });
-  }, [search, activeFilter, selectedClientId]);
+  }, [search, activeFilter, opportunities]);
 
-  function queueWorkflow() {
-    setReviews((prev) => [
-      {
-        id: `queued-${Date.now()}`,
-        agent: "Chief of Staff Agent",
-        status: "Queued now",
-        body: "Workflow queued. Tasks will route to Capital Desk, Claims Review, and Collateral Factory before approval.",
-        highlighted: true,
-      },
-      ...prev.map((card) => ({ ...card, highlighted: false })),
-    ]);
-  }
+  const metrics = useMemo(() => computePipelineMetrics(opportunities), [opportunities]);
+
+  const queueWorkflow = useCallback(() => {
+    setQueueing(true);
+    setQueueError(null);
+    fetch("/api/venture/workflow/queue", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ clientId: selectedClientId, prompt: agentPrompt }),
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json() as Promise<{
+          reviews: ReviewCard[];
+          receipts: AutomationReceipt[];
+        }>;
+      })
+      .then((data) => {
+        setReviews(data.reviews);
+        setAutomationReceipts(data.receipts);
+      })
+      .catch(() => setQueueError("Workflow queue failed — try again."))
+      .finally(() => setQueueing(false));
+  }, [agentPrompt, selectedClientId]);
+
+  const healthLabel =
+    serviceHealth === "live" ? "Live" : serviceHealth === "degraded" ? "Degraded" : "Checking";
 
   return (
     <>
@@ -48,16 +87,16 @@ export function CommandCenterWorkspace() {
         </div>
         <div className="hero-metrics" aria-label="Pipeline summary">
           <div>
-            <strong>42</strong>
+            <strong>{metrics.qualified}</strong>
             <span>Qualified</span>
           </div>
           <div>
-            <strong>11</strong>
+            <strong>{metrics.p1Moves}</strong>
             <span>P1 Moves</span>
           </div>
           <div>
-            <strong>7</strong>
-            <span>Approvals</span>
+            <strong>{metrics.approvalsPending}</strong>
+            <span>Needs proof</span>
           </div>
         </div>
       </section>
@@ -79,30 +118,68 @@ export function CommandCenterWorkspace() {
         <div className="board-column">
           <div className="column-heading">
             <h2>Priority Opportunities</h2>
-            <button className="small-button" type="button">
+            <button className="small-button" type="button" disabled title="Use Opportunities desk to sync">
               New
             </button>
           </div>
 
-          <div className="card-grid" id="opportunityGrid">
-            {visibleOpportunities.map((item) => (
-              <article key={item.id} className="opportunity-card" data-kind={item.kind} data-title={item.title}>
-                <div className={`card-visual ${item.visualClass}`}>
-                  <span className="card-badge">{item.kind === "revenue" ? "Revenue" : item.kind.charAt(0).toUpperCase() + item.kind.slice(1)}</span>
-                  <div className={item.visualClass === "visual-land" ? "mini-map" : item.visualClass === "visual-market" ? "wave-line" : item.visualClass === "visual-channel" ? "phone-stack" : "headline-stack"} />
-                </div>
-                <div className="card-body">
-                  <h3>{item.headline}</h3>
-                  <p>{item.description}</p>
-                  <div className="card-meta">
-                    <span>{item.priority}</span>
-                    <span>{item.horizon}</span>
-                    <span>{item.fit}</span>
-                  </div>
-                </div>
+          {loading ? (
+            <div className="review-stack" aria-busy="true">
+              <article className="review-card">
+                <p>Loading opportunities…</p>
               </article>
-            ))}
-          </div>
+            </div>
+          ) : error ? (
+            <div className="review-stack">
+              <article className="review-card">
+                <p>{error}</p>
+              </article>
+            </div>
+          ) : visibleOpportunities.length === 0 ? (
+            <div className="review-stack">
+              <article className="review-card">
+                <p>No opportunities match this filter for {client?.name ?? "this client"}.</p>
+              </article>
+            </div>
+          ) : (
+            <div className="card-grid" id="opportunityGrid">
+              {visibleOpportunities.map((item) => (
+                <article key={item.id} className="opportunity-card" data-kind={item.kind} data-title={item.title}>
+                  <div className={`card-visual ${item.visualClass}`}>
+                    <span className="card-badge">
+                      {item.kind === "revenue" ? "Revenue" : item.kind.charAt(0).toUpperCase() + item.kind.slice(1)}
+                    </span>
+                    <div
+                      className={
+                        item.visualClass === "visual-land"
+                          ? "mini-map"
+                          : item.visualClass === "visual-market"
+                            ? "wave-line"
+                            : item.visualClass === "visual-channel"
+                              ? "phone-stack"
+                              : "headline-stack"
+                      }
+                    />
+                  </div>
+                  <div className="card-body">
+                    <h3>{item.headline}</h3>
+                    <p>{item.description}</p>
+                    <div className="card-meta">
+                      <span>{item.priority}</span>
+                      <span>{item.horizon}</span>
+                      <span>{item.fit}</span>
+                      <EvidenceChip status={item.evidenceStatus} refPath={item.evidenceRef} />
+                    </div>
+                    {item.evidenceRef ? (
+                      <p className="evidence-ref" title={item.evidenceRef}>
+                        Evidence: {item.evidenceRef}
+                      </p>
+                    ) : null}
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
         </div>
 
         <aside className="agent-panel" aria-label="Agent command panel">
@@ -111,15 +188,27 @@ export function CommandCenterWorkspace() {
               <div className="section-label">Agent review</div>
               <h2>Venture Desk</h2>
             </div>
-            <span className="status-dot">Live</span>
+            <span className={`status-dot status-dot--${serviceHealth}`}>{healthLabel}</span>
           </div>
 
           <div className="command-box">
             <label htmlFor="agentPrompt">Ask the team</label>
-            <textarea id="agentPrompt" rows={4} defaultValue="Create a TerraOS DFI concept note and route claims to proof review." />
-            <button className="primary-button full-width" id="runAgent" type="button" onClick={queueWorkflow}>
-              Queue workflow
+            <textarea
+              id="agentPrompt"
+              rows={4}
+              value={agentPrompt}
+              onChange={(event) => setAgentPrompt(event.target.value)}
+            />
+            <button
+              className="primary-button full-width"
+              id="runAgent"
+              type="button"
+              onClick={queueWorkflow}
+              disabled={queueing}
+            >
+              {queueing ? "Queueing…" : "Queue workflow"}
             </button>
+            {queueError ? <p className="form-error">{queueError}</p> : null}
           </div>
 
           <div className="review-stack" id="reviewStack">
@@ -130,32 +219,36 @@ export function CommandCenterWorkspace() {
                   <strong>{card.status}</strong>
                 </div>
                 <p>{card.body}</p>
-                {card.highlighted ? (
-                  <div className="review-actions">
-                    <button type="button">Open task</button>
-                    <button type="button">Assign</button>
-                  </div>
+                {card.evidenceRef ? (
+                  <p className="evidence-ref" title={card.evidenceRef}>
+                    Proof: {card.evidenceRef}
+                  </p>
                 ) : null}
               </article>
             ))}
           </div>
+
+          <div className="section-label" style={{ marginTop: 16 }}>
+            Receipts
+          </div>
+          <AutomationReceiptLog receipts={automationReceipts} />
         </aside>
       </section>
 
       <div className="create-dock" aria-label="Create menu">
-        <button className="create-tile" type="button">
+        <button className="create-tile" type="button" disabled title="Collateral Factory — coming soon">
           <span className="tile-icon blue">D</span>
           <strong>Deck</strong>
         </button>
-        <button className="create-tile" type="button">
+        <button className="create-tile" type="button" disabled title="Rolling Brief — use /brief">
           <span className="tile-icon violet">N</span>
           <strong>Note</strong>
         </button>
-        <button className="create-tile" type="button">
+        <button className="create-tile" type="button" disabled title="Capital Desk — use /capital">
           <span className="tile-icon orange">P</span>
           <strong>Proposal</strong>
         </button>
-        <button className="create-tile" type="button">
+        <button className="create-tile" type="button" onClick={queueWorkflow} disabled={queueing}>
           <span className="tile-icon white">A</span>
           <strong>Agent</strong>
         </button>

@@ -1,5 +1,7 @@
 export type OpportunityKind = "capital" | "revenue" | "partner" | "visibility" | "collateral";
 
+export type EvidenceStatus = "verified" | "needs_proof" | "blocked";
+
 export type Opportunity = {
   id: string;
   clientId: string;
@@ -11,6 +13,8 @@ export type Opportunity = {
   horizon: string;
   fit: string;
   visualClass: string;
+  evidenceStatus: EvidenceStatus;
+  evidenceRef?: string;
 };
 
 export type ReviewCard = {
@@ -19,6 +23,7 @@ export type ReviewCard = {
   status: string;
   body: string;
   highlighted?: boolean;
+  evidenceRef?: string;
 };
 
 export const OPPORTUNITIES: Opportunity[] = [
@@ -33,6 +38,8 @@ export const OPPORTUNITIES: Opportunity[] = [
     horizon: "14d",
     fit: "92 fit",
     visualClass: "visual-land",
+    evidenceStatus: "needs_proof",
+    evidenceRef: "docs/foundation/milestones.md#m4-golden-transaction",
   },
   {
     id: "terra-bank-insurer",
@@ -45,6 +52,8 @@ export const OPPORTUNITIES: Opportunity[] = [
     horizon: "30d",
     fit: "83 fit",
     visualClass: "visual-channel",
+    evidenceStatus: "needs_proof",
+    evidenceRef: "pm/product/prds/prd-land-credit-score.md",
   },
   {
     id: "markets-pilot",
@@ -57,6 +66,8 @@ export const OPPORTUNITIES: Opportunity[] = [
     horizon: "9d",
     fit: "88 fit",
     visualClass: "visual-market",
+    evidenceStatus: "verified",
+    evidenceRef: "audit/evidence/golden-transaction-markets-staging-2026-06-12.json",
   },
   {
     id: "markets-broker-channel",
@@ -69,6 +80,8 @@ export const OPPORTUNITIES: Opportunity[] = [
     horizon: "20d",
     fit: "82 fit",
     visualClass: "visual-channel",
+    evidenceStatus: "needs_proof",
+    evidenceRef: "docs/business/strategy/channel-partners.md",
   },
   {
     id: "nyota-channel",
@@ -81,6 +94,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     horizon: "21d",
     fit: "84 fit",
     visualClass: "visual-channel",
+    evidenceStatus: "needs_proof",
   },
   {
     id: "nyota-program",
@@ -93,6 +107,8 @@ export const OPPORTUNITIES: Opportunity[] = [
     horizon: "16d",
     fit: "85 fit",
     visualClass: "visual-market",
+    evidenceStatus: "verified",
+    evidenceRef: "docs/foundation/goals.md",
   },
   {
     id: "fifty-four-press",
@@ -105,6 +121,8 @@ export const OPPORTUNITIES: Opportunity[] = [
     horizon: "5d",
     fit: "90 fit",
     visualClass: "visual-media",
+    evidenceStatus: "needs_proof",
+    evidenceRef: "docs/product/ux/visibility-desk.md",
   },
   {
     id: "terminal-exec-briefs",
@@ -117,6 +135,8 @@ export const OPPORTUNITIES: Opportunity[] = [
     horizon: "10d",
     fit: "81 fit",
     visualClass: "visual-media",
+    evidenceStatus: "verified",
+    evidenceRef: "docs/foundation/roadmap.md",
   },
   {
     id: "compliance-enterprise",
@@ -129,6 +149,8 @@ export const OPPORTUNITIES: Opportunity[] = [
     horizon: "18d",
     fit: "86 fit",
     visualClass: "visual-market",
+    evidenceStatus: "verified",
+    evidenceRef: "docs/foundation/constitution.md",
   },
   {
     id: "compliance-standards-body",
@@ -141,6 +163,8 @@ export const OPPORTUNITIES: Opportunity[] = [
     horizon: "24d",
     fit: "80 fit",
     visualClass: "visual-channel",
+    evidenceStatus: "blocked",
+    evidenceRef: "docs/compliance/standards-body-partnership.md",
   },
 ];
 
@@ -316,6 +340,7 @@ export const INITIAL_REVIEWS: ReviewCard[] = [
     agent: "Claims Reviewer",
     status: "Needs proof",
     body: "Three claims require evidence links before external use.",
+    evidenceRef: "docs/foundation/milestones.md#m4-golden-transaction",
   },
   {
     id: "visibility",
