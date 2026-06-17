@@ -38,5 +38,5 @@ Numeric quotes are client-specific after Day 0 intake (stage, desk mix, automati
 ## References
 
 - `pilot-onboarding.md` — Day 0–5 sequence
-- `01-docs/workflows/clickup-board-template.md`
-- `01-docs/workflows/n8n-workflows.v1.json`
+- `01-docs/04-ops/workflows/clickup-board-template.md`
+- `01-docs/04-ops/workflows/n8n-workflows.v1.json`

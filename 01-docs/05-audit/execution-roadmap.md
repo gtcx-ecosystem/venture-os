@@ -10,7 +10,10 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 
 # Execution roadmap — Venture OS
 
-> **Last reconciled:** 2026-06-17 · `execute-roadmap` · Venture OS app bootstrap
+> **Last reconciled:** 2026-06-17 · `execute-roadmap` · P35 `01-docs` IA + Sprint 8
+
+**PM SoR pointer:** [`pm/execution-roadmap.md`](../../pm/execution-roadmap.md)  
+**Numbered specs:** [`stories/`](./stories/) · **Intake backlog:** [`backlog/`](./backlog/)
 
 ## Active phase: **Phase 3 — Automation Layer**
 
@@ -113,6 +116,23 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 | S7-01 | Inbound webhook API (`POST /api/venture/inbound`) + dedupe rules | done |
 | S7-02 | Automation receipts + inbound queue on `/operations` | done |
 | S7-03 | Daily digest API stub (`POST /api/venture/digest`) with approval gate | done |
+
+### Sprint 8 — Media syndication (griot + agency)
+
+| Story | Title | Status |
+|------:|-------|--------|
+| S8-01 | Griot webhook adapter (`POST /api/venture/griot`) | done |
+| S8-02 | Agency handoff spec (approved brief → campaign asset) | pending |
+| S8-03 | Newsletter send rail stub (Listmonk dry-run) | pending |
+
+## P35 doc layout (`01-docs/`)
+
+| Layer | Path | Contents |
+| ----- | ---- | -------- |
+| 04-ops | `01-docs/04-ops/workflows/`, `templates/` | Operating rails |
+| 05-audit | `01-docs/05-audit/execution-roadmap.md` | This file |
+| 05-audit | `01-docs/05-audit/stories/S*-*.md` | Numbered story specs |
+| 05-audit | `01-docs/05-audit/backlog/BL-*-*.md` | Intake backlog |
 
 ## Story details
 
