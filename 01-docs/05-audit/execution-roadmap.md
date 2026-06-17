@@ -57,7 +57,18 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 | S1-02 | Wire sidebar client selection into workspace context | done |
 | S1-03 | Render desk pipelines scoped to selected client | done |
 | S1-04 | Filter Command Center opportunities by selected client | done |
-| S1-05 | Expand mock pipeline coverage to 5 pilot clients | pending |
+| S1-05 | Expand mock pipeline coverage to 5 pilot clients | done |
+
+### Sprint 2 — Tool registry + rolling brief
+
+| Story | Title | Status |
+|------:|-------|--------|
+| S2-01 | Tool Registry schema + dataset + Zod validation | done |
+| S2-02 | Explainable ranking for workflows | done |
+| S2-03 | `/tools` inspection UI (FOSS-first metadata) | done |
+| S2-04 | Rolling Brief route (`/brief`) with priority list + pipeline + calendar | done |
+| S2-05 | Approvals drawer sidepanel on brief | done |
+| S2-06 | Selection receipts + command palette (power-user) | pending |
 
 ## Story details
 
