@@ -1,0 +1,4 @@
+{
+  "enabled": false,
+  "note": "venture-os uses bridge-os baseline via agents/manifest.json"
+}

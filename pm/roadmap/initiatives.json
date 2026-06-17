@@ -1,0 +1,18 @@
+{
+  "repo": "venture-os",
+  "updated": "2026-06-17",
+  "initiatives": [
+    {
+      "id": "INIT-VENTURE-OS-APP",
+      "title": "Venture OS founder command center",
+      "status": "active",
+      "phase": "Phase 3 automation"
+    },
+    {
+      "id": "INIT-VENTURE-PROV",
+      "title": "Fleet provisioning compliance",
+      "status": "active",
+      "phase": "PROV-01"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "repo": "venture-os",
+  "updated": "2026-06-17",
+  "hubs": {
+    "docs": "docs/",
+    "pm": "pm/",
+    "audit": "audit/",
+    "agents": "agents/",
+    "platform": "platform/",
+    "ops": "ops/",
+    "config": "config/",
+    "workstream": "workstream/",
+    "deploy": "deploy/",
+    "archive": "archive/",
+    "agile": "agile/"
+  }
+}

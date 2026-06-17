@@ -1,0 +1,34 @@
+{
+  "$schema": "gtcx://ops/pm-backlog/v1",
+  "repo": "venture-os",
+  "updated": "2026-06-17",
+  "active": "S8-03",
+  "backlogClear": false,
+  "roadmapPath": "pm/execution-roadmap.md",
+  "stories": [
+    {
+      "id": "PROV-01",
+      "title": "P35 fleet provisioning lift",
+      "status": "done",
+      "owner": "venture-os"
+    },
+    {
+      "id": "PROV-02",
+      "title": "Fleet registry entry",
+      "status": "done",
+      "owner": "bridge-os"
+    },
+    {
+      "id": "S8-02",
+      "title": "Agency handoff spec",
+      "status": "done",
+      "owner": "venture-os"
+    },
+    {
+      "id": "S8-03",
+      "title": "Newsletter send rail stub",
+      "status": "pending",
+      "owner": "venture-os"
+    }
+  ]
+}

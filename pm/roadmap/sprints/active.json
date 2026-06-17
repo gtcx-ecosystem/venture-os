@@ -1,0 +1,7 @@
+{
+  "repo": "venture-os",
+  "sprintId": "PROV-01",
+  "title": "Fleet provisioning lift",
+  "status": "active",
+  "stories": ["PROV-01", "PROV-02"]
+}

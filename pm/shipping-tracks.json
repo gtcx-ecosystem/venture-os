@@ -1,0 +1,8 @@
+{
+  "repo": "venture-os",
+  "updated": "2026-06-17",
+  "tracks": [
+    { "id": "app", "label": "Next.js app", "gates": ["pnpm test", "pnpm lint", "pnpm build"] },
+    { "id": "provision", "label": "Fleet P35", "gates": ["pnpm ops:check"] }
+  ]
+}

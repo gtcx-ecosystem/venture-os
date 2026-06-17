@@ -1,0 +1,12 @@
+{
+  "$schema": "gtcx://layout-contract/v5-pointer",
+  "repo": "venture-os",
+  "updated": "2026-06-17",
+  "layoutVersion": "v5",
+  "sor": {
+    "engine": "bridge-os",
+    "bridge-osRoot": "../bridge-os",
+    "contract": "../bridge-os/config/ecosystem-layout-contract.json",
+    "documentManifest": "../bridge-os/config/ecosystem-repo-document-manifest.json"
+  }
+}

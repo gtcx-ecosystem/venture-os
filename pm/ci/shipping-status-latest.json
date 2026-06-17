@@ -1,0 +1,6 @@
+{
+  "repo": "venture-os",
+  "updated": "2026-06-17",
+  "app": { "test": "pending", "lint": "pending", "build": "pending" },
+  "provision": { "opsCheck": "pending" }
+}

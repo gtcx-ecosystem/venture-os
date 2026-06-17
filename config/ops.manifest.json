@@ -1,0 +1,18 @@
+{
+  "$schema": "gtcx://ops/manifest/v14",
+  "repo": "venture-os",
+  "updated": "2026-06-17",
+  "layoutVersion": "v5",
+  "hubs": {
+    "docs": "docs",
+    "ops": "ops",
+    "platform": "platform",
+    "audit": "audit",
+    "pm": "pm",
+    "agents": "agents"
+  },
+  "domains": {
+    "pm": "ops/pm",
+    "operations": "ops"
+  }
+}

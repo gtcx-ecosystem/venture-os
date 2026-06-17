@@ -1,0 +1,18 @@
+{
+  "$schema": "gtcx://pm/manifest/v1",
+  "schemaVersion": 2,
+  "repo": "venture-os",
+  "layoutVersion": "v5",
+  "updated": "2026-06-17",
+  "role": "product-venture-os",
+  "sor": {
+    "executionRoadmap": "pm/execution-roadmap.md",
+    "backlog": "pm/backlog.json",
+    "readinessSnapshot": "pm/readiness-snapshot.json",
+    "completionModel": "pm/completion-model.json"
+  },
+  "programOffice": {
+    "repo": "bridge-os",
+    "path": "../bridge-os"
+  }
+}
