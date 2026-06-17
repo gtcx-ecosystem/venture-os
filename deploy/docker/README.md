@@ -1,5 +1,12 @@
 # Docker — venture-os
 
-Placeholder artifact directory for fleet deploy dry-run witness.
+Production image: [`Dockerfile`](./Dockerfile)
 
-The Next.js app builds from repo root (`app/`). Add a `Dockerfile` here when pilot container deploy is required.
+```bash
+# From repo root (Docker daemon required)
+docker build -f deploy/docker/Dockerfile -t gtcx-venture-os:local .
+docker run --rm -p 3000:3000 gtcx-venture-os:local
+curl -s http://localhost:3000/api/health
+```
+
+Push to ECR: [`../scripts/build-push-ecr.sh`](../scripts/build-push-ecr.sh)

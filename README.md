@@ -41,7 +41,7 @@ pnpm lint     # eslint
 pnpm build    # production build (all routes)
 ```
 
-**Deploy:** Vercel — see [`docs/operations/deploy/deployment-profile.md`](./docs/operations/deploy/deployment-profile.md). Live URL pending Vercel project import.
+**Deploy:** AWS ECR→EKS (fabric-os) or GCP Cloud Run — see [`docs/operations/deploy/deployment-profile.md`](./docs/operations/deploy/deployment-profile.md).
 
 **Quality gates:** `pnpm lint` and `pnpm build` must pass before merging app changes.
 

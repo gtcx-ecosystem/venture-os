@@ -1,10 +1,15 @@
 # deploy — venture-os
 
+Fleet deploy surface — **AWS EKS** + **GCP Cloud Run** (not Vercel).
+
 | Path | Purpose |
 | ---- | ------- |
-| [`docker/`](./docker/README.md) | Optional container scaffold |
-| [`app/vercel.json`](../app/vercel.json) | Vercel build/install commands |
-| [`docs/operations/deploy/deployment-profile.md`](../docs/operations/deploy/deployment-profile.md) | Deploy runbook |
-| [`.github/workflows/ci.yml`](../.github/workflows/ci.yml) | CI quality gates |
+| [`docker/Dockerfile`](./docker/Dockerfile) | Production Next.js standalone image |
+| [`scripts/build-push-ecr.sh`](./scripts/build-push-ecr.sh) | AWS ECR build + push |
+| [`scripts/deploy-cloud-run.sh`](./scripts/deploy-cloud-run.sh) | GCP Cloud Run deploy |
+| [`kubernetes/staging/`](./kubernetes/staging/deployment.yaml) | EKS Deployment + Service reference |
+| [`aws/README.md`](./aws/README.md) | AWS runbook |
+| [`gcp/README.md`](./gcp/README.md) | GCP runbook |
+| [`../docs/operations/deploy/deployment-profile.md`](../docs/operations/deploy/deployment-profile.md) | Canonical profile |
 
-**Live URL:** not yet — import repo in Vercel per deployment profile, then record witness.
+**Live URL:** pending first ECR push + fabric-os overlay apply, or Cloud Run deploy.

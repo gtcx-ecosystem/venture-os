@@ -31,7 +31,7 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 
 | Story | Title | Status |
 |------:|-------|--------|
-| DEPLOY-01 | Vercel + CI + deploy witness (live URL pending import) | done |
+| DEPLOY-01 | AWS/GCP deploy wiring (Dockerfile, EKS manifest, Cloud Run script) | done |
 
 ### Sprint 9 — Newsletter source registry — **sealed**
 

@@ -22,10 +22,10 @@
   "deferred": [
     {
       "id": "DEPLOY-02",
-      "title": "Record live Vercel URL in deployment witness",
+      "title": "First staging deploy (AWS EKS or GCP Cloud Run)",
       "status": "pending",
       "owner": "venture-os",
-      "note": "Class A — requires Vercel project import"
+      "note": "Requires ECR push + fabric-os overlay, or gcloud run deploy"
     }
   ]
 }

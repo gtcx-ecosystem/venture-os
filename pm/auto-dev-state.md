@@ -7,13 +7,13 @@
 | Field | Value |
 | ----- | ----- |
 | **Story** | DEPLOY-02 |
-| **Action** | Record live deploy URL after Vercel billing reactivation or alternate host |
-| **Owner** | venture-os |
-| **Because** | `vercel deploy` blocked — account suspended (402) |
+| **Action** | First staging deploy — AWS ECR+EKS or GCP Cloud Run |
+| **Owner** | venture-os / fabric-os |
+| **Because** | Fleet uses AWS + GCP; container + probes wired |
 
 ## Verify
 
 ```bash
-pnpm test && pnpm ops:check
-vercel deploy --scope amani-7483s-projects   # after billing unblock
+pnpm test && pnpm build
+docker build -f deploy/docker/Dockerfile -t gtcx-venture-os:local .
 ```

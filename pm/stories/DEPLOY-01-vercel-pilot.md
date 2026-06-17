@@ -21,6 +21,9 @@ Wire CI, Vercel config, deployment profile, and deploy witness — live URL pend
 - [x] `docs/operations/demo-walkthrough.md`
 - [x] `audit/evidence/deployment-proof-latest.json` (pending URL)
 
-## Live deploy (Class A)
+## Live deploy (Class A — AWS or GCP)
 
-Operator imports repo in Vercel; agent records URL in deployment witness.
+Operator runs ECR push or Cloud Run deploy; agent records URL in deployment witness.
+
+**AWS:** `./deploy/scripts/build-push-ecr.sh` + fabric-os k8s overlay  
+**GCP:** `./deploy/scripts/deploy-cloud-run.sh`

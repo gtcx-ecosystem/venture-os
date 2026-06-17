@@ -3,10 +3,22 @@
   "repo": "venture-os",
   "updated": "2026-06-17",
   "status": "pending-live-url",
-  "platform": "vercel",
-  "configPath": "app/vercel.json",
-  "ciWorkflow": ".github/workflows/ci.yml",
-  "profileDoc": "docs/operations/deploy/deployment-profile.md",
+  "platforms": {
+    "aws": {
+      "kind": "eks",
+      "ecr": "348389439381.dkr.ecr.af-south-1.amazonaws.com/gtcx-venture-os",
+      "overlay": "fabric-os/deploy/kubernetes/overlays/staging/venture-os",
+      "manifest": "deploy/kubernetes/staging/deployment.yaml"
+    },
+    "gcp": {
+      "kind": "cloud-run",
+      "script": "deploy/scripts/deploy-cloud-run.sh",
+      "service": "venture-os-staging"
+    }
+  },
+  "deprecated": {
+    "vercel": "not used — fleet standard is AWS/GCP"
+  },
   "deployments": [],
-  "note": "Import repo to Vercel; append deployment URL and timestamp after first production deploy."
+  "note": "Run build-push-ecr.sh or deploy-cloud-run.sh; append URL and timestamp after first green deploy."
 }
