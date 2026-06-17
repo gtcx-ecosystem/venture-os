@@ -1,11 +1,11 @@
 # Current sprint — venture-os
 
-**Sprint 9 sealed** — newsletter source registry (S9-01 / BL-NEWS-01).
+**Sprint 10** — Phase 4 control plane (P4-01–P4-03 done).
 
 ## Goals
 
-- (complete)
+- P4-04 Opportunities board (ClickUp sync stub)
 
-## Next
+## Blockers
 
-- Icebox: live Listmonk dispatch, Miniflux production wiring, fabric-os receipt ledger
+- (none)

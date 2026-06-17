@@ -6,13 +6,13 @@
 
 | Field | Value |
 | ----- | ----- |
-| **Story** | — |
-| **Action** | Roadmap backlog clear — await new intake or Phase 4 scope |
+| **Story** | P4-04 |
+| **Action** | Opportunities board with ClickUp sync stub |
 | **Owner** | venture-os |
-| **Because** | S9-01 sealed; `backlogClear: true` |
+| **Because** | Phase 4 MVP module 4 per implementation-roadmap |
 
 ## Verify
 
 ```bash
-pnpm test && pnpm ops:check
+pnpm test && pnpm build && pnpm ops:check
 ```

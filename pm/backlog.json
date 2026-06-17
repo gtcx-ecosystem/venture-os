@@ -2,44 +2,38 @@
   "$schema": "gtcx://ops/pm-backlog/v1",
   "repo": "venture-os",
   "updated": "2026-06-17",
-  "active": null,
-  "backlogClear": true,
+  "active": "P4-04",
+  "backlogClear": false,
   "roadmapPath": "pm/execution-roadmap.md",
   "stories": [
-    {
-      "id": "PROV-01",
-      "title": "P35 fleet provisioning lift",
-      "status": "done",
-      "owner": "venture-os"
-    },
-    {
-      "id": "PROV-02",
-      "title": "Fleet registry entry",
-      "status": "done",
-      "owner": "bridge-os"
-    },
-    {
-      "id": "S8-01",
-      "title": "Griot webhook adapter",
-      "status": "done",
-      "owner": "venture-os"
-    },
-    {
-      "id": "S8-02",
-      "title": "Agency handoff spec",
-      "status": "done",
-      "owner": "venture-os"
-    },
-    {
-      "id": "S8-03",
-      "title": "Newsletter send rail stub",
-      "status": "done",
-      "owner": "venture-os"
-    },
     {
       "id": "S9-01",
       "title": "Newsletter source registry",
       "status": "done",
+      "owner": "venture-os"
+    },
+    {
+      "id": "P4-01",
+      "title": "Sources control plane",
+      "status": "done",
+      "owner": "venture-os"
+    },
+    {
+      "id": "P4-02",
+      "title": "Signals feed",
+      "status": "done",
+      "owner": "venture-os"
+    },
+    {
+      "id": "P4-03",
+      "title": "Clients directory",
+      "status": "done",
+      "owner": "venture-os"
+    },
+    {
+      "id": "P4-04",
+      "title": "Opportunities board",
+      "status": "pending",
       "owner": "venture-os"
     }
   ]

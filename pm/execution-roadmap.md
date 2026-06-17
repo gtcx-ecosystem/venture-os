@@ -14,9 +14,18 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 
 **Stories:** [`pm/stories/`](./stories/) · **Intake backlog:** [`audit/product-management/backlog/`](../audit/product-management/backlog/)
 
-## Active phase: **Sprint 9** — newsletter source ingest sealed
+## Active phase: **Phase 4 — App MVP** (Sprint 10 in flight)
 
 ## Sprints
+
+### Sprint 10 — Control plane modules (Phase 4)
+
+| Story | Title | Status |
+|------:|-------|--------|
+| P4-01 | Sources control plane (`/sources`) | done |
+| P4-02 | Signals feed (`/signals`) | done |
+| P4-03 | Clients directory (`/clients`) | done |
+| P4-04 | Opportunities board (ClickUp sync stub) | pending |
 
 ### Sprint 9 — Newsletter source registry — **sealed**
 
