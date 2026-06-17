@@ -68,7 +68,15 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 | S2-03 | `/tools` inspection UI (FOSS-first metadata) | done |
 | S2-04 | Rolling Brief route (`/brief`) with priority list + pipeline + calendar | done |
 | S2-05 | Approvals drawer sidepanel on brief | done |
-| S2-06 | Selection receipts + command palette (power-user) | pending |
+| S2-06 | Selection receipts + command palette (power-user) | done |
+
+### Sprint 3 — AI-native orchestration wiring
+
+| Story | Title | Status |
+|------:|-------|--------|
+| S3-01 | Wire tool ranking into rolling brief (signal + publish hops) | done |
+| S3-02 | Brief export + publish actions (mock) | done |
+| S3-03 | Workflow map: signals → enrich → approve → publish | done |
 
 ## Story details
 
