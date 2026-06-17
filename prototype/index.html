@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Venture OS Command Center</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Workspace navigation">
+        <div class="account-row">
+          <div class="avatar">GA</div>
+          <div>
+            <div class="account-name">GTCX Ventures</div>
+            <div class="account-meta">Africa Venture OS</div>
+          </div>
+          <button class="icon-button" type="button" aria-label="Notifications">!</button>
+        </div>
+
+        <label class="sidebar-search">
+          <span aria-hidden="true">/</span>
+          <input id="globalSearch" type="search" placeholder="Search clients, deals, sources" />
+        </label>
+
+        <nav class="nav-stack" aria-label="Primary">
+          <button class="nav-item is-active" type="button" data-view="command">
+            <span class="nav-icon">C</span>
+            <span>Command Center</span>
+          </button>
+          <button class="nav-item" type="button" data-view="capital">
+            <span class="nav-icon">K</span>
+            <span>Capital Desk</span>
+          </button>
+          <button class="nav-item" type="button" data-view="growth">
+            <span class="nav-icon">G</span>
+            <span>Growth Desk</span>
+          </button>
+          <button class="nav-item" type="button" data-view="visibility">
+            <span class="nav-icon">V</span>
+            <span>Visibility Desk</span>
+          </button>
+          <button class="nav-item" type="button" data-view="collateral">
+            <span class="nav-icon">D</span>
+            <span>Collateral Factory</span>
+          </button>
+        </nav>
+
+        <section class="workspace-block">
+          <div class="section-label">Clients</div>
+          <button class="folder-row is-selected" type="button">
+            <span class="folder-icon"></span>
+            TerraOS
+          </button>
+          <button class="folder-row" type="button">
+            <span class="folder-icon"></span>
+            Markets OS
+          </button>
+          <button class="folder-row" type="button">
+            <span class="folder-icon"></span>
+            ComplianceOS
+          </button>
+          <button class="folder-row" type="button">
+            <span class="folder-icon"></span>
+            Nyota AI
+          </button>
+          <button class="folder-row" type="button">
+            <span class="folder-icon"></span>
+            FIFTY-FOUR
+          </button>
+        </section>
+
+        <section class="workspace-block">
+          <div class="section-label">Portfolios</div>
+          <button class="folder-row" type="button">
+            <span class="folder-icon"></span>
+            Warm Clients
+          </button>
+          <button class="folder-row" type="button">
+            <span class="folder-icon"></span>
+            Africa Funds
+          </button>
+          <button class="folder-row" type="button">
+            <span class="folder-icon"></span>
+            DFI + Sovereign
+          </button>
+          <button class="folder-row" type="button">
+            <span class="folder-icon"></span>
+            Press + Events
+          </button>
+        </section>
+      </aside>
+
+      <main class="main-workspace">
+        <header class="topbar">
+          <div class="tabs" role="tablist" aria-label="Open workspaces">
+            <button class="tab is-active" type="button">TerraOS Capital Sprint</button>
+            <button class="tab" type="button">Markets OS Buyer Pipeline</button>
+            <button class="tab" type="button">Nyota Channel Partners</button>
+            <button class="tab add-tab" type="button" aria-label="New workspace">+</button>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-button" type="button">Share</button>
+            <button class="primary-button" type="button">Publish brief</button>
+          </div>
+        </header>
+
+        <section class="hero-panel" aria-labelledby="heroTitle">
+          <div class="orb orb-one"></div>
+          <div class="orb orb-two"></div>
+          <div class="hero-copy">
+            <div class="eyebrow">Founder command center</div>
+            <h1 id="heroTitle">Run capital, growth, visibility, and partnerships from one desk.</h1>
+            <p>
+              Monitor Africa-focused opportunities, draft investor materials,
+              coordinate agents, and approve external moves without losing the
+              operating thread.
+            </p>
+          </div>
+          <div class="hero-metrics" aria-label="Pipeline summary">
+            <div>
+              <strong>42</strong>
+              <span>Qualified</span>
+            </div>
+            <div>
+              <strong>11</strong>
+              <span>P1 Moves</span>
+            </div>
+            <div>
+              <strong>7</strong>
+              <span>Approvals</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="toolbar" aria-label="Workspace tools">
+          <button class="tool-pill is-active" type="button" data-filter="all">All</button>
+          <button class="tool-pill" type="button" data-filter="capital">Capital</button>
+          <button class="tool-pill" type="button" data-filter="revenue">Revenue</button>
+          <button class="tool-pill" type="button" data-filter="partner">Partners</button>
+          <button class="tool-pill" type="button" data-filter="visibility">Visibility</button>
+          <button class="tool-pill" type="button" data-filter="collateral">Collateral</button>
+        </section>
+
+        <section class="content-grid" aria-label="Venture workspace">
+          <div class="board-column">
+            <div class="column-heading">
+              <h2>Priority Opportunities</h2>
+              <button class="small-button" type="button">New</button>
+            </div>
+
+            <div class="card-grid" id="opportunityGrid">
+              <article class="opportunity-card" data-kind="capital" data-title="AfDB digital public infrastructure window terraos">
+                <div class="card-visual visual-land">
+                  <span class="card-badge">Capital</span>
+                  <div class="mini-map"></div>
+                </div>
+                <div class="card-body">
+                  <h3>AfDB DPI + land-rights pilot</h3>
+                  <p>Route TerraOS into sovereign/DFI pilot conversation with bankability proof.</p>
+                  <div class="card-meta">
+                    <span>P1</span>
+                    <span>14d</span>
+                    <span>92 fit</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="opportunity-card" data-kind="revenue" data-title="markets os buyer refiner trader pilot">
+                <div class="card-visual visual-market">
+                  <span class="card-badge">Revenue</span>
+                  <div class="wave-line"></div>
+                </div>
+                <div class="card-body">
+                  <h3>Buyer/refiner paid pilot</h3>
+                  <p>Convert Markets OS proof into a short commercial pilot with clear deal economics.</p>
+                  <div class="card-meta">
+                    <span>P1</span>
+                    <span>9d</span>
+                    <span>88 fit</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="opportunity-card" data-kind="partner" data-title="nyota telco whatsapp producer network">
+                <div class="card-visual visual-channel">
+                  <span class="card-badge">Partner</span>
+                  <div class="phone-stack"></div>
+                </div>
+                <div class="card-body">
+                  <h3>Producer-channel partnership</h3>
+                  <p>Package Nyota for telco, NGO, and mobile-money distribution partners.</p>
+                  <div class="card-meta">
+                    <span>P2</span>
+                    <span>21d</span>
+                    <span>84 fit</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="opportunity-card" data-kind="visibility" data-title="fifty four griot african commodity intelligence press">
+                <div class="card-visual visual-media">
+                  <span class="card-badge">Visibility</span>
+                  <div class="headline-stack"></div>
+                </div>
+                <div class="card-body">
+                  <h3>Africa commodity intelligence launch</h3>
+                  <p>Turn FIFTY-FOUR + Griot into press, LinkedIn, and executive audience growth.</p>
+                  <div class="card-meta">
+                    <span>P1</span>
+                    <span>5d</span>
+                    <span>90 fit</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <aside class="agent-panel" aria-label="Agent command panel">
+            <div class="agent-header">
+              <div>
+                <div class="section-label">Agent review</div>
+                <h2>Venture Desk</h2>
+              </div>
+              <span class="status-dot">Live</span>
+            </div>
+
+            <div class="command-box">
+              <label for="agentPrompt">Ask the team</label>
+              <textarea id="agentPrompt" rows="4">Create a TerraOS DFI concept note and route claims to proof review.</textarea>
+              <button class="primary-button full-width" id="runAgent" type="button">Queue workflow</button>
+            </div>
+
+            <div class="review-stack" id="reviewStack">
+              <article class="review-card is-highlighted">
+                <div class="review-topline">
+                  <span>Capital Desk Agent</span>
+                  <strong>Draft ready</strong>
+                </div>
+                <p>TerraOS concept note mapped to DFI pilot, land-credit score, and bank/insurer outcomes.</p>
+                <div class="review-actions">
+                  <button type="button">Review</button>
+                  <button type="button">Approve</button>
+                </div>
+              </article>
+
+              <article class="review-card">
+                <div class="review-topline">
+                  <span>Claims Reviewer</span>
+                  <strong>Needs proof</strong>
+                </div>
+                <p>Three claims require evidence links before external use.</p>
+              </article>
+
+              <article class="review-card">
+                <div class="review-topline">
+                  <span>Visibility Desk</span>
+                  <strong>Queued</strong>
+                </div>
+                <p>LinkedIn launch post for FIFTY-FOUR intelligence surface.</p>
+              </article>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <div class="create-dock" aria-label="Create menu">
+      <button class="create-tile" type="button">
+        <span class="tile-icon blue">D</span>
+        <strong>Deck</strong>
+      </button>
+      <button class="create-tile" type="button">
+        <span class="tile-icon violet">N</span>
+        <strong>Note</strong>
+      </button>
+      <button class="create-tile" type="button">
+        <span class="tile-icon orange">P</span>
+        <strong>Proposal</strong>
+      </button>
+      <button class="create-tile" type="button">
+        <span class="tile-icon white">A</span>
+        <strong>Agent</strong>
+      </button>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

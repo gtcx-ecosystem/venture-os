@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gtcx.trade/schemas/venture-os/client.schema.json",
+  "title": "Venture OS Client Profile",
+  "type": "object",
+  "required": [
+    "client_id",
+    "name",
+    "segment",
+    "stage",
+    "geographies",
+    "sectors",
+    "goals",
+    "primary_products",
+    "positioning",
+    "systems"
+  ],
+  "properties": {
+    "client_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "segment": {
+      "type": "string",
+      "enum": [
+        "startup",
+        "venture_studio",
+        "accelerator",
+        "incubator",
+        "fund",
+        "foundation",
+        "ecosystem_hub",
+        "corporate_program",
+        "internal_gtcx_product"
+      ]
+    },
+    "stage": {
+      "type": "string",
+      "enum": ["idea", "mvp", "pilot", "pre_revenue", "revenue", "growth", "scale"]
+    },
+    "geographies": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "sectors": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "goals": {
+      "type": "object",
+      "properties": {
+        "capital": { "type": "string" },
+        "revenue": { "type": "string" },
+        "partnerships": { "type": "string" },
+        "visibility": { "type": "string" },
+        "investor_relations": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "primary_products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description", "target_buyers"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "target_buyers": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "proof_points": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "positioning": {
+      "type": "object",
+      "required": ["one_liner", "narrative"],
+      "properties": {
+        "one_liner": { "type": "string" },
+        "narrative": { "type": "string" },
+        "differentiators": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "proof_points": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "constraints": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "systems": {
+      "type": "object",
+      "properties": {
+        "clickup": { "type": "string" },
+        "gmail": { "type": "string" },
+        "calendar": { "type": "string" },
+        "drive": { "type": "string" },
+        "website": { "type": "string" },
+        "linkedin": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

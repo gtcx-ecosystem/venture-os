@@ -1,0 +1,529 @@
+[
+  {
+    "client_id": "gtcx_os",
+    "name": "GTCX OS",
+    "segment": "internal_gtcx_product",
+    "stage": "pilot",
+    "geographies": ["Africa", "Global South"],
+    "sectors": ["commodity_trade", "trust_infrastructure", "protocols"],
+    "goals": {
+      "capital": "Strategic capital for core trust and commodity trade infrastructure",
+      "revenue": "Protocol licensing, sovereign pilots, enterprise integrations",
+      "partnerships": "Sovereigns, DFIs, banks, trade bodies, commodity institutions",
+      "visibility": "Establish GTCX as trust infrastructure for African commodity markets",
+      "investor_relations": "Maintain infrastructure-scale capital narrative"
+    },
+    "primary_products": [
+      {
+        "name": "GTCX Protocol Rail",
+        "description": "Core protocol infrastructure for verifiable commodity trade compliance",
+        "target_buyers": ["governments", "commodity_exchanges", "banks", "trade_bodies"],
+        "proof_points": ["multi-repo platform architecture", "protocol governance", "product portfolio integration"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "Trust infrastructure for verifiable African commodity trade.",
+      "narrative": "GTCX provides the protocol layer for trusted, compliant, and financeable commodity markets across Africa and the Global South.",
+      "differentiators": ["protocol-first", "Africa-scale", "multi-product ecosystem"]
+    },
+    "proof_points": ["gtcx-os platform monorepo", "ecosystem product portfolio"],
+    "constraints": ["strategic claims require evidence", "sovereign outreach requires founder approval"],
+    "systems": {}
+  },
+  {
+    "client_id": "terra_os",
+    "name": "TerraOS",
+    "segment": "internal_gtcx_product",
+    "stage": "pilot",
+    "geographies": ["Africa", "Global South"],
+    "sectors": ["land", "govtech", "property_rights", "financial_inclusion"],
+    "goals": {
+      "capital": "DFI, foundation, and catalytic capital for land infrastructure pilots",
+      "revenue": "Government, bank, insurer, and development agency pilots",
+      "partnerships": "Land agencies, banks, insurers, traditional leaders, DFIs",
+      "visibility": "Position TerraOS as land economic infrastructure",
+      "investor_relations": "Build infrastructure and DPG-aligned capital pipeline"
+    },
+    "primary_products": [
+      {
+        "name": "Land Economic Operating System",
+        "description": "Administrative, ambient, and economic intelligence layers for land registration and financeability",
+        "target_buyers": ["land_agencies", "banks", "insurers", "dfis", "development_agencies"],
+        "proof_points": ["pilot-ready dashboard", "PostGIS architecture", "offline verification"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "The land economic operating system for emerging markets.",
+      "narrative": "TerraOS turns land records and signals into verifiable, financeable economic infrastructure.",
+      "differentiators": ["land credit score", "ambient registration", "offline verification"]
+    },
+    "proof_points": ["backend dev-complete", "pilot-ready frontend", "DRC/Zimbabwe demo data"],
+    "constraints": ["government outreach requires approval", "land-rights claims require source review"],
+    "systems": {}
+  },
+  {
+    "client_id": "markets_os",
+    "name": "Markets OS",
+    "segment": "internal_gtcx_product",
+    "stage": "pilot",
+    "geographies": ["Africa"],
+    "sectors": ["natural_resources", "commodity_markets", "dealer_broker"],
+    "goals": {
+      "capital": "Strategic capital for regulated-market readiness",
+      "revenue": "Buyer, refiner, trader, broker, and institutional pilot pipeline",
+      "partnerships": "Commodity buyers, brokers, exchanges, banks, custody providers",
+      "visibility": "Position as dealer-broker infrastructure for African natural resources",
+      "investor_relations": "Track market-infrastructure investors and strategic partners"
+    },
+    "primary_products": [
+      {
+        "name": "AI-Native Dealer-Broker Infrastructure",
+        "description": "Dealer-broker product surfaces and transaction kernel for African natural resources markets",
+        "target_buyers": ["brokers", "traders", "refiners", "banks", "commodity_platforms"],
+        "proof_points": ["EIX transaction kernel", "internal desk surface", "regulated-market readiness artifacts"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "Dealer-broker infrastructure for African natural resources markets.",
+      "narrative": "Markets OS helps structure trusted, compliant, and intelligence-led transactions across African commodity markets.",
+      "differentiators": ["transaction kernel", "dealer-broker focus", "GTCX ecosystem integration"]
+    },
+    "proof_points": ["product spec", "EIX spec", "advisory surface"],
+    "constraints": ["regulated-market claims require compliance review", "commercial terms require finance review"],
+    "systems": {}
+  },
+  {
+    "client_id": "compliance_os",
+    "name": "ComplianceOS",
+    "segment": "internal_gtcx_product",
+    "stage": "growth",
+    "geographies": ["Africa", "Global"],
+    "sectors": ["compliance", "commodity_trade", "regtech"],
+    "goals": {
+      "capital": "Strategic enterprise/regtech capital",
+      "revenue": "Enterprise compliance, buyer, auditor, and regulator relationships",
+      "partnerships": "Standards bodies, auditors, buyers, regulators, supply-chain platforms",
+      "visibility": "Own assess-once-comply-everywhere narrative",
+      "investor_relations": "Maintain enterprise AI compliance narrative"
+    },
+    "primary_products": [
+      {
+        "name": "AI-Native Compliance Infrastructure",
+        "description": "Cross-framework harmonization, evidence, scoring, credentials, and trust layer",
+        "target_buyers": ["enterprises", "auditors", "regulators", "commodity_buyers"],
+        "proof_points": ["Core12 ontology", "framework registry", "trust layer spec"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "Assess once, comply everywhere.",
+      "narrative": "ComplianceOS harmonizes frameworks and evidence so commodity supply-chain actors can prove compliance across multiple regimes.",
+      "differentiators": ["Core12", "Trust Layer", "evidence reuse"]
+    },
+    "proof_points": ["50 deep frameworks", "175 registry frameworks", "trust layer runtime contract"],
+    "constraints": ["framework depth claims must match evidence", "AI trust claims require proof"],
+    "systems": {}
+  },
+  {
+    "client_id": "exploration_os",
+    "name": "ExplorationOS",
+    "segment": "internal_gtcx_product",
+    "stage": "pilot",
+    "geographies": ["Africa"],
+    "sectors": ["mining", "field_operations", "exploration"],
+    "goals": {
+      "capital": "Pilot and strategic mining-tech capital",
+      "revenue": "Mining company and exploration team pilots",
+      "partnerships": "Mining operators, satellite/data providers, geological agencies",
+      "visibility": "Show controlled preproduction readiness for field operations",
+      "investor_relations": "Build credible field-tech readiness narrative"
+    },
+    "primary_products": [
+      {
+        "name": "Offline-First Exploration Mobile App",
+        "description": "Canonical mobile application for exploration field operations",
+        "target_buyers": ["mining_companies", "exploration_teams", "geological_agencies"],
+        "proof_points": ["mobile-v2 supported surface", "offline-write integrity checks", "pilot launch checklist"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "Offline-first field operating system for exploration teams.",
+      "narrative": "ExplorationOS supports controlled mobile field operations where connectivity, validation, and data integrity matter.",
+      "differentiators": ["offline-first", "field validation", "pilot-ready runbooks"]
+    },
+    "proof_points": ["mobile-v2 canonical app", "pilot launch checklist"],
+    "constraints": ["production readiness claims require current evidence"],
+    "systems": {}
+  },
+  {
+    "client_id": "terminal_os",
+    "name": "FIFTY-FOUR / Terminal OS",
+    "segment": "internal_gtcx_product",
+    "stage": "pilot",
+    "geographies": ["Africa"],
+    "sectors": ["market_intelligence", "commodity_markets", "media"],
+    "goals": {
+      "capital": "Strategic media/data capital",
+      "revenue": "Subscriptions, data products, sponsorships, executive memberships",
+      "partnerships": "Media, data, trade, executive, and ecosystem partners",
+      "visibility": "Become the intelligence surface for African commodity markets",
+      "investor_relations": "Build data/media platform narrative"
+    },
+    "primary_products": [
+      {
+        "name": "FIFTY-FOUR Intelligence Platform",
+        "description": "Frontend and documentation system for African commodity market intelligence surfaces",
+        "target_buyers": ["executives", "investors", "trade_operators", "media_partners"],
+        "proof_points": ["8 product surfaces", "Index54", "DealRoom54", "Executive54"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "The intelligence platform for African commodity markets.",
+      "narrative": "FIFTY-FOUR packages country, corridor, trade, deal, and executive intelligence into a product-grade market surface.",
+      "differentiators": ["54-country frame", "multi-surface intelligence", "commodity-market focus"]
+    },
+    "proof_points": ["Next.js app", "8 top-level product surfaces"],
+    "constraints": ["market intelligence claims require source provenance"],
+    "systems": {}
+  },
+  {
+    "client_id": "griot_ai",
+    "name": "Griot AI",
+    "segment": "internal_gtcx_product",
+    "stage": "pilot",
+    "geographies": ["Africa"],
+    "sectors": ["intelligence_media", "content", "data"],
+    "goals": {
+      "capital": "Media/data product capital",
+      "revenue": "Content, intelligence, API, sponsor, and distribution partnerships",
+      "partnerships": "Media platforms, data providers, event organizers, ecosystem hubs",
+      "visibility": "Power repeatable GTCX thought leadership and market intelligence",
+      "investor_relations": "Show data-source and content-multiplier moat"
+    },
+    "primary_products": [
+      {
+        "name": "Intelligence Media Engine",
+        "description": "Ingests sources, synthesizes intelligence, generates content, and serves structured data across 54 jurisdictions",
+        "target_buyers": ["media_partners", "ecosystem_hubs", "data_buyers", "trade_platforms"],
+        "proof_points": ["233+ curated feeds", "54-country surfaces", "content review queue"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "The intelligence media engine for African markets.",
+      "narrative": "Griot turns fragmented African market sources into structured intelligence and publishable content.",
+      "differentiators": ["source ingestion", "content multiplier", "54-jurisdiction coverage"]
+    },
+    "proof_points": ["RSS registry", "Index54 contracts", "content pipeline"],
+    "constraints": ["AI-generated content requires human review"],
+    "systems": {}
+  },
+  {
+    "client_id": "nyota_ai",
+    "name": "Nyota AI",
+    "segment": "internal_gtcx_product",
+    "stage": "pilot",
+    "geographies": ["Africa"],
+    "sectors": ["producer_intelligence", "commodities", "messaging"],
+    "goals": {
+      "capital": "Program, DFI, foundation, and channel partnership capital",
+      "revenue": "Producer network, NGO, telco, buyer, and program partnerships",
+      "partnerships": "Producer groups, telcos, NGOs, DFIs, buyers, mobile-money providers",
+      "visibility": "Show commodity intelligence delivered on phones producers already use",
+      "investor_relations": "Build inclusive market-access narrative"
+    },
+    "primary_products": [
+      {
+        "name": "Producer Commodity Intelligence",
+        "description": "WhatsApp and Telegram intelligence for commodity producers",
+        "target_buyers": ["producer_networks", "ngos", "dfis", "telcos", "buyers"],
+        "proof_points": ["25 commodities", "9 languages", "16 WhatsApp commands"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "Commodity intelligence for African producers on the phones they already use.",
+      "narrative": "Nyota delivers verified commodity, compliance, route, and market access intelligence over WhatsApp and Telegram.",
+      "differentiators": ["producer-first", "messaging-native", "multi-language"]
+    },
+    "proof_points": ["25 commodities", "9 languages", "GTCX protocol integration"],
+    "constraints": ["producer impact claims require evidence", "channel partnerships require approval"],
+    "systems": {}
+  },
+  {
+    "client_id": "veritas_ai",
+    "name": "Veritas AI",
+    "segment": "internal_gtcx_product",
+    "stage": "pilot",
+    "geographies": ["Africa", "Global"],
+    "sectors": ["truth_infrastructure", "market_data", "verification"],
+    "goals": {
+      "capital": "Strategic data/trust infrastructure capital",
+      "revenue": "Enterprise verification, benchmark, screening, and data API products",
+      "partnerships": "Markets platforms, data buyers, compliance providers, institutions",
+      "visibility": "Position as verified market truth surface",
+      "investor_relations": "Build proof and data-product narrative"
+    },
+    "primary_products": [
+      {
+        "name": "Verified Market Truth Surface",
+        "description": "Verify, attest, and index product pillars for market truth",
+        "target_buyers": ["enterprises", "commodity_platforms", "data_buyers", "compliance_teams"],
+        "proof_points": ["append-only evidence", "attestation publication", "market benchmarks"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "Truth infrastructure for verified commodity markets.",
+      "narrative": "Veritas consumes verified upstream outputs and produces derivative intelligence, attestations, and index products.",
+      "differentiators": ["read-only truth layer", "append-only stores", "publication workflow"]
+    },
+    "proof_points": ["markets integration contract", "publication workflow", "governed workflow contract"],
+    "constraints": ["crypto authority claims are gated", "truth claims require verified upstream events"],
+    "systems": {}
+  },
+  {
+    "client_id": "sensei_os",
+    "name": "Sensei OS",
+    "segment": "internal_gtcx_product",
+    "stage": "growth",
+    "geographies": ["Africa", "Global South"],
+    "sectors": ["digitization", "government_modernization", "enterprise_migration"],
+    "goals": {
+      "capital": "Enterprise/govtech modernization capital",
+      "revenue": "Government and enterprise digitization programs",
+      "partnerships": "Government departments, regulators, mining commissions, enterprise modernization teams",
+      "visibility": "Show autonomous digitization and verified migration readiness",
+      "investor_relations": "Build modernization infrastructure narrative"
+    },
+    "primary_products": [
+      {
+        "name": "Autonomous Digitization Platform",
+        "description": "Document ingestion, data intelligence, governed migration, and compliance-ready outputs",
+        "target_buyers": ["governments", "regulators", "enterprises", "mining_commissions"],
+        "proof_points": ["MABA", "KORA", "desktop offline mode", "roadmap completion"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "Autonomous digitization for government and enterprise modernization.",
+      "narrative": "Sensei transforms physical records and fragmented legacy systems into verified digital records with audit trails.",
+      "differentiators": ["document intelligence", "KORA certification", "offline desktop mode"]
+    },
+    "proof_points": ["97.9% roadmap completion snapshot", "desktop/offline packaging", "MABA/KORA engines"],
+    "constraints": ["GA claims require current readiness evidence"],
+    "systems": {}
+  },
+  {
+    "client_id": "baseline_os",
+    "name": "BaselineOS",
+    "segment": "internal_gtcx_product",
+    "stage": "revenue",
+    "geographies": ["Africa", "Global South", "Global"],
+    "sectors": ["agent_runtime", "offline_ai", "developer_tools"],
+    "goals": {
+      "capital": "Strategic capital for offline and sovereign AI runtime adoption",
+      "revenue": "Enterprise runtime licensing, developer adoption, implementation services",
+      "partnerships": "AI platforms, systems integrators, government modernization programs, enterprise buyers",
+      "visibility": "Own the offline, low-bandwidth, verifiable AI operating system narrative",
+      "investor_relations": "Build enterprise AI infrastructure narrative"
+    },
+    "primary_products": [
+      {
+        "name": "Offline AI Operating System",
+        "description": "Agent runtime for low-bandwidth, offline, USSD, and verifiable enterprise AI operations",
+        "target_buyers": ["enterprises", "governments", "systems_integrators", "developers"],
+        "proof_points": ["offline durable queue", "USSD adapter", "signed artifacts", "published npm packages"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "AI that runs where AI does not.",
+      "narrative": "BaselineOS enables verifiable AI operations in offline, low-bandwidth, and constrained environments.",
+      "differentiators": ["offline runtime", "USSD support", "signed provenance"]
+    },
+    "proof_points": ["published npm packages", "desktop app", "release verification gates"],
+    "constraints": ["runtime security claims require current release evidence"],
+    "systems": {}
+  },
+  {
+    "client_id": "ledger_ui",
+    "name": "Ledger UI",
+    "segment": "internal_gtcx_product",
+    "stage": "growth",
+    "geographies": ["Africa", "Global"],
+    "sectors": ["design_system", "enterprise_ux", "developer_tools"],
+    "goals": {
+      "capital": "Strategic product infrastructure capital if spun out",
+      "revenue": "Design-system licensing, implementation support, enterprise UI acceleration",
+      "partnerships": "Product teams, enterprise SaaS builders, agencies, ecosystem products",
+      "visibility": "Position as governed UX infrastructure for serious operational software",
+      "investor_relations": "Support portfolio product credibility and UX standardization"
+    },
+    "primary_products": [
+      {
+        "name": "Governed Design-System Platform",
+        "description": "Tokens, UI primitives, layouts, pages, mobile screens, accessibility, and release gates",
+        "target_buyers": ["product_teams", "enterprise_saas", "venture_studios", "internal_gtcx_products"],
+        "proof_points": ["15 packages", "95 UI components", "39 layout variants", "governance SDK"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "Governed interface infrastructure for product-grade operational software.",
+      "narrative": "Ledger UI gives teams reusable, governed, accessible primitives and workflows for serious software products.",
+      "differentiators": ["governance-as-code", "web and mobile primitives", "enterprise workflow layouts"]
+    },
+    "proof_points": ["tokens", "layouts", "Storybook", "release gates"],
+    "constraints": ["package counts and readiness claims require current evidence"],
+    "systems": {}
+  },
+  {
+    "client_id": "fabric_os",
+    "name": "Fabric OS",
+    "segment": "internal_gtcx_product",
+    "stage": "pilot",
+    "geographies": ["Africa", "Global"],
+    "sectors": ["infrastructure", "devops", "security", "deployment"],
+    "goals": {
+      "capital": "Infrastructure/service-fabric investment if commercialized",
+      "revenue": "Managed DevOps, SecOps, deployment assurance, infrastructure services",
+      "partnerships": "Cloud providers, security partners, implementation partners, enterprise buyers",
+      "visibility": "Show production-grade operational backbone for GTCX products",
+      "investor_relations": "Support platform assurance narrative"
+    },
+    "primary_products": [
+      {
+        "name": "Service Fabric Execution Layer",
+        "description": "Cloud control plane for deployment, DevOps, SecOps, Terraform, EKS, and fleet assurance",
+        "target_buyers": ["internal_gtcx_products", "enterprise_clients", "regulated_platforms"],
+        "proof_points": ["ops programs", "deploy matrix", "fleet infra assurance"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "The service fabric that runs trust infrastructure.",
+      "narrative": "Fabric OS provides deployment, security, and infrastructure assurance for regulated and mission-critical systems.",
+      "differentiators": ["fleet assurance", "SecOps", "deployment control plane"]
+    },
+    "proof_points": ["ops:check", "deploy matrix", "CORE operations model"],
+    "constraints": ["security and production claims require current evidence"],
+    "systems": {}
+  },
+  {
+    "client_id": "bridge_os",
+    "name": "BridgeOS",
+    "segment": "internal_gtcx_product",
+    "stage": "pilot",
+    "geographies": ["Africa", "Global"],
+    "sectors": ["program_office", "portfolio_operations", "cross_repo_delivery"],
+    "goals": {
+      "capital": "Support venture studio and platform operating narrative",
+      "revenue": "Program office methodology, portfolio delivery support, implementation services",
+      "partnerships": "Venture studios, accelerators, enterprise transformation offices",
+      "visibility": "Show disciplined multi-repo execution and rollout capability",
+      "investor_relations": "Support operating-system credibility for GTCX"
+    },
+    "primary_products": [
+      {
+        "name": "Ecosystem Program Office",
+        "description": "Cross-repo coordination, gates, rollout scripts, PM engine catalogs, and layout enforcement",
+        "target_buyers": ["venture_studios", "accelerators", "enterprise_transformation_teams"],
+        "proof_points": ["fleet gates", "ZenHub integration", "layout enforcement"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "Program-office infrastructure for complex venture ecosystems.",
+      "narrative": "BridgeOS coordinates cross-repo execution, governance, and rollout discipline across complex product fleets.",
+      "differentiators": ["fleet coordination", "machine gates", "program office model"]
+    },
+    "proof_points": ["ecosystem gates", "PM engine", "rollout scripts"],
+    "constraints": ["delivery claims require current gate evidence"],
+    "systems": {}
+  },
+  {
+    "client_id": "agile_os",
+    "name": "Agile OS",
+    "segment": "internal_gtcx_product",
+    "stage": "mvp",
+    "geographies": ["Africa", "Global"],
+    "sectors": ["agile", "portfolio_operations", "delivery"],
+    "goals": {
+      "capital": "Support methodology/productivity narrative",
+      "revenue": "Cohort execution templates, sprint operations, portfolio agile support",
+      "partnerships": "Accelerators, studios, software delivery teams, ecosystem programs",
+      "visibility": "Show repeatable venture execution cadence",
+      "investor_relations": "Support founder-operating-system proof"
+    },
+    "primary_products": [
+      {
+        "name": "Fleet Agile Home",
+        "description": "Centralized sprint ceremonies, backlog, dependencies, templates, and cross-repo workplans",
+        "target_buyers": ["venture_studios", "accelerators", "portfolio_operators"],
+        "proof_points": ["sprint backlog", "dependency rollup", "sprint templates"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "Agile operating discipline for venture portfolios.",
+      "narrative": "Agile OS provides the sprint, backlog, and dependency machinery for coordinated venture execution.",
+      "differentiators": ["fleet backlog", "cross-repo dependencies", "ceremony templates"]
+    },
+    "proof_points": ["ecosystem sprint backlog", "ZenHub plan"],
+    "constraints": ["execution metrics require current PM evidence"],
+    "systems": {}
+  },
+  {
+    "client_id": "canon_os",
+    "name": "Canon OS",
+    "segment": "internal_gtcx_product",
+    "stage": "growth",
+    "geographies": ["Africa", "Global"],
+    "sectors": ["governance", "audit", "protocols", "documentation"],
+    "goals": {
+      "capital": "Support trust/governance moat narrative",
+      "revenue": "Governance templates, audit methodology, protocol licensing, assurance services",
+      "partnerships": "Auditors, standards bodies, enterprise governance teams, ecosystem operators",
+      "visibility": "Establish governance-as-product credibility",
+      "investor_relations": "Support defensibility and operating discipline narrative"
+    },
+    "primary_products": [
+      {
+        "name": "Governance And Protocol Canon",
+        "description": "Protocols, audit framework, legal/GTM references, templates, and governance source of truth",
+        "target_buyers": ["ecosystem_operators", "enterprise_governance_teams", "auditors"],
+        "proof_points": ["protocols", "audit framework", "central SoR"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "Governance infrastructure for trustworthy product ecosystems.",
+      "narrative": "Canon OS provides the protocols, audit frameworks, and documentation law that keep complex ecosystems coherent.",
+      "differentiators": ["protocol canon", "audit methodology", "machine-readable policy"]
+    },
+    "proof_points": ["P1-P39 protocols", "audit rubric", "central SoR manifest"],
+    "constraints": ["normative claims require canonical source links"],
+    "systems": {}
+  },
+  {
+    "client_id": "ecosystem_os",
+    "name": "Ecosystem OS",
+    "segment": "internal_gtcx_product",
+    "stage": "growth",
+    "geographies": ["Africa", "Global"],
+    "sectors": ["enablement", "gtm", "documentation", "venture_operations"],
+    "goals": {
+      "capital": "Support GTCX fundraising and venture productization",
+      "revenue": "Enable Venture OS, managed service packaging, GTM content, onboarding",
+      "partnerships": "Clients, operators, accelerators, funds, ecosystem hubs",
+      "visibility": "Publicly organize the GTCX ecosystem narrative",
+      "investor_relations": "Maintain fundraising, collateral, and publish registry"
+    },
+    "primary_products": [
+      {
+        "name": "Fleet Documentation And GTM Home",
+        "description": "GitBook, GTM catalog, onboarding, fundraising, Venture OS, and publish registry",
+        "target_buyers": ["internal_gtcx_products", "venture_os_clients", "ecosystem_partners"],
+        "proof_points": ["fundraising package", "venture-os package", "GTM catalog", "publish register"]
+      }
+    ],
+    "positioning": {
+      "one_liner": "The enablement layer for the GTCX venture ecosystem.",
+      "narrative": "Ecosystem OS organizes GTCX documentation, GTM, onboarding, fundraising, and productization into an operator-facing source of truth.",
+      "differentiators": ["fleet documentation", "fundraising engine", "Venture OS"]
+    },
+    "proof_points": ["fundraising root package", "venture-os root package", "fleet docs"],
+    "constraints": ["public-facing claims require review"],
+    "systems": {}
+  }
+]
