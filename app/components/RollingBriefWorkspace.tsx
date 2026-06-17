@@ -14,6 +14,8 @@ import { rankToolsForWorkflow } from "@/lib/tool-registry/ranking";
 import { parseToolDataset } from "@/lib/tool-registry/schema";
 import { WORKFLOW_LABELS } from "@/lib/tool-registry/workflows";
 import { formatBriefMarkdown } from "@/lib/brief";
+import { hasBlockingApprovals } from "@/lib/workflow-state";
+import { WorkflowProgress } from "./WorkflowProgress";
 import { useWorkspace } from "./WorkspaceProvider";
 
 const TOOL_DATASET = parseToolDataset(dataset);
@@ -23,7 +25,14 @@ function parseHorizonDays(horizon: string) {
   return match ? Number(match[1]) : 99;
 }
 
-export function ApprovalsDrawer(props: { open: boolean; onClose: () => void; items: ApprovalItem[] }) {
+export function ApprovalsDrawer(props: {
+  open: boolean;
+  onClose: () => void;
+  items: ApprovalItem[];
+  onApprove: (id: string) => void;
+  onHold: (id: string) => void;
+  statusFor: (id: string) => string;
+}) {
   if (!props.open) return null;
 
   return (
@@ -42,12 +51,16 @@ export function ApprovalsDrawer(props: { open: boolean; onClose: () => void; ite
           <article key={item.id} className={item.highlighted ? "review-card is-highlighted" : "review-card"}>
             <div className="review-topline">
               <span>{item.kind}</span>
-              <strong>{item.status}</strong>
+              <strong>{props.statusFor(item.id)}</strong>
             </div>
             <p>{item.body}</p>
             <div className="review-actions">
-              <button type="button">Approve</button>
-              <button type="button">Hold</button>
+              <button type="button" onClick={() => props.onApprove(item.id)}>
+                Approve
+              </button>
+              <button type="button" onClick={() => props.onHold(item.id)}>
+                Hold
+              </button>
             </div>
           </article>
         ))}
@@ -57,7 +70,14 @@ export function ApprovalsDrawer(props: { open: boolean; onClose: () => void; ite
 }
 
 export function RollingBriefWorkspace() {
-  const { selectedClientId, approvalsDrawerOpen, setApprovalsDrawerOpen } = useWorkspace();
+  const {
+    selectedClientId,
+    approvalsDrawerOpen,
+    setApprovalsDrawerOpen,
+    workflowState,
+    updateApprovalStatus,
+    markClientPublished,
+  } = useWorkspace();
   const client = getClient(selectedClientId);
   const [updatedAt, setUpdatedAt] = useState(() => new Date());
   const [status, setStatus] = useState<string | null>(null);
@@ -124,12 +144,26 @@ export function RollingBriefWorkspace() {
     }
   }
 
+  const approvalIds = useMemo(() => approvals.map((a) => a.id), [approvals]);
+
+  function approvalDisplayStatus(id: string, fallback: string) {
+    const mapped = workflowState.approvalStatuses[id];
+    if (mapped === "approved") return "Approved";
+    if (mapped === "held") return "On hold";
+    return fallback;
+  }
+
   function publishBrief() {
-    if (approvals.some((a) => a.status.toLowerCase().includes("needs") || a.status.toLowerCase().includes("review"))) {
+    if (!workflowState.intakeComplete) {
+      setStatus("Complete intake first — workflow blocked at Day 0.");
+      return;
+    }
+    if (hasBlockingApprovals(workflowState, approvalIds)) {
       setStatus("Publish blocked — approvals pending.");
       setApprovalsDrawerOpen(true);
       return;
     }
+    markClientPublished();
     setStatus(`Published via ${publishTool?.tool.name ?? "automation rail"} (mock).`);
     setUpdatedAt(new Date());
   }
@@ -160,6 +194,8 @@ export function RollingBriefWorkspace() {
           </div>
         </div>
       </section>
+
+      <WorkflowProgress state={workflowState} approvalIds={approvalIds} />
 
       <div style={{ display: "flex", gap: 10, marginBottom: 12, alignItems: "center", flexWrap: "wrap" }}>
         <button className="ghost-button" type="button" onClick={exportBrief}>
@@ -297,7 +333,17 @@ export function RollingBriefWorkspace() {
         </aside>
       </section>
 
-      <ApprovalsDrawer open={approvalsDrawerOpen} onClose={() => setApprovalsDrawerOpen(false)} items={approvals} />
+      <ApprovalsDrawer
+        open={approvalsDrawerOpen}
+        onClose={() => setApprovalsDrawerOpen(false)}
+        items={approvals}
+        onApprove={(id) => updateApprovalStatus(id, "approved")}
+        onHold={(id) => updateApprovalStatus(id, "held")}
+        statusFor={(id) => {
+          const item = approvals.find((a) => a.id === id);
+          return approvalDisplayStatus(id, item?.status ?? "Pending");
+        }}
+      />
     </>
   );
 }

@@ -2,6 +2,14 @@
 
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from "react";
 import type { SelectionReceipt } from "@/lib/tool-registry/receipts";
+import {
+  completeIntake,
+  emptyWorkflowState,
+  markPublished,
+  setApprovalStatus,
+  type ApprovalStatus,
+  type ClientWorkflowState,
+} from "@/lib/workflow-state";
 
 type WorkspaceContextValue = {
   search: string;
@@ -17,6 +25,10 @@ type WorkspaceContextValue = {
   approvalsDrawerOpen: boolean;
   setApprovalsDrawerOpen: (open: boolean) => void;
   requestApprovalsDrawer: () => void;
+  workflowState: ClientWorkflowState;
+  completeClientIntake: () => void;
+  updateApprovalStatus: (approvalId: string, status: ApprovalStatus) => void;
+  markClientPublished: () => void;
 };
 
 const WorkspaceContext = createContext<WorkspaceContextValue | null>(null);
@@ -28,6 +40,9 @@ export function WorkspaceProvider(props: { children: ReactNode }) {
   const [receipts, setReceipts] = useState<SelectionReceipt[]>([]);
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const [approvalsDrawerOpen, setApprovalsDrawerOpen] = useState(false);
+  const [workflowByClient, setWorkflowByClient] = useState<Record<string, ClientWorkflowState>>({});
+
+  const workflowState = workflowByClient[selectedClientId] ?? emptyWorkflowState();
 
   const appendReceipt = useCallback((receipt: SelectionReceipt) => {
     setReceipts((prev) => [receipt, ...prev].slice(0, 50));
@@ -36,6 +51,30 @@ export function WorkspaceProvider(props: { children: ReactNode }) {
   const requestApprovalsDrawer = useCallback(() => {
     setApprovalsDrawerOpen(true);
   }, []);
+
+  const completeClientIntake = useCallback(() => {
+    setWorkflowByClient((prev) => ({
+      ...prev,
+      [selectedClientId]: completeIntake(prev[selectedClientId] ?? emptyWorkflowState()),
+    }));
+  }, [selectedClientId]);
+
+  const updateApprovalStatus = useCallback(
+    (approvalId: string, status: ApprovalStatus) => {
+      setWorkflowByClient((prev) => ({
+        ...prev,
+        [selectedClientId]: setApprovalStatus(prev[selectedClientId] ?? emptyWorkflowState(), approvalId, status),
+      }));
+    },
+    [selectedClientId],
+  );
+
+  const markClientPublished = useCallback(() => {
+    setWorkflowByClient((prev) => ({
+      ...prev,
+      [selectedClientId]: markPublished(prev[selectedClientId] ?? emptyWorkflowState()),
+    }));
+  }, [selectedClientId]);
 
   const value = useMemo(
     () => ({
@@ -52,6 +91,10 @@ export function WorkspaceProvider(props: { children: ReactNode }) {
       approvalsDrawerOpen,
       setApprovalsDrawerOpen,
       requestApprovalsDrawer,
+      workflowState,
+      completeClientIntake,
+      updateApprovalStatus,
+      markClientPublished,
     }),
     [
       search,
@@ -62,6 +105,10 @@ export function WorkspaceProvider(props: { children: ReactNode }) {
       commandPaletteOpen,
       approvalsDrawerOpen,
       requestApprovalsDrawer,
+      workflowState,
+      completeClientIntake,
+      updateApprovalStatus,
+      markClientPublished,
     ],
   );
 
