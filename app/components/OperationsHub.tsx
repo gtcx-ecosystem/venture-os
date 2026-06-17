@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { InboundQueue } from "@/components/InboundQueue";
 import { WorkflowProgress } from "@/components/WorkflowProgress";
 import { useWorkspace } from "@/components/WorkspaceProvider";
 
@@ -9,13 +10,14 @@ const CHECKLIST = [
   { id: "gmail", label: "Gmail labels + Calendar prefixes", doc: "01-docs/workflows/gmail-calendar-setup.md" },
   { id: "drive", label: "Drive folder structure per client", doc: "01-docs/workflows/gmail-calendar-setup.md" },
   { id: "n8n", label: "n8n inbound + digest workflows", doc: "01-docs/workflows/n8n-workflows.v1.json" },
+  { id: "dedupe", label: "Inbound dedupe rules", doc: "01-docs/workflows/dedupe-rules.md" },
   { id: "intake", label: "Day 0 intake complete", route: "/intake" },
   { id: "brief", label: "Rolling brief cadence live", route: "/brief" },
   { id: "templates", label: "Investor update + pricing templates", doc: "01-docs/templates/monthly-investor-update.md" },
 ];
 
 export function OperationsHub() {
-  const { workflowState } = useWorkspace();
+  const { workflowState, selectedClientId } = useWorkspace();
 
   return (
     <>
@@ -38,6 +40,7 @@ export function OperationsHub() {
           </article>
         ))}
       </section>
+      <InboundQueue clientId={selectedClientId} />
     </>
   );
 }

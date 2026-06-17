@@ -12,7 +12,9 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 
 > **Last reconciled:** 2026-06-17 · `execute-roadmap` · Venture OS app bootstrap
 
-## Active phase: **Phase 2 — Warm client managed service**
+## Active phase: **Phase 3 — Automation Layer**
+
+**Phase 2** (managed service surfaces) is **complete** — operational onboarding of warm clients remains.
 
 **Sources reviewed:**
 
@@ -33,9 +35,13 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 
 - Make client + opportunity views real with mock data → first live pipelines.
 
-### Phase 2 — Warm client managed service (now)
+### Phase 2 — Warm client managed service (complete)
 
 - ClickUp/Gmail/Calendar operating surfaces + approval workflow.
+
+### Phase 3 — Automation Layer (now)
+
+- n8n inbound capture, dedupe, digest stubs; approval gates preserved.
 
 ## Sprints (1 week)
 
@@ -99,6 +105,14 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 |------:|-------|--------|
 | S6-01 | Monthly investor update template + export from brief | done |
 | S6-02 | Pricing/options memo (managed service) | done |
+
+### Sprint 7 — Phase 3 automation stubs
+
+| Story | Title | Status |
+|------:|-------|--------|
+| S7-01 | Inbound webhook API (`POST /api/venture/inbound`) + dedupe rules | done |
+| S7-02 | Automation receipts + inbound queue on `/operations` | done |
+| S7-03 | Daily digest API stub (`POST /api/venture/digest`) with approval gate | done |
 
 ## Story details
 

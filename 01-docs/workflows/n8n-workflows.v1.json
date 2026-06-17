@@ -1,13 +1,13 @@
 {
   "version": "1.0.0",
-  "description": "Venture OS Phase 2 — n8n workflow stubs for inbound capture and rolling brief digest",
+  "description": "Venture OS Phase 3 — n8n workflow stubs for inbound capture and rolling brief digest",
   "workflows": [
     {
       "id": "venture-inbound-capture",
       "name": "Venture Inbound Capture",
       "trigger": {
         "type": "webhook",
-        "path": "venture/inbound",
+        "path": "/api/venture/inbound",
         "method": "POST"
       },
       "steps": [
@@ -24,7 +24,7 @@
         {
           "id": "receipt",
           "type": "http",
-          "description": "POST selection receipt to fabric-os ledger (future — fabric-os#106)"
+          "description": "POST automation receipt to Venture OS store; fabric-os ledger when FABRIC_RECEIPT_URL set (fabric-os#106)"
         }
       ],
       "env": ["CLICKUP_API_TOKEN", "CLICKUP_LIST_ID", "FABRIC_RECEIPT_URL"]
