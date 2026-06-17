@@ -2,14 +2,17 @@
   "$schema": "gtcx://audit/deployment-proof/v1",
   "repo": "venture-os",
   "updated": "2026-06-17",
-  "status": "pending-live-url",
+  "status": "staging-origin-live",
   "platforms": {
     "aws": {
       "kind": "eks",
       "ecr": "348389439381.dkr.ecr.af-south-1.amazonaws.com/gtcx-venture-os",
+      "imageTag": "3943cb2",
       "overlay": "fabric-os/deploy/kubernetes/overlays/staging/venture-os",
       "terraform": "fabric-os/deploy/terraform/modules/secrets/venture-os.tf",
-      "stagingUrl": "https://venture-staging.gtcx.trade"
+      "stagingUrl": "https://venture-staging.gtcx.trade",
+      "albHost": "k8s-gtcxstagingapi-295a96727a-1533822930.af-south-1.elb.amazonaws.com",
+      "namespace": "venture-os-staging"
     },
     "gcp": {
       "kind": "cloud-run",
@@ -20,6 +23,33 @@
   "deprecated": {
     "vercel": "not used — fleet standard is AWS/GCP"
   },
-  "deployments": [],
-  "note": "Run build-push-ecr.sh or deploy-cloud-run.sh; append URL and timestamp after first green deploy."
+  "deployments": [
+    {
+      "platform": "aws-eks",
+      "environment": "staging",
+      "deployedAt": "2026-06-17T15:49:37Z",
+      "image": "348389439381.dkr.ecr.af-south-1.amazonaws.com/gtcx-venture-os:3943cb2",
+      "probes": {
+        "inClusterHealth": {
+          "url": "http://venture-os.venture-os-staging.svc.cluster.local:3000/api/health",
+          "httpStatus": 200,
+          "bodyStatus": "ok"
+        },
+        "albOriginHealth": {
+          "url": "https://k8s-gtcxstagingapi-295a96727a-1533822930.af-south-1.elb.amazonaws.com/api/health",
+          "hostHeader": "venture-staging.gtcx.trade",
+          "httpStatus": 200,
+          "bodyStatus": "ok"
+        },
+        "publicHostname": {
+          "url": "https://venture-staging.gtcx.trade/api/health",
+          "httpStatus": 525,
+          "note": "Cloudflare proxy — point CNAME to ALB (terminal-staging pattern) or disable orange-cloud"
+        }
+      },
+      "pod": "venture-os-6bc4994f6b-mks4z",
+      "externalsecret": "venture-os-secrets SecretSynced=True"
+    }
+  ],
+  "note": "EKS origin live. Public hostname pending Cloudflare DNS alignment with external-dns ALB target."
 }

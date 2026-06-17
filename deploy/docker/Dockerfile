@@ -20,6 +20,8 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY --from=deps /app/app/node_modules ./app/node_modules
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY app ./app
+COPY clients ./clients
+COPY prototype ./prototype
 COPY docs/operations/workflows/newsletter-source-registry.json ./docs/operations/workflows/newsletter-source-registry.json
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_ENV=production

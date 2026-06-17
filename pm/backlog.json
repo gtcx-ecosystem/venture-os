@@ -23,9 +23,9 @@
     {
       "id": "DEPLOY-02",
       "title": "First staging deploy (AWS EKS or GCP Cloud Run)",
-      "status": "pending",
+      "status": "done",
       "owner": "venture-os",
-      "note": "Requires ECR push + fabric-os overlay, or gcloud run deploy"
+      "note": "EKS origin live 2026-06-17 — pod 1/1, ALB health 200; public CF DNS 525 pending"
     }
   ]
 }
