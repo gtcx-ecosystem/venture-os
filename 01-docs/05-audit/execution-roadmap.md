@@ -93,6 +93,13 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 | S5-01 | Operations hub route (`/operations`) with Day 4 setup checklist | done |
 | S5-02 | n8n workflow manifest (JSON) for inbound + digest | done |
 
+### Sprint 6 — Phase 2 deliverables (templates)
+
+| Story | Title | Status |
+|------:|-------|--------|
+| S6-01 | Monthly investor update template + export from brief | done |
+| S6-02 | Pricing/options memo (managed service) | done |
+
 ## Story details
 
 ### S0-02 — Route skeletons

@@ -14,6 +14,7 @@ import { rankToolsForWorkflow } from "@/lib/tool-registry/ranking";
 import { parseToolDataset } from "@/lib/tool-registry/schema";
 import { WORKFLOW_LABELS } from "@/lib/tool-registry/workflows";
 import { formatBriefMarkdown } from "@/lib/brief";
+import { formatInvestorUpdateMarkdown } from "@/lib/investor-update";
 import { hasBlockingApprovals } from "@/lib/workflow-state";
 import { WorkflowProgress } from "./WorkflowProgress";
 import { useWorkspace } from "./WorkspaceProvider";
@@ -144,6 +145,23 @@ export function RollingBriefWorkspace() {
     }
   }
 
+  async function exportInvestorUpdate() {
+    const periodLabel = updatedAt.toLocaleDateString(undefined, { month: "long", year: "numeric" });
+    const md = formatInvestorUpdateMarkdown({
+      client,
+      periodLabel,
+      pipeline,
+      priorities,
+    });
+    try {
+      await navigator.clipboard.writeText(md);
+      setStatus("Investor update draft copied to clipboard.");
+      setUpdatedAt(new Date());
+    } catch {
+      setStatus("Export failed — clipboard unavailable.");
+    }
+  }
+
   const approvalIds = useMemo(() => approvals.map((a) => a.id), [approvals]);
 
   function approvalDisplayStatus(id: string, fallback: string) {
@@ -199,7 +217,10 @@ export function RollingBriefWorkspace() {
 
       <div style={{ display: "flex", gap: 10, marginBottom: 12, alignItems: "center", flexWrap: "wrap" }}>
         <button className="ghost-button" type="button" onClick={exportBrief}>
-          Export
+          Export brief
+        </button>
+        <button className="ghost-button" type="button" onClick={exportInvestorUpdate}>
+          Investor update
         </button>
         <button className="primary-button" type="button" onClick={publishBrief}>
           Publish

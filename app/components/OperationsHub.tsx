@@ -11,6 +11,7 @@ const CHECKLIST = [
   { id: "n8n", label: "n8n inbound + digest workflows", doc: "01-docs/workflows/n8n-workflows.v1.json" },
   { id: "intake", label: "Day 0 intake complete", route: "/intake" },
   { id: "brief", label: "Rolling brief cadence live", route: "/brief" },
+  { id: "templates", label: "Investor update + pricing templates", doc: "01-docs/templates/monthly-investor-update.md" },
 ];
 
 export function OperationsHub() {
