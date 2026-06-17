@@ -2,23 +2,28 @@
 
 **Repo:** venture-os — GTCX venture operating system (Next.js app in `app/`).
 
-## Session start
-
-1. Read `README.md` and `docs/README.md`.
-2. Run `pnpm install` && `pnpm dev` from repo root.
-3. Fleet work selection: `pnpm --dir ../bridge-os agent:next-work` when coordinating with program office.
-
 ## Protocols
 
-- **P22** — execute returned story; no story menus.
-- **P26** — Proceed Brief then implement.
-- **P27** — run gates in-session; report command + exit code.
+Protocol 22 (work selection — **delegated to bridge-os**), Protocol 24, Protocol 26, Protocol 27, Protocol 28 in force.
+
+**Phase 5.4:** Run `pnpm agent:next-work` before substantive work. **Authority class** R/A/S per Protocol 28.
+
+**Never ask the operator to choose** among backlog items when P22 returns a story.
+
+```bash
+pnpm agent:next-work
+pnpm agent:work-selection:check
+pnpm ops:check
+```
 
 ## Quality gates
 
 ```bash
+pnpm test
 pnpm lint
-pnpm dev
+pnpm build
 ```
 
-Conventional commits: `type(scope): subject`.
+## Scope
+
+Product app in `app/` · Roadmap `pm/execution-roadmap.md` · Product docs `docs/product/`.

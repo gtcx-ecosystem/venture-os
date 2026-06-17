@@ -1,4 +1,4 @@
-export type AutomationReceiptKind = "inbound_capture" | "digest_scheduled" | "dedupe_skip";
+export type AutomationReceiptKind = "inbound_capture" | "digest_scheduled" | "dedupe_skip" | "agency_handoff";
 
 export type AutomationReceipt = {
   id: string;

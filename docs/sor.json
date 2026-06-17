@@ -24,7 +24,7 @@
       "role": "session, MCP, ACR — read-only"
     }
   },
-  "allowedTopLevel": ["overview", "operations", "reference", "strategy"],
+  "allowedTopLevel": ["product", "operations", "reference"],
   "narrativePointersOnly": ["assurance", "coordination", "gtm", "legal", "security"],
   "forbidden": {
     "opsDuplicatesUnderDocs": ["assurance", "attestation", "coordination", "gtm", "legal", "security", "witness"]

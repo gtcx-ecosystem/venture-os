@@ -33,7 +33,7 @@ Repo-scoped documentation for **venture-os**. Read `INDEX.md` before creating pa
 - New top-level folders without `CHANGELOG.md` entry + profile check
 - P29 ops domains under `docs/` (`compliance/`, `gtm/`, `security/`) — use `ops/`
 - Version path tokens (`-v2`, `v3/`) — Protocol 47
-- Numbered segments (`01-agents/`) — relocate to canonical names
+- Numbered root hubs (`01-docs/`, `03-platform/`) — use `docs/` + `pm/` per P35 v5
 
 ## Agent rules
 

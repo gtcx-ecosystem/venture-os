@@ -1,0 +1,8 @@
+{
+  "$schema": "gtcx://ops/security/v1",
+  "repo": "venture-os",
+  "updated": "2026-06-17",
+  "paths": {
+    "posture": "ops/security/posture.json"
+  }
+}

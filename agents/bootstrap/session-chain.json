@@ -1,0 +1,4 @@
+{
+  "$schema": "gtcx://canon-os/session-chain/v1",
+  "reads": ["AGENTS.md", "pm/execution-roadmap.md", "agents/capabilities/authority-matrix.md"]
+}

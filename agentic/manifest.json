@@ -1,0 +1,20 @@
+{
+  "$schema": "gtcx://agentic/bridge/v1",
+  "schema": "gtcx.agentic.bridge.v1",
+  "repo": "venture-os",
+  "role": "product-venture-os",
+  "updated": "2026-06-17",
+  "bridge-os": {
+    "resolvedAt": "../bridge-os",
+    "verbs": {
+      "agent:next-work": "pnpm agent:next-work"
+    }
+  },
+  "agents": {
+    "resolvedAt": "agents/manifest.json"
+  },
+  "protocols": {
+    "P22": "delegated — bridge-os",
+    "P35": "product repo — docs/ + pm/ + ops/"
+  }
+}

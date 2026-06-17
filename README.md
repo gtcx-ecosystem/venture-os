@@ -47,17 +47,9 @@ pnpm build    # production build (all routes)
 
 | File | Purpose |
 | ---- | ------- |
-| [`ecosystem-client-map.md`](./ecosystem-client-map.md) | Internal pilot client review across GTCX repos |
-| [`product-spec.md`](./product-spec.md) | Product scope, users, modules, wedge, and MVP |
-| [`modules-and-workflows.md`](./modules-and-workflows.md) | Workflows for fundraising, growth, visibility, investor relations, partnerships, and scale |
-| [`agentic-team.md`](./agentic-team.md) | Agentic team roles and handoffs for Venture OS |
-| [`data-model.md`](./data-model.md) | Core product entities and relationships |
-| [`implementation-roadmap.md`](./implementation-roadmap.md) | Build path from internal service to app-backed product |
-| [`gtm-and-packaging.md`](./gtm-and-packaging.md) | Customer segments, packages, pricing logic, and sales motions |
-| [`pilot-onboarding.md`](./pilot-onboarding.md) | How to onboard warm clients and GTCX repos as pilots |
-| [`clients/internal-gtcx-clients.json`](./clients/internal-gtcx-clients.json) | Seed client profiles for GTCX ecosystem repos |
-| [`01-docs/05-audit/execution-roadmap.md`](./01-docs/05-audit/execution-roadmap.md) | Living execute-roadmap (sprints, numbered story specs) |
-| [`pm/execution-roadmap.md`](./pm/execution-roadmap.md) | Fleet PM SoR pointer |
+| [`docs/product/product-spec.md`](./docs/product/product-spec.md) | Product scope, modules, MVP |
+| [`docs/product/implementation-roadmap.md`](./docs/product/implementation-roadmap.md) | Phase 0–6 build path |
+| [`pm/execution-roadmap.md`](./pm/execution-roadmap.md) | Living execute-roadmap (sprints) |
 | [`schema/client.schema.json`](./schema/client.schema.json) | Machine-readable client profile contract |
 
 ## Relationship To Fundraising

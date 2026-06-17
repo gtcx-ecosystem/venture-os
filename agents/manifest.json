@@ -1,0 +1,8 @@
+{
+  "$schema": "gtcx://agentic/bridge/v1",
+  "repo": "venture-os",
+  "role": "thin-bridge",
+  "updated": "2026-06-17",
+  "bridge-os": { "resolvedAt": "../bridge-os" },
+  "protocols": { "P22": "pm/backlog.json", "P35": "pm/manifest.json layoutVersion v5" }
+}

@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "description": "Venture OS — Africa-focused founder command center (docs + app).",
   "packageManager": "pnpm@9.15.0",
+  "type": "module",
   "engines": {
     "node": ">=20.18.0",
     "pnpm": ">=9.15.0"
@@ -13,7 +14,12 @@
     "build": "pnpm --dir app build",
     "start": "pnpm --dir app start",
     "lint": "pnpm --dir app lint",
-    "test": "pnpm --dir app test"
+    "test": "pnpm --dir app test",
+    "ops:check": "node platform/scripts/ops-check.mjs",
+    "workspace:check": "node platform/scripts/workspace/check.mjs",
+    "agent:next-work": "node platform/scripts/agent/agent-next-work.mjs",
+    "agent:work-selection:check": "node ../bridge-os/platform/scripts/checks/check-agent-work-selection.mjs",
+    "pm:folder:check": "node ../bridge-os/platform/scripts/workspace/pm-folder-check.mjs",
+    "agent:conduct:check": "node ../bridge-os/platform/scripts/checks/check-agent-conduct-local.mjs"
   }
 }
-

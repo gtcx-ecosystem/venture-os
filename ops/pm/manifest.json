@@ -1,0 +1,14 @@
+{
+  "$schema": "gtcx://ops/pm/v1",
+  "repo": "venture-os",
+  "updated": "2026-06-17",
+  "local": {
+    "executionRoadmap": "pm/execution-roadmap.md",
+    "workSelection": "docs/operations/agent-work-selection.md",
+    "autoDevState": "pm/auto-dev-state.md",
+    "nextWorkScript": "platform/scripts/agent/agent-next-work.mjs"
+  },
+  "sync": {
+    "output": "pm/backlog.json"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "gtcx://ops/attestation/witness/v1",
+  "repo": "venture-os",
+  "updated": "2026-06-17",
+  "paths": {
+    "evidence": "ops/attestation/witness/evidence-index.json",
+    "narrative": "audit/README.md"
+  }
+}
