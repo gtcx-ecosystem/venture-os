@@ -2,7 +2,7 @@
   "$schema": "gtcx://audit/deployment-proof/v1",
   "repo": "venture-os",
   "updated": "2026-06-17",
-  "status": "staging-origin-live",
+  "status": "live",
   "platforms": {
     "aws": {
       "kind": "eks",
@@ -11,7 +11,7 @@
       "overlay": "fabric-os/deploy/kubernetes/overlays/staging/venture-os",
       "terraform": "fabric-os/deploy/terraform/modules/secrets/venture-os.tf",
       "stagingUrl": "https://venture-staging.gtcx.trade",
-      "albHost": "k8s-gtcxstagingapi-295a96727a-1533822930.af-south-1.elb.amazonaws.com",
+      "acmCertificateArn": "arn:aws:acm:af-south-1:348389439381:certificate/5fb27ff7-3e2c-499b-93d1-1bc7cb8aa62a",
       "namespace": "venture-os-staging"
     },
     "gcp": {
@@ -27,29 +27,27 @@
     {
       "platform": "aws-eks",
       "environment": "staging",
-      "deployedAt": "2026-06-17T15:49:37Z",
+      "deployedAt": "2026-06-17T17:37:17Z",
       "image": "348389439381.dkr.ecr.af-south-1.amazonaws.com/gtcx-venture-os:3943cb2",
       "probes": {
-        "inClusterHealth": {
-          "url": "http://venture-os.venture-os-staging.svc.cluster.local:3000/api/health",
-          "httpStatus": 200,
-          "bodyStatus": "ok"
-        },
-        "albOriginHealth": {
-          "url": "https://k8s-gtcxstagingapi-295a96727a-1533822930.af-south-1.elb.amazonaws.com/api/health",
-          "hostHeader": "venture-staging.gtcx.trade",
-          "httpStatus": 200,
-          "bodyStatus": "ok"
-        },
-        "publicHostname": {
+        "publicHealth": {
           "url": "https://venture-staging.gtcx.trade/api/health",
-          "httpStatus": 525,
-          "note": "Cloudflare proxy — point CNAME to ALB (terminal-staging pattern) or disable orange-cloud"
+          "httpStatus": 200,
+          "bodyStatus": "ok"
+        },
+        "publicReady": {
+          "url": "https://venture-staging.gtcx.trade/api/ready",
+          "httpStatus": 403,
+          "note": "WAF on staging ALB — health is canonical liveness probe"
+        },
+        "publicOpportunities": {
+          "url": "https://venture-staging.gtcx.trade/api/venture/opportunities?clientId=terra_os",
+          "httpStatus": 200
         }
       },
-      "pod": "venture-os-6bc4994f6b-mks4z",
-      "externalsecret": "venture-os-secrets SecretSynced=True"
+      "externalsecret": "venture-os-secrets SecretSynced=True",
+      "dns": "Cloudflare CNAME venture-staging.gtcx.trade -> staging ALB (proxied=false)",
+      "vaultCredential": "CLOUDFLARE_DNS_API_TOKEN (Baseline Vault)"
     }
-  ],
-  "note": "EKS origin live. Public hostname pending Cloudflare DNS alignment with external-dns ALB target."
+  ]
 }
