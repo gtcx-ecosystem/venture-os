@@ -12,7 +12,7 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 
 > **Last reconciled:** 2026-06-17 · `execute-roadmap` · Venture OS app bootstrap
 
-## Active phase: **Phase 1 — Internal pilots (GTCX repos as clients)**
+## Active phase: **Phase 2 — Warm client managed service**
 
 **Sources reviewed:**
 
@@ -83,8 +83,15 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 | Story | Title | Status |
 |------:|-------|--------|
 | S4-01 | Day 0 client intake form (`/intake`) pre-filled from client profile | done |
-| S4-02 | ClickUp board template + Gmail/Calendar setup guide (docs) | pending |
-| S4-03 | Approval workflow wiring (intake → brief → publish) | pending |
+| S4-02 | ClickUp board template + Gmail/Calendar setup guide (docs) | done |
+| S4-03 | Approval workflow wiring (intake → brief → publish) | done |
+
+### Sprint 5 — Operating system hub
+
+| Story | Title | Status |
+|------:|-------|--------|
+| S5-01 | Operations hub route (`/operations`) with Day 4 setup checklist | done |
+| S5-02 | n8n workflow manifest (JSON) for inbound + digest | done |
 
 ## Story details
 
