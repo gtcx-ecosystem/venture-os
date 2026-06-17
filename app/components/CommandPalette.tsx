@@ -43,6 +43,9 @@ export function CommandPalette() {
       { id: "nav-brief", label: "Go to Rolling Brief", hint: "/brief", action: () => router.push("/brief") },
       { id: "nav-intake", label: "Go to Client Intake", hint: "/intake", action: () => router.push("/intake") },
       { id: "nav-operations", label: "Go to Operations Hub", hint: "/operations", action: () => router.push("/operations") },
+      { id: "nav-sources", label: "Go to Sources", hint: "/sources", action: () => router.push("/sources") },
+      { id: "nav-signals", label: "Go to Signals", hint: "/signals", action: () => router.push("/signals") },
+      { id: "nav-clients", label: "Go to Clients", hint: "/clients", action: () => router.push("/clients") },
       { id: "nav-capital", label: "Go to Capital Desk", hint: "/capital", action: () => router.push("/capital") },
       { id: "nav-tools", label: "Go to Tool Registry", hint: "/tools", action: () => router.push("/tools") },
       {

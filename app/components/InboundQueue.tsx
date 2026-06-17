@@ -22,7 +22,7 @@ type AutomationReceipt = {
   summary: string;
 };
 
-export function InboundQueue(props: { clientId?: string }) {
+export function InboundQueue(props: { clientId?: string; sourceFilter?: string }) {
   const [candidates, setCandidates] = useState<InboundCandidate[]>([]);
   const [receipts, setReceipts] = useState<AutomationReceipt[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -39,7 +39,11 @@ export function InboundQueue(props: { clientId?: string }) {
       })
       .then((data) => {
         if (cancelled) return;
-        setCandidates(data.candidates);
+        const filtered =
+          props.sourceFilter && props.sourceFilter !== "all"
+            ? data.candidates.filter((item) => item.payload.source === props.sourceFilter)
+            : data.candidates;
+        setCandidates(filtered);
         setReceipts(data.receipts);
         setError(null);
       })
@@ -51,7 +55,7 @@ export function InboundQueue(props: { clientId?: string }) {
     return () => {
       cancelled = true;
     };
-  }, [props.clientId, reloadToken]);
+  }, [props.clientId, props.sourceFilter, reloadToken]);
 
   return (
     <section className="content-grid" aria-label="Inbound automation queue">
