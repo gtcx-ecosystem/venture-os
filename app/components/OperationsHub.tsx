@@ -13,6 +13,7 @@ const CHECKLIST = [
   { id: "dedupe", label: "Inbound dedupe rules", doc: "docs/operations/workflows/dedupe-rules.md" },
   { id: "griot", label: "Griot webhook adapter", doc: "pm/stories/S8-01-griot-webhook-adapter.md" },
   { id: "agency", label: "Agency handoff (approved brief)", doc: "docs/operations/workflows/agency-handoff.md" },
+  { id: "newsletter", label: "Newsletter send rail (Listmonk)", doc: "docs/operations/workflows/newsletter-send.md" },
   { id: "intake", label: "Day 0 intake complete", route: "/intake" },
   { id: "brief", label: "Rolling brief cadence live", route: "/brief" },
   { id: "templates", label: "Investor update + pricing templates", doc: "docs/operations/templates/monthly-investor-update.md" },
