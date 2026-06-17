@@ -1,6 +1,6 @@
 # AWS — venture-os
 
-**Primary fleet path:** ECR → EKS (fabric-os staging overlays).
+**Primary fleet path:** ECR → EKS via **fabric-os** staging overlay.
 
 ## Build + push (ECR)
 
@@ -11,12 +11,17 @@ export PUSH=1
 ./deploy/scripts/build-push-ecr.sh
 ```
 
-## Apply to staging
+## Apply to staging (fabric-os)
 
-Register overlay in `fabric-os/deploy/kubernetes/overlays/staging/venture-os/` using [`kubernetes/staging/deployment.yaml`](../kubernetes/staging/deployment.yaml).
+Canonical overlay: `fabric-os/deploy/kubernetes/overlays/staging/venture-os/`
 
 ```bash
-kubectl apply -k fabric-os/deploy/kubernetes/overlays/staging/venture-os
+# fabric-os repo — after terraform apply module.secrets (venture-os.tf)
+./platform/scripts/staging/populate-venture-os-staging-sm.sh
+kubectl apply -k deploy/kubernetes/overlays/staging/venture-os/
+kubectl get pods -n venture-os-staging
 ```
 
-Secrets: AWS Secrets Manager via ExternalSecrets — `venture-os-secrets` (see terminal-os pattern).
+Secrets: AWS SM `gtcx/venture-os/staging/api-keys` → K8s `venture-os-secrets` (ESO).
+
+Staging URL: `https://venture-staging.gtcx.trade`

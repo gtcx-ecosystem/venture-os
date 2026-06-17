@@ -17,9 +17,11 @@ pnpm test && pnpm build && pnpm ops:check
 | ---- | ------------------ |
 | Image | [`deploy/docker/Dockerfile`](../../deploy/docker/Dockerfile) |
 | Build/push | [`deploy/scripts/build-push-ecr.sh`](../../deploy/scripts/build-push-ecr.sh) |
-| K8s manifest | [`deploy/kubernetes/staging/deployment.yaml`](../../deploy/kubernetes/staging/deployment.yaml) |
-| Overlay home | `fabric-os/deploy/kubernetes/overlays/staging/venture-os/` |
+| K8s overlay (SoR) | `fabric-os/deploy/kubernetes/overlays/staging/venture-os/` |
+| Terraform IRSA | `fabric-os/deploy/terraform/modules/secrets/venture-os.tf` |
+| SM populate | `fabric-os/platform/scripts/staging/populate-venture-os-staging-sm.sh` |
 | ECR (staging) | `348389439381.dkr.ecr.af-south-1.amazonaws.com/gtcx-venture-os` |
+| Staging URL | `https://venture-staging.gtcx.trade` |
 
 ```bash
 export AWS_REGION=af-south-1
@@ -28,7 +30,12 @@ export PUSH=1
 ./deploy/scripts/build-push-ecr.sh
 ```
 
-Secrets: AWS Secrets Manager → `venture-os-secrets` (ExternalSecrets pattern — mirror terminal-os).
+Secrets: AWS SM path `gtcx/venture-os/staging/api-keys` → K8s `venture-os-secrets` via ESO (mirror terminal-os).
+
+```bash
+# fabric-os — after terraform apply
+kubectl apply -k deploy/kubernetes/overlays/staging/venture-os/
+```
 
 ## GCP — Cloud Run
 

@@ -8,7 +8,8 @@
       "kind": "eks",
       "ecr": "348389439381.dkr.ecr.af-south-1.amazonaws.com/gtcx-venture-os",
       "overlay": "fabric-os/deploy/kubernetes/overlays/staging/venture-os",
-      "manifest": "deploy/kubernetes/staging/deployment.yaml"
+      "terraform": "fabric-os/deploy/terraform/modules/secrets/venture-os.tf",
+      "stagingUrl": "https://venture-staging.gtcx.trade"
     },
     "gcp": {
       "kind": "cloud-run",
