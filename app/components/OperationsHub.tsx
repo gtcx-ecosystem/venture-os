@@ -9,7 +9,7 @@ const CHECKLIST = [
   { id: "clickup", label: "ClickUp space + Venture Opportunities list", doc: "docs/operations/workflows/clickup-board-template.md" },
   { id: "gmail", label: "Gmail labels + Calendar prefixes", doc: "docs/operations/workflows/gmail-calendar-setup.md" },
   { id: "drive", label: "Drive folder structure per client", doc: "docs/operations/workflows/gmail-calendar-setup.md" },
-  { id: "n8n", label: "n8n inbound + digest workflows", doc: "docs/operations/workflows/n8n-workflows.v1.json" },
+  { id: "n8n", label: "n8n inbound + digest workflows", doc: "docs/operations/workflows/n8n-workflows.json" },
   { id: "dedupe", label: "Inbound dedupe rules", doc: "docs/operations/workflows/dedupe-rules.md" },
   { id: "griot", label: "Griot webhook adapter", doc: "pm/stories/S8-01-griot-webhook-adapter.md" },
   { id: "agency", label: "Agency handoff (approved brief)", doc: "docs/operations/workflows/agency-handoff.md" },

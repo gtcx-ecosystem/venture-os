@@ -22,6 +22,7 @@
     "pm:folder:check": "node ../bridge-os/platform/scripts/workspace/pm-folder-check.mjs",
     "agent:conduct:check": "node ../bridge-os/platform/scripts/checks/check-agent-conduct-local.mjs",
     "docs:foundation:check": "node platform/scripts/docs-foundation-check.mjs",
-    "docs:foundation:check:write": "node platform/scripts/docs-foundation-check.mjs --write"
+    "docs:foundation:check:write": "node platform/scripts/docs-foundation-check.mjs --write",
+    "agent:auto-dev:check": "node ../bridge-os/platform/scripts/checks/check-agent-auto-dev-local.mjs"
   }
 }
