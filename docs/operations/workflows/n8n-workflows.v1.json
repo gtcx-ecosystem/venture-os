@@ -55,6 +55,33 @@
         }
       ],
       "env": ["CLICKUP_API_TOKEN", "GMAIL_OAUTH_CREDENTIALS", "FOUNDER_EMAIL"]
+    },
+    {
+      "id": "venture-newsletter-send",
+      "name": "Venture Newsletter Send (Listmonk)",
+      "trigger": {
+        "type": "webhook",
+        "path": "/api/venture/newsletter",
+        "method": "POST"
+      },
+      "steps": [
+        {
+          "id": "validate-approval",
+          "type": "function",
+          "description": "Require approvalStatus approved + briefId when present"
+        },
+        {
+          "id": "compose-campaign",
+          "type": "http",
+          "description": "POST Venture OS newsletter rail (dryRun true by default)"
+        },
+        {
+          "id": "listmonk-dispatch",
+          "type": "http",
+          "description": "Optional: POST /api/campaigns when dryRun false and LISTMONK_* configured"
+        }
+      ],
+      "env": ["LISTMONK_URL", "LISTMONK_API_USER", "LISTMONK_API_TOKEN", "VENTURE_WEBHOOK_SECRET"]
     }
   ]
 }

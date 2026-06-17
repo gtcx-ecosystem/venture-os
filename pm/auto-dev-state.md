@@ -6,10 +6,10 @@
 
 | Field | Value |
 | ----- | ----- |
-| **Story** | PROV-01 |
-| **Action** | Complete P35 provisioning lift |
+| **Story** | BL-NEWS-01 |
+| **Action** | Newsletter source registry — Miniflux/Gmail → inbound |
 | **Owner** | venture-os |
-| **Because** | Fleet compliance + protocol violation remediation |
+| **Because** | Sprint 8 sealed; Phase 3 automation rails live |
 
 ## Verify
 

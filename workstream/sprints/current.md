@@ -1,12 +1,11 @@
 # Current sprint — venture-os
 
-**Sprint 8** — media rails (S8-02, S8-03) after PROV-01.
+**Sprint 9** — newsletter source rails (BL-NEWS-01).
 
 ## Goals
 
-- PROV-01 P35 provisioning lift
-- S8-02 Agency handoff spec
-- S8-03 Newsletter send rail stub
+- BL-NEWS-01 Miniflux RSS + Gmail label → inbound mapping
+- Wire source registry to live ingest
 
 ## Blockers
 

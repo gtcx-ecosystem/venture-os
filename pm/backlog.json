@@ -2,7 +2,7 @@
   "$schema": "gtcx://ops/pm-backlog/v1",
   "repo": "venture-os",
   "updated": "2026-06-17",
-  "active": "S8-03",
+  "active": "BL-NEWS-01",
   "backlogClear": false,
   "roadmapPath": "pm/execution-roadmap.md",
   "stories": [
@@ -19,6 +19,12 @@
       "owner": "bridge-os"
     },
     {
+      "id": "S8-01",
+      "title": "Griot webhook adapter",
+      "status": "done",
+      "owner": "venture-os"
+    },
+    {
       "id": "S8-02",
       "title": "Agency handoff spec",
       "status": "done",
@@ -27,6 +33,12 @@
     {
       "id": "S8-03",
       "title": "Newsletter send rail stub",
+      "status": "done",
+      "owner": "venture-os"
+    },
+    {
+      "id": "BL-NEWS-01",
+      "title": "Newsletter source registry (Miniflux/Gmail)",
       "status": "pending",
       "owner": "venture-os"
     }

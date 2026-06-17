@@ -1,0 +1,26 @@
+{
+  "$schema": "gtcx://venture/newsletter-source-registry/v1",
+  "updated": "2026-06-17",
+  "listmonk": {
+    "baseUrlEnv": "LISTMONK_URL",
+    "apiUserEnv": "LISTMONK_API_USER",
+    "apiTokenEnv": "LISTMONK_API_TOKEN"
+  },
+  "clients": {
+    "terra_os": {
+      "listmonkListId": 1,
+      "sources": ["rss", "gmail"],
+      "defaultSubjectPrefix": "[Terra OS]"
+    },
+    "terminal_os": {
+      "listmonkListId": 2,
+      "sources": ["rss", "griot"],
+      "defaultSubjectPrefix": "[Terminal OS]"
+    },
+    "nyota_ai": {
+      "listmonkListId": 3,
+      "sources": ["rss", "gmail"],
+      "defaultSubjectPrefix": "[Nyota]"
+    }
+  }
+}
