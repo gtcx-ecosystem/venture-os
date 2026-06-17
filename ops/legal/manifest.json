@@ -1,0 +1,8 @@
+{
+  "$schema": "gtcx://ops/legal/v1",
+  "updated": "2026-06-17",
+  "fabricRegister": "fabric-os/pm/legal-friction-register.json",
+  "fabricDoc": "fabric-os/docs/operations/legalops-as-a-service.md",
+  "blocksIRDefault": false,
+  "protocol": "P44-FABRIC-CONSUMPTION"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "gtcx://bridge-os/deployment-profile/v1",
+  "repo": "venture-os",
+  "deployMode": "static",
+  "environments": [
+    "staging"
+  ],
+  "readinessCommand": "pnpm ops:consumption:check",
+  "infraMatrixRef": "INF-PER-REPO-001#venture-os",
+  "costClass": "scheduled",
+  "owner": "venture-os"
+}
