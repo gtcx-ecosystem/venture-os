@@ -1,0 +1,28 @@
+{
+  "$schema": "./root-allowlist.schema.json",
+  "version": "5.0.0",
+  "updated": "2026-06-17",
+  "description": "P35 v5 venture-os product repo root",
+  "required_files": ["README.md", "AGENTS.md", "CHANGELOG.md"],
+  "required_directories": [
+    "archive",
+    "docs",
+    "ops",
+    "platform",
+    "deploy",
+    "audit",
+    "workstream",
+    "config",
+    "agents",
+    "pm",
+    "agile",
+    "app",
+    "clients",
+    "prototype",
+    "schema"
+  ],
+  "forbidden_root_names": {
+    "01-docs": "Use docs/ + pm/ (P35 v5).",
+    "03-platform": "Use platform/ (P35 v5)."
+  }
+}
