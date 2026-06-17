@@ -3,7 +3,7 @@
   "schema": "gtcx.docs.sor.v1",
   "repo": "venture-os",
   "repoKind": "product",
-  "updated": "2026-06-17",
+  "updated": "2026-06-16",
   "narrativeRoot": "docs/",
   "upstream": {
     "constitution": {
@@ -24,9 +24,29 @@
       "role": "session, MCP, ACR — read-only"
     }
   },
-  "allowedTopLevel": ["product", "operations", "reference"],
-  "narrativePointersOnly": ["assurance", "coordination", "gtm", "legal", "security"],
+  "allowedTopLevel": [
+    "foundation",
+    "product",
+    "operations",
+    "reference",
+    "business"
+  ],
+  "narrativePointersOnly": [
+    "assurance",
+    "coordination",
+    "gtm",
+    "legal",
+    "security"
+  ],
   "forbidden": {
-    "opsDuplicatesUnderDocs": ["assurance", "attestation", "coordination", "gtm", "legal", "security", "witness"]
+    "opsDuplicatesUnderDocs": [
+      "assurance",
+      "attestation",
+      "coordination",
+      "gtm",
+      "legal",
+      "security",
+      "witness"
+    ]
   }
 }

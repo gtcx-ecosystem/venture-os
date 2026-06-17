@@ -1,0 +1,81 @@
+{
+  "$schema": "gtcx://bridge-os/product-goals/v1",
+  "version": "1.0.0",
+  "repo": "venture-os",
+  "tier": "product",
+  "updated": "2026-06-17",
+  "vision": {
+    "statement": "Africa-focused founder command center — capital desk, growth desk, and visibility desk productized from the GTCX fundraising engine",
+    "horizon": "2026-2028"
+  },
+  "mission": "Ship Venture OS MVP app + collateral workflows so GTCX ecosystem repos are the first pilot clients with demoable founder journeys",
+  "northStarMetric": {
+    "name": "Pilot founder journey completion",
+    "target": "One end-to-end intake → collateral → visibility witness per pilot client",
+    "witness": "audit/evidence/venture-pilot-journey-latest.json"
+  },
+  "valueProposition": {
+    "for": "African founders, venture studios, and accelerators",
+    "who": "need governed fundraising and growth operations without generic CRM sprawl",
+    "product": "Venture OS",
+    "that": "turns opportunity flow into funded, visible, partnership-ready companies",
+    "unlike": "generic CRMs and chatbot wrappers",
+    "we": "bind human-gated sends with agent prep, monitoring, and GTCX ecosystem pilot profiles"
+  },
+  "customers": {
+    "primarySegment": "GTCX ecosystem repos as first pilot clients",
+    "icp": "Founder-led ventures raising capital in African and Global South markets",
+    "buyerPersonas": ["founder-ceo", "venture-studio-operator", "accelerator-partner"],
+    "soR": "docs/product/"
+  },
+  "competition": {
+    "alternatives": ["Notion + spreadsheets", "HubSpot CRM", "Manual fundraising consultants"],
+    "differentiation": "Venture studio execution engine with GTCX substrate pilots — not a generic CRM",
+    "soR": "docs/product/product-spec.md"
+  },
+  "gtm": {
+    "tier": "GR-T2-partial",
+    "motion": "Ecosystem-first pilot — GTCX repos as venture profiles, then external founders",
+    "channels": ["ecosystem pilot", "venture studio partners", "accelerator cohorts"],
+    "programmes": ["PROG-CONTINENTAL-CAPITAL"]
+  },
+  "activeMilestone": {
+    "id": "M1",
+    "title": "Venture OS MVP + GTCX pilot shell",
+    "shippableOutcome": "Next.js app routes green (lint/build); product-goals + PRD indexed; pilot client schema validated",
+    "targetDate": "2026-Q3",
+    "programmeId": "PROG-CONTINENTAL-CAPITAL",
+    "headStoryId": "VENTURE-MVP-001",
+    "prdRefs": ["prd-venture-os-charter"],
+    "acceptanceChecks": [
+      {
+        "id": "app-build",
+        "label": "pnpm build exit 0",
+        "witness": "app/.next/BUILD_ID"
+      },
+      {
+        "id": "culture-check",
+        "label": "ecosystem:product-culture:check PASS for venture-os",
+        "witness": "bridge-os/pm/ci/product-culture-fleet-latest.json"
+      }
+    ]
+  },
+  "definitionOfDone": {
+    "story": [
+      "prdRef in activeMilestone.prdRefs",
+      "pnpm lint + build green for app changes",
+      "auditNotes on done"
+    ],
+    "milestone": [
+      "all acceptanceChecks pass",
+      "human approval on external sends and public claims"
+    ],
+    "forbidden": ["done without PRD trace", "autonomous external investor outreach"]
+  },
+  "productIntegrity": {
+    "prdIndex": "pm/product/prd-index.json",
+    "prdsDir": "pm/product/prds/",
+    "executionRoadmap": "pm/execution-roadmap.md",
+    "storyMustTraceTo": ["prdRef", "activeMilestone.id"]
+  }
+}
