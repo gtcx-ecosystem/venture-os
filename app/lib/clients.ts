@@ -19,6 +19,7 @@ export type VentureClient = {
     narrative: string;
     differentiators: string[];
   };
+  constraints?: string[];
 };
 
 export const CLIENTS = rawClients as VentureClient[];

@@ -29,11 +29,11 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 - Port the static prototype into a real Next.js app surface without losing visual fidelity.
 - Establish navigation + component boundaries so subsequent design iterations are fast.
 
-### Phase 1 — Internal pilots (GTCX repos as clients) (now)
+### Phase 1 — Internal pilots (GTCX repos as clients) (complete)
 
 - Make client + opportunity views real with mock data → first live pipelines.
 
-### Phase 2 — Warm client managed service
+### Phase 2 — Warm client managed service (now)
 
 - ClickUp/Gmail/Calendar operating surfaces + approval workflow.
 
@@ -77,6 +77,14 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 | S3-01 | Wire tool ranking into rolling brief (signal + publish hops) | done |
 | S3-02 | Brief export + publish actions (mock) | done |
 | S3-03 | Workflow map: signals → enrich → approve → publish | done |
+
+### Sprint 4 — Phase 2 kickoff (managed service)
+
+| Story | Title | Status |
+|------:|-------|--------|
+| S4-01 | Day 0 client intake form (`/intake`) pre-filled from client profile | done |
+| S4-02 | ClickUp board template + Gmail/Calendar setup guide (docs) | pending |
+| S4-03 | Approval workflow wiring (intake → brief → publish) | pending |
 
 ## Story details
 

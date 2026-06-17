@@ -41,6 +41,7 @@ export function CommandPalette() {
     const nav: Command[] = [
       { id: "nav-home", label: "Go to Command Center", hint: "/", action: () => router.push("/") },
       { id: "nav-brief", label: "Go to Rolling Brief", hint: "/brief", action: () => router.push("/brief") },
+      { id: "nav-intake", label: "Go to Client Intake", hint: "/intake", action: () => router.push("/intake") },
       { id: "nav-capital", label: "Go to Capital Desk", hint: "/capital", action: () => router.push("/capital") },
       { id: "nav-tools", label: "Go to Tool Registry", hint: "/tools", action: () => router.push("/tools") },
       {
