@@ -1,0 +1,18 @@
+{
+  "name": "venture-os",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Venture OS — Africa-focused founder command center (docs + app).",
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20.18.0",
+    "pnpm": ">=9.15.0"
+  },
+  "scripts": {
+    "dev": "pnpm --dir app dev",
+    "build": "pnpm --dir app build",
+    "start": "pnpm --dir app start",
+    "lint": "pnpm --dir app lint"
+  }
+}
+
