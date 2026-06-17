@@ -30,6 +30,19 @@ Venture OS is not a generic CRM. It is a founder-driven execution engine that
 turns messy opportunity flow into funded, visible, investable, partnership-ready
 companies.
 
+## Dev app
+
+The Next.js app lives in [`app/`](./app/). From repo root:
+
+```bash
+pnpm install
+pnpm dev      # http://localhost:3000
+pnpm lint     # eslint
+pnpm build    # production build (all routes)
+```
+
+**Quality gates:** `pnpm lint` and `pnpm build` must pass before merging app changes.
+
 ## Files
 
 | File | Purpose |

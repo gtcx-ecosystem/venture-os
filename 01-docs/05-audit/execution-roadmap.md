@@ -43,10 +43,10 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 | Story | Title | Status |
 |------:|-------|--------|
 | S0-01 | App shell exists; prototype CSS loads; Command Center renders | done |
-| S0-02 | Add route skeletons (`/capital`, `/growth`, `/visibility`, `/collateral`) | pending |
-| S0-03 | Componentize layout (Sidebar/Topbar) + view switch wiring | pending |
-| S0-04 | Port interactive behaviors from `prototype/app.js` (search + filter + run agent queue) | pending |
-| S0-05 | Add dev-quality gates (`pnpm lint`, `pnpm build`) documented in repo root | pending |
+| S0-02 | Add route skeletons (`/capital`, `/growth`, `/visibility`, `/collateral`) | done |
+| S0-03 | Componentize layout (Sidebar/Topbar) + view switch wiring | done |
+| S0-04 | Port interactive behaviors from `prototype/app.js` (search + filter + run agent queue) | done |
+| S0-05 | Add dev-quality gates (`pnpm lint`, `pnpm build`) documented in repo root | done |
 
 ## Story details
 
