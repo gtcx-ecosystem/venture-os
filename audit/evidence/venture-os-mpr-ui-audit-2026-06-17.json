@@ -1,0 +1,139 @@
+{
+  "schema": "gtcx://baseline-os/mpr-feature-witness/v1",
+  "repo": "venture-os",
+  "scope": "feature",
+  "scopeId": "command-center-mpr-11pr",
+  "auditedAt": "2026-06-17T18:50:00.000Z",
+  "surface": "Command Center + fleet app shell (localhost:3000)",
+  "rubric": "11PR",
+  "commands": [
+    { "cmd": "pnpm test", "exitCode": 0, "detail": "13 files, 31 tests" },
+    { "cmd": "pnpm lint", "exitCode": 0 },
+    { "cmd": "pnpm build", "exitCode": 0 },
+    { "cmd": "pnpm ops:check", "exitCode": 0 },
+    { "cmd": "pnpm docs:foundation:check", "exitCode": 1, "detail": "ERR_MODULE_NOT_FOUND platform/scripts/lib/repo-root.mjs" }
+  ],
+  "composite100": 66,
+  "foundationComposite100": 62,
+  "transformationalComposite100": 71,
+  "publishable": false,
+  "trustCap100": 74,
+  "pillars": {
+    "compliance": {
+      "score100": 58,
+      "published": false,
+      "findings": [
+        { "id": "CMP-01", "severity": "P1", "title": "Default Next.js page metadata", "evidence": "app/app/layout.tsx title Create Next App" },
+        { "id": "CMP-02", "severity": "P1", "title": "Missing LICENSE", "evidence": "five-pillar-latest.json root-license" },
+        { "id": "CMP-03", "severity": "P1", "title": "P35 strict layout fail", "evidence": "five-pillar-latest.json p35-strict-pass" },
+        { "id": "CMP-04", "severity": "P1", "title": "docs:foundation:check broken", "evidence": "missing platform/scripts/lib/repo-root.mjs" },
+        { "id": "CMP-05", "severity": "P2", "title": "Hardcoded pipeline metrics without provenance", "evidence": "CommandCenterWorkspace.tsx 42/11/7" },
+        { "id": "CMP-06", "severity": "P2", "title": "UX SoR pack missing", "evidence": "ux-sor-latest.json 0/8 items pass" }
+      ]
+    },
+    "technicalExcellence": {
+      "score100": 68,
+      "published": false,
+      "findings": [
+        { "id": "TE-01", "severity": "P1", "title": "Command Center bypasses API layer", "evidence": "CommandCenterWorkspace imports mock.ts directly; OpportunitiesWorkspace uses /api/venture/opportunities" },
+        { "id": "TE-02", "severity": "P1", "title": "Agent queue is client-only state", "evidence": "queueWorkflow() setReviews local only; no /api/venture/agency call" },
+        { "id": "TE-03", "severity": "P2", "title": "No E2E on primary operator journey", "evidence": "vitest lib tests only; no playwright for /" },
+        { "id": "TE-04", "severity": "P2", "title": "Non-functional primary actions", "evidence": "Topbar Share/Publish brief; create dock tiles; Command Center New button" },
+        { "id": "TE-05", "severity": "P3", "title": "API still mock-backed at source", "evidence": "clickup-sync.ts imports OPPORTUNITIES from mock.ts" }
+      ]
+    },
+    "craft": {
+      "score100": 74,
+      "published": false,
+      "findings": [
+        { "id": "CRF-01", "severity": "P2", "title": "Commodity AI SaaS visual language", "evidence": "Geist + glass orbs + gradient cards" },
+        { "id": "CRF-02", "severity": "P2", "title": "Decorative Live badge", "evidence": "agent-panel status-dot without health binding" },
+        { "id": "CRF-03", "severity": "P3", "title": "Single-letter nav icons without expanded labels", "evidence": "Sidebar NAV icon C/B/I only" }
+      ]
+    },
+    "worldClass": {
+      "score100": 72,
+      "published": false,
+      "findings": [
+        { "id": "WC-01", "severity": "P1", "title": "Missing empty/loading/error states on Command Center", "evidence": "no skeleton or empty opportunity grid" },
+        { "id": "WC-02", "severity": "P2", "title": "ESL-2 not ESL-3", "evidence": "five-pillar-latest worldClass blockedBy esl:ESL-3" },
+        { "id": "WC-03", "severity": "P2", "title": "No keyboard shortcuts discoverability beyond ⌘K", "evidence": "create dock hints not wired" },
+        { "id": "WC-04", "severity": "P3", "title": "Next dev overlay breaks demo immersion", "evidence": "N 1 Issue badge in operator screenshot" }
+      ]
+    },
+    "trustAndSafety": {
+      "score100": 55,
+      "published": false,
+      "findings": [
+        { "id": "TS-01", "severity": "P0", "title": "Opportunity claims without evidence refs", "evidence": "cards show fit scores and DFI claims; no evidenceRef" },
+        { "id": "TS-02", "severity": "P1", "title": "Agent outputs lack receipt envelope", "evidence": "ReceiptLog exists but not surfaced in Command Center agent panel" },
+        { "id": "TS-03", "severity": "P1", "title": "Publish brief has no Class A approval gate", "evidence": "Topbar primary-button no workflow hook" },
+        { "id": "TS-04", "severity": "P2", "title": "anti-hallucination score low in fleet witness", "evidence": "five-pillar trust anti-hallucination 30" },
+        { "id": "TS-05", "severity": "P2", "title": "Rolling brief publish marked mock", "evidence": "RollingBriefWorkspace Published via ... (mock)" }
+      ]
+    },
+    "creativityInnovation": {
+      "score100": 78,
+      "published": false,
+      "blockedBy": ["craft<85", "worldClass<85"],
+      "findings": [
+        { "id": "CI-01", "severity": "info", "title": "Africa Venture OS desk taxonomy is differentiated", "evidence": "Capital/Growth/Visibility/Collateral desks + client workspaces" }
+      ]
+    },
+    "commercialValue": {
+      "score100": 82,
+      "published": false,
+      "blockedBy": ["worldClass<85"],
+      "findings": [
+        { "id": "CV-01", "severity": "info", "title": "GTM-native opportunity cards", "evidence": "P1/P2 priority, horizon, fit on AfDB/Markets OS cards" }
+      ]
+    },
+    "defensiveMoat": {
+      "score100": 70,
+      "published": false,
+      "blockedBy": ["craft<85", "worldClass<85"],
+      "findings": [
+        { "id": "DM-01", "severity": "P2", "title": "Fleet client context not bound to canon SoR", "evidence": "clients.ts static; no pm/canon/strategy.json load" }
+      ]
+    },
+    "agenticEmpowerment": {
+      "score100": 65,
+      "published": false,
+      "blockedBy": ["technicalExcellence<85"],
+      "findings": [
+        { "id": "AE-01", "severity": "P1", "title": "Agent rail looks live but is not orchestrated", "evidence": "queueWorkflow local state; agency/griot APIs unused from CC" },
+        { "id": "AE-02", "severity": "P2", "title": "Command palette queue action only navigates home", "evidence": "CommandPalette action-queue router.push('/')" }
+      ]
+    },
+    "productEcosystemIntegration": {
+      "score100": 68,
+      "published": false,
+      "blockedBy": ["technicalExcellence<85", "worldClass<85"],
+      "findings": [
+        { "id": "PE-01", "severity": "P1", "title": "Client list names fleet OS but no deep links", "evidence": "Sidebar clients are buttons not cross-repo links" },
+        { "id": "PE-02", "severity": "P2", "title": "Inbound/sources/signals wired; Command Center isolated", "evidence": "grep fetch /api/venture — CC absent" }
+      ]
+    },
+    "ipMagic": {
+      "score100": 73,
+      "published": false,
+      "blockedBy": ["craft<85", "worldClass<85"],
+      "findings": [
+        { "id": "IP-01", "severity": "info", "title": "Founder command center composite has wow potential", "evidence": "hero + agent rail + create dock pattern" },
+        { "id": "IP-02", "severity": "P1", "title": "Magic deflated by non-functional affordances", "evidence": "TE-04 + hardcoded metrics" }
+      ]
+    }
+  },
+  "backlogRef": "pm/backlog.json",
+  "intakeRef": "audit/product-management/backlog/",
+  "prioritizedRemediation": [
+    "MPR-05",
+    "MPR-03",
+    "MPR-04",
+    "MPR-01",
+    "MPR-02",
+    "MPR-06",
+    "MPR-07",
+    "MPR-08"
+  ]
+}
