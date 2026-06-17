@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import dataset from "@/lib/tool-registry/dataset/tools.v1.json";
 import { getClient } from "@/lib/clients";
 import {
   APPROVAL_ITEMS,
@@ -9,7 +10,13 @@ import {
   PIPELINE_ITEMS,
   type ApprovalItem,
 } from "@/lib/mock";
+import { rankToolsForWorkflow } from "@/lib/tool-registry/ranking";
+import { parseToolDataset } from "@/lib/tool-registry/schema";
+import { WORKFLOW_LABELS } from "@/lib/tool-registry/workflows";
+import { formatBriefMarkdown } from "@/lib/brief";
 import { useWorkspace } from "./WorkspaceProvider";
+
+const TOOL_DATASET = parseToolDataset(dataset);
 
 function parseHorizonDays(horizon: string) {
   const match = horizon.match(/(\d+)/);
@@ -50,10 +57,10 @@ export function ApprovalsDrawer(props: { open: boolean; onClose: () => void; ite
 }
 
 export function RollingBriefWorkspace() {
-  const { selectedClientId } = useWorkspace();
+  const { selectedClientId, approvalsDrawerOpen, setApprovalsDrawerOpen } = useWorkspace();
   const client = getClient(selectedClientId);
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const [updatedAt] = useState(() => new Date());
+  const [updatedAt, setUpdatedAt] = useState(() => new Date());
+  const [status, setStatus] = useState<string | null>(null);
 
   const priorities = useMemo(
     () =>
@@ -84,6 +91,49 @@ export function RollingBriefWorkspace() {
     [selectedClientId],
   );
 
+  const signalTool = useMemo(
+    () => rankToolsForWorkflow("brief_signals", { tools: TOOL_DATASET.tools })[0],
+    [],
+  );
+
+  const publishTool = useMemo(
+    () => rankToolsForWorkflow("brief_publish", { tools: TOOL_DATASET.tools })[0],
+    [],
+  );
+
+  const briefMarkdown = useMemo(
+    () =>
+      formatBriefMarkdown({
+        client,
+        priorities,
+        pipeline,
+        worklist72h,
+        calendar,
+        approvals,
+      }),
+    [client, priorities, pipeline, worklist72h, calendar, approvals],
+  );
+
+  async function exportBrief() {
+    try {
+      await navigator.clipboard.writeText(briefMarkdown);
+      setStatus("Brief exported to clipboard.");
+      setUpdatedAt(new Date());
+    } catch {
+      setStatus("Export failed — clipboard unavailable.");
+    }
+  }
+
+  function publishBrief() {
+    if (approvals.some((a) => a.status.toLowerCase().includes("needs") || a.status.toLowerCase().includes("review"))) {
+      setStatus("Publish blocked — approvals pending.");
+      setApprovalsDrawerOpen(true);
+      return;
+    }
+    setStatus(`Published via ${publishTool?.tool.name ?? "automation rail"} (mock).`);
+    setUpdatedAt(new Date());
+  }
+
   return (
     <>
       <section className="hero-panel" aria-label="Rolling founder brief">
@@ -111,17 +161,25 @@ export function RollingBriefWorkspace() {
         </div>
       </section>
 
-      <div style={{ display: "flex", gap: 10, marginBottom: 12 }}>
-        <button className="ghost-button" type="button">
+      <div style={{ display: "flex", gap: 10, marginBottom: 12, alignItems: "center", flexWrap: "wrap" }}>
+        <button className="ghost-button" type="button" onClick={exportBrief}>
           Export
         </button>
-        <button className="ghost-button" type="button">
+        <button className="primary-button" type="button" onClick={publishBrief}>
           Publish
         </button>
-        <button className="primary-button" type="button" onClick={() => setDrawerOpen(true)}>
+        <button className="primary-button" type="button" onClick={() => setApprovalsDrawerOpen(true)}>
           Approvals · {approvals.length}
         </button>
+        {status ? <span style={{ color: "var(--subtle)", fontSize: 13 }}>{status}</span> : null}
       </div>
+
+      <section className="toolbar" aria-label="Workflow map">
+        <span className="tool-pill is-active">Signals · {signalTool?.tool.name ?? "—"}</span>
+        <span className="tool-pill">Enrich · n8n</span>
+        <span className="tool-pill">Approve · drawer</span>
+        <span className="tool-pill">Publish · {publishTool?.tool.name ?? "—"}</span>
+      </section>
 
       <section className="content-grid" aria-label="Rolling brief workspace">
         <div className="board-column">
@@ -207,10 +265,39 @@ export function RollingBriefWorkspace() {
               ))
             )}
           </div>
+
+          <div className="agent-header" style={{ marginTop: 20 }}>
+            <div>
+              <div className="section-label">AI-native stack</div>
+              <h2>Recommended tools</h2>
+            </div>
+          </div>
+          <div className="review-stack">
+            {signalTool ? (
+              <article className="review-card">
+                <div className="review-topline">
+                  <span>{WORKFLOW_LABELS.brief_signals}</span>
+                  <strong>{signalTool.rank_score}</strong>
+                </div>
+                <p>{signalTool.tool.name}</p>
+                <p style={{ color: "var(--muted)", fontSize: 13 }}>{signalTool.rationale.slice(0, 2).join(" · ")}</p>
+              </article>
+            ) : null}
+            {publishTool ? (
+              <article className="review-card">
+                <div className="review-topline">
+                  <span>{WORKFLOW_LABELS.brief_publish}</span>
+                  <strong>{publishTool.rank_score}</strong>
+                </div>
+                <p>{publishTool.tool.name}</p>
+                <p style={{ color: "var(--muted)", fontSize: 13 }}>{publishTool.rationale.slice(0, 2).join(" · ")}</p>
+              </article>
+            ) : null}
+          </div>
         </aside>
       </section>
 
-      <ApprovalsDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} items={approvals} />
+      <ApprovalsDrawer open={approvalsDrawerOpen} onClose={() => setApprovalsDrawerOpen(false)} items={approvals} />
     </>
   );
 }
