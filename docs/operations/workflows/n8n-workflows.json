@@ -82,6 +82,44 @@
         }
       ],
       "env": ["LISTMONK_URL", "LISTMONK_API_USER", "LISTMONK_API_TOKEN", "VENTURE_WEBHOOK_SECRET"]
+    },
+    {
+      "id": "venture-miniflux-ingest",
+      "name": "Venture Miniflux RSS Ingest",
+      "trigger": {
+        "type": "webhook",
+        "path": "/api/venture/sources/miniflux",
+        "method": "POST"
+      },
+      "steps": [
+        {
+          "id": "forward-entry",
+          "type": "http",
+          "description": "Forward Miniflux entry payload; resolve client via feed id in newsletter-source-registry.json"
+        }
+      ],
+      "env": ["VENTURE_WEBHOOK_SECRET", "MINIFLUX_WEBHOOK_SECRET"]
+    },
+    {
+      "id": "venture-gmail-source-ingest",
+      "name": "Venture Gmail Label Ingest",
+      "trigger": {
+        "type": "gmail",
+        "description": "New message on VO/{client}/inbox-opportunities or visibility labels"
+      },
+      "steps": [
+        {
+          "id": "normalize-label",
+          "type": "function",
+          "description": "Map Gmail message to label, messageId, subject, snippet"
+        },
+        {
+          "id": "post-venture",
+          "type": "http",
+          "description": "POST /api/venture/sources/gmail"
+        }
+      ],
+      "env": ["GMAIL_OAUTH_CREDENTIALS", "VENTURE_WEBHOOK_SECRET", "GMAIL_WEBHOOK_SECRET"]
     }
   ]
 }

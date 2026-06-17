@@ -6,14 +6,13 @@
 
 | Field | Value |
 | ----- | ----- |
-| **Story** | BL-NEWS-01 |
-| **Action** | Newsletter source registry — Miniflux/Gmail → inbound |
+| **Story** | — |
+| **Action** | Roadmap backlog clear — await new intake or Phase 4 scope |
 | **Owner** | venture-os |
-| **Because** | Sprint 8 sealed; Phase 3 automation rails live |
+| **Because** | S9-01 sealed; `backlogClear: true` |
 
 ## Verify
 
 ```bash
-pnpm agent:next-work --json
-pnpm ops:check
+pnpm test && pnpm ops:check
 ```

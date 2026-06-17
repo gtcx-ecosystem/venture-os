@@ -2,8 +2,8 @@
   "$schema": "gtcx://ops/pm-backlog/v1",
   "repo": "venture-os",
   "updated": "2026-06-17",
-  "active": "BL-NEWS-01",
-  "backlogClear": false,
+  "active": null,
+  "backlogClear": true,
   "roadmapPath": "pm/execution-roadmap.md",
   "stories": [
     {
@@ -37,9 +37,9 @@
       "owner": "venture-os"
     },
     {
-      "id": "BL-NEWS-01",
-      "title": "Newsletter source registry (Miniflux/Gmail)",
-      "status": "pending",
+      "id": "S9-01",
+      "title": "Newsletter source registry",
+      "status": "done",
       "owner": "venture-os"
     }
   ]

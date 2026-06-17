@@ -14,11 +14,15 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 
 **Stories:** [`pm/stories/`](./stories/) · **Intake backlog:** [`audit/product-management/backlog/`](../audit/product-management/backlog/)
 
-## Active phase: **Phase 3 complete** — Sprint 8 media syndication sealed
-
-Next intake: **BL-NEWS-01** source rails (Sprint 9).
+## Active phase: **Sprint 9** — newsletter source ingest sealed
 
 ## Sprints
+
+### Sprint 9 — Newsletter source registry — **sealed**
+
+| Story | Title | Status |
+|------:|-------|--------|
+| S9-01 | Newsletter source registry (Miniflux/Gmail → inbound) | done |
 
 ### Sprint PROV — Fleet provisioning (P35)
 

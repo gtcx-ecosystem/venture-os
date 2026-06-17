@@ -10,17 +10,94 @@
     "terra_os": {
       "listmonkListId": 1,
       "sources": ["rss", "gmail"],
-      "defaultSubjectPrefix": "[Terra OS]"
+      "defaultSubjectPrefix": "[Terra OS]",
+      "rss": {
+        "feeds": [
+          {
+            "feedId": 101,
+            "name": "AfDB Press",
+            "url": "https://www.afdb.org/en/news-and-events/rss",
+            "kind": "partner",
+            "urgency": "P2"
+          },
+          {
+            "feedId": 102,
+            "name": "UNECA News",
+            "url": "https://www.uneca.org/rss.xml",
+            "kind": "visibility",
+            "urgency": "P3"
+          }
+        ]
+      },
+      "gmail": {
+        "labels": [
+          {
+            "label": "VO/terra_os/inbox-opportunities",
+            "kind": "revenue",
+            "urgency": "P1"
+          },
+          {
+            "label": "VO/terra_os/visibility",
+            "kind": "visibility",
+            "urgency": "P2"
+          }
+        ]
+      }
     },
     "terminal_os": {
       "listmonkListId": 2,
       "sources": ["rss", "griot"],
-      "defaultSubjectPrefix": "[Terminal OS]"
+      "defaultSubjectPrefix": "[Terminal OS]",
+      "rss": {
+        "feeds": [
+          {
+            "feedId": 201,
+            "name": "LME Notices",
+            "url": "https://www.lme.com/rss",
+            "kind": "capital",
+            "urgency": "P2"
+          }
+        ]
+      },
+      "gmail": {
+        "labels": [
+          {
+            "label": "VO/terminal_os/inbox-opportunities",
+            "kind": "revenue",
+            "urgency": "P1"
+          }
+        ]
+      }
     },
     "nyota_ai": {
       "listmonkListId": 3,
       "sources": ["rss", "gmail"],
-      "defaultSubjectPrefix": "[Nyota]"
+      "defaultSubjectPrefix": "[Nyota]",
+      "rss": {
+        "feeds": [
+          {
+            "feedId": 301,
+            "name": "FAO Africa",
+            "url": "https://www.fao.org/africa/rss/news.xml",
+            "kind": "partner",
+            "urgency": "P2"
+          }
+        ]
+      },
+      "gmail": {
+        "labels": [
+          {
+            "label": "VO/nyota_ai/inbox-opportunities",
+            "kind": "revenue",
+            "urgency": "P1"
+          },
+          {
+            "label": "VO/nyota_ai/diligence",
+            "kind": "capital",
+            "urgency": "P1"
+          }
+        ]
+      }
     }
   }
 }

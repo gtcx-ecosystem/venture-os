@@ -1,12 +1,11 @@
 # Current sprint — venture-os
 
-**Sprint 9** — newsletter source rails (BL-NEWS-01).
+**Sprint 9 sealed** — newsletter source registry (S9-01 / BL-NEWS-01).
 
 ## Goals
 
-- BL-NEWS-01 Miniflux RSS + Gmail label → inbound mapping
-- Wire source registry to live ingest
+- (complete)
 
-## Blockers
+## Next
 
-- (none)
+- Icebox: live Listmonk dispatch, Miniflux production wiring, fabric-os receipt ledger

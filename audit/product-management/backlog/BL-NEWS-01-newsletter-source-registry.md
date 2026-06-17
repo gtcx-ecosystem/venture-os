@@ -1,6 +1,6 @@
 ---
 title: 'BL-NEWS-01 — Newsletter source registry'
-status: intake
+status: done
 date: 2026-06-17
 backlog_id: BL-NEWS-01
 ---
@@ -9,4 +9,4 @@ backlog_id: BL-NEWS-01
 
 Miniflux RSS + Gmail labels per client; map to inbound `source: rss | gmail`.
 
-**Promote to:** Sprint 9 when Phase 3 automation stable.
+**Promoted to:** [`pm/stories/S9-01-newsletter-source-registry.md`](../../../pm/stories/S9-01-newsletter-source-registry.md) — done.
