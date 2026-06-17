@@ -1,19 +1,28 @@
 "use client";
 
 import { useMemo, useState, useEffect, useCallback } from "react";
+import { useRouter } from "next/navigation";
 import { FILTER_OPTIONS, INITIAL_REVIEWS, type ReviewCard } from "../lib/mock";
 import { getClient } from "../lib/clients";
+import { getClientVisualTheme } from "../lib/client-visual";
 import { computePipelineMetrics } from "../lib/opportunities";
 import { useOpportunities } from "../lib/hooks/useOpportunities";
 import type { AutomationReceipt } from "../lib/automation/receipts";
-import { EvidenceChip } from "./EvidenceChip";
+import { OpportunityCard } from "./OpportunityCard";
 import { AutomationReceiptLog } from "./AutomationReceiptLog";
 import { useWorkspace } from "./WorkspaceProvider";
+import {
+  SkeletonOpportunityGrid,
+  WorkspaceEmptyState,
+  WorkspaceErrorState,
+} from "./workspace/WorkspaceStates";
 
 export function CommandCenterWorkspace() {
+  const router = useRouter();
   const { search, activeFilter, setActiveFilter, selectedClientId } = useWorkspace();
   const client = getClient(selectedClientId);
-  const { opportunities, loading, error } = useOpportunities(selectedClientId);
+  const clientVisual = getClientVisualTheme(selectedClientId);
+  const { opportunities, loading, error, reload } = useOpportunities(selectedClientId);
   const [reviews, setReviews] = useState<ReviewCard[]>(INITIAL_REVIEWS);
   const [automationReceipts, setAutomationReceipts] = useState<AutomationReceipt[]>([]);
   const [queueError, setQueueError] = useState<string | null>(null);
@@ -39,7 +48,10 @@ export function CommandCenterWorkspace() {
     const term = search.trim().toLowerCase();
     return opportunities.filter((item) => {
       const matchesFilter = activeFilter === "all" || item.kind === activeFilter;
-      const matchesSearch = !term || item.title.includes(term) || item.headline.toLowerCase().includes(term);
+      const matchesSearch =
+        !term ||
+        item.title.toLowerCase().includes(term) ||
+        item.headline.toLowerCase().includes(term);
       return matchesFilter && matchesSearch;
     });
   }, [search, activeFilter, opportunities]);
@@ -72,13 +84,18 @@ export function CommandCenterWorkspace() {
   const healthLabel =
     serviceHealth === "live" ? "Live" : serviceHealth === "degraded" ? "Degraded" : "Checking";
 
+  const metricValue = (value: number) => (loading ? "—" : String(value));
+
   return (
     <>
       <section className="hero-panel" aria-label="Founder command center">
-        <div className="orb orb-one" />
-        <div className="orb orb-two" />
         <div className="hero-copy">
-          <div className="eyebrow">Founder command center</div>
+          <div className="eyebrow">
+            Founder command center
+            <span className={`client-identity client-identity--${clientVisual.motif}`}>
+              {client?.name ?? selectedClientId} · {clientVisual.shortLabel}
+            </span>
+          </div>
           <h1>Run capital, growth, visibility, and partnerships from one desk.</h1>
           <p>
             {client?.positioning.one_liner ??
@@ -87,15 +104,15 @@ export function CommandCenterWorkspace() {
         </div>
         <div className="hero-metrics" aria-label="Pipeline summary">
           <div>
-            <strong>{metrics.qualified}</strong>
+            <strong>{metricValue(metrics.qualified)}</strong>
             <span>Qualified</span>
           </div>
           <div>
-            <strong>{metrics.p1Moves}</strong>
+            <strong>{metricValue(metrics.p1Moves)}</strong>
             <span>P1 Moves</span>
           </div>
           <div>
-            <strong>{metrics.approvalsPending}</strong>
+            <strong>{metricValue(metrics.approvalsPending)}</strong>
             <span>Needs proof</span>
           </div>
         </div>
@@ -118,65 +135,37 @@ export function CommandCenterWorkspace() {
         <div className="board-column">
           <div className="column-heading">
             <h2>Priority Opportunities</h2>
-            <button className="small-button" type="button" disabled title="Use Opportunities desk to sync">
-              New
+            <button
+              className="small-button"
+              type="button"
+              onClick={() => router.push("/opportunities")}
+            >
+              Open board
             </button>
           </div>
 
           {loading ? (
-            <div className="review-stack" aria-busy="true">
-              <article className="review-card">
-                <p>Loading opportunities…</p>
-              </article>
-            </div>
+            <SkeletonOpportunityGrid />
           ) : error ? (
-            <div className="review-stack">
-              <article className="review-card">
-                <p>{error}</p>
-              </article>
-            </div>
+            <WorkspaceErrorState message={error} onRetry={reload} />
+          ) : opportunities.length === 0 ? (
+            <WorkspaceEmptyState
+              title="No opportunities yet"
+              detail={`${client?.name ?? "This client"} has no pipeline cards. Check Sources and Signals, or queue an agent workflow.`}
+              actionLabel="View sources"
+              onAction={() => router.push("/sources")}
+            />
           ) : visibleOpportunities.length === 0 ? (
-            <div className="review-stack">
-              <article className="review-card">
-                <p>No opportunities match this filter for {client?.name ?? "this client"}.</p>
-              </article>
-            </div>
+            <WorkspaceEmptyState
+              title="No matches"
+              detail="Try a different filter or clear search to see all opportunities for this client."
+              actionLabel="Show all"
+              onAction={() => setActiveFilter("all")}
+            />
           ) : (
             <div className="card-grid" id="opportunityGrid">
               {visibleOpportunities.map((item) => (
-                <article key={item.id} className="opportunity-card" data-kind={item.kind} data-title={item.title}>
-                  <div className={`card-visual ${item.visualClass}`}>
-                    <span className="card-badge">
-                      {item.kind === "revenue" ? "Revenue" : item.kind.charAt(0).toUpperCase() + item.kind.slice(1)}
-                    </span>
-                    <div
-                      className={
-                        item.visualClass === "visual-land"
-                          ? "mini-map"
-                          : item.visualClass === "visual-market"
-                            ? "wave-line"
-                            : item.visualClass === "visual-channel"
-                              ? "phone-stack"
-                              : "headline-stack"
-                      }
-                    />
-                  </div>
-                  <div className="card-body">
-                    <h3>{item.headline}</h3>
-                    <p>{item.description}</p>
-                    <div className="card-meta">
-                      <span>{item.priority}</span>
-                      <span>{item.horizon}</span>
-                      <span>{item.fit}</span>
-                      <EvidenceChip status={item.evidenceStatus} refPath={item.evidenceRef} />
-                    </div>
-                    {item.evidenceRef ? (
-                      <p className="evidence-ref" title={item.evidenceRef}>
-                        Evidence: {item.evidenceRef}
-                      </p>
-                    ) : null}
-                  </div>
-                </article>
+                <OpportunityCard key={item.id} opportunity={item} />
               ))}
             </div>
           )}
@@ -236,15 +225,19 @@ export function CommandCenterWorkspace() {
       </section>
 
       <div className="create-dock" aria-label="Create menu">
-        <button className="create-tile" type="button" disabled title="Collateral Factory — coming soon">
-          <span className="tile-icon blue">D</span>
-          <strong>Deck</strong>
-        </button>
-        <button className="create-tile" type="button" disabled title="Rolling Brief — use /brief">
+        <button
+          className="create-tile"
+          type="button"
+          onClick={() => router.push("/brief")}
+        >
           <span className="tile-icon violet">N</span>
           <strong>Note</strong>
         </button>
-        <button className="create-tile" type="button" disabled title="Capital Desk — use /capital">
+        <button
+          className="create-tile"
+          type="button"
+          onClick={() => router.push("/capital")}
+        >
           <span className="tile-icon orange">P</span>
           <strong>Proposal</strong>
         </button>

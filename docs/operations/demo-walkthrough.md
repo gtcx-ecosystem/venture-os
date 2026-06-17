@@ -1,7 +1,20 @@
 # Venture OS — demo walkthrough
 
 **Audience:** founders, pilot operators, GTCX internal  
-**Entry:** deployed URL or `http://localhost:3000`
+**Entry:** staging `https://venture-staging.gtcx.trade` · local `http://localhost:3000`
+
+## Production-style demo (no Next dev overlay)
+
+Use a production build for investor or partner demos — the dev overlay does not appear.
+
+```bash
+pnpm install
+pnpm build
+pnpm start
+# open http://localhost:3000
+```
+
+**Verification path:** `curl -sf http://localhost:3000/api/health` → HTTP 200
 
 ## Path (15 min)
 

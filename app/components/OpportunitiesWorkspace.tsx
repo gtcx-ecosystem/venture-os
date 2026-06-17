@@ -1,8 +1,18 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import type { Opportunity } from "@/lib/mock";
+import { getClient, getClientLabel } from "@/lib/clients";
+import { getClientVisualTheme } from "@/lib/client-visual";
+import { useOpportunities } from "@/lib/hooks/useOpportunities";
+import { EvidenceChip } from "./EvidenceChip";
 import { useWorkspace } from "./WorkspaceProvider";
+import {
+  SkeletonOpportunityGrid,
+  WorkspaceEmptyState,
+  WorkspaceErrorState,
+} from "./workspace/WorkspaceStates";
 
 type SyncResult = {
   ok: boolean;
@@ -11,28 +21,30 @@ type SyncResult = {
   message?: string;
 };
 
+function BoardCard({ opportunity }: { opportunity: Opportunity }) {
+  const theme = getClientVisualTheme(opportunity.clientId);
+
+  return (
+    <article className="review-card opportunity-board-card" data-client={opportunity.clientId}>
+      <div className={`board-card-accent board-card-accent--${theme.motif}`} aria-hidden="true" />
+      <div className="review-topline">
+        <span>{opportunity.priority}</span>
+        <strong>{opportunity.horizon}</strong>
+      </div>
+      <p>{opportunity.headline}</p>
+      <p className="board-card-fit">{opportunity.fit}</p>
+      <EvidenceChip status={opportunity.evidenceStatus} refPath={opportunity.evidenceRef} />
+    </article>
+  );
+}
+
 export function OpportunitiesWorkspace() {
+  const router = useRouter();
   const { selectedClientId } = useWorkspace();
-  const [opportunities, setOpportunities] = useState<Opportunity[]>([]);
+  const client = getClient(selectedClientId);
+  const clientVisual = getClientVisualTheme(selectedClientId);
+  const { opportunities, loading, error, reload } = useOpportunities(selectedClientId);
   const [syncResult, setSyncResult] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  const load = useCallback(() => {
-    fetch(`/api/venture/opportunities?clientId=${encodeURIComponent(selectedClientId)}`)
-      .then((response) => {
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return response.json() as Promise<{ opportunities: Opportunity[] }>;
-      })
-      .then((data) => {
-        setOpportunities(data.opportunities);
-        setError(null);
-      })
-      .catch(() => setError("Could not load opportunities."));
-  }, [selectedClientId]);
-
-  useEffect(() => {
-    load();
-  }, [load]);
 
   const grouped = useMemo(() => {
     const map = new Map<string, Opportunity[]>();
@@ -65,38 +77,54 @@ export function OpportunitiesWorkspace() {
     <>
       <section className="hero-panel" aria-label="Opportunities intro">
         <div className="hero-copy">
-          <div className="eyebrow">Phase 4 · Opportunities</div>
+          <div className="eyebrow">
+            Phase 4 · Opportunities
+            <span className={`client-identity client-identity--${clientVisual.motif}`}>
+              {getClientLabel(selectedClientId)} · {clientVisual.shortLabel}
+            </span>
+          </div>
           <h1>Venture opportunities board</h1>
-          <p>Qualified leads across capital, revenue, partners, and visibility — ClickUp sync stub (dry-run).</p>
+          <p>
+            Qualified leads across capital, revenue, partners, and visibility — ClickUp sync stub
+            (dry-run).
+          </p>
         </div>
-        <button className="small-button" type="button" onClick={syncToClickUp}>
+        <button className="small-button" type="button" onClick={syncToClickUp} disabled={loading}>
           ClickUp sync (dry-run)
         </button>
       </section>
-      {syncResult ? <p style={{ color: "var(--muted)", marginBottom: 12 }}>{syncResult}</p> : null}
-      {error ? <p style={{ color: "var(--muted)" }}>{error}</p> : null}
-      <section className="content-grid" aria-label="Opportunity board">
-        {Array.from(grouped.entries()).map(([kind, items]) => (
-          <div key={kind} className="board-column">
-            <div className="column-heading">
-              <h2>{kind}</h2>
-              <span className="section-label">{items.length}</span>
+      {syncResult ? <p className="sync-banner">{syncResult}</p> : null}
+
+      {loading ? (
+        <section className="content-grid content-grid--single" aria-label="Opportunity board loading">
+          <SkeletonOpportunityGrid count={3} />
+        </section>
+      ) : error ? (
+        <WorkspaceErrorState message={error} onRetry={reload} />
+      ) : opportunities.length === 0 ? (
+        <WorkspaceEmptyState
+          title="Board is empty"
+          detail={`No opportunities for ${client?.name ?? selectedClientId}. Add sources or run intake before syncing to ClickUp.`}
+          actionLabel="Open sources"
+          onAction={() => router.push("/sources")}
+        />
+      ) : (
+        <section className="content-grid" aria-label="Opportunity board">
+          {Array.from(grouped.entries()).map(([kind, items]) => (
+            <div key={kind} className="board-column">
+              <div className="column-heading">
+                <h2>{kind}</h2>
+                <span className="section-label">{items.length}</span>
+              </div>
+              <div className="review-stack">
+                {items.map((opp) => (
+                  <BoardCard key={opp.id} opportunity={opp} />
+                ))}
+              </div>
             </div>
-            <div className="review-stack">
-              {items.map((opp) => (
-                <article key={opp.id} className="review-card">
-                  <div className="review-topline">
-                    <span>{opp.priority}</span>
-                    <strong>{opp.horizon}</strong>
-                  </div>
-                  <p>{opp.headline}</p>
-                  <p style={{ color: "var(--muted)", fontSize: 12 }}>{opp.fit}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        ))}
-      </section>
+          ))}
+        </section>
+      )}
     </>
   );
 }

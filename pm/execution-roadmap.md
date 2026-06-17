@@ -29,7 +29,7 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 | MPR-04 | Agent orchestration + receipt envelope | done | Agentic Empowerment |
 | MPR-01 | Compliance + repo hygiene closure | done | Compliance |
 | MPR-02 | UX SoR scaffold (EXR + pm/ux) | done | World-class |
-| MPR-06 | World-class polish (states, metrics, a11y) | todo | World-class |
+| MPR-06 | World-class polish (states, metrics, a11y) | done | World-class |
 | MPR-07 | Fleet ecosystem integration seams | todo | Ecosystem Integration |
 | MPR-08 | E2E operator golden path | todo | Technical Excellence |
 

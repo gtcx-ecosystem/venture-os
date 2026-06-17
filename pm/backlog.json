@@ -2,7 +2,7 @@
   "$schema": "gtcx://ops/pm-backlog/v1",
   "repo": "venture-os",
   "updated": "2026-06-17",
-  "active": "MPR-06",
+  "active": "MPR-07",
   "backlogClear": false,
   "roadmapPath": "pm/execution-roadmap.md",
   "auditRef": "audit/evidence/venture-os-mpr-ui-audit-2026-06-17.json",
@@ -55,7 +55,7 @@
     {
       "id": "MPR-06",
       "title": "World-class polish (states, metrics, a11y)",
-      "status": "todo",
+      "status": "done",
       "owner": "venture-os",
       "pillar": "worldClass",
       "priority": "P2",
