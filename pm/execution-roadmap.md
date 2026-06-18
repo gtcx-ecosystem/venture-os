@@ -14,9 +14,9 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 
 **Stories:** [`pm/stories/`](./stories/) · **Intake backlog:** [`audit/product-management/backlog/`](../audit/product-management/backlog/)
 
-## Active phase: **Phase 5 — 11PR UI hardening** (Sprint 11 in flight)
+## Active phase: **Phase 5 — 11PR UI hardening** — **sealed** (Sprint 11)
 
-**Audit:** [`audit/product-management/venture-os-mpr-ui-audit-2026-06-17.md`](../audit/product-management/venture-os-mpr-ui-audit-2026-06-17.md) · witness [`audit/evidence/venture-os-mpr-ui-audit-2026-06-17.json`](../audit/evidence/venture-os-mpr-ui-audit-2026-06-17.json)
+**Audit:** [`audit/product-management/venture-os-mpr-ui-audit-2026-06-17.md`](../audit/product-management/venture-os-mpr-ui-audit-2026-06-17.md) · witness [`audit/evidence/venture-os-mpr-ui-audit-2026-06-17.json`](../audit/evidence/venture-os-mpr-ui-audit-2026-06-17.json) · golden path [`audit/evidence/golden-path-latest.json`](../audit/evidence/golden-path-latest.json)
 
 ## Sprints
 
@@ -31,7 +31,7 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 | MPR-02 | UX SoR scaffold (EXR + pm/ux) | done | World-class |
 | MPR-06 | World-class polish (states, metrics, a11y) | done | World-class |
 | MPR-07 | Fleet ecosystem integration seams | done | Ecosystem Integration |
-| MPR-08 | E2E operator golden path | todo | Technical Excellence |
+| MPR-08 | E2E operator golden path | done | Technical Excellence |
 
 ### Sprint 10 — Control plane modules (Phase 4) — **sealed**
 

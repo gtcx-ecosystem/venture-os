@@ -1,0 +1,21 @@
+{
+  "schema": "gtcx.goldenPathWitness.v1",
+  "story": "MPR-08",
+  "at": "2026-06-18T06:39:21.153Z",
+  "steps": [
+    "command-center",
+    "capital-filter",
+    "workflow-receipt",
+    "rolling-brief",
+    "approvals-drawer",
+    "publish-blocked"
+  ],
+  "screenshots": [
+    "golden-path-01-command-center.png",
+    "golden-path-02-capital-filter.png",
+    "golden-path-03-workflow-receipt.png",
+    "golden-path-04-rolling-brief.png",
+    "golden-path-05-approvals-drawer.png",
+    "golden-path-06-publish-blocked.png"
+  ]
+}

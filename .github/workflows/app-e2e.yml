@@ -1,0 +1,32 @@
+name: venture-os-app-e2e
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "app/**"
+      - ".github/workflows/app-e2e.yml"
+  push:
+    branches: [main]
+    paths:
+      - "app/**"
+      - ".github/workflows/app-e2e.yml"
+
+jobs:
+  golden-path:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: pnpm
+      - run: pnpm install
+      - run: pnpm --dir app exec playwright install chromium --with-deps
+      - run: pnpm test:e2e:golden-path
+        env:
+          CI: "true"

@@ -2,8 +2,8 @@
   "$schema": "gtcx://ops/pm-backlog/v1",
   "repo": "venture-os",
   "updated": "2026-06-17",
-  "active": "MPR-08",
-  "backlogClear": false,
+  "active": null,
+  "backlogClear": true,
   "roadmapPath": "pm/execution-roadmap.md",
   "auditRef": "audit/evidence/venture-os-mpr-ui-audit-2026-06-17.json",
   "stories": [
@@ -73,7 +73,7 @@
     {
       "id": "MPR-08",
       "title": "E2E operator golden path",
-      "status": "todo",
+      "status": "done",
       "owner": "venture-os",
       "pillar": "technicalExcellence",
       "priority": "P2",

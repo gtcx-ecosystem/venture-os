@@ -2,11 +2,10 @@ import type { ReactNode } from "react";
 import { CommandPalette } from "./CommandPalette";
 import { Sidebar } from "./Sidebar";
 import { Topbar } from "./Topbar";
-import { WorkspaceProvider } from "./WorkspaceProvider";
 
 export function AppShell(props: { children: ReactNode; topbarTitle?: string }) {
   return (
-    <WorkspaceProvider>
+    <>
       <div className="app-shell">
         <Sidebar />
         <main className="main-workspace">
@@ -15,7 +14,6 @@ export function AppShell(props: { children: ReactNode; topbarTitle?: string }) {
         </main>
       </div>
       <CommandPalette />
-    </WorkspaceProvider>
+    </>
   );
 }
-
