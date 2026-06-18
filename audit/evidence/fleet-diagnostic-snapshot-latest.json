@@ -1,0 +1,82 @@
+{
+  "schema": "gtcx://audit/fleet-diagnostic-snapshot/v1",
+  "repo": "venture-os",
+  "tier": "product",
+  "refreshedAt": "2026-06-17T18:17:54.938Z",
+  "sessionPhase": "close",
+  "diagnostics": {
+    "engineering": {
+      "score100": null,
+      "status": "missing",
+      "witnessPath": null,
+      "forensicPath": null,
+      "ageHours": null,
+      "stale": true,
+      "deepCommand": "full-audit skill in owner repo workspace"
+    },
+    "multiPillar": {
+      "composite100": 74,
+      "trustCap100": 74,
+      "compliance100": 87,
+      "published": false,
+      "witnessPath": "audit/evidence/multi-pillar-latest.json",
+      "evaluatedAt": "2026-06-17T17:59:54.082Z",
+      "ageHours": 0.30022258253309464,
+      "stale": false,
+      "refreshCommand": "pnpm audit:multi-pillar:run --repo <repo> --write"
+    },
+    "master": {
+      "score10": null,
+      "score100": null,
+      "productionReady": false,
+      "gaps": [],
+      "witnessPath": null,
+      "ageHours": null,
+      "stale": true,
+      "refreshCommand": "pnpm ecosystem:master:audit --repo <repo> --write"
+    },
+    "gtm": {
+      "stage": "S2",
+      "stageName": "Pilot Ready",
+      "status": "partial",
+      "score100": 36,
+      "gates": {
+        "readme": true,
+        "packageOrMakefile": true,
+        "devEntry": true,
+        "opsCheckPass": true,
+        "agentNextWork": true,
+        "demoWalkthrough": true,
+        "syntheticFixtures": false,
+        "featureMatrix90": false,
+        "deployWitness": false,
+        "privacyPolicy": false,
+        "billingOrPricingDoc": false,
+        "soc2Path": false,
+        "ssoPath": false,
+        "auditLog": false,
+        "dpaTemplate": false,
+        "fedrampPath": false,
+        "fipsCrypto": false,
+        "dataResidencyUs": false,
+        "airgapPath": false,
+        "sbom": false,
+        "cveClear": false
+      },
+      "gaps": [
+        "S2:syntheticFixtures",
+        "S2:featureMatrix90"
+      ],
+      "witnessPath": "audit/evidence/gtm-readiness-latest.json",
+      "qualitativeForensic": null,
+      "deepAuditRecommended": true,
+      "note": "Machine inference — run /gtm for buyer-grade qualitative assessment"
+    }
+  },
+  "rollup": {
+    "avgScore100": 55,
+    "anyStale": true,
+    "pilotReady": false,
+    "deployBarMet": false
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "schema": "gtcx://audit/documentation review/v1",
+  "repo": "venture-os",
+  "repoKind": "product",
+  "date": "2026-06-17",
+  "auditType": "documentation-pillar",
+  "ok": false,
+  "composite100": 69,
+  "pillars": {
+    "compliance": {
+      "score100": 25,
+      "openP1": 6,
+      "source": "documentation-pack"
+    },
+    "technicalExcellence": {
+      "score100": 94,
+      "score100Raw": 94,
+      "packTe100": 100,
+      "capped": false,
+      "source": "pack+forensic-links"
+    },
+    "craft": {
+      "score100": 75,
+      "score100Raw": 75,
+      "capped": false,
+      "capReasons": [],
+      "craftFlags": {
+        "interchangeable": false,
+        "aiSlop": false
+      },
+      "source": "forensic-doc-standard"
+    },
+    "worldClass": {
+      "score100": 93,
+      "documentationQuality100": 88,
+      "worldClassBar100": 95,
+      "gap100": 7,
+      "gapLabel": "frontier",
+      "references": [
+        "Stripe docs",
+        "Kubernetes docs",
+        "gtcx-docs hub"
+      ],
+      "source": "documentation-quality-vs-global-bar"
+    }
+  },
+  "forensic": {
+    "axes": {
+      "structural": 100,
+      "naming": 100,
+      "frontmatter": 67,
+      "links": 100,
+      "agentic": 55
+    },
+    "score100": 84,
+    "signals": {
+      "competingRoots": [],
+      "docsHub": "docs",
+      "markdownFileCount": 3,
+      "brokenLinks": 0,
+      "scaffoldFileCount": 0,
+      "aiSlopFileCount": 0
+    }
+  },
+  "pack": {
+    "score100": 25,
+    "openP1": 6,
+    "violations": [
+      {
+        "packId": "CORE-P32",
+        "itemId": "docs-readme",
+        "severity": "P1",
+        "detail": "missing one of: docs/README.md, docs/README.md"
+      },
+      {
+        "packId": "CORE-P32",
+        "itemId": "docs-sor",
+        "severity": "P1",
+        "detail": "missing one of: docs/sor.json, docs/sor.json"
+      },
+      {
+        "packId": "CORE-P32",
+        "itemId": "audit-agent-start",
+        "severity": "P1",
+        "detail": "missing one of: audit/AGENT-START.md, 05-audit/AGENT-START.md"
+      },
+      {
+        "packId": "CORE-P32",
+        "itemId": "tier-b-conduct",
+        "severity": "P2",
+        "detail": "missing one of: docs/operations/repo/CODE_OF_CONDUCT.md, docs/operations/repo/CODE_OF_CONDUCT.md"
+      },
+      {
+        "packId": "AGENT-OPS",
+        "itemId": "agents-md",
+        "severity": "P1",
+        "detail": "missing AGENTS.md"
+      },
+      {
+        "packId": "AGENT-OPS",
+        "itemId": "agents-readme",
+        "severity": "P2",
+        "detail": "missing one of: docs/agents/README.md, agents/README.md, docs/agents/"
+      },
+      {
+        "packId": "JURISDICTION-SOR",
+        "itemId": "sor-schema",
+        "severity": "P1",
+        "detail": "missing docs/sor.json"
+      },
+      {
+        "packId": "JURISDICTION-SOR",
+        "itemId": "canon-upstream-pointer",
+        "severity": "P2",
+        "detail": "missing canon-os/gtcx-docs upstream in sor.json"
+      },
+      {
+        "packId": "ONBOARD-PACK",
+        "itemId": "contributing",
+        "severity": "P1",
+        "detail": "missing one of: docs/operations/repo/CONTRIBUTING.md, docs/operations/repo/CONTRIBUTING.md, CONTRIBUTING.md"
+      },
+      {
+        "packId": "ONBOARD-PACK",
+        "itemId": "contributing-sections",
+        "severity": "P2",
+        "detail": "missing CONTRIBUTING"
+      },
+      {
+        "packId": "GTM-PACK",
+        "itemId": "gtm-dod",
+        "severity": "P2",
+        "detail": "missing demo-walkthrough or deployment-profile"
+      }
+    ]
+  }
+}

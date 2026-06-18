@@ -1,8 +1,12 @@
 {
-  "schema": "gtcx://audit/compliance-rubric/v1",
+  "schema": "gtcx://audit/compliance-pillar/v1",
   "repo": "venture-os",
   "date": "2026-06-18",
   "score100": 69,
+  "published": false,
+  "provisional": true,
+  "blockedBy": "below-threshold",
+  "unlockThreshold100": 85,
   "categories": {
     "layout-p35": {
       "label": "Layout & workspace (P35 v5)",
@@ -851,7 +855,7 @@
       "itemCount": 3
     }
   },
-  "violations": [
+  "hygieneViolations": [
     {
       "id": "p35-strict-pass",
       "categoryId": "layout-p35",
@@ -916,5 +920,8 @@
       "detail": "0/1 present"
     }
   ],
-  "itemTotal": 66
+  "itemTotal": 66,
+  "rubricVersion": "1.0.0",
+  "openP0": 0,
+  "openP1": 2
 }
