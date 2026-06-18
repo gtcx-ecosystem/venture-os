@@ -3,10 +3,12 @@
 import { useMemo, useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { FILTER_OPTIONS, INITIAL_REVIEWS, type ReviewCard } from "../lib/mock";
-import { getClient } from "../lib/clients";
+import { getClient, getFleetClientEntry } from "../lib/clients";
 import { getClientVisualTheme } from "../lib/client-visual";
+import { heroCopyFromStrategy } from "../lib/automation/canon-strategy-shared";
 import { computePipelineMetrics } from "../lib/opportunities";
 import { useOpportunities } from "../lib/hooks/useOpportunities";
+import { useClientStrategy } from "../lib/hooks/useClientStrategy";
 import type { AutomationReceipt } from "../lib/automation/receipts";
 import { OpportunityCard } from "./OpportunityCard";
 import { AutomationReceiptLog } from "./AutomationReceiptLog";
@@ -21,7 +23,9 @@ export function CommandCenterWorkspace() {
   const router = useRouter();
   const { search, activeFilter, setActiveFilter, selectedClientId } = useWorkspace();
   const client = getClient(selectedClientId);
+  const fleet = getFleetClientEntry(selectedClientId);
   const clientVisual = getClientVisualTheme(selectedClientId);
+  const { strategy } = useClientStrategy(selectedClientId);
   const { opportunities, loading, error, reload } = useOpportunities(selectedClientId);
   const [reviews, setReviews] = useState<ReviewCard[]>(INITIAL_REVIEWS);
   const [automationReceipts, setAutomationReceipts] = useState<AutomationReceipt[]>([]);
@@ -85,6 +89,7 @@ export function CommandCenterWorkspace() {
     serviceHealth === "live" ? "Live" : serviceHealth === "degraded" ? "Degraded" : "Checking";
 
   const metricValue = (value: number) => (loading ? "—" : String(value));
+  const heroCopy = heroCopyFromStrategy(strategy, client?.positioning.one_liner);
 
   return (
     <>
@@ -97,10 +102,35 @@ export function CommandCenterWorkspace() {
             </span>
           </div>
           <h1>Run capital, growth, visibility, and partnerships from one desk.</h1>
-          <p>
-            {client?.positioning.one_liner ??
-              "Monitor Africa-focused opportunities, draft investor materials, coordinate agents, and approve external moves without losing the operating thread."}
-          </p>
+          <p>{heroCopy.primary}</p>
+          {heroCopy.secondary ? <p className="hero-mission">{heroCopy.secondary}</p> : null}
+          {fleet ? (
+            <div className="fleet-hero-links">
+              <a
+                href={fleet.githubUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="fleet-link"
+              >
+                Open {fleet.ownerRepo}
+              </a>
+              {fleet.collateralUrl ? (
+                <a
+                  href={fleet.collateralUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="fleet-link"
+                >
+                  Published collateral
+                </a>
+              ) : null}
+              {strategy ? (
+                <span className="fleet-canon-source" title={fleet.canonStrategyPath}>
+                  Canon · {strategy.source}
+                </span>
+              ) : null}
+            </div>
+          ) : null}
         </div>
         <div className="hero-metrics" aria-label="Pipeline summary">
           <div>

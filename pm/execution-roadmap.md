@@ -30,7 +30,7 @@ tags: ['execute-roadmap', 'roadmap', 'delivery']
 | MPR-01 | Compliance + repo hygiene closure | done | Compliance |
 | MPR-02 | UX SoR scaffold (EXR + pm/ux) | done | World-class |
 | MPR-06 | World-class polish (states, metrics, a11y) | done | World-class |
-| MPR-07 | Fleet ecosystem integration seams | todo | Ecosystem Integration |
+| MPR-07 | Fleet ecosystem integration seams | done | Ecosystem Integration |
 | MPR-08 | E2E operator golden path | todo | Technical Excellence |
 
 ### Sprint 10 — Control plane modules (Phase 4) — **sealed**

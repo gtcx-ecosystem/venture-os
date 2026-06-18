@@ -161,15 +161,120 @@ textarea:focus:not(:focus-visible) {
 .nav-item,
 .folder-row {
   width: 100%;
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 36px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: #d7d9df;
+  text-align: left;
+}
+
+.folder-row-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 32px;
+  gap: 4px;
+  align-items: center;
+}
+
+.folder-row-wrap .folder-row {
+  width: auto;
+}
+
+.folder-repo-link {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.folder-repo-link:hover {
+  color: var(--text);
+  border-color: #536187;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.hero-mission {
+  margin-top: 10px;
+  color: #a8adb8 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+.fleet-hero-links {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
-  min-height: 36px;
-  border-color: transparent;
-  border-radius: 8px;
-  padding: 8px 10px;
-  color: #c9cbd1;
-  text-align: left;
+  margin-top: 14px;
+}
+
+.fleet-link {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 5px 12px;
+  color: #dbe6ff;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.fleet-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.fleet-canon-source {
+  color: var(--subtle);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.fleet-client-title {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.fleet-client-mission {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.fleet-client-meta {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.fleet-client-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.fleet-panel-copy {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.fleet-panel-copy code {
+  color: #c6cad4;
+  font-size: 12px;
 }
 
 .nav-item:hover,

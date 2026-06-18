@@ -1,0 +1,10 @@
+{
+  "productId": "compliance-os",
+  "repo": "compliance-os",
+  "updated": "2026-06-18",
+  "vision": {
+    "statement": "ComplianceOS is the AI-native compliance gateway of the GTCX ecosystem — a single, auditable surface where commodity producers, auditors, and buyers prove controls once and satisfy many frameworks across the Global South.",
+    "horizon": "2026–2028"
+  },
+  "mission": "Make cross-framework compliance predictable, traceable, and deploy-ready by harmonizing standards into Core12, embedding AI with human review gates, and shipping protocol-native evidence workflows for enterprise pilot readiness."
+}

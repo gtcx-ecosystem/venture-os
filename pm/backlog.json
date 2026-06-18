@@ -2,7 +2,7 @@
   "$schema": "gtcx://ops/pm-backlog/v1",
   "repo": "venture-os",
   "updated": "2026-06-17",
-  "active": "MPR-07",
+  "active": "MPR-08",
   "backlogClear": false,
   "roadmapPath": "pm/execution-roadmap.md",
   "auditRef": "audit/evidence/venture-os-mpr-ui-audit-2026-06-17.json",
@@ -64,7 +64,7 @@
     {
       "id": "MPR-07",
       "title": "Fleet ecosystem integration seams",
-      "status": "todo",
+      "status": "done",
       "owner": "venture-os",
       "pillar": "productEcosystemIntegration",
       "priority": "P2",

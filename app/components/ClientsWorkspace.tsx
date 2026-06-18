@@ -1,6 +1,5 @@
-import Link from "next/link";
-import { listSourcesForClient } from "@/lib/automation/source-registry";
 import { CLIENTS } from "@/lib/clients";
+import { FleetClientCard } from "./FleetClientCard";
 
 export function ClientsWorkspace() {
   return (
@@ -11,38 +10,22 @@ export function ClientsWorkspace() {
           <span className="section-label">{CLIENTS.length} profiles</span>
         </div>
         <div className="review-stack">
-          {CLIENTS.map((client) => {
-            const sources = listSourcesForClient(client.client_id);
-            return (
-              <article key={client.client_id} className="review-card">
-                <div className="review-topline">
-                  <span>{client.segment}</span>
-                  <strong>{client.stage}</strong>
-                </div>
-                <h3 style={{ margin: "8px 0" }}>{client.name}</h3>
-                <p>{client.positioning.one_liner}</p>
-                <p style={{ color: "var(--muted)", fontSize: 12, marginTop: 8 }}>
-                  {client.geographies.join(" · ")} · {sources?.rssFeeds.length ?? 0} RSS ·{" "}
-                  {sources?.gmailLabels.length ?? 0} Gmail labels
-                </p>
-                <Link href={`/sources?clientId=${client.client_id}`} className="small-button" style={{ display: "inline-block", marginTop: 8 }}>
-                  View sources
-                </Link>
-              </article>
-            );
-          })}
+          {CLIENTS.map((client) => (
+            <FleetClientCard key={client.client_id} client={client} />
+          ))}
         </div>
       </div>
       <aside className="agent-panel" aria-label="Client goals">
         <div className="agent-header">
           <div>
-            <div className="section-label">Operating model</div>
-            <h2>Desk goals</h2>
+            <div className="section-label">Fleet integration</div>
+            <h2>Owner repos + canon</h2>
           </div>
         </div>
-        <p style={{ color: "var(--muted)", fontSize: 14 }}>
-          Each client profile links capital, revenue, partnership, and visibility desks. Select a client in the
-          sidebar to scope briefs, signals, and source registry.
+        <p className="fleet-panel-copy">
+          Each sidebar client loads <code>pm/canon/strategy.json</code> from its owner repo when the
+          ecosystem checkout is available; staging and production fall back to bundled canon snapshots
+          in <code>clients/canon-snapshots/</code>.
         </p>
       </aside>
     </section>

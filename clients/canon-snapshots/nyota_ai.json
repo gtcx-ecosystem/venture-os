@@ -1,0 +1,10 @@
+{
+  "productId": "nyota-ai",
+  "repo": "nyota-ai",
+  "updated": "2026-06-18",
+  "vision": {
+    "statement": "Every African producer accesses verified commodity intelligence in their own language on the device they already own",
+    "horizon": "2026-2028"
+  },
+  "mission": "Deliver trustworthy, protocol-traceable commodity intelligence via conversational channels (WhatsApp, Telegram, MCP) so producers make better pricing, compliance, and market-access decisions"
+}

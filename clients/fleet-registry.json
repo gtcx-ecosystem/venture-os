@@ -1,0 +1,38 @@
+{
+  "$schema": "gtcx://venture-os/fleet-registry/v1",
+  "updated": "2026-06-17",
+  "githubOrg": "gtcx-ecosystem",
+  "clients": [
+    {
+      "clientId": "terra_os",
+      "ownerRepo": "terra-os",
+      "canonStrategyPath": "pm/canon/strategy.json",
+      "canonSnapshot": "clients/canon-snapshots/terra_os.json"
+    },
+    {
+      "clientId": "markets_os",
+      "ownerRepo": "markets-os",
+      "canonStrategyPath": "pm/canon/strategy.json",
+      "canonSnapshot": "clients/canon-snapshots/markets_os.json"
+    },
+    {
+      "clientId": "compliance_os",
+      "ownerRepo": "compliance-os",
+      "canonStrategyPath": "pm/canon/strategy.json",
+      "canonSnapshot": "clients/canon-snapshots/compliance_os.json"
+    },
+    {
+      "clientId": "nyota_ai",
+      "ownerRepo": "nyota-ai",
+      "canonStrategyPath": "pm/canon/strategy.json",
+      "canonSnapshot": "clients/canon-snapshots/nyota_ai.json"
+    },
+    {
+      "clientId": "terminal_os",
+      "ownerRepo": "terminal-os",
+      "canonStrategyPath": "pm/canon/strategy.json",
+      "canonSnapshot": "clients/canon-snapshots/terminal_os.json",
+      "collateralUrl": "https://terminal-staging.gtcx.trade/ecosystem"
+    }
+  ]
+}

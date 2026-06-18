@@ -1,0 +1,10 @@
+{
+  "productId": "terra-os",
+  "repo": "terra-os",
+  "updated": "2026-06-18",
+  "vision": {
+    "statement": "TerraOS is the Land Economic Operating System for frontier markets: a sovereign, signal-driven, cryptographically verifiable platform that transforms land registration from a paper-bound bureaucratic bottleneck into continuous, ambient, economically composable territorial intelligence.",
+    "horizon": "2026-2028"
+  },
+  "mission": "Make every parcel in a jurisdiction — registered or unregistered — a live, financeable economic object with cryptographically verifiable rights, a transparent confidence score, and instant creditworthiness, while keeping the registrar, the community, and the landowner in control."
+}

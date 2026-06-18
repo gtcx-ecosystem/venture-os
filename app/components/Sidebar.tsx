@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useWorkspace } from "./WorkspaceProvider";
-import { SIDEBAR_CLIENTS } from "../lib/clients";
+import { SIDEBAR_CLIENTS, getFleetClientEntry } from "../lib/clients";
 
 const NAV = [
   { href: "/", icon: "C", label: "Command Center" },
@@ -63,19 +63,37 @@ export function Sidebar() {
 
       <section className="workspace-block">
         <div className="section-label">Clients</div>
-        {SIDEBAR_CLIENTS.map((client) => (
-          <button
-            key={client.client_id}
-            className={selectedClientId === client.client_id ? "folder-row is-selected" : "folder-row"}
-            type="button"
-            onClick={() => setSelectedClientId(client.client_id)}
-          >
-            <span className="folder-icon" />
-            {client.name.replace("FIFTY-FOUR / ", "")}
-          </button>
-        ))}
+        {SIDEBAR_CLIENTS.map((client) => {
+          const fleet = getFleetClientEntry(client.client_id);
+          const label = client.name.replace("FIFTY-FOUR / ", "");
+          return (
+            <div key={client.client_id} className="folder-row-wrap">
+              <button
+                className={
+                  selectedClientId === client.client_id ? "folder-row is-selected" : "folder-row"
+                }
+                type="button"
+                onClick={() => setSelectedClientId(client.client_id)}
+              >
+                <span className="folder-icon" />
+                {label}
+              </button>
+              {fleet ? (
+                <a
+                  href={fleet.githubUrl}
+                  className="folder-repo-link"
+                  target="_blank"
+                  rel="noreferrer"
+                  title={`Open ${fleet.ownerRepo} (${fleet.localPath})`}
+                  aria-label={`Open ${label} owner repo`}
+                >
+                  ↗
+                </a>
+              ) : null}
+            </div>
+          );
+        })}
       </section>
     </aside>
   );
 }
-

@@ -39,3 +39,6 @@ export function getClient(clientId: string) {
 export function getClientLabel(clientId: string) {
   return getClient(clientId)?.name ?? clientId;
 }
+
+export { getFleetClientEntry, listFleetClientEntries } from "./fleet-registry";
+export type { FleetClientEntry } from "./fleet-registry";
