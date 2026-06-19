@@ -1,0 +1,22 @@
+{
+  "version": "1",
+  "browser": {
+    "default": "arc",
+    "automation": "chrome",
+    "notes": "Arc for daily browsing; Chrome for Playwright/CDP, DevTools, and visual QA capture when Arc cannot attach."
+  },
+  "elevatedCommands": {
+    "policy": "human-terminal-only",
+    "platform": "darwin",
+    "cannotRunInCursor": [
+      "sudo",
+      "xcrun simctl runtime add"
+    ],
+    "humanTerminalHint": "Open Terminal.app (not Cursor) for elevated macOS steps — e.g. iOS Simulator runtime DMG registration."
+  },
+  "terminal": {
+    "preferredApp": "Terminal.app",
+    "cursorSandbox": "allowlist",
+    "notes": "Agents run pnpm/node/git/gh/baseline in Cursor; Class S elevated steps use macOS Terminal."
+  }
+}
