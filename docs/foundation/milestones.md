@@ -31,6 +31,6 @@ review_cycle: on-change
 - **Witness:** bridge-os/pm/ci/product-culture-fleet-latest.json
 
 
-## Machine mirror
+## Machine mirror (generated)
 
-[`pm/spec/product-goals.json`](../../pm/spec/product-goals.json) — `activeMilestone`
+[`pm/canon/strategy.json`](../../pm/canon/strategy.json) — `pnpm canon:synthesize` — `activeMilestone`

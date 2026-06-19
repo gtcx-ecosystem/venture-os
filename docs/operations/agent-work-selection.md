@@ -5,6 +5,9 @@ date: 2026-06-17
 owner: venture-os
 document_id: OPS-AWS-AGT-001
 document_type: runbook
+tier: operating
+tags: ['agents', 'protocol-22', 'work-selection', 'venture-os']
+review_cycle: on-change
 ---
 
 # Agent Work Selection — venture-os

@@ -26,6 +26,6 @@ Africa-focused founder command center — capital desk, growth desk, and visibil
 
 **Witness:** audit/evidence/venture-pilot-journey-latest.json
 
-## Machine mirror
+## Machine mirror (generated)
 
-[`pm/spec/product-goals.json`](../../pm/spec/product-goals.json)
+[`pm/canon/strategy.json`](../../pm/canon/strategy.json) — `pnpm canon:synthesize`

@@ -3,6 +3,10 @@ title: 'Code of Conduct — venture-os'
 status: current
 date: 2026-06-17
 owner: venture-os
+document_type: overview
+tier: standard
+tags: ['governance', 'conduct', 'venture-os']
+review_cycle: annual
 ---
 
 # Code of Conduct

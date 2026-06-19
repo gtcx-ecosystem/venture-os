@@ -1,3 +1,14 @@
+---
+title: 'Agency handoff workflow'
+status: current
+date: 2026-06-19
+owner: venture-os
+document_type: operating-playbook
+tier: operating
+tags: ['venture-os', 'workflows', 'agency']
+review_cycle: on-change
+---
+
 # Agency handoff workflow
 
 Venture OS is the **approval gate**. Agency (`ecosystem-os/agency`) is the **finish lane** for video and campaign assets.

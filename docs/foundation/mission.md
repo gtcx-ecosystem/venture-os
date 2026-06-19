@@ -18,6 +18,6 @@ Ship Venture OS MVP app + collateral workflows so GTCX ecosystem repos are the f
 
 **For** African founders, venture studios, and accelerators **who** need governed fundraising and growth operations without generic CRM sprawl, **Venture OS** **that** turns opportunity flow into funded, visible, partnership-ready companies. **Unlike** generic CRMs and chatbot wrappers, **we** bind human-gated sends with agent prep, monitoring, and GTCX ecosystem pilot profiles.
 
-## Machine mirror
+## Machine mirror (generated)
 
-[`pm/spec/product-goals.json`](../../pm/spec/product-goals.json)
+[`pm/canon/strategy.json`](../../pm/canon/strategy.json) — `pnpm canon:synthesize`

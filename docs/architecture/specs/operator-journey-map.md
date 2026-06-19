@@ -6,6 +6,7 @@ owner: venture-os
 document_type: spec
 tier: operating
 tags: ['ux', 'journey', 'p21']
+review_cycle: on-change
 ---
 
 # Operator journey map — Venture OS

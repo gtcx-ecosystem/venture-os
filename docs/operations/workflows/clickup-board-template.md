@@ -6,6 +6,7 @@ owner: venture-os
 document_type: operating-playbook
 tier: tactical
 tags: ['venture-os', 'clickup', 'crm', 'managed-service']
+review_cycle: on-change
 ---
 
 # ClickUp board template — Venture OS clients

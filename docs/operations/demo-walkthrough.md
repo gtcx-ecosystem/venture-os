@@ -1,3 +1,14 @@
+---
+title: 'Venture OS — demo walkthrough'
+status: current
+date: 2026-06-19
+owner: venture-os
+document_type: runbook
+tier: operating
+tags: ['venture-os', 'demo', 'walkthrough']
+review_cycle: on-change
+---
+
 # Venture OS — demo walkthrough
 
 **Audience:** founders, pilot operators, GTCX internal  
@@ -11,7 +22,7 @@ Use a production build for investor or partner demos — the dev overlay does no
 pnpm install
 pnpm build
 pnpm start
-# open http://localhost:3000
+#open http://localhost:3000
 ```
 
 **Verification path:** `curl -sf http://localhost:3000/api/health` → HTTP 200

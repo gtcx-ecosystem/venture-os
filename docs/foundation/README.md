@@ -13,7 +13,7 @@ goals: 'Mandatory agent narrative before P22'
 # `docs/foundation/` — venture-os
 
 > **Initiative:** `INIT-DOCS-FOUNDATION-IA-V1` · **Fleet spec:** [`../../canon-os/pm/spec/docs-foundation-pack.json`](../../canon-os/pm/spec/docs-foundation-pack.json)  
-> **Machine mirror:** [`pm/spec/product-goals.json`](../../pm/spec/product-goals.json)
+> **Machine mirror (generated):** [`pm/canon/strategy.json`](../../pm/canon/strategy.json) — run `pnpm canon:synthesize`
 
 ## Purpose
 
@@ -33,12 +33,13 @@ Fleet law: [`../canon-os/docs/governance/constitution/GTCX-CONSTITUTION.md`](../
 | [milestones.md](./milestones.md) | Active milestone |
 | [roadmap.md](./roadmap.md) | Executive narrative |
 
+## Detail layers
+
+- **Business depth:** [`../business/README.md`](../business/README.md) — market, customers, economics
+- **Architecture:** [`../architecture/README.md`](../architecture/README.md) — technical SoR
+
 ## Session read order
 
 1. This README → `constitution.md` → fleet constitution Articles I, III, V  
 2. `vision.md` · `mission.md` · `goals.md`  
 3. `pnpm agent:next-work`
-
-## Business detail layer
-
-ICP, GTM positioning, and customer context: [`../business/`](../business/README.md)

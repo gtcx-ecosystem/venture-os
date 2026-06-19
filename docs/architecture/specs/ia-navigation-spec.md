@@ -6,6 +6,7 @@ owner: venture-os
 document_type: spec
 tier: operating
 tags: ['ux', 'ia', 'p21']
+review_cycle: on-change
 ---
 
 # IA navigation spec — Venture OS app

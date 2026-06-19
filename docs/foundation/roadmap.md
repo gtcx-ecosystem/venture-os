@@ -12,7 +12,8 @@ review_cycle: on-change
 
 # venture-os — executive roadmap
 
-> **Execution SoR:** [`pm/execution-roadmap.md`](../../pm/execution-roadmap.md) · [`pm/roadmap/initiatives.json`](../../pm/roadmap/initiatives.json)
+> **Execution SoR:** [`pm/execution-roadmap.md`](../../pm/execution-roadmap.md) · [`pm/roadmap/initiatives.json`](../../pm/roadmap/initiatives.json)  
+> **Delivery lanes:** [`../../agile/roadmaps/`](../../agile/roadmaps/)
 
 ## Now — foundation IA
 

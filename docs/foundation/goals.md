@@ -12,7 +12,7 @@ review_cycle: on-change
 
 # venture-os — goals
 
-> **Machine SoR:** [`pm/spec/product-goals.json`](../../pm/spec/product-goals.json)
+> **Generated mirror:** [`pm/canon/strategy.json`](../../pm/canon/strategy.json) — `pnpm canon:synthesize`
 
 ## Active program
 

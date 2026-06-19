@@ -19,7 +19,7 @@ Africa-focused founder command center — capital desk, growth desk, and visibil
 ## Principles
 
 1. **Proof over permission** — witnesses and gates, not narrative consensus.
-2. **PRD traceability** — stories link to product-goals and active milestone.
+2. **PRD traceability** — stories link to pm/canon bundles and active milestone.
 3. **Fleet integration** — protocol clients and harness, not standalone silos.
 
 ## Related

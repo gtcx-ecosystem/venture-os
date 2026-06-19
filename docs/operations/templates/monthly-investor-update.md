@@ -1,3 +1,14 @@
+---
+title: 'Monthly investor update template'
+status: current
+date: 2026-06-19
+owner: venture-os
+document_type: template
+tier: operating
+tags: ['venture-os', 'templates', 'investor-update']
+review_cycle: on-change
+---
+
 # Monthly investor update template
 
 > **Client:** {{client_name}}  

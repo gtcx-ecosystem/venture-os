@@ -1,3 +1,14 @@
+---
+title: 'Pricing and options memo — Venture OS managed service'
+status: current
+date: 2026-06-19
+owner: venture-os
+document_type: template
+tier: operating
+tags: ['venture-os', 'templates', 'pricing']
+review_cycle: on-change
+---
+
 # Pricing and options memo — Venture OS managed service
 
 **Effective:** 2026-06-17  

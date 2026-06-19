@@ -3,6 +3,10 @@ title: 'Cross-repo coordination — venture-os'
 status: current
 date: 2026-06-17
 owner: venture-os
+document_type: protocol
+tier: operating
+tags: ['coordination', 'protocol-24', 'venture-os']
+review_cycle: on-change
 ---
 
 # Cross-repo coordination

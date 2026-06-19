@@ -1,3 +1,14 @@
+---
+title: 'Inbound dedupe rules — Venture OS Phase 3'
+status: current
+date: 2026-06-19
+owner: venture-os
+document_type: operating-playbook
+tier: operating
+tags: ['venture-os', 'workflows', 'dedupe']
+review_cycle: on-change
+---
+
 # Inbound dedupe rules — Venture OS Phase 3
 
 **API:** `POST /api/venture/inbound`  

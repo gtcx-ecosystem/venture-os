@@ -4,6 +4,9 @@ status: current
 date: 2026-06-17
 owner: venture-os
 document_type: conventions
+tier: operating
+tags: ['documentation', 'conventions', 'venture-os']
+review_cycle: on-change
 ---
 
 # Conventions
