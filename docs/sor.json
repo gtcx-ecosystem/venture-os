@@ -56,7 +56,10 @@
       "docs/architecture/specs/layers",
       "docs/gitbook/business",
       "docs/architecture/operations",
-      "docs/architecture/specs/_project"
+      "docs/architecture/specs/_project",
+      "docs/architecture/specs/layers/packs",
+      "docs/operations/compliance/evidence",
+      "docs/reference/archived"
     ],
     "readmeExemptPathPrefixes": [
       "docs/reference/archive"
@@ -72,7 +75,15 @@
       "docs/business/strategy",
       "docs/business/research",
       "docs/reference/skills",
-      "docs/specs"
+      "docs/specs",
+      "docs/architecture/specs/_project",
+      "docs/reference/archived"
     ]
-  }
+  },
+  "deprecatedTopLevel": [
+    "specs",
+    "strategy",
+    "overview",
+    "engineering"
+  ]
 }
