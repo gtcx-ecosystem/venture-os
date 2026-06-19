@@ -31,6 +31,19 @@
     "ux:sor:check:write": "node ../bridge-os/platform/scripts/ecosystem/check-ux-sor.mjs --repo venture-os --write",
     "agent:auto-dev:check": "node ../bridge-os/platform/scripts/checks/check-agent-auto-dev-local.mjs",
     "ops:consumption:check": "node ../bridge-os/platform/scripts/ecosystem/ops-consumption-check.mjs",
-    "ops:consumption:check:write": "node ../bridge-os/platform/scripts/ecosystem/ops-consumption-check.mjs --write"
+    "ops:consumption:check:write": "node ../bridge-os/platform/scripts/ecosystem/ops-consumption-check.mjs --write",
+    "docs:architecture:check": "node platform/scripts/docs-architecture-check.mjs",
+    "docs:architecture:check:write": "node platform/scripts/docs-architecture-check.mjs --write",
+    "docs:product:check": "node platform/scripts/docs-product-check.mjs",
+    "docs:product:check:write": "node platform/scripts/docs-product-check.mjs --write",
+    "docs:roadmap:check": "node platform/scripts/docs-roadmap-check.mjs",
+    "docs:operations:check": "node platform/scripts/docs-operations-check.mjs",
+    "docs:operations:check:write": "node platform/scripts/docs-operations-check.mjs --write",
+    "agile:check": "node platform/scripts/agile-check.mjs",
+    "agile:check:write": "node platform/scripts/agile-check.mjs --write",
+    "docs:agile:check": "node platform/scripts/agile-check.mjs",
+    "docs:agile:check:write": "node platform/scripts/agile-check.mjs --write",
+    "docs:fractal-mpr:check": "node platform/scripts/docs-fractal-mpr-check.mjs",
+    "docs:pack:pillar-contract:check": "node platform/scripts/docs-pack-pillar-contract-check.mjs"
   }
 }
