@@ -1,16 +1,14 @@
 ---
 title: 'docs/roadmap — pointer'
 status: pointer
-date: 2026-06-19
+date: 2026-06-17
 owner: venture-os
-document_type: overview
-tier: operating
-tags: ['documentation', 'roadmap']
+document_type: pointer
 review_cycle: on-change
 ---
 
 # docs/roadmap — relocated
 
-> **Canonical SoR:** [`../../agile/roadmaps/`](../../agile/roadmaps/)
+**Canonical path:** [`agile/roadmaps/`](../agile/roadmaps/)
 
-Do not add new files here. Scorecard rollup: [`scorecard.md`](./scorecard.md).
+P0 legacy scrub — do not add new files here.

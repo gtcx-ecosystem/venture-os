@@ -1,14 +1,14 @@
 ---
-title: 'engineering/ — README'
-status: current
-date: 2026-06-19
+title: 'docs/engineering — pointer'
+status: pointer
+date: 2026-06-17
 owner: venture-os
-document_type: overview
-tier: operating
-tags: ['documentation', 'engineering']
+document_type: pointer
 review_cycle: on-change
 ---
 
-# `docs/engineering/`
+# docs/engineering — relocated
 
-Engineering layer scorecard nest for venture-os.
+**Canonical path:** [`docs/architecture/`](../docs/architecture/)
+
+P0 legacy scrub — do not add new files here.

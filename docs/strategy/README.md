@@ -1,14 +1,14 @@
 ---
-title: 'strategy/ — README'
-status: current
-date: 2026-06-19
+title: 'docs/strategy — pointer'
+status: pointer
+date: 2026-06-17
 owner: venture-os
-document_type: overview
-tier: operating
-tags: ['documentation', 'strategy']
+document_type: pointer
 review_cycle: on-change
 ---
 
-# `docs/strategy/`
+# docs/strategy — relocated
 
-Strategy lane — capability matrices and fleet pointers.
+**Canonical path:** [`docs/business/opportunity/`](../docs/business/opportunity/)
+
+P0 legacy scrub — do not add new files here.

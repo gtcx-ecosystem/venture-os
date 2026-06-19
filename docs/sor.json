@@ -48,5 +48,31 @@
       "security",
       "witness"
     ]
+  },
+  "iaExemptions": {
+    "depthExemptPathPrefixes": [
+      "docs/reference/archive",
+      "docs/reference/templates",
+      "docs/architecture/specs/layers",
+      "docs/gitbook/business",
+      "docs/architecture/operations",
+      "docs/architecture/specs/_project"
+    ],
+    "readmeExemptPathPrefixes": [
+      "docs/reference/archive"
+    ],
+    "denseExemptPathPrefixes": [
+      "docs/reference/archive",
+      "docs/reference/audits",
+      "docs/architecture/specs",
+      "docs/architecture/specs/layers",
+      "docs/architecture/specs/layers/packs",
+      "docs/architecture/specs/layers/guides",
+      "docs/architecture/specs/product-scopes",
+      "docs/business/strategy",
+      "docs/business/research",
+      "docs/reference/skills",
+      "docs/specs"
+    ]
   }
 }
