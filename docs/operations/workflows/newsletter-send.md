@@ -1,3 +1,14 @@
+---
+title: 'Newsletter send workflow (Listmonk)'
+status: current
+date: 2026-06-15
+owner: venture-os
+tier: operating
+tags: ['runbook', 'documentation']
+review_cycle: on-change
+document_type: runbook
+goals: 'Hub documentation — runbook'
+---
 # Newsletter send workflow (Listmonk)
 
 Venture OS gates external newsletter publish. Listmonk is the **send rail**; Griot/agency supply **content**.

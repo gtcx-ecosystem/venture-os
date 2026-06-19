@@ -1,3 +1,14 @@
+---
+title: 'Deployment profile — venture-os'
+status: current
+date: 2026-06-15
+owner: venture-os
+tier: operating
+tags: ['runbook', 'documentation']
+review_cycle: on-change
+document_type: runbook
+goals: 'Hub documentation — runbook'
+---
 # Deployment profile — venture-os
 
 **App:** Next.js 16 in [`app/`](../../app/)  

@@ -1,3 +1,14 @@
+---
+title: 'Newsletter source ingest (Miniflux + Gmail)'
+status: current
+date: 2026-06-15
+owner: venture-os
+tier: operating
+tags: ['runbook', 'documentation']
+review_cycle: on-change
+document_type: runbook
+goals: 'Hub documentation — runbook'
+---
 # Newsletter source ingest (Miniflux + Gmail)
 
 Maps external signals into Venture OS inbound queue via [`newsletter-source-registry.json`](./newsletter-source-registry.json).
