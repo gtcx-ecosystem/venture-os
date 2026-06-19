@@ -6,7 +6,10 @@ owner: venture-os
 document_type: design
 tier: critical
 tags: ["venture-os", "ai-native", "integrations", "tool-registry", "ranking"]
+review_cycle: on-change
 ---
+
+# Tool Registry v1 — metadata + ranking schema (FOSS-first)
 
 ## Summary
 

@@ -1,3 +1,14 @@
+---
+title: 'Product capability matrix — venture-os'
+status: current
+date: 2026-06-19
+owner: venture-os
+document_type: product
+tier: strategic
+tags: ['venture-os', 'strategy', 'capabilities']
+review_cycle: on-change
+---
+
 # Product capability matrix — venture-os
 
 > **SoR:** PRD features → shippable capabilities. Stories must trace to a row here or a `prdRef`.

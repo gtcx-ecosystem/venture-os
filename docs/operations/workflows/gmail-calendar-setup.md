@@ -6,6 +6,7 @@ owner: venture-os
 document_type: operating-playbook
 tier: tactical
 tags: ['venture-os', 'gmail', 'calendar', 'google-workspace', 'managed-service']
+review_cycle: on-change
 ---
 
 # Gmail and Calendar setup — Venture OS clients

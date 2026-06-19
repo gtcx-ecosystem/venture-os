@@ -1,10 +1,32 @@
-# Product — venture-os
+---
+title: 'product/ — experience SoR'
+status: current
+date: 2026-06-16
+owner: venture-os
+document_type: product
+tier: critical
+tags: ['documentation', 'product']
+review_cycle: on-change
+---
 
-| Document | Description |
-| -------- | ----------- |
-| [product-spec.md](./product-spec.md) | Scope, modules, MVP |
-| [implementation-roadmap.md](./implementation-roadmap.md) | Phase 0–6 build path |
-| [modules-and-workflows.md](./modules-and-workflows.md) | Desk workflows |
-| [ecosystem-client-map.md](./ecosystem-client-map.md) | GTCX pilot clients |
-| [pilot-onboarding.md](./pilot-onboarding.md) | 5-day onboarding |
-| [gtm-and-packaging.md](./gtm-and-packaging.md) | Packages and pricing logic |
+# `docs/product/` — venture-os
+
+> **Pack:** [`../../canon-os/pm/spec/docs-product-pack.json`](../../canon-os/pm/spec/docs-product-pack.json)  
+> **Foundation:** [`../foundation/`](../foundation/) · **Business:** [`../business/`](../business/) · **Architecture:** [`../architecture/`](../architecture/)
+
+## Cross-reference
+
+| Layer | Path | Role |
+| ----- | ---- | ---- |
+| Foundation | `docs/foundation/` | Why — charter, vision, goals |
+| Business | `docs/business/` | Market, ICP, economics |
+| **Product** | `docs/product/ux/` | Users, JTBD, journeys, workflows (UX only) |
+| Architecture | `docs/architecture/` | Requirements, specs, ADRs |
+| Ceremony | `agile/` | Scrum, planning, UAT, roadmap lanes |
+| Machine | `pm/` | PRDs, backlog, CI |
+
+## Subfolders
+
+| Folder | Contents |
+| ------ | -------- |
+| `ux/` | Users, JTBD, journeys, flows — **only** subfolder allowed |
