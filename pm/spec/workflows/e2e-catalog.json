@@ -1,0 +1,60 @@
+{
+  "$schema": "gtcx://venture-os/e2e-workflow-catalog/v1",
+  "repo": "venture-os",
+  "updated": "2026-06-19",
+  "workflows": [
+    {
+      "id": "WF-EXR-001",
+      "exrRef": "EXR-001",
+      "title": "Founder intake to operations desk",
+      "featureTier": "core",
+      "jtbdIds": ["JTBD-VENTURE-INTAKE-001"],
+      "persona": "founder",
+      "witness": "audit/evidence/demo-readiness-venture-os.json",
+      "steps": [
+        { "order": 1, "action": "Open venture home", "route": "/app", "exit": "Desk loads", "impl": "app/app/page.tsx" },
+        { "order": 2, "action": "Submit founder intake", "route": "/app/intake", "exit": "Intake form complete", "impl": "app/app/intake/page.tsx" },
+        { "order": 3, "action": "Operations review queue", "route": "/app/operations", "exit": "Pipeline visible", "impl": "app/app/operations/page.tsx" }
+      ]
+    },
+    {
+      "id": "WF-EXR-002",
+      "exrRef": "EXR-002",
+      "title": "Capital desk and opportunities",
+      "featureTier": "core",
+      "jtbdIds": ["JTBD-VENTURE-CAPITAL-001"],
+      "persona": "capital-analyst",
+      "steps": [
+        { "order": 1, "action": "Capital desk overview", "route": "/app/capital", "exit": "Allocations render", "impl": "app/app/capital/page.tsx" },
+        { "order": 2, "action": "Browse opportunities", "route": "/app/opportunities", "exit": "Deal flow listed", "impl": "app/app/opportunities/page.tsx" },
+        { "order": 3, "action": "Investment brief", "route": "/app/brief", "exit": "Brief artifact ready", "impl": "app/app/brief/page.tsx" }
+      ]
+    },
+    {
+      "id": "WF-EXR-003",
+      "exrRef": "EXR-003",
+      "title": "Collateral and visibility workflows",
+      "featureTier": "competitive",
+      "jtbdIds": ["JTBD-VENTURE-COLLATERAL-001"],
+      "persona": "venture-operator",
+      "steps": [
+        { "order": 1, "action": "Collateral workspace", "route": "/app/collateral", "exit": "Assets indexed", "impl": "app/app/collateral/page.tsx" },
+        { "order": 2, "action": "Visibility desk", "route": "/app/visibility", "exit": "LP-facing view ready", "impl": "app/app/visibility/page.tsx" },
+        { "order": 3, "action": "Client roster", "route": "/app/clients", "exit": "Schema-linked profiles", "impl": "app/app/clients/page.tsx" }
+      ]
+    },
+    {
+      "id": "WF-EXR-004",
+      "exrRef": "EXR-004",
+      "title": "Signals and growth motions",
+      "featureTier": "competitive",
+      "jtbdIds": ["JTBD-VENTURE-GROWTH-001"],
+      "persona": "venture-operator",
+      "steps": [
+        { "order": 1, "action": "Market signals feed", "route": "/app/signals", "exit": "Signals ranked", "impl": "app/app/signals/page.tsx" },
+        { "order": 2, "action": "Source intelligence", "route": "/app/sources", "exit": "Sources catalogued", "impl": "app/app/sources/page.tsx" },
+        { "order": 3, "action": "Growth playbook", "route": "/app/growth", "exit": "Motions tracked", "impl": "app/app/growth/page.tsx" }
+      ]
+    }
+  ]
+}
