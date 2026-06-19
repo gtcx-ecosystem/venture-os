@@ -1,0 +1,5 @@
+{
+  "$schema": "gtcx://canon-os/docs-agile-pack/v1",
+  "deprecated": true,
+  "upstreamSpec": "agile-pack.json"
+}
