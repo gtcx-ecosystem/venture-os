@@ -1,3 +1,14 @@
+---
+title: 'Layout v5 — venture-os pointer'
+status: current
+date: 2026-06-19
+owner: venture-os
+document_type: overview
+tier: standard
+tags: ['workspace', 'layout', 'p35', 'venture-os']
+review_cycle: on-change
+---
+
 # Layout v5 — venture-os pointer
 
 | Artifact | Path |

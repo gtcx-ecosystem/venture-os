@@ -1,4 +1,15 @@
-## Tool Registry v1 Implementation Plan
+---
+title: 'Tool Registry v1 Implementation Plan'
+status: current
+date: 2026-06-17
+owner: venture-os
+document_type: product
+tier: critical
+tags: ['venture-os', 'tool-registry', 'implementation-plan']
+review_cycle: on-change
+---
+
+# Tool Registry v1 Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
