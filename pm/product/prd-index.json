@@ -1,18 +1,51 @@
 {
   "$schema": "gtcx://bridge-os/prd-index/v1",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "repo": "venture-os",
-  "updated": "2026-06-17",
+  "updated": "2026-06-19",
   "productGoals": "pm/spec/product-goals.json",
   "prds": [
     {
+      "id": "prd-product-charter",
+      "path": "pm/product/prds/prd-product-charter.md",
+      "title": "Venture OS product charter",
+      "status": "active",
+      "milestones": ["M1"],
+      "features": [
+        "venture-app-intake",
+        "venture-operations-desk",
+        "venture-collateral-workflows",
+        "venture-visibility-desk",
+        "venture-client-schema"
+      ],
+      "capabilityIds": [
+        "founder-intake",
+        "capital-desk",
+        "collateral-workflows",
+        "visibility-desk",
+        "client-profile-schema"
+      ]
+    },
+    {
       "id": "prd-venture-os-charter",
       "path": "pm/product/prds/prd-venture-os-charter.md",
-      "title": "Venture OS product charter",
-      "status": "draft",
+      "title": "Venture OS product charter (legacy alias)",
+      "status": "active",
       "milestones": ["M1"],
-      "features": [],
-      "capabilityIds": []
+      "features": [
+        "venture-app-intake",
+        "venture-operations-desk",
+        "venture-collateral-workflows",
+        "venture-visibility-desk",
+        "venture-client-schema"
+      ],
+      "capabilityIds": [
+        "founder-intake",
+        "capital-desk",
+        "collateral-workflows",
+        "visibility-desk",
+        "client-profile-schema"
+      ]
     }
   ]
 }
