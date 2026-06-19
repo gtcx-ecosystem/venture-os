@@ -1,0 +1,30 @@
+{
+  "features": [
+    {
+      "id": "VENTUR-WF-001",
+      "capabilityId": "VENTUR-001",
+      "name": "venture-os demo path (workflow step 1)",
+      "domain": "venture-os",
+      "featureTier": "core",
+      "featureClass": "workflow-step",
+      "workflowId": "WF-VENTUR-DEMO-001",
+      "workflowStep": 1,
+      "jtbdIds": [],
+      "prdRef": "prd-product-charter",
+      "status": "catalog",
+      "coveragePercent": 50,
+      "evidence": "audit/evidence/demo-readiness-venture-os.json",
+      "specRef": "pm/product/prds/prd-product-charter.md",
+      "pillars": [
+        "F4",
+        "T7",
+        "T10"
+      ],
+      "plane": "product",
+      "persona": "product-engineer",
+      "phase": "M1",
+      "gtmCritical": true,
+      "forensicStatus": "catalog"
+    }
+  ]
+}
