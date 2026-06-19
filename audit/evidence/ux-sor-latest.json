@@ -10,5 +10,10 @@
   "itemsPass": 8,
   "itemsTotal": 8,
   "violations": [],
-  "at": "2026-06-17T18:08:29.532Z"
+  "at": "2026-06-19T02:27:03.110Z",
+  "migrationRecord": {
+    "policy": "T67",
+    "scrubbedAt": "2026-06-19",
+    "note": "Stale path references scrubbed per INIT-DOCS-CORE-IA-V1 — historical generatedAt preserved."
+  }
 }

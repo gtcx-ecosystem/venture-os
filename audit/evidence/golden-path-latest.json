@@ -17,5 +17,10 @@
     "golden-path-04-rolling-brief.png",
     "golden-path-05-approvals-drawer.png",
     "golden-path-06-publish-blocked.png"
-  ]
+  ],
+  "migrationRecord": {
+    "policy": "T67",
+    "scrubbedAt": "2026-06-19",
+    "note": "Stale path references scrubbed per INIT-DOCS-CORE-IA-V1 — historical generatedAt preserved."
+  }
 }

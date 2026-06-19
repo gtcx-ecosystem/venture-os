@@ -23,7 +23,7 @@
       "evaluatedAt": "2026-06-17T17:59:54.082Z",
       "ageHours": 0.30022258253309464,
       "stale": false,
-      "refreshCommand": "pnpm audit:multi-pillar:run --repo <repo> --write"
+      "refreshCommand": "pnpm review:multi-pillar:run --repo <repo> --write"
     },
     "master": {
       "score10": null,
@@ -78,5 +78,10 @@
     "anyStale": true,
     "pilotReady": false,
     "deployBarMet": false
+  },
+  "migrationRecord": {
+    "policy": "T67",
+    "scrubbedAt": "2026-06-19",
+    "note": "Stale path references scrubbed per INIT-DOCS-CORE-IA-V1 — historical generatedAt preserved."
   }
 }
