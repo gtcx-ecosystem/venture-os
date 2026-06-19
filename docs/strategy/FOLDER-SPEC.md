@@ -1,0 +1,24 @@
+---
+title: 'strategy/ — folder provisioning'
+status: current
+date: 2026-06-19
+owner: venture-os
+document_type: folder-spec
+tier: operating
+tags: ['documentation', 'strategy']
+review_cycle: on-change
+---
+
+# `docs/strategy/` — provisioning
+
+> **Parent:** [`docs/FOLDER-SPEC.md`](../FOLDER-SPEC.md)
+
+## Purpose
+
+Strategy lane for **venture-os** capability matrices and fleet pointers.
+
+## Agent rules
+
+1. Read `docs/INDEX.md` and parent `FOLDER-SPEC.md` first
+2. Set `document_type` per canon-os `docs-document-types.json`
+3. Log structural changes in `docs/CHANGELOG.md`
