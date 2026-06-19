@@ -1,0 +1,14 @@
+---
+title: 'domain — README'
+status: current
+date: 2026-06-15
+owner: venture-os
+document_type: overview
+tier: operating
+tags: ['documentation']
+review_cycle: on-change
+---
+
+# domain
+
+> See [`FOLDER-SPEC.md`](./FOLDER-SPEC.md) when present.
