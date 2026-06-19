@@ -49,5 +49,10 @@
       "dns": "Cloudflare CNAME venture-staging.gtcx.trade -> staging ALB (proxied=false)",
       "vaultCredential": "CLOUDFLARE_DNS_API_TOKEN (Baseline Vault)"
     }
-  ]
+  ],
+  "migrationRecord": {
+    "policy": "T67",
+    "scrubbedAt": "2026-06-19",
+    "note": "Stale path references scrubbed per INIT-DOCS-CORE-IA-V1 — historical generatedAt preserved."
+  }
 }

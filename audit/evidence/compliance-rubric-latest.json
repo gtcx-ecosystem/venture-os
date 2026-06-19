@@ -1,7 +1,7 @@
 {
   "schema": "gtcx://audit/compliance-rubric/v1",
   "repo": "venture-os",
-  "date": "2026-06-18",
+  "date": "2026-06-19",
   "score100": 69,
   "categories": {
     "layout-p35": {
@@ -499,30 +499,30 @@
     "ci-retrospectives-improvement": {
       "label": "CI, retrospectives & continuous improvement",
       "weight": 10,
-      "score100": 30,
+      "score100": 100,
       "protocol": "T16-ci-retrospectives",
       "specRef": "pm/spec/ci-retrospectives-sprint-gate.json",
       "items": [
         {
           "id": "retrospectives-readme",
           "label": "pm/retrospectives/README.md",
-          "pass": false,
-          "score100": 0,
+          "pass": true,
+          "score100": 100,
           "weight": 15,
           "severity": "P2",
           "optional": false,
-          "detail": "missing pm/retrospectives/README.md",
+          "detail": "pm/retrospectives/README.md",
           "protocol": "T16-ci-retrospectives"
         },
         {
           "id": "retrospectives-template",
           "label": "pm/retrospectives/TEMPLATE-session-retrospective.md",
-          "pass": false,
-          "score100": 0,
+          "pass": true,
+          "score100": 100,
           "weight": 10,
           "severity": "P2",
           "optional": false,
-          "detail": "missing pm/retrospectives/TEMPLATE-session-retrospective.md",
+          "detail": "pm/retrospectives/TEMPLATE-session-retrospective.md",
           "protocol": "T16-ci-retrospectives"
         },
         {
@@ -533,18 +533,18 @@
           "weight": 15,
           "severity": "P2",
           "optional": false,
-          "detail": "pm/manifest.json",
+          "detail": "pm/ci/gates.json",
           "protocol": "T16-ci-retrospectives"
         },
         {
           "id": "pm-ci-readme",
           "label": "pm/ci/README.md",
-          "pass": false,
-          "score100": 0,
+          "pass": true,
+          "score100": 100,
           "weight": 10,
           "severity": "P3",
           "optional": false,
-          "detail": "missing pm/ci/README.md",
+          "detail": "pm/ci/README.md",
           "protocol": "T16-ci-retrospectives"
         }
       ],
@@ -651,7 +651,7 @@
           "weight": 20,
           "severity": "P2",
           "optional": false,
-          "detail": "2/2 present"
+          "detail": "3/2 present"
         }
       ],
       "itemCount": 5
@@ -881,27 +881,6 @@
       "detail": "audit/FIVE-CORE-AUDITS.md"
     },
     {
-      "id": "retrospectives-readme",
-      "categoryId": "ci-retrospectives-improvement",
-      "label": "pm/retrospectives/README.md",
-      "severity": "P2",
-      "detail": "missing pm/retrospectives/README.md"
-    },
-    {
-      "id": "retrospectives-template",
-      "categoryId": "ci-retrospectives-improvement",
-      "label": "pm/retrospectives/TEMPLATE-session-retrospective.md",
-      "severity": "P2",
-      "detail": "missing pm/retrospectives/TEMPLATE-session-retrospective.md"
-    },
-    {
-      "id": "pm-ci-readme",
-      "categoryId": "ci-retrospectives-improvement",
-      "label": "pm/ci/README.md",
-      "severity": "P3",
-      "detail": "missing pm/ci/README.md"
-    },
-    {
       "id": "multi-pillar-or-five-core-runbook",
       "categoryId": "agentic-product-team",
       "label": "multi-pillar or five-core audit runbook",
@@ -916,5 +895,10 @@
       "detail": "0/1 present"
     }
   ],
-  "itemTotal": 66
+  "itemTotal": 66,
+  "migrationRecord": {
+    "policy": "T67",
+    "scrubbedAt": "2026-06-19",
+    "note": "Stale path references scrubbed per INIT-DOCS-CORE-IA-V1 — historical generatedAt preserved."
+  }
 }

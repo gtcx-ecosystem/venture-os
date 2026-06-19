@@ -1,8 +1,8 @@
 {
   "schema": "gtcx://canon-os/docs-foundation-check/v2",
   "repo": "venture-os",
-  "at": "2026-06-17T18:08:52.240Z",
-  "ok": true,
+  "at": "2026-06-19T19:12:34.541Z",
+  "ok": false,
   "spec": {
     "localPath": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/pm/spec/docs-foundation-pack.json",
     "localIsStub": false,
@@ -76,7 +76,7 @@
     },
     {
       "id": "readme:business-link",
-      "ok": true,
+      "ok": false,
       "detail": "README links to docs/business/ for detail layer"
     },
     {
@@ -85,19 +85,14 @@
       "detail": "constitution.md → fleet constitution"
     },
     {
-      "id": "sync:vision",
-      "ok": true,
-      "detail": "vision.md mirrors product-goals.json"
-    },
-    {
-      "id": "sync:mission",
-      "ok": true,
-      "detail": "mission.md mirrors product-goals.json"
-    },
-    {
-      "id": "sync:milestone",
-      "ok": true,
-      "detail": "milestones.md references M1"
+      "id": "canon:synthesize:check",
+      "ok": false,
+      "detail": "run pnpm canon:synthesize"
     }
-  ]
+  ],
+  "migrationRecord": {
+    "policy": "T67",
+    "scrubbedAt": "2026-06-19",
+    "note": "Stale path references scrubbed per INIT-DOCS-CORE-IA-V1 — historical generatedAt preserved."
+  }
 }
