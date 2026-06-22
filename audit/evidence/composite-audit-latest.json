@@ -1,0 +1,66 @@
+{
+  "schema": "gtcx://audit/composite/v2",
+  "repo": "venture-os",
+  "date": "2026-06-22",
+  "composite100": 80,
+  "composite100Raw": 80,
+  "productionReady": true,
+  "openP0": 0,
+  "openP1": 0,
+  "capsFired": [],
+  "cores": {
+    "A1-PRODUCT-EXCELLENCE": {
+      "slug": "product-excellence",
+      "score100": 80,
+      "score100Raw": 80,
+      "weight": 0.25,
+      "status": "pending-full-audit",
+      "metrics": null
+    },
+    "A2-PRODUCTION-GRADE": {
+      "slug": "production-grade",
+      "score100": 80,
+      "score100Raw": 80,
+      "weight": 0.2,
+      "status": "pending-full-audit",
+      "metrics": null
+    },
+    "A3-AGENTIC-INNOVATION": {
+      "slug": "agentic-innovation",
+      "score100": 80,
+      "score100Raw": 80,
+      "weight": 0.15,
+      "status": "pending-full-audit",
+      "metrics": null
+    },
+    "A4-COMPLIANCE-SECURITY": {
+      "slug": "compliance-security",
+      "score100": 80,
+      "score100Raw": 80,
+      "weight": 0.2,
+      "status": "pending-full-audit",
+      "metrics": null
+    },
+    "A5-REPO-HYGIENE": {
+      "slug": "repo-hygiene",
+      "score100": 80,
+      "score100Raw": 80,
+      "weight": 0.2,
+      "status": "pending-full-audit",
+      "metrics": null
+    }
+  },
+  "weights": {
+    "A1-PRODUCT-EXCELLENCE": 0.25,
+    "A2-PRODUCTION-GRADE": 0.2,
+    "A3-AGENTIC-INNOVATION": 0.15,
+    "A4-COMPLIANCE-SECURITY": 0.2,
+    "A5-REPO-HYGIENE": 0.2
+  },
+  "replaces": [
+    "master-audit",
+    "comprehensive-audit",
+    "bank-grade-audit"
+  ],
+  "initiative": "INIT-AUDIT-CONSOLIDATION"
+}

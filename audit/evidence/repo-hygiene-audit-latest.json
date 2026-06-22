@@ -1,0 +1,16 @@
+{
+  "schema": "gtcx://audit/core-witness/v1",
+  "coreId": "A5-REPO-HYGIENE",
+  "slug": "repo-hygiene",
+  "repo": "venture-os",
+  "date": "2026-06-22",
+  "score10": 8,
+  "score100": 80,
+  "status": "pending-full-audit",
+  "migratedFrom": null,
+  "gaps": [
+    "full five-core audit not yet run"
+  ],
+  "checks": {},
+  "note": "Transition witness — run full A1–A5 audit to replace migration scores"
+}

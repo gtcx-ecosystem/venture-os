@@ -1,0 +1,15 @@
+{
+  "schema": "gtcx.auditScrubManifest.v1",
+  "repo": "venture-os",
+  "date": "2026-06-22",
+  "initiative": "INIT-AUDIT-CONSOLIDATION",
+  "dryRun": false,
+  "moved": [],
+  "fiveCoreOnly": [
+    "audit/product-excellence-audit-{date}.md",
+    "audit/production-grade-audit-{date}.md",
+    "audit/agentic-innovation-audit-{date}.md",
+    "audit/compliance-security-audit-{date}.md",
+    "audit/repo-hygiene-audit-{date}.md"
+  ]
+}
