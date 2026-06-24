@@ -8,6 +8,8 @@ tags: ['protocol', 'documentation']
 review_cycle: on-change
 document_type: protocol
 document_id: EXR-001
+personaId: founder-command
+jtbdId: jtbd-founder-command-center
 journey_phase: J1-J3
 product_module: Command Center
 workflow: W1-triage

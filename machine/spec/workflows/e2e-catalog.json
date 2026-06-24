@@ -1,0 +1,16 @@
+{
+  "$schema": "gtcx://venture-os/workflows-e2e-catalog/v1",
+  "repo": "venture-os",
+  "updated": "2026-06-23",
+  "workflows": [
+    {
+      "id": "WF-VENTURE-INTAKE",
+      "label": "Founder intake to command center",
+      "featureIds": ["VENTUR-001", "VENTUR-WF-001"],
+      "steps": [
+        { "order": 1, "label": "Intake route", "featureIds": ["VENTUR-001"] },
+        { "order": 2, "label": "Command center triage", "featureIds": ["VENTUR-WF-001"] }
+      ]
+    }
+  ]
+}

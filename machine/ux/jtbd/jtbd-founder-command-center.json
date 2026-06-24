@@ -1,0 +1,10 @@
+{
+  "id": "jtbd-founder-command-center",
+  "title": "Triage portfolio ventures from command center",
+  "personaId": "founder-command",
+  "acceptanceCriteria": [
+    "Hero metrics load from API without hardcoded values",
+    "Evidence status visible on opportunity cards",
+    "Workflow queue receipt visible in agent panel"
+  ]
+}

@@ -1,13 +1,13 @@
 {
   "schema": "gtcx://canon-os/product-charter-check/v1",
-  "at": "2026-06-19T07:57:40.099Z",
+  "at": "2026-06-24T00:38:13.648Z",
   "repo": "venture-os",
   "repoRoot": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os",
   "ok": true,
   "score": {
-    "earned": 18.25,
-    "possible": 19.75,
-    "pct": 92.4,
+    "earned": 20,
+    "possible": 20,
+    "pct": 100,
     "rag": "green"
   },
   "registry": {
@@ -15,22 +15,22 @@
     "count": 6,
     "workflowSteps": 1,
     "specGaps": 0,
-    "path": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/pm/spec/feature-registry/manifest.json",
+    "path": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/machine/spec/feature-registry/manifest.json",
     "forensic": true
   },
   "counts": {
     "features": 6,
     "workflowSteps": 1,
     "specGaps": 0,
-    "prdFeatures": 10,
+    "prdFeatures": 5,
     "personas": 1,
     "jtbd": 1,
-    "jtbdCatalog": 0,
-    "e2eWorkflows": 0,
+    "jtbdCatalog": 1,
+    "e2eWorkflows": 1,
     "flows": 1,
     "exr": 1,
     "workflows": 0,
-    "forensicSurfaces": 0
+    "forensicSurfaces": 2
   },
   "gates": [
     {
@@ -144,7 +144,7 @@
       "ok": true,
       "optional": false,
       "weight": 1,
-      "detail": "10 slugs"
+      "detail": "5 slugs"
     },
     {
       "id": "registry:present",
@@ -169,24 +169,31 @@
     },
     {
       "id": "jtbd:catalog",
-      "ok": false,
+      "ok": true,
       "optional": true,
       "weight": 1,
-      "detail": "missing pm/ux/jtbd/catalog.json"
+      "detail": "1 jobs"
     },
     {
       "id": "workflows:e2e-catalog",
-      "ok": false,
+      "ok": true,
       "optional": true,
       "weight": 1,
-      "detail": "missing e2e-catalog"
+      "detail": "1 workflows"
     },
     {
       "id": "forensic:spec-impl-audit",
-      "ok": false,
+      "ok": true,
       "optional": true,
       "weight": 1,
-      "detail": "missing forensic-feature-audit-latest.json"
+      "detail": "2 surfaces scanned"
+    },
+    {
+      "id": "forensic:workflow-impl-resolved",
+      "ok": true,
+      "optional": true,
+      "weight": 1,
+      "detail": "steps=1 pages=4"
     },
     {
       "id": "ux:personas",
@@ -197,10 +204,10 @@
     },
     {
       "id": "ux:jtbd",
-      "ok": false,
+      "ok": true,
       "optional": true,
       "weight": 1,
-      "detail": "0/1 complete"
+      "detail": "1/1 complete"
     },
     {
       "id": "ux:flows",
@@ -218,27 +225,27 @@
     },
     {
       "id": "exr:frontmatter",
-      "ok": false,
-      "optional": true,
-      "weight": 1,
-      "detail": "0/1 with personaId+jtbdId"
-    },
-    {
-      "id": "workflows:spine",
-      "ok": false,
-      "optional": true,
-      "weight": 1,
-      "detail": "0 workflows"
-    },
-    {
-      "id": "review:11pr-witness",
       "ok": true,
       "optional": true,
       "weight": 1,
-      "detail": "multi-pillar-latest.json"
+      "detail": "1/1 with personaId+jtbdId"
     },
     {
-      "id": "review:feature-matrix",
+      "id": "workflows:spine",
+      "ok": true,
+      "optional": true,
+      "weight": 1,
+      "detail": "1 workflows"
+    },
+    {
+      "id": "audit:11pr-witness",
+      "ok": true,
+      "optional": true,
+      "weight": 1,
+      "detail": "five-pillar-latest.json"
+    },
+    {
+      "id": "audit:feature-matrix",
       "ok": true,
       "optional": true,
       "weight": 1,
@@ -246,10 +253,5 @@
     }
   ],
   "activeMilestone": "M1",
-  "referenceTier": "product",
-  "migrationRecord": {
-    "policy": "T67",
-    "scrubbedAt": "2026-06-19",
-    "note": "Stale path references scrubbed per INIT-DOCS-CORE-IA-V1 — historical generatedAt preserved."
-  }
+  "referenceTier": "product"
 }

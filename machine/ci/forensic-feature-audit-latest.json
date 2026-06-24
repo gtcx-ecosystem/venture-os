@@ -1,0 +1,16 @@
+{
+  "schema": "gtcx://venture-os/forensic-feature-audit/v1",
+  "repo": "venture-os",
+  "generatedAt": "2026-06-23T19:00:00.000Z",
+  "inventory": {
+    "capabilities": 5,
+    "workflowSteps": 1,
+    "specGaps": 0,
+    "missingImplementations": 0,
+    "pageRoutes": 4
+  },
+  "specSurfaceAudit": [
+    { "surface": "app/components/CommandCenterWorkspace.tsx", "status": "implemented" },
+    { "surface": "app/app/api/venture/opportunities/route.ts", "status": "implemented" }
+  ]
+}
