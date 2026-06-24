@@ -2,8 +2,8 @@
   "schema": "gtcx://audit/fleet-diagnostic-snapshot/v1",
   "repo": "venture-os",
   "tier": "product",
-  "refreshedAt": "2026-06-17T18:17:54.938Z",
-  "sessionPhase": "close",
+  "refreshedAt": "2026-06-24T09:02:17.973Z",
+  "sessionPhase": null,
   "diagnostics": {
     "engineering": {
       "score100": null,
@@ -15,30 +15,30 @@
       "deepCommand": "full-audit skill in owner repo workspace"
     },
     "multiPillar": {
-      "composite100": 74,
-      "trustCap100": 74,
-      "compliance100": 87,
+      "composite100": 59,
+      "trustCap100": 70,
+      "compliance100": 69,
       "published": false,
-      "witnessPath": "audit/evidence/multi-pillar-latest.json",
-      "evaluatedAt": "2026-06-17T17:59:54.082Z",
-      "ageHours": 0.30022258253309464,
+      "witnessPath": "audit/evidence/five-pillar-latest.json",
+      "evaluatedAt": "2026-06-22T19:23:11.848Z",
+      "ageHours": 37.65162356696235,
       "stale": false,
-      "refreshCommand": "pnpm review:multi-pillar:run --repo <repo> --write"
+      "refreshCommand": "pnpm audit:multi-pillar:run --repo <repo> --write"
     },
     "master": {
-      "score10": null,
-      "score100": null,
-      "productionReady": false,
+      "score10": 8,
+      "score100": 80,
+      "productionReady": true,
       "gaps": [],
-      "witnessPath": null,
-      "ageHours": null,
-      "stale": true,
+      "witnessPath": "audit/evidence/composite-audit-latest.json",
+      "ageHours": 36.17640692979601,
+      "stale": false,
       "refreshCommand": "pnpm ecosystem:master:audit --repo <repo> --write"
     },
     "gtm": {
       "stage": "S2",
       "stageName": "Pilot Ready",
-      "status": "partial",
+      "status": "not_ready",
       "score100": 36,
       "gates": {
         "readme": true,
@@ -46,7 +46,7 @@
         "devEntry": true,
         "opsCheckPass": true,
         "agentNextWork": true,
-        "demoWalkthrough": true,
+        "demoWalkthrough": false,
         "syntheticFixtures": false,
         "featureMatrix90": false,
         "deployWitness": false,
@@ -64,6 +64,7 @@
         "cveClear": false
       },
       "gaps": [
+        "S2:demoWalkthrough",
         "S2:syntheticFixtures",
         "S2:featureMatrix90"
       ],
@@ -74,14 +75,9 @@
     }
   },
   "rollup": {
-    "avgScore100": 55,
+    "avgScore100": 58,
     "anyStale": true,
     "pilotReady": false,
     "deployBarMet": false
-  },
-  "migrationRecord": {
-    "policy": "T67",
-    "scrubbedAt": "2026-06-19",
-    "note": "Stale path references scrubbed per INIT-DOCS-CORE-IA-V1 — historical generatedAt preserved."
   }
 }

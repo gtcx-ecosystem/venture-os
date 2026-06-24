@@ -1,7 +1,7 @@
 {
   "schema": "gtcx://audit/compliance-rubric/v1",
   "repo": "venture-os",
-  "date": "2026-06-19",
+  "date": "2026-06-22",
   "score100": 69,
   "categories": {
     "layout-p35": {
@@ -435,7 +435,7 @@
     "agentic-harness-p22-p28": {
       "label": "Agentic harness (P22–P28)",
       "weight": 10,
-      "score100": 100,
+      "score100": 75,
       "protocol": "P22-P28",
       "items": [
         {
@@ -463,8 +463,8 @@
         {
           "id": "agent-work-selection-check",
           "label": "pnpm agent:work-selection:check",
-          "pass": true,
-          "score100": 100,
+          "pass": false,
+          "score100": 0,
           "weight": 25,
           "severity": "P1",
           "optional": false,
@@ -634,8 +634,8 @@
           "detail": "2/1 present"
         },
         {
-          "id": "multi-pillar-or-five-core-runbook",
-          "label": "multi-pillar or five-core audit runbook",
+          "id": "five-pillar-or-five-core-runbook",
+          "label": "Five-pillar or five-core audit runbook",
           "pass": false,
           "score100": 0,
           "weight": 20,
@@ -748,18 +748,18 @@
           "detail": "audit/evidence or attestation"
         },
         {
-          "id": "multi-pillar-witness",
-          "label": "audit/evidence/multi-pillar-latest.json",
+          "id": "five-pillar-witness",
+          "label": "audit/evidence/five-pillar-latest.json",
           "pass": true,
           "score100": 100,
           "weight": 25,
           "severity": "P2",
           "optional": false,
-          "detail": "audit/evidence/multi-pillar-latest.json"
+          "detail": "audit/evidence/five-pillar-latest.json"
         },
         {
-          "id": "rollup-or-five-core",
-          "label": "rollup-audit or five-core witnesses",
+          "id": "composite-or-five-core",
+          "label": "composite-audit or five-core witnesses",
           "pass": false,
           "score100": 0,
           "weight": 25,
@@ -881,24 +881,26 @@
       "detail": "audit/FIVE-CORE-AUDITS.md"
     },
     {
-      "id": "multi-pillar-or-five-core-runbook",
+      "id": "agent-work-selection-check",
+      "categoryId": "agentic-harness-p22-p28",
+      "label": "pnpm agent:work-selection:check",
+      "severity": "P1",
+      "detail": "workSelection"
+    },
+    {
+      "id": "five-pillar-or-five-core-runbook",
       "categoryId": "agentic-product-team",
-      "label": "multi-pillar or five-core audit runbook",
+      "label": "Five-pillar or five-core audit runbook",
       "severity": "P2",
       "detail": "0/1 present"
     },
     {
-      "id": "rollup-or-five-core",
+      "id": "composite-or-five-core",
       "categoryId": "audit-evidence-index",
-      "label": "rollup-audit or five-core witnesses",
+      "label": "composite-audit or five-core witnesses",
       "severity": "P2",
       "detail": "0/1 present"
     }
   ],
-  "itemTotal": 66,
-  "migrationRecord": {
-    "policy": "T67",
-    "scrubbedAt": "2026-06-19",
-    "note": "Stale path references scrubbed per INIT-DOCS-CORE-IA-V1 — historical generatedAt preserved."
-  }
+  "itemTotal": 66
 }

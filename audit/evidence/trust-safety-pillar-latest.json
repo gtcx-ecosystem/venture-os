@@ -1,7 +1,7 @@
 {
   "schema": "gtcx://audit/trust-safety-pillar/v1",
   "repo": "venture-os",
-  "date": "2026-06-19",
+  "date": "2026-06-22",
   "score100": 70,
   "published": true,
   "metrics": {
@@ -45,10 +45,5 @@
     "minConfidence": "B",
     "minTrust100": 70,
     "blocked": false
-  },
-  "migrationRecord": {
-    "policy": "T67",
-    "scrubbedAt": "2026-06-19",
-    "note": "Stale path references scrubbed per INIT-DOCS-CORE-IA-V1 — historical generatedAt preserved."
   }
 }

@@ -3,7 +3,7 @@
   "repo": "venture-os",
   "repoKind": "product",
   "isPilot": false,
-  "date": "2026-06-17",
+  "date": "2026-06-23",
   "ok": true,
   "score100": 100,
   "pillar": "compliance",
@@ -57,7 +57,7 @@
       "label": "Agent onboarding surfaces",
       "pillar": "compliance",
       "required": true,
-      "score100": 50,
+      "score100": 100,
       "items": [
         {
           "id": "agents-md",
@@ -70,8 +70,8 @@
           "id": "agents-readme",
           "label": "docs/agents/README.md or agent index",
           "severity": "P2",
-          "pass": false,
-          "detail": "missing one of: docs/agents/README.md, agents/README.md, docs/agents/"
+          "pass": true,
+          "detail": "agents/README.md"
         }
       ]
     },
@@ -117,14 +117,14 @@
           "label": "CONTRIBUTING.md (repo or docs/operations/repo/)",
           "severity": "P1",
           "pass": true,
-          "detail": "CONTRIBUTING.md"
+          "detail": "docs/operations/repo/CONTRIBUTING.md"
         },
         {
           "id": "contributing-sections",
           "label": "CONTRIBUTING required sections",
           "severity": "P2",
           "pass": true,
-          "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/CONTRIBUTING.md"
+          "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/docs/operations/repo/CONTRIBUTING.md"
         }
       ]
     },
@@ -140,7 +140,7 @@
           "label": "demo-walkthrough or deployment-profile",
           "severity": "P2",
           "pass": true,
-          "detail": "docs/operations/demo-walkthrough.md"
+          "detail": "docs/operations/deployment-profile.json"
         }
       ]
     },
@@ -178,8 +178,8 @@
           "id": "docs-internal-links",
           "label": "Broken internal links in docs/ ≤25",
           "severity": "P2",
-          "pass": true,
-          "detail": "0 broken / 10 files"
+          "pass": false,
+          "detail": "33 broken / 207 files"
         }
       ]
     },
@@ -200,19 +200,7 @@
       ]
     }
   ],
-  "violations": [
-    {
-      "packId": "AGENT-OPS",
-      "itemId": "agents-readme",
-      "severity": "P2",
-      "detail": "missing one of: docs/agents/README.md, agents/README.md, docs/agents/"
-    }
-  ],
+  "violations": [],
   "openP0": 0,
-  "openP1": 0,
-  "migrationRecord": {
-    "policy": "T67",
-    "scrubbedAt": "2026-06-19",
-    "note": "Stale path references scrubbed per INIT-DOCS-CORE-IA-V1 — historical generatedAt preserved."
-  }
+  "openP1": 0
 }
