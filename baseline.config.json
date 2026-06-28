@@ -1,0 +1,46 @@
+{
+  "projectRoot": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os",
+  "name": "venture-os",
+  "knowledge": [
+    "./docs",
+    "./docs",
+    "./.agent",
+    "./.claude",
+    "./.cursor",
+    "./README.md",
+    "./AGENTS.md",
+    "./CHANGELOG.md"
+  ],
+  "include": [
+    "**/*.md",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.json",
+    "**/*.yml",
+    "**/*.yaml"
+  ],
+  "exclude": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.git/**",
+    "**/.turbo/**",
+    "**/coverage/**",
+    "**/.baseline/data/**",
+    "**/.baseline/index/**",
+    "**/.baseline/checkpoints/**"
+  ],
+  "paths": {
+    "data": ".baseline",
+    "index": ".baseline/index",
+    "checkpoints": ".baseline/checkpoints"
+  },
+  "rag": {
+    "budget": {
+      "maxTokens": 1200
+    }
+  },
+  "workflows": []
+}

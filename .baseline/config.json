@@ -1,0 +1,37 @@
+{
+  "version": "ecosystem-init-1",
+  "name": "venture-os",
+  "projectRoot": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os",
+  "createdAt": "2026-06-27T16:45:19.271Z",
+  "detection": {
+    "runtime": "node",
+    "providers": [],
+    "frameworks": [
+      "Node.js / TypeScript"
+    ]
+  },
+  "knowledge": [
+    "./docs",
+    "./docs",
+    "./.agent",
+    "./.claude",
+    "./.cursor",
+    "./README.md",
+    "./AGENTS.md",
+    "./CHANGELOG.md"
+  ],
+  "index": {
+    "documents": 0,
+    "indexedAt": null
+  },
+  "layers": {
+    "armed": 0,
+    "total": 7,
+    "score": 0,
+    "status": "initialized"
+  },
+  "discovery": {
+    "patterns": 1,
+    "todos": 1
+  }
+}

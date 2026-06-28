@@ -1,0 +1,16 @@
+# Confirmed Patterns
+
+## Architecture & Stack
+**Discovered:** 2026-06-27
+- Monorepo managed with pnpm workspaces + Turborepo
+- CI/CD via GitHub Actions
+- Tech stack: Node.js / TypeScript
+
+## Conventions
+**Discovered:** 2026-06-27
+- Add confirmed conventions here as they are validated
+
+## Documentation
+**Discovered:** 2026-06-27
+- Uses docs/ for documentation
+- Has root README.md
