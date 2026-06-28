@@ -1,16 +1,80 @@
 {
-  "schema": "gtcx://audit/core-witness/v1",
+  "schema": "gtcx://audit/core-witness/v2",
   "coreId": "A4-COMPLIANCE-SECURITY",
   "slug": "compliance-security",
   "repo": "venture-os",
-  "date": "2026-06-22",
-  "score10": 8,
-  "score100": 80,
-  "status": "pending-full-audit",
-  "migratedFrom": null,
-  "gaps": [
-    "full five-core audit not yet run"
+  "date": "2026-06-25",
+  "score10": 10,
+  "score100": 100,
+  "score100Raw": 100,
+  "status": "probe-gates-only",
+  "source": "run-five-core-audit",
+  "metrics": {
+    "security": {
+      "score100": 0,
+      "weight": 1,
+      "confidence": "D",
+      "source": "missing"
+    },
+    "enterprise-readiness": {
+      "score100": 0,
+      "weight": 1,
+      "confidence": "D",
+      "source": "missing"
+    },
+    "bank-grade-auditability": {
+      "score100": 0,
+      "weight": 1,
+      "confidence": "D",
+      "source": "missing"
+    }
+  },
+  "gates": [
+    {
+      "id": "security-scan-clean-or-waived",
+      "label": "Gitleaks witness or CI security gate",
+      "pass": true,
+      "severity": "P0",
+      "cap100": 59
+    },
+    {
+      "id": "secrets-no-leak",
+      "label": "No committed .env secrets",
+      "pass": true,
+      "severity": "P0",
+      "cap100": 50
+    },
+    {
+      "id": "trust-evidence-indexed",
+      "label": "audit/evidence or attestation path",
+      "pass": true,
+      "severity": "P1",
+      "cap100": 75
+    }
   ],
-  "checks": {},
-  "note": "Transition witness — run full A1–A5 audit to replace migration scores"
+  "capsFired": [],
+  "openP0": 0,
+  "openP1": 0,
+  "rubricSource": "readiness-snapshot",
+  "rubricSourcePath": "pm/readiness-snapshot.json",
+  "checks": {
+    "noEnvInGit": {
+      "ok": true,
+      "detail": ".env should not be committed"
+    },
+    "assuranceWorkspace": {
+      "ok": true,
+      "detail": "assurance or security ops domain"
+    },
+    "trustEvidence": {
+      "ok": true,
+      "detail": "audit/evidence or attestation"
+    },
+    "gitleaksWitness": {
+      "ok": true,
+      "detail": "gitleaks witness or CI workflow"
+    }
+  },
+  "gaps": [],
+  "runbook": "audit/runbooks/A4-compliance-security.md"
 }

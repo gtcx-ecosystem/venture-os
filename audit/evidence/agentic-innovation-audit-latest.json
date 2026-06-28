@@ -1,16 +1,82 @@
 {
-  "schema": "gtcx://audit/core-witness/v1",
+  "schema": "gtcx://audit/core-witness/v2",
   "coreId": "A3-AGENTIC-INNOVATION",
   "slug": "agentic-innovation",
   "repo": "venture-os",
-  "date": "2026-06-22",
-  "score10": 8,
-  "score100": 80,
-  "status": "pending-full-audit",
-  "migratedFrom": null,
-  "gaps": [
-    "full five-core audit not yet run"
+  "date": "2026-06-25",
+  "score10": 7.5,
+  "score100": 75,
+  "score100Raw": 80,
+  "status": "probe-gates-only",
+  "source": "run-five-core-audit",
+  "metrics": {
+    "ai-maturity": {
+      "score100": 0,
+      "weight": 1,
+      "confidence": "D",
+      "source": "missing"
+    },
+    "hallucination-resilience": {
+      "score100": 0,
+      "weight": 1,
+      "confidence": "D",
+      "source": "missing"
+    }
+  },
+  "gates": [
+    {
+      "id": "agent-protocol-wiring",
+      "label": "AGENTS.md + agent:next-work or work-selection",
+      "pass": false,
+      "severity": "P1",
+      "cap100": 75
+    },
+    {
+      "id": "baseline-session-ok",
+      "label": "Baseline session or agentic manifest",
+      "pass": true,
+      "severity": "P2",
+      "cap100": 80
+    }
   ],
-  "checks": {},
-  "note": "Transition witness — run full A1–A5 audit to replace migration scores"
+  "capsFired": [
+    {
+      "id": "gate-agent-protocol-wiring",
+      "label": "Gate failed: AGENTS.md + agent:next-work or work-selection",
+      "ceiling100": 75,
+      "trigger": "agent-protocol-wiring"
+    }
+  ],
+  "openP0": 0,
+  "openP1": 0,
+  "rubricSource": "readiness-snapshot",
+  "rubricSourcePath": "pm/readiness-snapshot.json",
+  "checks": {
+    "agenticManifest": {
+      "ok": true,
+      "detail": "agentic/manifest.json"
+    },
+    "agentsMd": {
+      "ok": true,
+      "detail": "AGENTS.md"
+    },
+    "nextWork": {
+      "ok": true,
+      "code": 0,
+      "out": "> venture-os@0.1.0 agent:next-work /Users/amanianai/Sites/gtcx-ecosystem/venture-os\n> node platform/scripts/agent/agent-next-work.mjs \"--json\""
+    },
+    "workSelection": {
+      "ok": false,
+      "code": 1,
+      "out": "> venture-os@0.1.0 agent:work-selection:check /Users/amanianai/Sites/gtcx-ecosystem/venture-os\n> node ../bridge-os/platform/scripts/checks/check-agent-work-selection.mjs\n\n ELIFECYCLE  Command failed with exit code 1.\n[protocols-adoption] warn: GTM/legal layout check deferred for v5 hub (ops/ not under docs/)\nAgent protocols adoption check failed:\n\n  - Missing work-selection manifest: tried docs/operations/agent-work-selection.md, docs/operations/agent-work-selection.md, docs/operations/agent-work-selection.md\n  - coordination doc missing Protocol 24"
+    },
+    "mcpHub": {
+      "ok": true,
+      "detail": "MCP hub, hub repo, or agentic consumer"
+    }
+  },
+  "gaps": [
+    "workSelection"
+  ],
+  "runbook": "audit/runbooks/A3-agentic-innovation.md"
 }
