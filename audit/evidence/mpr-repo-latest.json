@@ -3,9 +3,9 @@
   "scope": "repo",
   "id": "venture-os",
   "repo": "venture-os",
-  "evaluatedAt": "2026-06-26T11:34:58.590Z",
-  "gitHead": "a2e9f90b56449cafa147006b6e35c6bc6f807576",
-  "date": "2026-06-26",
+  "evaluatedAt": "2026-06-27T10:15:00.184Z",
+  "gitHead": "3fe93b255745cbb5da2aafc1083db167bfde1fe0",
+  "date": "2026-06-27",
   "weights": {
     "compliance": 0,
     "technicalExcellence": 0.15,
@@ -274,7 +274,7 @@
               "weight": 40,
               "severity": "P2",
               "optional": false,
-              "detail": "11 dated sibling(s) with -latest witness — e.g. audit/agentic-innovation-audit-2026-06-22.md",
+              "detail": "13 dated sibling(s) with -latest witness — e.g. audit/agentic-innovation-audit-2026-06-22.md",
               "protocol": "P32"
             }
           ],
@@ -900,7 +900,7 @@
           "categoryId": "anti-version-bloat-p32",
           "label": "No dated audit/evidence siblings when *-latest.* exists",
           "severity": "P2",
-          "detail": "11 dated sibling(s) with -latest witness — e.g. audit/agentic-innovation-audit-2026-06-22.md"
+          "detail": "13 dated sibling(s) with -latest witness — e.g. audit/agentic-innovation-audit-2026-06-22.md"
         },
         {
           "id": "agent-work-selection-check",
@@ -1000,7 +1000,7 @@
       "score100": 0,
       "published": false,
       "provisional": true,
-      "blockedBy": "esl:ESL-2",
+      "blockedBy": "compliance",
       "unlockThreshold100": 85,
       "metrics": {
         "selectivity-ingredients": {
@@ -1065,9 +1065,7 @@
       "craftFlags": {
         "interchangeable": false,
         "aiSlop": false
-      },
-      "eslRequired": "ESL-2",
-      "eslActive": "ESL-1"
+      }
     },
     "worldClass": {
       "score100": 0,
@@ -1187,7 +1185,7 @@
       "rubricSpec": "pm/spec/world-class-rubric.json",
       "rubricVersion": "1.0.0",
       "eslRequired": "ESL-3",
-      "eslActive": "ESL-1"
+      "eslActive": "ESL-2"
     },
     "trustAndSafety": {
       "score100": 63,
@@ -1218,7 +1216,7 @@
           "score100": 60,
           "weight": 20,
           "freshFivePillar": true,
-          "versionBloatHits": 11
+          "versionBloatHits": 12
         },
         "independent-replay": {
           "score100": 45,
@@ -1287,7 +1285,7 @@
         "published": false,
         "provisional": true,
         "blockedBy": [
-          "esl:ESL-2"
+          "compliance"
         ],
         "confidence": "B",
         "checks": []

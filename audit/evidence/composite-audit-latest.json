@@ -1,66 +1,41 @@
 {
-  "schema": "gtcx://audit/composite/v2",
+  "schema": "gtcx://audit/composite/v1",
   "repo": "venture-os",
-  "date": "2026-06-22",
-  "composite100": 80,
-  "composite100Raw": 80,
-  "productionReady": true,
-  "openP0": 0,
-  "openP1": 0,
-  "capsFired": [],
-  "cores": {
-    "A1-PRODUCT-EXCELLENCE": {
-      "slug": "product-excellence",
-      "score100": 80,
-      "score100Raw": 80,
-      "weight": 0.25,
-      "status": "pending-full-audit",
-      "metrics": null
+  "date": "2026-06-27",
+  "composite100": 75,
+  "productionReady": false,
+  "source": "ecosystem-master-audit-gate-rollup",
+  "gates": {
+    "baselineConfig": {
+      "ok": true,
+      "sor": true,
+      "stub": false
     },
-    "A2-PRODUCTION-GRADE": {
-      "slug": "production-grade",
-      "score100": 80,
-      "score100Raw": 80,
-      "weight": 0.2,
-      "status": "pending-full-audit",
-      "metrics": null
+    "ops": {
+      "ok": false,
+      "code": 1,
+      "out": "> venture-os@0.1.0 ops:check /Users/amanianai/Sites/gtcx-ecosystem/venture-os\n> node platform/scripts/ops-check.mjs\n\n ELIFECYCLE  Command failed with exit code 1.\nops:check FAIL — venture-os\n  - lint exit 1 —   ELIFECYCLE  Command failed with exit code 1.  ELIFECYCLE  Command failed with exit code 1.\n  - layout:check exit 1 —     \"required path missing: docs/operations/workspace/ecosystem-repo-layout-v5.md\"   ] }\n  - agent:work-selection:check exit 1 —    - Missing work-selection manifest: tried docs/operations/agent-work-selection.md, docs/operations/agent-work-selection.md, docs/operations/agent-work-selection.md   - coordination doc missing Protocol 24"
     },
-    "A3-AGENTIC-INNOVATION": {
-      "slug": "agentic-innovation",
-      "score100": 80,
-      "score100Raw": 80,
-      "weight": 0.15,
-      "status": "pending-full-audit",
-      "metrics": null
+    "p35Strict": {
+      "ok": false,
+      "detail": "{\n  \"ok\": false,\n  \"protocol\": \"35-ecosystem-workspace-world-class/v5.0.0\",\n  \"engine\": \"layout-spec-enforce/v1\",\n  \"contractVersion\": \"5.1.0\",\n  \"contractPath\""
     },
-    "A4-COMPLIANCE-SECURITY": {
-      "slug": "compliance-security",
-      "score100": 80,
-      "score100Raw": 80,
-      "weight": 0.2,
-      "status": "pending-full-audit",
-      "metrics": null
+    "agentic": {
+      "ok": true
     },
-    "A5-REPO-HYGIENE": {
-      "slug": "repo-hygiene",
-      "score100": 80,
-      "score100Raw": 80,
-      "weight": 0.2,
-      "status": "pending-full-audit",
-      "metrics": null
+    "mcp": {
+      "ok": false,
+      "detail": "optional product"
+    },
+    "gitPush": {
+      "ok": true,
+      "detail": "Everything up-to-date"
     }
   },
-  "weights": {
-    "A1-PRODUCT-EXCELLENCE": 0.25,
-    "A2-PRODUCTION-GRADE": 0.2,
-    "A3-AGENTIC-INNOVATION": 0.15,
-    "A4-COMPLIANCE-SECURITY": 0.2,
-    "A5-REPO-HYGIENE": 0.2
-  },
-  "replaces": [
-    "master-audit",
-    "comprehensive-audit",
-    "bank-grade-audit"
+  "gaps": [
+    "ops:check failed",
+    "P35 strict"
   ],
-  "initiative": "INIT-AUDIT-CONSOLIDATION"
+  "note": "Gate rollup — replace with five-core witness composite after A1–A5 audits",
+  "replaces": "master-audit"
 }

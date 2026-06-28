@@ -1,18 +1,18 @@
 {
   "schema": "gtcx://canon-os/docs-tree-witness/v1",
-  "generatedAt": "2026-06-22T17:31:53.221Z",
+  "generatedAt": "2026-06-27T14:56:53.087Z",
   "repo": "venture-os",
-  "strict": true,
-  "structureOnly": false,
+  "strict": false,
+  "structureOnly": true,
   "profile": "product",
-  "pass": true,
+  "pass": false,
   "metrics": {
-    "mdFiles": 203,
-    "folders": 65,
+    "mdFiles": 0,
+    "folders": 0,
     "missingReadme": 0,
     "missingFrontmatter": 0,
     "missingDocumentType": 0,
-    "unknownTopLevel": 0
+    "unknownTopLevel": 2
   },
   "gates": [
     {
@@ -62,8 +62,8 @@
     },
     {
       "id": "top-level:allowlist",
-      "ok": true,
-      "detail": "ok"
+      "ok": false,
+      "detail": "11-legal, gtm"
     },
     {
       "id": "layer:required:foundation",
@@ -432,8 +432,8 @@
     },
     {
       "id": "layer:root-sprawl:operations",
-      "ok": true,
-      "detail": "clean"
+      "ok": false,
+      "detail": "agent-communication-protocol.md, agent-proceed-brief-template.md, agent-status-update-template.md, coordination-handoff-template.md"
     },
     {
       "id": "aux:reference:README.md",
@@ -441,5 +441,8 @@
       "detail": "README.md"
     }
   ],
-  "failed": []
+  "failed": [
+    "top-level:allowlist",
+    "layer:root-sprawl:operations"
+  ]
 }

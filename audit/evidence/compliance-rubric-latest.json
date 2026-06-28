@@ -1,7 +1,7 @@
 {
   "schema": "gtcx://audit/compliance-rubric/v1",
   "repo": "venture-os",
-  "date": "2026-06-22",
+  "date": "2026-06-27",
   "score100": 69,
   "categories": {
     "layout-p35": {
@@ -177,7 +177,7 @@
     "docs-sor-p32": {
       "label": "Documentation SoR (P32)",
       "weight": 6,
-      "score100": 70,
+      "score100": 100,
       "protocol": "P32",
       "items": [
         {
@@ -205,8 +205,8 @@
         {
           "id": "audit-entry-doc",
           "label": "audit/AGENT-START.md or audit/FIVE-CORE-AUDITS.md",
-          "pass": false,
-          "score100": 0,
+          "pass": true,
+          "score100": 100,
           "weight": 30,
           "severity": "P2",
           "optional": false,
@@ -219,7 +219,7 @@
     "anti-version-bloat-p32": {
       "label": "Anti-version bloat (P32)",
       "weight": 4,
-      "score100": 100,
+      "score100": 60,
       "protocol": "P32",
       "items": [
         {
@@ -247,12 +247,12 @@
         {
           "id": "witness-latest-only",
           "label": "No dated audit/evidence siblings when *-latest.* exists",
-          "pass": true,
-          "score100": 100,
+          "pass": false,
+          "score100": 0,
           "weight": 40,
           "severity": "P2",
           "optional": false,
-          "detail": "witness-latest clean",
+          "detail": "13 dated sibling(s) with -latest witness — e.g. audit/agentic-innovation-audit-2026-06-22.md",
           "protocol": "P32"
         }
       ],
@@ -601,7 +601,7 @@
     "agentic-product-team": {
       "label": "World-class agentic product team signals",
       "weight": 8,
-      "score100": 80,
+      "score100": 100,
       "items": [
         {
           "id": "persona-profiles",
@@ -621,7 +621,7 @@
           "weight": 20,
           "severity": "P2",
           "optional": false,
-          "detail": "1/1 present"
+          "detail": "2/1 present"
         },
         {
           "id": "zenhub-or-pm-standard",
@@ -636,12 +636,12 @@
         {
           "id": "five-pillar-or-five-core-runbook",
           "label": "Five-pillar or five-core audit runbook",
-          "pass": false,
-          "score100": 0,
+          "pass": true,
+          "score100": 100,
           "weight": 20,
           "severity": "P2",
           "optional": false,
-          "detail": "0/1 present"
+          "detail": "1/1 present"
         },
         {
           "id": "continuous-improvement-chain",
@@ -735,7 +735,7 @@
     "audit-evidence-index": {
       "label": "Audit & evidence index",
       "weight": 6,
-      "score100": 75,
+      "score100": 100,
       "items": [
         {
           "id": "audit-evidence-dir",
@@ -760,12 +760,12 @@
         {
           "id": "composite-or-five-core",
           "label": "composite-audit or five-core witnesses",
-          "pass": false,
-          "score100": 0,
+          "pass": true,
+          "score100": 100,
           "weight": 25,
           "severity": "P2",
           "optional": false,
-          "detail": "0/1 present"
+          "detail": "2/1 present"
         },
         {
           "id": "attestation-ops",
@@ -874,11 +874,11 @@
       "detail": "opsCheck"
     },
     {
-      "id": "audit-entry-doc",
-      "categoryId": "docs-sor-p32",
-      "label": "audit/AGENT-START.md or audit/FIVE-CORE-AUDITS.md",
+      "id": "witness-latest-only",
+      "categoryId": "anti-version-bloat-p32",
+      "label": "No dated audit/evidence siblings when *-latest.* exists",
       "severity": "P2",
-      "detail": "audit/FIVE-CORE-AUDITS.md"
+      "detail": "13 dated sibling(s) with -latest witness — e.g. audit/agentic-innovation-audit-2026-06-22.md"
     },
     {
       "id": "agent-work-selection-check",
@@ -886,20 +886,6 @@
       "label": "pnpm agent:work-selection:check",
       "severity": "P1",
       "detail": "workSelection"
-    },
-    {
-      "id": "five-pillar-or-five-core-runbook",
-      "categoryId": "agentic-product-team",
-      "label": "Five-pillar or five-core audit runbook",
-      "severity": "P2",
-      "detail": "0/1 present"
-    },
-    {
-      "id": "composite-or-five-core",
-      "categoryId": "audit-evidence-index",
-      "label": "composite-audit or five-core witnesses",
-      "severity": "P2",
-      "detail": "0/1 present"
     }
   ],
   "itemTotal": 66

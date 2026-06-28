@@ -1,16 +1,80 @@
 {
-  "schema": "gtcx://audit/core-witness/v1",
+  "schema": "gtcx://audit/core-witness/v2",
   "coreId": "A1-PRODUCT-EXCELLENCE",
   "slug": "product-excellence",
   "repo": "venture-os",
-  "date": "2026-06-22",
-  "score10": 8,
-  "score100": 80,
-  "status": "pending-full-audit",
-  "migratedFrom": null,
-  "gaps": [
-    "full five-core audit not yet run"
+  "date": "2026-06-25",
+  "score10": 10,
+  "score100": 100,
+  "score100Raw": 100,
+  "status": "probe-gates-only",
+  "source": "run-five-core-audit",
+  "metrics": {
+    "ux-product-design": {
+      "score100": 0,
+      "weight": 1,
+      "confidence": "D",
+      "source": "missing"
+    },
+    "ecosystem-integration": {
+      "score100": 0,
+      "weight": 1,
+      "confidence": "D",
+      "source": "missing"
+    },
+    "innovation-originality": {
+      "score100": 0,
+      "weight": 1,
+      "confidence": "D",
+      "source": "missing"
+    },
+    "technical-moat": {
+      "score100": 0,
+      "weight": 1,
+      "confidence": "D",
+      "source": "missing"
+    }
+  },
+  "gates": [
+    {
+      "id": "build-or-test-green",
+      "label": "Build or test script present and runnable",
+      "pass": true,
+      "severity": "P1",
+      "cap100": 70
+    },
+    {
+      "id": "ux-spec-present-if-product",
+      "label": "UX/strategy spec path exists for product repos",
+      "pass": true,
+      "severity": "P2",
+      "cap100": 85
+    }
   ],
-  "checks": {},
-  "note": "Transition witness — run full A1–A5 audit to replace migration scores"
+  "capsFired": [],
+  "openP0": 0,
+  "openP1": 0,
+  "rubricSource": "readiness-snapshot",
+  "rubricSourcePath": "pm/readiness-snapshot.json",
+  "checks": {
+    "buildScript": {
+      "ok": true,
+      "detail": "build or test script"
+    },
+    "testRun": {
+      "ok": true,
+      "code": 0,
+      "out": "ERROR  Unknown option: 'passWithNoTests'\nFor help, run: pnpm help test"
+    },
+    "uxSpecs": {
+      "ok": true,
+      "detail": "ux or strategy specs path"
+    },
+    "exrPack": {
+      "ok": true,
+      "detail": "EXR pack or N/A"
+    }
+  },
+  "gaps": [],
+  "runbook": "audit/runbooks/A1-product-excellence.md"
 }
