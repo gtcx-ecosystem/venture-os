@@ -1,0 +1,37 @@
+{
+  "repo": "venture-os",
+  "date": "2026-06-26",
+  "score": 7.5,
+  "productionReady": false,
+  "gaps": [
+    "ops:check failed",
+    "P35 strict"
+  ],
+  "checks": {
+    "baselineConfig": {
+      "ok": true,
+      "sor": true,
+      "stub": false
+    },
+    "ops": {
+      "ok": false,
+      "code": 1,
+      "out": "> venture-os@0.1.0 ops:check /Users/amanianai/Sites/gtcx-ecosystem/venture-os\n> node platform/scripts/ops-check.mjs\n\n ELIFECYCLE  Command failed with exit code 1.\nops:check FAIL — venture-os\n  - lint exit 1 —   ELIFECYCLE  Command failed with exit code 1.  ELIFECYCLE  Command failed with exit code 1.\n  - layout:check exit 1 —     \"required path missing: docs/operations/workspace/ecosystem-repo-layout-v5.md\"   ] }\n  - agent:work-selection:check exit 1 —    - Missing work-selection manifest: tried docs/operations/agent-work-selection.md, docs/operations/agent-work-selection.md, docs/operations/agent-work-selection.md   - coordination doc missing Protocol 24"
+    },
+    "p35Strict": {
+      "ok": false,
+      "detail": "{\n  \"ok\": false,\n  \"protocol\": \"35-ecosystem-workspace-world-class/v5.0.0\",\n  \"engine\": \"layout-spec-enforce/v1\",\n  \"contractVersion\": \"5.1.0\",\n  \"contractPath\""
+    },
+    "agentic": {
+      "ok": true
+    },
+    "mcp": {
+      "ok": false,
+      "detail": "optional product"
+    },
+    "gitPush": {
+      "ok": true,
+      "detail": "Everything up-to-date"
+    }
+  }
+}
