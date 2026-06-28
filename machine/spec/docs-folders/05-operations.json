@@ -1,0 +1,54 @@
+{
+  "$schema": "gtcx://canon-os/docs-folder-spec-item/v1",
+  "level": "L2",
+  "id": "05-operations",
+  "path": "docs/operations/",
+  "status": "current",
+  "updated": "2026-06-28",
+  "title": "Operations — human runbooks + agent init",
+  "purpose": "Operator and agent ops narrative. Local override of canon 05-operations: allowlists deploy/ and workflows/ (sanctioned by machine/spec/docs-tree-spec.json allowedNestedDirPatterns) — deploy/ holds the repo deployment profile referenced by README/stories; workflows/ holds repo-specific automation runbooks (n8n, newsletter, gmail-calendar).",
+  "structure": {
+    "mode": "closed",
+    "archiveFolder": "archive",
+    "allowedChildFolders": [
+      "runbooks",
+      "playbooks",
+      "incidents",
+      "on-call",
+      "agent-init",
+      "deployment",
+      "deploy",
+      "workflows",
+      "remediation",
+      "coordination",
+      "repo",
+      "workspace",
+      "templates",
+      "monitoring",
+      "runtime",
+      "compliance",
+      "documentation",
+      "fleet",
+      "archive"
+    ],
+    "forbiddenChildFolders": [
+      "_archive",
+      "agents",
+      "agent-spine",
+      "organization",
+      "sprints",
+      "agile",
+      "gtm",
+      "specs"
+    ]
+  },
+  "files": {
+    "mode": "closed",
+    "allowlist": [
+      "README.md",
+      "scorecard.md",
+      "FOLDER-SPEC.md",
+      "deployment-profile.json"
+    ]
+  }
+}
