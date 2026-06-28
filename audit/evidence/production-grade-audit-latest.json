@@ -1,16 +1,84 @@
 {
-  "schema": "gtcx://audit/core-witness/v1",
+  "schema": "gtcx://audit/core-witness/v2",
   "coreId": "A2-PRODUCTION-GRADE",
   "slug": "production-grade",
   "repo": "venture-os",
-  "date": "2026-06-22",
-  "score10": 8,
-  "score100": 80,
-  "status": "pending-full-audit",
-  "migratedFrom": null,
-  "gaps": [
-    "full five-core audit not yet run"
+  "date": "2026-06-25",
+  "score10": 6,
+  "score100": 60,
+  "score100Raw": 60,
+  "status": "probe-gates-only",
+  "source": "run-five-core-audit",
+  "metrics": {
+    "production-readiness": {
+      "score100": 0,
+      "weight": 1,
+      "confidence": "D",
+      "source": "missing"
+    }
+  },
+  "gates": [
+    {
+      "id": "ci-pipeline-defined",
+      "label": "CI workflow or test/lint scripts",
+      "pass": true,
+      "severity": "P1",
+      "cap100": 75
+    },
+    {
+      "id": "ops-check-pass",
+      "label": "pnpm ops:check exit 0",
+      "pass": false,
+      "severity": "P1",
+      "cap100": 70
+    },
+    {
+      "id": "deploy-path-documented",
+      "label": "Deploy path exists",
+      "pass": true,
+      "severity": "P2",
+      "cap100": 85
+    }
   ],
-  "checks": {},
-  "note": "Transition witness — run full A1–A5 audit to replace migration scores"
+  "capsFired": [
+    {
+      "id": "gate-ops-check-pass",
+      "label": "Gate failed: pnpm ops:check exit 0",
+      "ceiling100": 70,
+      "trigger": "ops-check-pass"
+    }
+  ],
+  "openP0": 0,
+  "openP1": 0,
+  "rubricSource": "readiness-snapshot",
+  "rubricSourcePath": "pm/readiness-snapshot.json",
+  "checks": {
+    "ciPipeline": {
+      "ok": true,
+      "detail": "ci.yml or test/lint scripts"
+    },
+    "opsCheck": {
+      "ok": false,
+      "code": 1,
+      "out": "> venture-os@0.1.0 ops:check /Users/amanianai/Sites/gtcx-ecosystem/venture-os\n> node platform/scripts/ops-check.mjs\n\n ELIFECYCLE  Command failed with exit code 1.\nops:check FAIL — venture-os\n  - lint exit 1 —   ELIFECYCLE  Command failed with exit code 1.  ELIFECYCLE  Command failed with exit code 1.\n  - layout:check exit 1 —     \"required path missing: docs/operations/workspace/ecosystem-repo-layout-v5.md\"   ] }\n  - agent:work-selection:check exit 1 —    - Missing work-selection manifest: tried docs/operations/agent-work-selection.md, docs/operations/agent-work-selection.md, docs/operations/a"
+    },
+    "deployPath": {
+      "ok": true,
+      "detail": "deploy directory"
+    },
+    "pmGates": {
+      "ok": true,
+      "detail": "pm ci gates or manifest"
+    },
+    "p35Strict": {
+      "ok": false,
+      "code": 1,
+      "out": "{\n  \"ok\": false,\n  \"protocol\": \"35-ecosystem-workspace-world-class/v5.0.0\",\n  \"engine\": \"layout-spec-enforce/v1\",\n  \"contractVersion\": \"5.1.0\",\n  \"contractPath\": \"/Users/amanianai/Sites/gtcx-ecosystem/bridge-os/config/ecosystem-layout-contract.json\",\n  \"mode\": \"strict\",\n  \"repo\": \"venture-os\",\n  \"repoRoot\": \"/Users/amanianai/Sites/gtcx-ecosystem/venture-os\",\n  \"repoKind\": null,\n  \"layoutVersion\": \"v5\",\n  \"resolvedHubs\": {\n    \"agentic\": {\n      \"path\": \"agentic\",\n      \"kind\": \"v5\"\n    },\n    \"agents\": {\n      \"path\": \"agents\",\n      \"kind\": \"v5\"\n    },\n    \"archive\": {\n      \"path\": \"archive\""
+    }
+  },
+  "gaps": [
+    "opsCheck",
+    "p35Strict"
+  ],
+  "runbook": "audit/runbooks/A2-production-grade.md"
 }
