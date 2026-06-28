@@ -1,11 +1,11 @@
 {
   "schema": "gtcx://audit/craft-pillar/v1",
   "repo": "venture-os",
-  "date": "2026-06-27",
+  "date": "2026-06-28",
   "score100": 0,
   "published": false,
   "provisional": true,
-  "blockedBy": "compliance",
+  "blockedBy": "esl:ESL-2",
   "unlockThreshold100": 85,
   "metrics": {
     "selectivity-ingredients": {
@@ -70,5 +70,7 @@
   "craftFlags": {
     "interchangeable": false,
     "aiSlop": false
-  }
+  },
+  "eslRequired": "ESL-2",
+  "eslActive": "ESL-1"
 }

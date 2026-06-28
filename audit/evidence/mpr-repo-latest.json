@@ -3,9 +3,9 @@
   "scope": "repo",
   "id": "venture-os",
   "repo": "venture-os",
-  "evaluatedAt": "2026-06-27T10:15:00.184Z",
-  "gitHead": "3fe93b255745cbb5da2aafc1083db167bfde1fe0",
-  "date": "2026-06-27",
+  "evaluatedAt": "2026-06-28T11:15:18.347Z",
+  "gitHead": "e1fd843537e84e6c61ea1ea7b9440c038d0bc8b7",
+  "date": "2026-06-28",
   "weights": {
     "compliance": 0,
     "technicalExcellence": 0.15,
@@ -468,7 +468,7 @@
               "weight": 20,
               "severity": "P1",
               "optional": false,
-              "detail": "agentic/manifest.json",
+              "detail": "agents/manifest.json (or legacy agentic/manifest.json)",
               "protocol": "P22-P28"
             },
             {
@@ -501,7 +501,7 @@
               "weight": 15,
               "severity": "P2",
               "optional": false,
-              "detail": "MCP hub, hub repo, or agentic consumer",
+              "detail": "MCP hub, hub repo, or agent-manifest consumer",
               "protocol": "P22-P28"
             },
             {
@@ -643,7 +643,7 @@
               "weight": 20,
               "severity": "P2",
               "optional": false,
-              "detail": "2/1 present"
+              "detail": "1/1 present"
             },
             {
               "id": "zenhub-or-pm-standard",
@@ -815,7 +815,7 @@
               "weight": 50,
               "severity": "P2",
               "optional": false,
-              "detail": "deploy directory"
+              "detail": "deploy/ or platform/ infra home (deploy optional)"
             },
             {
               "id": "pm-ci-gates-json",
@@ -1000,7 +1000,7 @@
       "score100": 0,
       "published": false,
       "provisional": true,
-      "blockedBy": "compliance",
+      "blockedBy": "esl:ESL-2",
       "unlockThreshold100": 85,
       "metrics": {
         "selectivity-ingredients": {
@@ -1065,7 +1065,9 @@
       "craftFlags": {
         "interchangeable": false,
         "aiSlop": false
-      }
+      },
+      "eslRequired": "ESL-2",
+      "eslActive": "ESL-1"
     },
     "worldClass": {
       "score100": 0,
@@ -1185,7 +1187,7 @@
       "rubricSpec": "pm/spec/world-class-rubric.json",
       "rubricVersion": "1.0.0",
       "eslRequired": "ESL-3",
-      "eslActive": "ESL-2"
+      "eslActive": "ESL-1"
     },
     "trustAndSafety": {
       "score100": 63,
@@ -1285,7 +1287,7 @@
         "published": false,
         "provisional": true,
         "blockedBy": [
-          "compliance"
+          "esl:ESL-2"
         ],
         "confidence": "B",
         "checks": []

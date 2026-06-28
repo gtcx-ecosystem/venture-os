@@ -1,0 +1,61 @@
+{
+  "schema": "gtcx://fabric-os/aaas-honesty-gate/v1",
+  "worstVerifiedFinding": null,
+  "repo": "venture-os",
+  "owner": "fabric-os",
+  "checkedAt": "2026-06-28T13:39:50.356Z",
+  "registry": {
+    "status": "draft",
+    "capabilityCount": 0,
+    "authoritative": false
+  },
+  "coverage": {
+    "required": 0,
+    "claimed": 0,
+    "coveragePct": 0
+  },
+  "gates": {
+    "coverageComplete": {
+      "ok": false,
+      "required": 0,
+      "claimed": 0,
+      "uncovered": []
+    },
+    "depthVerified": {
+      "ok": true,
+      "landingOnly": []
+    },
+    "veracityDisclosed": {
+      "ok": true,
+      "undisclosed": [],
+      "invalidVeracity": []
+    },
+    "contradictionReconciled": {
+      "ok": true,
+      "composite100": 75,
+      "contradictionCeil": 85,
+      "floor": 60,
+      "brokenBelowFloor": [],
+      "capsFired": 0
+    },
+    "noHollowCores": {
+      "ok": true,
+      "hollowCeil": 85,
+      "hollowCores": []
+    },
+    "registryNonEmpty": {
+      "ok": false,
+      "capabilityCount": 0
+    },
+    "registryAuthoritative": {
+      "ok": true,
+      "authoritative": false,
+      "status": "draft"
+    }
+  },
+  "failures": [
+    "coverageComplete",
+    "registryNonEmpty"
+  ],
+  "ok": false
+}

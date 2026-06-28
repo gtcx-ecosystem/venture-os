@@ -1,7 +1,7 @@
 {
   "schema": "gtcx://audit/trust-safety-pillar/v1",
   "repo": "venture-os",
-  "date": "2026-06-27",
+  "date": "2026-06-28",
   "score100": 63,
   "published": true,
   "metrics": {
