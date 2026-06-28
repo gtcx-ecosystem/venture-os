@@ -25,7 +25,7 @@ pnpm ops:check
 | ------- | ---- |
 | Vision / mission / goals | `pm/spec/product-goals.json` |
 | PRD index | `pm/product/prd-index.json` |
-| Capability matrix | `docs/strategy/product-capability-matrix.md` |
+| Capability matrix | `docs/business/strategy/product-capability-matrix.md` |
 | Demo witness | `audit/evidence/demo-readiness-latest.json` or acceptanceChecks in product-goals |
 | QA bar | `audit/evidence/five-pillar-latest.json` |
 

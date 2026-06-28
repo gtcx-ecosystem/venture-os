@@ -7,7 +7,7 @@
   "principle": "agile-os is the tactical Chief Product Officer (CPO) of the GTCX ecosystem. Each repo owns repo-root agile/ (P35 hub — not under docs/) — local ceremony workspace plugging into the CPO loop. Fleet backlog and ceremony law stay in agile-os.",
   "cpoRole": {
     "fleetCpoRepo": "agile-os",
-    "charter": "../agile-os/docs/strategy/fleet-agile-hub.md",
+    "charter": "../agile-os/docs/business/strategy/fleet-agile-hub.md",
     "productGoals": "../agile-os/pm/spec/product-goals.json",
     "prd": "../agile-os/pm/product/fleet-agile-hub-prd.md",
     "loop": "OBSERVE → ANTICIPATE → DECIDE → EXECUTE → VERIFY → LEARN",
@@ -28,7 +28,7 @@
     "fleetBacklog": "../agile-os/pm/ecosystem-sprint-backlog.json",
     "zenhubPlan": "../agile-os/pm/zenhub-plan.json",
     "zenhubRegistry": "../bridge-os/config/zenhub-ecosystem-registry.json",
-    "strategy": "../agile-os/docs/strategy/fleet-agile-hub.md"
+    "strategy": "../agile-os/docs/business/strategy/fleet-agile-hub.md"
   },
   "pillarContract": {
     "compliance": {

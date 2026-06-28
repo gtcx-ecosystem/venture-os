@@ -15,7 +15,7 @@ review_cycle: on-change
 
 | Role | SoR |
 | ---- | --- |
-| Fleet CPO | [`../agile-os/docs/strategy/fleet-agile-hub.md`](../agile-os/docs/strategy/fleet-agile-hub.md) |
+| Fleet CPO | [`../agile-os/docs/business/strategy/fleet-agile-hub.md`](../agile-os/docs/business/strategy/fleet-agile-hub.md) |
 | Fleet backlog | [`../agile-os/pm/ecosystem-sprint-backlog.json`](../agile-os/pm/ecosystem-sprint-backlog.json) |
 | **This repo sprint authority** | `pm/` + [`planning.md`](./planning.md) |
 

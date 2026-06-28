@@ -15,7 +15,7 @@ review_cycle: on-change
 
 | Role | SoR |
 | ---- | --- |
-| Fleet COO | [`../fabric-os/docs/strategy/fleet-ops-hub.md`](../fabric-os/docs/strategy/fleet-ops-hub.md) |
+| Fleet COO | [`../fabric-os/docs/business/strategy/fleet-ops-hub.md`](../fabric-os/docs/business/strategy/fleet-ops-hub.md) |
 | Ops authority | [`../bridge-os/pm/spec/ops-authority.json`](../bridge-os/pm/spec/ops-authority.json) |
 | Fleet ops backlog | [`../fabric-os/pm/ecosystem-ops-backlog.json`](../fabric-os/pm/ecosystem-ops-backlog.json) |
 | **This repo runtime** | `pm/` + [`docs/operations/deployment-profile.json`](../docs/operations/deployment-profile.json) |
