@@ -1,4 +1,8 @@
 {
-  "enabled": false,
-  "note": "venture-os uses bridge-os baseline via agents/manifest.json"
+  "$schema": "gtcx://baseline-os/config/v1",
+  "organization": {
+    "name": "GTCX",
+    "voice": "professional and clear",
+    "formality": "neutral"
+  }
 }

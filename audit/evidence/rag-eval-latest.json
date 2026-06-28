@@ -1,0 +1,51 @@
+{
+  "schema": "gtcx://venture-os/rag-eval/v1",
+  "generatedAt": "2026-06-28T18:47:34.289Z",
+  "repo": "venture-os",
+  "ok": true,
+  "golden": "config/baseline/rag-eval-golden.json",
+  "mockCorpus": "config/baseline/rag-eval-mock-corpus.json",
+  "queryCount": 3,
+  "averageRecall": 1,
+  "threshold": 0.5,
+  "issues": [],
+  "queryResults": [
+    {
+      "id": "repo-purpose",
+      "expectedSources": [
+        "README.md",
+        "AGENTS.md"
+      ],
+      "matchedSources": [
+        "README.md",
+        "AGENTS.md"
+      ],
+      "recall": 1,
+      "ok": true
+    },
+    {
+      "id": "venture-system",
+      "expectedSources": [
+        "pm/manifest.json",
+        "pm/product/prds/"
+      ],
+      "matchedSources": [
+        "pm/manifest.json",
+        "pm/product/prds/"
+      ],
+      "recall": 1,
+      "ok": true
+    },
+    {
+      "id": "rag-config",
+      "expectedSources": [
+        "config/baseline/baseline.config.json"
+      ],
+      "matchedSources": [
+        "config/baseline/baseline.config.json"
+      ],
+      "recall": 1,
+      "ok": true
+    }
+  ]
+}

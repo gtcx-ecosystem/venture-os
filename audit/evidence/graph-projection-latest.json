@@ -1,0 +1,11 @@
+{
+  "schema": "gtcx://venture-os/graph-config-check/v1",
+  "generatedAt": "2026-06-28T18:47:34.303Z",
+  "repo": "venture-os",
+  "kind": "graph",
+  "ok": true,
+  "config": "config/baseline/graph.config.json",
+  "issues": [],
+  "nodeCount": 6,
+  "edgeTypeCount": 4
+}
