@@ -1,0 +1,9 @@
+{
+  "schema": "gtcx://venture-os/mcp-config-check/v1",
+  "generatedAt": "2026-06-28T18:47:34.311Z",
+  "repo": "venture-os",
+  "kind": "mcp",
+  "ok": true,
+  "config": "config/baseline/mcp.config.json",
+  "issues": []
+}

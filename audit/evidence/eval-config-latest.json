@@ -1,0 +1,9 @@
+{
+  "schema": "gtcx://venture-os/eval-config-check/v1",
+  "generatedAt": "2026-06-28T18:47:34.295Z",
+  "repo": "venture-os",
+  "kind": "eval",
+  "ok": true,
+  "config": "config/baseline/eval.config.json",
+  "issues": []
+}

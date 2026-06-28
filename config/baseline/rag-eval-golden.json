@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "name": "venture-os-baseline",
+  "description": "Kaleidoscope AI golden eval for venture-os graph/RAG/MCP restoration.",
+  "defaultTopK": 5,
+  "queries": [
+    {
+      "id": "repo-purpose",
+      "query": "venture-os product purpose architecture",
+      "expectedSources": [
+        "README.md",
+        "AGENTS.md"
+      ],
+      "tags": [
+        "overview"
+      ]
+    },
+    {
+      "id": "venture-system",
+      "query": "founder command center capital filter workflow",
+      "expectedSources": [
+        "pm/manifest.json",
+        "pm/product/prds/"
+      ],
+      "tags": [
+        "venture",
+        "founder"
+      ]
+    },
+    {
+      "id": "rag-config",
+      "query": "rag topology local baseline config",
+      "expectedSources": [
+        "config/baseline/baseline.config.json"
+      ],
+      "tags": [
+        "rag"
+      ]
+    }
+  ]
+}

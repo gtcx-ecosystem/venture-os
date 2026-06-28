@@ -1,0 +1,61 @@
+{
+  "$schema": "gtcx://ecosystem-os/graph-config/v1",
+  "repo": "venture-os",
+  "entities": [
+    {
+      "type": "repo",
+      "source": "package.json"
+    },
+    {
+      "type": "venture-product",
+      "source": "pm/manifest.json"
+    },
+    {
+      "type": "founder-command-center",
+      "source": "docs/product/ux/"
+    },
+    {
+      "type": "capital-filter",
+      "source": "audit/evidence/golden-path-02-capital-filter.png"
+    },
+    {
+      "type": "approval-workflow",
+      "source": "docs/operations/workflows/"
+    },
+    {
+      "type": "evidence",
+      "source": "audit/evidence/*.json"
+    }
+  ],
+  "relations": [
+    {
+      "type": "implements",
+      "source": "app/"
+    },
+    {
+      "type": "validated_by",
+      "source": "audit/evidence/rag-eval-latest.json"
+    },
+    {
+      "type": "depends_on",
+      "source": "package.json"
+    },
+    {
+      "type": "supports_investment_readiness",
+      "source": "docs/business/strategy/"
+    }
+  ],
+  "evidencePaths": [
+    "audit/evidence/rag-config-latest.json",
+    "audit/evidence/rag-eval-latest.json",
+    "audit/evidence/mcp-config-latest.json",
+    "audit/evidence/graph-projection-latest.json",
+    "audit/evidence/eval-config-latest.json"
+  ],
+  "exclude": [
+    ".git/**",
+    ".worktrees/**",
+    "node_modules/**",
+    "audit/archive/**"
+  ]
+}

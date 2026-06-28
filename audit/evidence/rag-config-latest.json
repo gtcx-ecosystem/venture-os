@@ -1,0 +1,9 @@
+{
+  "schema": "gtcx://venture-os/rag-config-check/v1",
+  "generatedAt": "2026-06-28T18:47:34.334Z",
+  "repo": "venture-os",
+  "ok": true,
+  "config": "config/baseline/rag.config.json",
+  "exit": 0,
+  "detail": "validate-rag-config passed"
+}
