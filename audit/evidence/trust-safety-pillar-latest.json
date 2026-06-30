@@ -1,8 +1,8 @@
 {
   "schema": "gtcx://audit/trust-safety-pillar/v1",
   "repo": "venture-os",
-  "date": "2026-06-28",
-  "score100": 63,
+  "date": "2026-06-30",
+  "score100": 70,
   "published": true,
   "metrics": {
     "evidence-coverage": {
@@ -13,7 +13,7 @@
         "hasSnapshot": true,
         "hasStrategic": false,
         "hasFivePillar": true,
-        "hasComposite": true
+        "hasComposite": false
       }
     },
     "confidence-grade": {
@@ -27,10 +27,10 @@
       "weight": 20
     },
     "audit-trail": {
-      "score100": 60,
+      "score100": 95,
       "weight": 20,
       "freshFivePillar": true,
-      "versionBloatHits": 12
+      "versionBloatHits": 0
     },
     "independent-replay": {
       "score100": 45,
@@ -44,6 +44,6 @@
   "publishGate": {
     "minConfidence": "B",
     "minTrust100": 70,
-    "blocked": true
+    "blocked": false
   }
 }

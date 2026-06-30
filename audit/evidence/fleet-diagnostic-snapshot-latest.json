@@ -2,7 +2,7 @@
   "schema": "gtcx://audit/fleet-diagnostic-snapshot/v2",
   "repo": "venture-os",
   "tier": "product",
-  "refreshedAt": "2026-06-27T01:27:36.684Z",
+  "refreshedAt": "2026-06-29T06:38:58.271Z",
   "sessionPhase": "close",
   "laneSeparation": {
     "policy": "GS-MATURITY-LANE-001",
@@ -24,22 +24,19 @@
       "compliance100": 69,
       "published": false,
       "witnessPath": "audit/evidence/mpr-repo-latest.json",
-      "evaluatedAt": "2026-06-26T11:34:58.590Z",
-      "ageHours": 13.877247563815647,
+      "evaluatedAt": "2026-06-28T11:15:18.347Z",
+      "ageHours": 19.394422587280275,
       "stale": false,
       "refreshCommand": "pnpm audit:mpr:repo:run -- --repo <repo> --write"
     },
     "master": {
-      "score10": 7.5,
-      "score100": 75,
+      "score10": null,
+      "score100": null,
       "productionReady": false,
-      "gaps": [
-        "ops:check failed",
-        "P35 strict"
-      ],
-      "witnessPath": "audit/evidence/master-audit-latest.json",
-      "ageHours": 46.27067958597819,
-      "stale": false,
+      "gaps": [],
+      "witnessPath": null,
+      "ageHours": null,
+      "stale": true,
       "refreshCommand": "pnpm ecosystem:master:audit --repo <repo> --write"
     },
     "gtm": {
@@ -370,7 +367,7 @@
     }
   },
   "rollup": {
-    "avgScore100": 61,
+    "avgScore100": 55,
     "anyStale": true,
     "pilotReady": false,
     "integratorPilotReady": false,

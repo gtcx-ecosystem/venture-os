@@ -3,9 +3,9 @@
   "scope": "repo",
   "id": "venture-os",
   "repo": "venture-os",
-  "evaluatedAt": "2026-06-28T11:15:18.347Z",
-  "gitHead": "e1fd843537e84e6c61ea1ea7b9440c038d0bc8b7",
-  "date": "2026-06-28",
+  "evaluatedAt": "2026-06-30T04:39:58.226Z",
+  "gitHead": "f3d65c0741f59416ae892d8aa3e12e9a0688d0e0",
+  "date": "2026-06-30",
   "weights": {
     "compliance": 0,
     "technicalExcellence": 0.15,
@@ -241,7 +241,7 @@
         "anti-version-bloat-p32": {
           "label": "Anti-version bloat (P32)",
           "weight": 4,
-          "score100": 60,
+          "score100": 100,
           "protocol": "P32",
           "items": [
             {
@@ -269,12 +269,12 @@
             {
               "id": "witness-latest-only",
               "label": "No dated audit/evidence siblings when *-latest.* exists",
-              "pass": false,
-              "score100": 0,
+              "pass": true,
+              "score100": 100,
               "weight": 40,
               "severity": "P2",
               "optional": false,
-              "detail": "13 dated sibling(s) with -latest witness — e.g. audit/agentic-innovation-audit-2026-06-22.md",
+              "detail": "witness-latest clean",
               "protocol": "P32"
             }
           ],
@@ -757,7 +757,7 @@
         "audit-evidence-index": {
           "label": "Audit & evidence index",
           "weight": 6,
-          "score100": 100,
+          "score100": 75,
           "items": [
             {
               "id": "audit-evidence-dir",
@@ -782,12 +782,12 @@
             {
               "id": "composite-or-five-core",
               "label": "composite-audit or five-core witnesses",
-              "pass": true,
-              "score100": 100,
+              "pass": false,
+              "score100": 0,
               "weight": 25,
               "severity": "P2",
               "optional": false,
-              "detail": "2/1 present"
+              "detail": "0/1 present"
             },
             {
               "id": "attestation-ops",
@@ -896,18 +896,18 @@
           "detail": "opsCheck"
         },
         {
-          "id": "witness-latest-only",
-          "categoryId": "anti-version-bloat-p32",
-          "label": "No dated audit/evidence siblings when *-latest.* exists",
-          "severity": "P2",
-          "detail": "13 dated sibling(s) with -latest witness — e.g. audit/agentic-innovation-audit-2026-06-22.md"
-        },
-        {
           "id": "agent-work-selection-check",
           "categoryId": "agentic-harness-p22-p28",
           "label": "pnpm agent:work-selection:check",
           "severity": "P1",
           "detail": "workSelection"
+        },
+        {
+          "id": "composite-or-five-core",
+          "categoryId": "audit-evidence-index",
+          "label": "composite-audit or five-core witnesses",
+          "severity": "P2",
+          "detail": "0/1 present"
         }
       ],
       "itemTotal": 66,
@@ -1000,7 +1000,7 @@
       "score100": 0,
       "published": false,
       "provisional": true,
-      "blockedBy": "esl:ESL-2",
+      "blockedBy": "compliance",
       "unlockThreshold100": 85,
       "metrics": {
         "selectivity-ingredients": {
@@ -1065,9 +1065,7 @@
       "craftFlags": {
         "interchangeable": false,
         "aiSlop": false
-      },
-      "eslRequired": "ESL-2",
-      "eslActive": "ESL-1"
+      }
     },
     "worldClass": {
       "score100": 0,
@@ -1187,10 +1185,10 @@
       "rubricSpec": "pm/spec/world-class-rubric.json",
       "rubricVersion": "1.0.0",
       "eslRequired": "ESL-3",
-      "eslActive": "ESL-1"
+      "eslActive": "ESL-2"
     },
     "trustAndSafety": {
-      "score100": 63,
+      "score100": 70,
       "published": true,
       "metrics": {
         "evidence-coverage": {
@@ -1201,7 +1199,7 @@
             "hasSnapshot": true,
             "hasStrategic": false,
             "hasFivePillar": true,
-            "hasComposite": true
+            "hasComposite": false
           }
         },
         "confidence-grade": {
@@ -1215,10 +1213,10 @@
           "weight": 20
         },
         "audit-trail": {
-          "score100": 60,
+          "score100": 95,
           "weight": 20,
           "freshFivePillar": true,
-          "versionBloatHits": 12
+          "versionBloatHits": 0
         },
         "independent-replay": {
           "score100": 45,
@@ -1232,13 +1230,13 @@
       "publishGate": {
         "minConfidence": "B",
         "minTrust100": 70,
-        "blocked": true
+        "blocked": false
       }
     }
   },
-  "foundationComposite100": 20,
+  "foundationComposite100": 23,
   "fullComposite100": 1,
-  "trustCap100": 63,
+  "trustCap100": 70,
   "composite100": 59,
   "composite100Raw": 69,
   "compositeMode": "partial-unlock",
@@ -1248,9 +1246,9 @@
   "openP1": 0,
   "multiPillar": {
     "schema": "gtcx://baseline-os/multi-pillar-repo-extension/v1",
-    "foundationComposite100": 20,
+    "foundationComposite100": 23,
     "fullComposite100": 1,
-    "trustCap100": 63,
+    "trustCap100": 70,
     "weights": {
       "compliance": 0,
       "technicalExcellence": 0.15,
@@ -1287,7 +1285,7 @@
         "published": false,
         "provisional": true,
         "blockedBy": [
-          "esl:ESL-2"
+          "compliance"
         ],
         "confidence": "B",
         "checks": []
@@ -1303,7 +1301,7 @@
         "checks": []
       },
       "trustAndSafety": {
-        "score100": 63,
+        "score100": 70,
         "published": true,
         "provisional": false,
         "blockedBy": [],
@@ -1330,8 +1328,7 @@
         "published": false,
         "provisional": true,
         "blockedBy": [
-          "worldClass<85",
-          "trustAndSafety<70"
+          "worldClass<85"
         ],
         "confidence": "C",
         "checks": [],
@@ -1360,8 +1357,7 @@
         "published": false,
         "provisional": true,
         "blockedBy": [
-          "technicalExcellence<85",
-          "trustAndSafety<70"
+          "technicalExcellence<85"
         ],
         "confidence": "C",
         "checks": [],
@@ -1386,13 +1382,12 @@
         }
       },
       "ipMagic": {
-        "score100": 19,
+        "score100": 21,
         "published": false,
         "provisional": true,
         "blockedBy": [
           "craft<85",
-          "worldClass<85",
-          "trustAndSafety<70"
+          "worldClass<85"
         ],
         "confidence": "C",
         "checks": [],

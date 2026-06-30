@@ -1,7 +1,7 @@
 {
   "schema": "gtcx://audit/compliance-pillar/v1",
   "repo": "venture-os",
-  "date": "2026-06-28",
+  "date": "2026-06-30",
   "score100": 69,
   "published": false,
   "provisional": true,
@@ -223,7 +223,7 @@
     "anti-version-bloat-p32": {
       "label": "Anti-version bloat (P32)",
       "weight": 4,
-      "score100": 60,
+      "score100": 100,
       "protocol": "P32",
       "items": [
         {
@@ -251,12 +251,12 @@
         {
           "id": "witness-latest-only",
           "label": "No dated audit/evidence siblings when *-latest.* exists",
-          "pass": false,
-          "score100": 0,
+          "pass": true,
+          "score100": 100,
           "weight": 40,
           "severity": "P2",
           "optional": false,
-          "detail": "13 dated sibling(s) with -latest witness — e.g. audit/agentic-innovation-audit-2026-06-22.md",
+          "detail": "witness-latest clean",
           "protocol": "P32"
         }
       ],
@@ -739,7 +739,7 @@
     "audit-evidence-index": {
       "label": "Audit & evidence index",
       "weight": 6,
-      "score100": 100,
+      "score100": 75,
       "items": [
         {
           "id": "audit-evidence-dir",
@@ -764,12 +764,12 @@
         {
           "id": "composite-or-five-core",
           "label": "composite-audit or five-core witnesses",
-          "pass": true,
-          "score100": 100,
+          "pass": false,
+          "score100": 0,
           "weight": 25,
           "severity": "P2",
           "optional": false,
-          "detail": "2/1 present"
+          "detail": "0/1 present"
         },
         {
           "id": "attestation-ops",
@@ -878,18 +878,18 @@
       "detail": "opsCheck"
     },
     {
-      "id": "witness-latest-only",
-      "categoryId": "anti-version-bloat-p32",
-      "label": "No dated audit/evidence siblings when *-latest.* exists",
-      "severity": "P2",
-      "detail": "13 dated sibling(s) with -latest witness — e.g. audit/agentic-innovation-audit-2026-06-22.md"
-    },
-    {
       "id": "agent-work-selection-check",
       "categoryId": "agentic-harness-p22-p28",
       "label": "pnpm agent:work-selection:check",
       "severity": "P1",
       "detail": "workSelection"
+    },
+    {
+      "id": "composite-or-five-core",
+      "categoryId": "audit-evidence-index",
+      "label": "composite-audit or five-core witnesses",
+      "severity": "P2",
+      "detail": "0/1 present"
     }
   ],
   "itemTotal": 66,
