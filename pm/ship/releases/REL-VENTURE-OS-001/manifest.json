@@ -33,8 +33,8 @@
           "id": "evidence-chain-current",
           "status": "satisfied",
           "evidence": [
-            "machine/dslc/releases/REL-VENTURE-OS-001/manifest.json",
-            "machine/ship/releases/REL-VENTURE-OS-001/manifest.json",
+            "pm/dslc/releases/REL-VENTURE-OS-001/manifest.json",
+            "pm/ship/releases/REL-VENTURE-OS-001/manifest.json",
             "audit/evidence/qasc-repo-latest.json"
           ]
         },
@@ -66,7 +66,7 @@
         {
           "id": "legal-ops-critical-controls",
           "status": "not-applicable",
-          "evidence": ["machine/dslc/releases/REL-VENTURE-OS-001/manifest.json"],
+          "evidence": ["pm/dslc/releases/REL-VENTURE-OS-001/manifest.json"],
           "rationale": "Internal release class; no customer legal instrument, public claim, regulated-data processing, or revenue-recognition path is activated.",
           "approver": "operator-directive-2026-07-01"
         },
@@ -99,8 +99,8 @@
           "id": "spec-versioning",
           "status": "satisfied",
           "evidence": [
-            "machine/dslc/releases/REL-VENTURE-OS-001/manifest.json",
-            "machine/ship/releases/REL-VENTURE-OS-001/manifest.json",
+            "pm/dslc/releases/REL-VENTURE-OS-001/manifest.json",
+            "pm/ship/releases/REL-VENTURE-OS-001/manifest.json",
             "pm/spec/feature-registry/manifest.json"
           ]
         },
@@ -112,14 +112,14 @@
         {
           "id": "gitbook-public-docs-issued",
           "status": "not-applicable",
-          "evidence": ["machine/dslc/releases/REL-VENTURE-OS-001/manifest.json"],
+          "evidence": ["pm/dslc/releases/REL-VENTURE-OS-001/manifest.json"],
           "rationale": "Internal release class; public GitBook issuance is not activated.",
           "approver": "operator-directive-2026-07-01"
         },
         {
           "id": "public-changelog-release-notes-issued",
           "status": "not-applicable",
-          "evidence": ["machine/dslc/releases/REL-VENTURE-OS-001/manifest.json"],
+          "evidence": ["pm/dslc/releases/REL-VENTURE-OS-001/manifest.json"],
           "rationale": "Internal release class; public changelog and external release notes are not activated.",
           "approver": "operator-directive-2026-07-01"
         }

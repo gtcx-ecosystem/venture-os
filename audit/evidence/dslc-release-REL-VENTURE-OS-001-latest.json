@@ -1,10 +1,10 @@
 {
   "schema": "gtcx://fabric-os/dslc-release-decision/v1",
-  "generatedAt": "2026-07-01T18:10:57.409Z",
+  "generatedAt": "2026-07-01T18:13:38.054Z",
   "date": "2026-07-01",
   "protocolId": "GTCX-DSLC-001",
   "contractVersion": "1.0.0",
-  "manifest": "../venture-os/machine/dslc/releases/REL-VENTURE-OS-001/manifest.json",
+  "manifest": "../venture-os/pm/dslc/releases/REL-VENTURE-OS-001/manifest.json",
   "outputRoot": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os",
   "releaseId": "REL-VENTURE-OS-001",
   "repo": "venture-os",

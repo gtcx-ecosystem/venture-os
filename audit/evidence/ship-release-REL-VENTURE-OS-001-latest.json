@@ -1,10 +1,10 @@
 {
   "schema": "gtcx://fabric-os/ship-release-decision/v1",
-  "generatedAt": "2026-07-01T18:11:02.441Z",
+  "generatedAt": "2026-07-01T18:13:38.104Z",
   "date": "2026-07-01",
   "protocolId": "GTCX-SHIP-001",
   "contractVersion": "1.0.0",
-  "manifest": "../venture-os/machine/ship/releases/REL-VENTURE-OS-001/manifest.json",
+  "manifest": "../venture-os/pm/ship/releases/REL-VENTURE-OS-001/manifest.json",
   "outputRoot": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os",
   "releaseId": "REL-VENTURE-OS-001",
   "repo": "venture-os",
@@ -61,8 +61,8 @@
           "authorityClass": "R",
           "status": "satisfied",
           "evidence": [
-            "machine/dslc/releases/REL-VENTURE-OS-001/manifest.json",
-            "machine/ship/releases/REL-VENTURE-OS-001/manifest.json",
+            "pm/dslc/releases/REL-VENTURE-OS-001/manifest.json",
+            "pm/ship/releases/REL-VENTURE-OS-001/manifest.json",
             "audit/evidence/qasc-repo-latest.json"
           ],
           "rationale": null,
@@ -154,8 +154,8 @@
           "authorityClass": "R",
           "status": "satisfied",
           "evidence": [
-            "machine/dslc/releases/REL-VENTURE-OS-001/manifest.json",
-            "machine/ship/releases/REL-VENTURE-OS-001/manifest.json",
+            "pm/dslc/releases/REL-VENTURE-OS-001/manifest.json",
+            "pm/ship/releases/REL-VENTURE-OS-001/manifest.json",
             "pm/spec/feature-registry/manifest.json"
           ],
           "rationale": null,

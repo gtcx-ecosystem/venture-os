@@ -1,9 +1,0 @@
-{
-  "$schema": "gtcx://fabric-os/aaas-audit-contract-pin/v1",
-  "sor": "fabric-os/machine/spec/aaas-audit-contract.json",
-  "contractVersion": "1.2.0",
-  "repo": "venture-os",
-  "auditProfile": "product",
-  "writes": false,
-  "note": "Standard machine-plane pin for Fabric QASC/DSLC/SHIP parity. Fabric owns the AaaS contract SoR."
-}
