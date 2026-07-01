@@ -61,6 +61,12 @@
     "docs:agile:check": "node platform/scripts/agile-check.mjs",
     "docs:agile:check:write": "node platform/scripts/agile-check.mjs --write",
     "docs:fractal-mpr:check": "node platform/scripts/docs-fractal-mpr-check.mjs",
-    "docs:pack:pillar-contract:check": "node platform/scripts/docs-pack-pillar-contract-check.mjs"
+    "docs:pack:pillar-contract:check": "node platform/scripts/docs-pack-pillar-contract-check.mjs",
+    "qasc:check": "pnpm --dir ../fabric-os qasc:repo -- --repo venture-os",
+    "qasc:check:write": "pnpm --dir ../fabric-os qasc:repo:write -- --repo venture-os",
+    "dslc:check": "pnpm --dir ../fabric-os dslc:release -- --manifest ../venture-os/machine/dslc/releases/REL-VENTURE-OS-001/manifest.json",
+    "dslc:check:write": "pnpm --dir ../fabric-os dslc:release:write -- --manifest ../venture-os/machine/dslc/releases/REL-VENTURE-OS-001/manifest.json --output-root ../venture-os",
+    "ship:check": "pnpm --dir ../fabric-os ship:release -- --manifest ../venture-os/machine/ship/releases/REL-VENTURE-OS-001/manifest.json",
+    "ship:check:write": "pnpm --dir ../fabric-os ship:release:write -- --manifest ../venture-os/machine/ship/releases/REL-VENTURE-OS-001/manifest.json --output-root ../venture-os"
   }
 }

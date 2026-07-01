@@ -1,0 +1,167 @@
+{
+  "schema": "gtcx://fabric-os/dslc-release-decision/v1",
+  "generatedAt": "2026-07-01T18:10:57.409Z",
+  "date": "2026-07-01",
+  "protocolId": "GTCX-DSLC-001",
+  "contractVersion": "1.0.0",
+  "manifest": "../venture-os/machine/dslc/releases/REL-VENTURE-OS-001/manifest.json",
+  "outputRoot": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os",
+  "releaseId": "REL-VENTURE-OS-001",
+  "repo": "venture-os",
+  "releaseClass": "internal",
+  "title": "Venture OS internal protocol parity closeout",
+  "owner": "venture-os product leadership",
+  "requiredLanes": [
+    "deployment"
+  ],
+  "qasc": {
+    "score100": 100,
+    "signalLevel": "L5",
+    "evidence": "audit/evidence/qasc-repo-latest.json",
+    "atBenchmark": true
+  },
+  "lanes": {
+    "deployment": {
+      "name": "deployment",
+      "owner": "venture-os",
+      "required": true,
+      "score100": 100,
+      "controlsAtBenchmark": 8,
+      "controlCount": 8,
+      "controls": [
+        {
+          "id": "release-scope-version",
+          "authorityClass": "R",
+          "status": "satisfied",
+          "evidence": [
+            "package.json",
+            "pm/shipping-tracks.json",
+            "pm/ci/shipping-status-latest.json"
+          ],
+          "rationale": null,
+          "approver": null,
+          "atBenchmark": true
+        },
+        {
+          "id": "ci-build-provenance",
+          "authorityClass": "R",
+          "status": "satisfied",
+          "evidence": [
+            "audit/evidence/qasc-repo-latest.json",
+            "pm/ci/shipping-status-latest.json",
+            "pm/spec/feature-ship-gates-protocol.json"
+          ],
+          "rationale": null,
+          "approver": null,
+          "atBenchmark": true
+        },
+        {
+          "id": "qa-qasc-acceptance",
+          "authorityClass": "R",
+          "status": "satisfied",
+          "evidence": [
+            "audit/evidence/qasc-repo-latest.json",
+            "audit/evidence/mpr-repo-latest.json",
+            "audit/evidence/signal-maturity-latest.json"
+          ],
+          "rationale": null,
+          "approver": null,
+          "atBenchmark": true
+        },
+        {
+          "id": "environment-config-migrations",
+          "authorityClass": "R",
+          "status": "not-applicable",
+          "evidence": [
+            "docs/operations/deployment-profile.json"
+          ],
+          "rationale": "Internal QASC/DSLC/SHIP parity closeout only; no production environment mutation, secret binding, or database migration is executed by this release.",
+          "approver": "operator-directive-2026-07-01",
+          "atBenchmark": true
+        },
+        {
+          "id": "release-notes-operator-runbook",
+          "authorityClass": "R",
+          "status": "satisfied",
+          "evidence": [
+            "docs/operations/deploy/deployment-profile.md",
+            "docs/product/ux/narratives/pilot-onboarding.md",
+            "pm/stories/DEPLOY-01-vercel-pilot.md"
+          ],
+          "rationale": null,
+          "approver": null,
+          "atBenchmark": true
+        },
+        {
+          "id": "deployment-rollout-rollback",
+          "authorityClass": "A",
+          "status": "satisfied",
+          "evidence": [
+            "docs/operations/deploy/deployment-profile.md",
+            "docs/operations/deployment-profile.json",
+            "pm/stories/DEPLOY-01-vercel-pilot.md"
+          ],
+          "rationale": "Internal protocol parity closeout; rollout is bounded to delegated evidence and package scripts and is reversible by reverting this manifest/witness commit.",
+          "approver": "operator-directive-2026-07-01",
+          "atBenchmark": true
+        },
+        {
+          "id": "observability-alerting-slo",
+          "authorityClass": "R",
+          "status": "satisfied",
+          "evidence": [
+            "pm/ci/shipping-status-latest.json",
+            "docs/operations/deploy/deployment-profile.md"
+          ],
+          "rationale": null,
+          "approver": null,
+          "atBenchmark": true
+        },
+        {
+          "id": "post-deploy-verification",
+          "authorityClass": "R",
+          "status": "satisfied",
+          "evidence": [
+            "audit/evidence/qasc-repo-latest.json",
+            "pm/ci/shipping-status-latest.json"
+          ],
+          "rationale": null,
+          "approver": null,
+          "atBenchmark": true
+        }
+      ]
+    },
+    "sales": {
+      "name": "sales",
+      "owner": "commercial-ops",
+      "required": false,
+      "score100": 100,
+      "controlsAtBenchmark": 0,
+      "controlCount": 0,
+      "controls": []
+    },
+    "legal": {
+      "name": "legal",
+      "owner": "legal-ops",
+      "required": false,
+      "score100": 100,
+      "controlsAtBenchmark": 0,
+      "controlCount": 0,
+      "controls": []
+    },
+    "communications": {
+      "name": "communications",
+      "owner": "communications-ops",
+      "required": false,
+      "score100": 100,
+      "controlsAtBenchmark": 0,
+      "controlCount": 0,
+      "controls": []
+    }
+  },
+  "score100": 100,
+  "benchmarkScore100": 100,
+  "decision": "ready",
+  "atBenchmark": true,
+  "blockers": []
+}

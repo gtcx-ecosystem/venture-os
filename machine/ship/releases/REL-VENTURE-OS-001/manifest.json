@@ -1,0 +1,129 @@
+{
+  "schema": "gtcx://fabric-os/ship-release-manifest/v1",
+  "releaseId": "REL-VENTURE-OS-001",
+  "repo": "venture-os",
+  "releaseClass": "internal",
+  "title": "Venture OS internal SHIP parity closeout",
+  "owner": "venture-os product leadership",
+  "dslc": {
+    "releaseId": "REL-VENTURE-OS-001",
+    "decision": "ready",
+    "score100": 100,
+    "evidence": "audit/evidence/dslc-release-REL-VENTURE-OS-001-latest.json"
+  },
+  "pillars": {
+    "sealed": {
+      "owner": "release-management",
+      "controls": [
+        {
+          "id": "protocol-proof-pack",
+          "status": "satisfied",
+          "evidence": [
+            "audit/evidence/qasc-repo-latest.json",
+            "audit/evidence/dslc-release-REL-VENTURE-OS-001-latest.json",
+            "pm/ci/shipping-status-latest.json"
+          ]
+        },
+        {
+          "id": "dslc-decision-ready",
+          "status": "satisfied",
+          "evidence": ["audit/evidence/dslc-release-REL-VENTURE-OS-001-latest.json"]
+        },
+        {
+          "id": "evidence-chain-current",
+          "status": "satisfied",
+          "evidence": [
+            "machine/dslc/releases/REL-VENTURE-OS-001/manifest.json",
+            "machine/ship/releases/REL-VENTURE-OS-001/manifest.json",
+            "audit/evidence/qasc-repo-latest.json"
+          ]
+        },
+        {
+          "id": "release-manager-attestation",
+          "status": "satisfied",
+          "evidence": [
+            "operator directive 2026-07-01: continue with QASC/DSLC/SHIP parity and ship all unblocked platform/app work",
+            "machine/ship/releases/REL-VENTURE-OS-001/manifest.json",
+            "pm/stories/DEPLOY-01-vercel-pilot.md"
+          ],
+          "rationale": "Internal Venture OS parity closeout only; public launch, customer activation, legal signature, and regulated-data deployment remain out of scope.",
+          "approver": "operator-directive-2026-07-01"
+        }
+      ]
+    },
+    "hardened": {
+      "owner": "security-legal-ops",
+      "controls": [
+        {
+          "id": "security-critical-controls",
+          "status": "satisfied",
+          "evidence": [
+            "audit/evidence/qasc-repo-latest.json",
+            "audit/evidence/mpr-repo-latest.json",
+            "audit/evidence/signal-maturity-latest.json"
+          ]
+        },
+        {
+          "id": "legal-ops-critical-controls",
+          "status": "not-applicable",
+          "evidence": ["machine/dslc/releases/REL-VENTURE-OS-001/manifest.json"],
+          "rationale": "Internal release class; no customer legal instrument, public claim, regulated-data processing, or revenue-recognition path is activated.",
+          "approver": "operator-directive-2026-07-01"
+        },
+        {
+          "id": "ops-critical-controls",
+          "status": "satisfied",
+          "evidence": [
+            "docs/operations/deploy/deployment-profile.md",
+            "docs/operations/deployment-profile.json",
+            "pm/ci/shipping-status-latest.json"
+          ]
+        },
+        {
+          "id": "exceptions-risk-acceptance-register",
+          "status": "satisfied",
+          "evidence": ["audit/evidence/qasc-repo-latest.json", "pm/ci/shipping-status-latest.json"],
+          "rationale": "No residual exceptions are accepted for public/customer activation; this release is scoped to internal delegated parity evidence only.",
+          "approver": "operator-directive-2026-07-01"
+        }
+      ]
+    },
+    "institutionalized": {
+      "owner": "product-docs-architecture",
+      "controls": []
+    },
+    "provisioned": {
+      "owner": "release-management-docs",
+      "controls": [
+        {
+          "id": "spec-versioning",
+          "status": "satisfied",
+          "evidence": [
+            "machine/dslc/releases/REL-VENTURE-OS-001/manifest.json",
+            "machine/ship/releases/REL-VENTURE-OS-001/manifest.json",
+            "pm/spec/feature-registry/manifest.json"
+          ]
+        },
+        {
+          "id": "surface-feature-versioning",
+          "status": "satisfied",
+          "evidence": ["package.json", "pm/canon/registry.json", "pm/canon/composition/features-index.json"]
+        },
+        {
+          "id": "gitbook-public-docs-issued",
+          "status": "not-applicable",
+          "evidence": ["machine/dslc/releases/REL-VENTURE-OS-001/manifest.json"],
+          "rationale": "Internal release class; public GitBook issuance is not activated.",
+          "approver": "operator-directive-2026-07-01"
+        },
+        {
+          "id": "public-changelog-release-notes-issued",
+          "status": "not-applicable",
+          "evidence": ["machine/dslc/releases/REL-VENTURE-OS-001/manifest.json"],
+          "rationale": "Internal release class; public changelog and external release notes are not activated.",
+          "approver": "operator-directive-2026-07-01"
+        }
+      ]
+    }
+  }
+}
