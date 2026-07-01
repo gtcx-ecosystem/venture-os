@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useWorkspace } from "@/components/WorkspaceProvider";
 import { WorkflowProgress } from "@/components/WorkflowProgress";
 import { getClient } from "@/lib/clients";
@@ -11,19 +11,12 @@ export function IntakeForm() {
   const { selectedClientId, completeClientIntake, workflowState } = useWorkspace();
   const client = getClient(selectedClientId);
   const [status, setStatus] = useState<string | null>(null);
-  const [openBriefAfterIntake, setOpenBriefAfterIntake] = useState(false);
-
-  useEffect(() => {
-    if (!openBriefAfterIntake || !workflowState.intakeComplete) return;
-    setStatus(`Intake saved for ${client?.name ?? selectedClientId}. Opening rolling brief…`);
-    router.push("/brief");
-    setOpenBriefAfterIntake(false);
-  }, [openBriefAfterIntake, workflowState.intakeComplete, router, client?.name, selectedClientId]);
 
   function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     completeClientIntake();
-    setOpenBriefAfterIntake(true);
+    setStatus(`Intake saved for ${client?.name ?? selectedClientId}. Opening rolling brief...`);
+    router.push("/brief");
   }
 
   const approvalIds: string[] = [];

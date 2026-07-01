@@ -1,0 +1,509 @@
+{
+  "schema": "gtcx://canon-os/docs-fractal-mpr-check/v1",
+  "generatedAt": "2026-07-01T17:29:01.847Z",
+  "repo": "venture-os",
+  "policyUpdated": "2026-06-19",
+  "pass": true,
+  "gates": [
+    {
+      "id": "policy:present",
+      "ok": true,
+      "detail": "2026-06-19"
+    },
+    {
+      "id": "policy:rollup-rules",
+      "ok": true,
+      "detail": "rollup from witnesses"
+    },
+    {
+      "id": "profile:target",
+      "ok": true,
+      "detail": "pillar target 85"
+    },
+    {
+      "id": "layer:foundation:path",
+      "ok": true,
+      "detail": "docs/foundation/"
+    },
+    {
+      "id": "layer:foundation:pillarContract-complete",
+      "ok": true,
+      "detail": "all 11 pillars in pack"
+    },
+    {
+      "id": "layer:foundation:fractalMpr-present",
+      "ok": true,
+      "detail": "fractalMpr block present"
+    },
+    {
+      "id": "layer:foundation:scorecard-exists",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/docs/foundation/scorecard.md"
+    },
+    {
+      "id": "layer:foundation:scorecard-witness-link",
+      "ok": true,
+      "detail": "scorecard links layer MPR witness (not self-assessed only)"
+    },
+    {
+      "id": "layer:foundation:scorecard-target",
+      "ok": true,
+      "detail": "scorecard documents target 85/100 or rollup"
+    },
+    {
+      "id": "layer:foundation:scorecard-rollup-notice",
+      "ok": true,
+      "detail": "scorecard declares rollup from witness"
+    },
+    {
+      "id": "layer:foundation:scorecard-eleven-pillars",
+      "ok": true,
+      "detail": "all 11 pillars listed"
+    },
+    {
+      "id": "layer:foundation:layer-witness-parse",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/mpr-foundation-layer-latest.json"
+    },
+    {
+      "id": "layer:foundation:layer-witness-schema",
+      "ok": true,
+      "detail": "gtcx://canon-os/mpr-layer-witness-stub/v1"
+    },
+    {
+      "id": "layer:foundation:layer-witness-scope",
+      "ok": true,
+      "detail": "foundation layer scope"
+    },
+    {
+      "id": "layer:foundation:layer-witness-target",
+      "ok": true,
+      "detail": "target 85"
+    },
+    {
+      "id": "layer:foundation:layer-witness-stub",
+      "ok": true,
+      "detail": "bootstrap stub (published:false until MPR audit)"
+    },
+    {
+      "id": "layer:business:path",
+      "ok": true,
+      "detail": "docs/business/"
+    },
+    {
+      "id": "layer:business:pillarContract-complete",
+      "ok": true,
+      "detail": "all 11 pillars in pack"
+    },
+    {
+      "id": "layer:business:fractalMpr-present",
+      "ok": true,
+      "detail": "fractalMpr block present"
+    },
+    {
+      "id": "layer:business:scorecard-exists",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/docs/business/scorecard.md"
+    },
+    {
+      "id": "layer:business:scorecard-witness-link",
+      "ok": true,
+      "detail": "scorecard links layer MPR witness (not self-assessed only)"
+    },
+    {
+      "id": "layer:business:scorecard-target",
+      "ok": true,
+      "detail": "scorecard documents target 85/100 or rollup"
+    },
+    {
+      "id": "layer:business:scorecard-rollup-notice",
+      "ok": true,
+      "detail": "scorecard declares rollup from witness"
+    },
+    {
+      "id": "layer:business:scorecard-eleven-pillars",
+      "ok": true,
+      "detail": "all 11 pillars listed"
+    },
+    {
+      "id": "layer:business:layer-witness-parse",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/mpr-business-layer-latest.json"
+    },
+    {
+      "id": "layer:business:layer-witness-schema",
+      "ok": true,
+      "detail": "gtcx://canon-os/mpr-layer-witness-stub/v1"
+    },
+    {
+      "id": "layer:business:layer-witness-scope",
+      "ok": true,
+      "detail": "business layer scope"
+    },
+    {
+      "id": "layer:business:layer-witness-target",
+      "ok": true,
+      "detail": "target 85"
+    },
+    {
+      "id": "layer:business:layer-witness-stub",
+      "ok": true,
+      "detail": "bootstrap stub (published:false until MPR audit)"
+    },
+    {
+      "id": "layer:strategy:skip",
+      "ok": true,
+      "detail": "not active in this repo: docs/primitives/strategy/"
+    },
+    {
+      "id": "layer:architecture:skip",
+      "ok": true,
+      "detail": "not active in this repo: docs/primitives/architecture/"
+    },
+    {
+      "id": "layer:engineering:skip",
+      "ok": true,
+      "detail": "not active in this repo: docs/engineering/"
+    },
+    {
+      "id": "layer:research:skip",
+      "ok": true,
+      "detail": "not active in this repo: docs/research/"
+    },
+    {
+      "id": "layer:product:path",
+      "ok": true,
+      "detail": "docs/product/"
+    },
+    {
+      "id": "layer:product:pillarContract-complete",
+      "ok": true,
+      "detail": "all 11 pillars in pack"
+    },
+    {
+      "id": "layer:product:fractalMpr-present",
+      "ok": true,
+      "detail": "fractalMpr block present"
+    },
+    {
+      "id": "layer:product:scorecard-exists",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/docs/product/scorecard.md"
+    },
+    {
+      "id": "layer:product:scorecard-witness-link",
+      "ok": true,
+      "detail": "scorecard links layer MPR witness (not self-assessed only)"
+    },
+    {
+      "id": "layer:product:scorecard-target",
+      "ok": true,
+      "detail": "scorecard documents target 85/100 or rollup"
+    },
+    {
+      "id": "layer:product:scorecard-rollup-notice",
+      "ok": true,
+      "detail": "scorecard declares rollup from witness"
+    },
+    {
+      "id": "layer:product:scorecard-eleven-pillars",
+      "ok": true,
+      "detail": "all 11 pillars listed"
+    },
+    {
+      "id": "layer:product:layer-witness-parse",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/mpr-product-layer-latest.json"
+    },
+    {
+      "id": "layer:product:layer-witness-schema",
+      "ok": true,
+      "detail": "gtcx://canon-os/mpr-layer-witness-stub/v1"
+    },
+    {
+      "id": "layer:product:layer-witness-scope",
+      "ok": true,
+      "detail": "product layer scope"
+    },
+    {
+      "id": "layer:product:layer-witness-target",
+      "ok": true,
+      "detail": "target 85"
+    },
+    {
+      "id": "layer:product:layer-witness-stub",
+      "ok": true,
+      "detail": "bootstrap stub (published:false until MPR audit)"
+    },
+    {
+      "id": "layer:canon:path",
+      "ok": true,
+      "detail": "docs/reference/canon/"
+    },
+    {
+      "id": "layer:canon:pillarContract-complete",
+      "ok": true,
+      "detail": "all 11 pillars in pack"
+    },
+    {
+      "id": "layer:canon:fractalMpr-present",
+      "ok": true,
+      "detail": "fractalMpr block present"
+    },
+    {
+      "id": "layer:canon:scorecard-exists",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/docs/reference/canon/scorecard.md"
+    },
+    {
+      "id": "layer:canon:scorecard-witness-link",
+      "ok": true,
+      "detail": "scorecard links layer MPR witness (not self-assessed only)"
+    },
+    {
+      "id": "layer:canon:scorecard-target",
+      "ok": true,
+      "detail": "scorecard documents target 85/100 or rollup"
+    },
+    {
+      "id": "layer:canon:scorecard-rollup-notice",
+      "ok": true,
+      "detail": "scorecard declares rollup from witness"
+    },
+    {
+      "id": "layer:canon:scorecard-eleven-pillars",
+      "ok": true,
+      "detail": "all 11 pillars listed"
+    },
+    {
+      "id": "layer:canon:layer-witness-parse",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/mpr-canon-layer-latest.json"
+    },
+    {
+      "id": "layer:canon:layer-witness-schema",
+      "ok": true,
+      "detail": "gtcx://canon-os/mpr-layer-witness-stub/v1"
+    },
+    {
+      "id": "layer:canon:layer-witness-scope",
+      "ok": true,
+      "detail": "canon layer scope"
+    },
+    {
+      "id": "layer:canon:layer-witness-target",
+      "ok": true,
+      "detail": "target 85"
+    },
+    {
+      "id": "layer:canon:layer-witness-stub",
+      "ok": true,
+      "detail": "bootstrap stub (published:false until MPR audit)"
+    },
+    {
+      "id": "layer:publishing:skip",
+      "ok": true,
+      "detail": "not active in this repo: docs/publishing/"
+    },
+    {
+      "id": "layer:roadmap:skip",
+      "ok": true,
+      "detail": "not active in this repo: docs/roadmap/"
+    },
+    {
+      "id": "layer:agile:path",
+      "ok": true,
+      "detail": "agile/"
+    },
+    {
+      "id": "layer:agile:pillarContract-complete",
+      "ok": true,
+      "detail": "all 11 pillars in pack"
+    },
+    {
+      "id": "layer:agile:fractalMpr-present",
+      "ok": true,
+      "detail": "fractalMpr block present"
+    },
+    {
+      "id": "layer:agile:scorecard-exists",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/agile/scorecard.md"
+    },
+    {
+      "id": "layer:agile:scorecard-witness-link",
+      "ok": true,
+      "detail": "scorecard links layer MPR witness (not self-assessed only)"
+    },
+    {
+      "id": "layer:agile:scorecard-target",
+      "ok": true,
+      "detail": "scorecard documents target 85/100 or rollup"
+    },
+    {
+      "id": "layer:agile:scorecard-rollup-notice",
+      "ok": true,
+      "detail": "scorecard declares rollup from witness"
+    },
+    {
+      "id": "layer:agile:scorecard-eleven-pillars",
+      "ok": true,
+      "detail": "all 11 pillars listed"
+    },
+    {
+      "id": "layer:agile:layer-witness-parse",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/mpr-agile-layer-latest.json"
+    },
+    {
+      "id": "layer:agile:layer-witness-schema",
+      "ok": true,
+      "detail": "gtcx://canon-os/mpr-layer-witness-stub/v1"
+    },
+    {
+      "id": "layer:agile:layer-witness-scope",
+      "ok": true,
+      "detail": "agile layer scope"
+    },
+    {
+      "id": "layer:agile:layer-witness-target",
+      "ok": true,
+      "detail": "target 85"
+    },
+    {
+      "id": "layer:agile:layer-witness-stub",
+      "ok": true,
+      "detail": "bootstrap stub (published:false until MPR audit)"
+    },
+    {
+      "id": "layer:operations:path",
+      "ok": true,
+      "detail": "docs/operations/"
+    },
+    {
+      "id": "layer:operations:pillarContract-complete",
+      "ok": true,
+      "detail": "all 11 pillars in pack"
+    },
+    {
+      "id": "layer:operations:fractalMpr-present",
+      "ok": true,
+      "detail": "fractalMpr block present"
+    },
+    {
+      "id": "layer:operations:scorecard-exists",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/docs/operations/scorecard.md"
+    },
+    {
+      "id": "layer:operations:scorecard-witness-link",
+      "ok": true,
+      "detail": "scorecard links layer MPR witness (not self-assessed only)"
+    },
+    {
+      "id": "layer:operations:scorecard-target",
+      "ok": true,
+      "detail": "scorecard documents target 85/100 or rollup"
+    },
+    {
+      "id": "layer:operations:scorecard-rollup-notice",
+      "ok": true,
+      "detail": "scorecard declares rollup from witness"
+    },
+    {
+      "id": "layer:operations:scorecard-eleven-pillars",
+      "ok": true,
+      "detail": "all 11 pillars listed"
+    },
+    {
+      "id": "layer:operations:layer-witness-parse",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/mpr-operations-layer-latest.json"
+    },
+    {
+      "id": "layer:operations:layer-witness-schema",
+      "ok": true,
+      "detail": "gtcx://canon-os/mpr-layer-witness-stub/v1"
+    },
+    {
+      "id": "layer:operations:layer-witness-scope",
+      "ok": true,
+      "detail": "operations layer scope"
+    },
+    {
+      "id": "layer:operations:layer-witness-target",
+      "ok": true,
+      "detail": "target 85"
+    },
+    {
+      "id": "layer:operations:layer-witness-stub",
+      "ok": true,
+      "detail": "bootstrap stub (published:false until MPR audit)"
+    },
+    {
+      "id": "layer:agents:path",
+      "ok": true,
+      "detail": "agents/"
+    },
+    {
+      "id": "layer:agents:pillarContract-complete",
+      "ok": true,
+      "detail": "all 11 pillars in pack"
+    },
+    {
+      "id": "layer:agents:fractalMpr-present",
+      "ok": true,
+      "detail": "fractalMpr block present"
+    },
+    {
+      "id": "layer:agents:scorecard-exists",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/agents/scorecard.md"
+    },
+    {
+      "id": "layer:agents:scorecard-witness-link",
+      "ok": true,
+      "detail": "scorecard links layer MPR witness (not self-assessed only)"
+    },
+    {
+      "id": "layer:agents:scorecard-target",
+      "ok": true,
+      "detail": "scorecard documents target 85/100 or rollup"
+    },
+    {
+      "id": "layer:agents:scorecard-rollup-notice",
+      "ok": true,
+      "detail": "scorecard declares rollup from witness"
+    },
+    {
+      "id": "layer:agents:scorecard-eleven-pillars",
+      "ok": true,
+      "detail": "all 11 pillars listed"
+    },
+    {
+      "id": "layer:agents:layer-witness-parse",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/mpr-agents-layer-latest.json"
+    },
+    {
+      "id": "layer:agents:layer-witness-schema",
+      "ok": true,
+      "detail": "gtcx://canon-os/mpr-layer-witness-stub/v1"
+    },
+    {
+      "id": "layer:agents:layer-witness-scope",
+      "ok": true,
+      "detail": "agents layer scope"
+    },
+    {
+      "id": "layer:agents:layer-witness-target",
+      "ok": true,
+      "detail": "target 85"
+    },
+    {
+      "id": "layer:agents:layer-witness-stub",
+      "ok": true,
+      "detail": "bootstrap stub (published:false until MPR audit)"
+    }
+  ]
+}

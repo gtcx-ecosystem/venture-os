@@ -1,0 +1,150 @@
+{
+  "schema": "gtcx://canon-os/docs-product-check/v1",
+  "repo": "venture-os",
+  "profile": "product",
+  "at": "2026-07-01T17:29:01.584Z",
+  "ok": true,
+  "spec": {
+    "localPath": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/pm/spec/docs-product-pack.json",
+    "localIsStub": false,
+    "upstreamPath": "/Users/amanianai/Sites/gtcx-ecosystem/canon-os/pm/spec/docs-product-pack.json",
+    "resolvedIsFull": true
+  },
+  "gates": [
+    {
+      "id": "spec:local-present",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/pm/spec/docs-product-pack.json"
+    },
+    {
+      "id": "spec:not-stub",
+      "ok": true,
+      "detail": "full local pack"
+    },
+    {
+      "id": "spec:resolved-full",
+      "ok": true,
+      "detail": "resolved full product pack"
+    },
+    {
+      "id": "profile",
+      "ok": true,
+      "detail": "product"
+    },
+    {
+      "id": "root:docs/product/README.md",
+      "ok": true,
+      "detail": "docs/product/README.md"
+    },
+    {
+      "id": "root:docs/product/FOLDER-SPEC.md",
+      "ok": true,
+      "detail": "docs/product/FOLDER-SPEC.md"
+    },
+    {
+      "id": "root-readme:cross-ref",
+      "ok": true,
+      "detail": "README must link foundation ↔ product (cross-ref table)"
+    },
+    {
+      "id": "root-folder-spec:pack-link",
+      "ok": true,
+      "detail": "FOLDER-SPEC must cite docs-product-pack.json"
+    },
+    {
+      "id": "subfolder:ux",
+      "ok": true,
+      "detail": "docs/product/ux/"
+    },
+    {
+      "id": "subfolder-readme:ux",
+      "ok": true,
+      "detail": "docs/product/ux/README.md"
+    },
+    {
+      "id": "canonical:ux/users.md",
+      "ok": true,
+      "detail": "docs/product/ux/users.md"
+    },
+    {
+      "id": "canonical:ux/northern-stars.md",
+      "ok": true,
+      "detail": "docs/product/ux/northern-stars.md"
+    },
+    {
+      "id": "canonical:ux/job-to-be-done.md",
+      "ok": true,
+      "detail": "docs/product/ux/job-to-be-done.md"
+    },
+    {
+      "id": "canonical:ux/information-architecture.md",
+      "ok": true,
+      "detail": "docs/product/ux/information-architecture.md"
+    },
+    {
+      "id": "canonical:ux/user-flow-diagrams.md",
+      "ok": true,
+      "detail": "docs/product/ux/user-flow-diagrams.md"
+    },
+    {
+      "id": "canonical:ux/critical-workflows.md",
+      "ok": true,
+      "detail": "docs/product/ux/critical-workflows.md"
+    },
+    {
+      "id": "canonical:ux/user-journey-maps.md",
+      "ok": true,
+      "detail": "docs/product/ux/user-journey-maps.md"
+    },
+    {
+      "id": "forbid:product-roadmap",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "id": "forbid:product-requirements",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "id": "forbid:product-acceptance",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "id": "forbid:product-surfaces",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "id": "forbid:product-prds",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "id": "forbid:product-roadmaps",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "id": "forbid:product-scrum",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "id": "forbid:product-research",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "id": "ux:users",
+      "ok": true,
+      "detail": "docs/product/ux/users.md (migrate from personas.md)"
+    },
+    {
+      "id": "no-loose-narrative-at-root",
+      "ok": true,
+      "detail": "ok"
+    }
+  ]
+}

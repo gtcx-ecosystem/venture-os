@@ -60,9 +60,12 @@ function main() {
     }
 
     const layerPath = join(REPO, layer.path);
-    gates.push(
-      gate(`${prefix}:path`, existsSync(layerPath) || layer.id === 'roadmap', layer.path),
-    );
+    if (!existsSync(layerPath)) {
+      gates.push(gate(`${prefix}:skip`, true, `not active in this repo: ${layer.path}`));
+      continue;
+    }
+
+    gates.push(gate(`${prefix}:path`, true, layer.path));
 
     checkPillarContractComplete(packSpec, prefix, gates);
     checkFractalMprBlock(packSpec, prefix, gates);

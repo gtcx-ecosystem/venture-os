@@ -1,0 +1,68 @@
+{
+  "schema": "gtcx://fabric-os/aaas-cadence-forecast/v1",
+  "snapshots": 3,
+  "intervalDays": 0,
+  "metricCount": 5,
+  "regressions": [],
+  "forecasts": [],
+  "metrics": {
+    "compliance": {
+      "current": 69,
+      "previous": 69,
+      "trend": "flat",
+      "slopePerSnapshot": 0,
+      "delta": 0,
+      "regressed": false,
+      "crossedBelow": false,
+      "forecastSnaps": 0,
+      "threshold": 85
+    },
+    "technicalExcellence": {
+      "current": 11,
+      "previous": 11,
+      "trend": "flat",
+      "slopePerSnapshot": 0,
+      "delta": 0,
+      "regressed": false,
+      "crossedBelow": false,
+      "forecastSnaps": 0,
+      "threshold": 85
+    },
+    "craft": {
+      "current": 13,
+      "previous": 13,
+      "trend": "flat",
+      "slopePerSnapshot": 0,
+      "delta": 0,
+      "regressed": false,
+      "crossedBelow": false,
+      "forecastSnaps": 0,
+      "threshold": 85
+    },
+    "worldClass": {
+      "current": 13,
+      "previous": 13,
+      "trend": "flat",
+      "slopePerSnapshot": 0,
+      "delta": 0,
+      "regressed": false,
+      "crossedBelow": false,
+      "forecastSnaps": 0,
+      "threshold": 85
+    },
+    "trustAndSafety": {
+      "current": 71,
+      "previous": 71,
+      "trend": "flat",
+      "slopePerSnapshot": 0,
+      "delta": 0,
+      "regressed": false,
+      "crossedBelow": false,
+      "forecastSnaps": 0,
+      "threshold": 85
+    }
+  },
+  "ok": true,
+  "checkedAt": "2026-07-01T17:07:39.841Z",
+  "repo": "venture-os"
+}

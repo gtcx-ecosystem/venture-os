@@ -1,0 +1,28 @@
+{
+  "schema": "gtcx://canon-os/docs-compliance-nest-check/v1",
+  "generatedAt": "2026-07-01T17:29:01.754Z",
+  "repo": "venture-os",
+  "ok": true,
+  "gates": [
+    {
+      "id": "nest-spec:present",
+      "ok": true,
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/canon-os/machine/spec/docs-operations-compliance-nest.json"
+    },
+    {
+      "id": "compliance-dir:present",
+      "ok": true,
+      "detail": "docs/operations/compliance/"
+    },
+    {
+      "id": "compliance:forbid-slices",
+      "ok": true,
+      "detail": "artifact-type taxonomy only"
+    },
+    {
+      "id": "compliance:allowed-children",
+      "ok": true,
+      "detail": "nest allowlist"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "gtcx://venture-os/docs-ia-check/v1",
+  "generatedAt": "2026-07-01T17:29:01.881Z",
+  "repo": "venture-os",
+  "ok": true,
+  "strict": false,
+  "initiative": "INIT-DOCS-CORE-IA-V1",
+  "gateSequenceSource": "canon-os/pm/spec/docs-ia-initiative.json",
+  "failures": [],
+  "steps": [
+    {
+      "gateId": "docs:foundation:check",
+      "script": "docs-foundation-check.mjs",
+      "ok": true,
+      "exit": 0,
+      "detail": " | PASS — 16/16 | witness: /Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/docs-foundation-latest.json"
+    },
+    {
+      "gateId": "docs:business:check",
+      "script": "docs-business-check.mjs",
+      "ok": true,
+      "exit": 0,
+      "detail": " | PASS — 44/44 | witness: /Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/docs-business-latest.json"
+    },
+    {
+      "gateId": "docs:architecture:check",
+      "script": "docs-architecture-check.mjs",
+      "ok": true,
+      "exit": 0,
+      "detail": " | PASS — 25/25 | witness: /Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/docs-architecture-latest.json"
+    },
+    {
+      "gateId": "docs:product:check",
+      "script": "docs-product-check.mjs",
+      "ok": true,
+      "exit": 0,
+      "detail": " | PASS — 27/27 | witness: /Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/docs-product-latest.json"
+    },
+    {
+      "gateId": "docs:roadmap:check",
+      "script": "docs-roadmap-check.mjs",
+      "ok": true,
+      "exit": 0,
+      "detail": " | PASS — 17/17 | witness: /Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/docs-roadmap-latest.json"
+    },
+    {
+      "gateId": "docs:agile:check",
+      "script": "agile-check.mjs",
+      "ok": true,
+      "exit": 0,
+      "detail": "OK absent:docs-agile — absent |  | PASS — 39/39"
+    },
+    {
+      "gateId": "docs:operations:check",
+      "script": "docs-operations-check.mjs",
+      "ok": true,
+      "exit": 0,
+      "detail": "OK canonical:agent-init/agent-universal-instructions.md — docs/operations/agent-init/agent-universal-instructions.md |  | PASS — 16/16"
+    },
+    {
+      "gateId": "docs:compliance-nest:check",
+      "script": "docs-compliance-nest-check.mjs",
+      "ok": true,
+      "exit": 0,
+      "detail": "PASS — 4/4"
+    },
+    {
+      "gateId": "docs:agents:check",
+      "script": "agents-check.mjs",
+      "ok": true,
+      "exit": 0,
+      "detail": "agents:check — PASS (32/32)"
+    },
+    {
+      "gateId": "docs:fractal-mpr:check",
+      "script": "docs-fractal-mpr-check.mjs",
+      "ok": true,
+      "exit": 0,
+      "detail": "OK layer:agents:layer-witness-stub — bootstrap stub (published:false until MPR audit) |  | PASS — 100/100"
+    },
+    {
+      "gateId": "docs:pack:pillar-contract:check",
+      "script": "docs-pack-pillar-contract-check.mjs",
+      "ok": true,
+      "exit": 0,
+      "detail": "OK pack:agents-pack:fractalMpr-present — fractalMpr block present |  | PASS — 25/25"
+    },
+    {
+      "gateId": "validate:dead-links",
+      "skipped": true,
+      "reason": "validate gates require --strict"
+    },
+    {
+      "gateId": "validate:nav-links",
+      "skipped": true,
+      "reason": "validate gates require --strict"
+    },
+    {
+      "gateId": "validate:hub-operations-scope",
+      "skipped": true,
+      "reason": "validate gates require --strict"
+    },
+    {
+      "gateId": "validate:publish",
+      "skipped": true,
+      "reason": "validate gates require --strict"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "gtcx://canon-os/docs-folder-spec-item/v1",
+  "level": "L2",
+  "id": "01-foundation",
+  "path": "docs/foundation/",
+  "pathVariants": ["docs/primitives/foundation/"],
+  "status": "current",
+  "updated": "2026-06-28",
+  "layer": 1,
+  "packSpec": "machine/spec/docs-foundation-pack.json",
+  "parentNest": "09-primitives-nest",
+  "title": "Foundation — agent mandatory read",
+  "purpose": "Why the repo exists. Every agent reads this layer before P22 work. Local override of canon 01-foundation: allowlists FOLDER-SPEC.md (required by machine/spec/docs-tree-spec.json universal.topLevelLayerRequiresFolderSpec).",
+  "structure": { "mode": "flat", "allowedChildFolders": [], "forbiddenChildFolders": ["*"] },
+  "files": {
+    "mode": "closed",
+    "allowlist": [
+      "README.md",
+      "FOLDER-SPEC.md",
+      "scorecard.md",
+      "constitution.md",
+      "manifesto.md",
+      "vision.md",
+      "mission.md",
+      "goals.md",
+      "milestones.md",
+      "roadmap.md"
+    ]
+  },
+  "primaryPillars": ["P1", "P5", "P9"]
+}

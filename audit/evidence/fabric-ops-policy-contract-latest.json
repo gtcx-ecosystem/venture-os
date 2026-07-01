@@ -1,0 +1,49 @@
+{
+  "schema": "gtcx://fabric-os/cross-repo-contract-witness/v1",
+  "repo": "venture-os",
+  "generatedAt": "2026-07-01T17:27:35.349Z",
+  "score100": 100,
+  "ok": true,
+  "gates": [
+    {
+      "id": "aaas-pin",
+      "ok": true,
+      "detail": "pm/spec/aaas-audit-contract.pin.json"
+    },
+    {
+      "id": "fabric-contract",
+      "ok": true,
+      "detail": "ops/fabric-contract.json"
+    },
+    {
+      "id": "fabric-aaas-sor",
+      "ok": true,
+      "detail": "../fabric-os/machine/spec/aaas-audit-contract.json"
+    },
+    {
+      "id": "fabric-policy-sor",
+      "ok": true,
+      "detail": "../fabric-os/machine/spec/fabric-ops-policy-contract.json"
+    },
+    {
+      "id": "canon",
+      "ok": true,
+      "detail": "../canon-os"
+    },
+    {
+      "id": "bridge",
+      "ok": true,
+      "detail": "../bridge-os"
+    },
+    {
+      "id": "baseline",
+      "ok": true,
+      "detail": "../baseline-os"
+    },
+    {
+      "id": "agile",
+      "ok": true,
+      "detail": "../agile-os"
+    }
+  ]
+}

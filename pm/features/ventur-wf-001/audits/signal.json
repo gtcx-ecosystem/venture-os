@@ -1,0 +1,14 @@
+{
+  "schema": "gtcx://venture-os/package-signal/v1",
+  "id": "VENTUR-WF-001",
+  "level": "L5",
+  "score100": 100,
+  "dimensions": {
+    "systemsArchitecture": 5,
+    "tooling": 5,
+    "process": 5,
+    "safeguards": 5,
+    "monitoring": 5,
+    "teamOwnership": 5
+  }
+}

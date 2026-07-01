@@ -1,0 +1,16 @@
+{
+  "schema": "gtcx://venture-os/feature-record/v1",
+  "id": "VENTUR-WF-001",
+  "name": "venture-os demo path (workflow step 1)",
+  "owner": "venture-os",
+  "status": "ready-for-scrum-prioritization",
+  "updated": "2026-07-01",
+  "sourceRegistry": "pm/spec/feature-registry/manifest.json",
+  "prdRef": "prd-product-charter",
+  "specRef": "pm/product/prds/prd-product-charter.md",
+  "featureTier": "core",
+  "featureClass": "workflow-step",
+  "gtmCritical": true,
+  "workflowId": "WF-VENTUR-DEMO-001",
+  "acceptanceSource": "pm/features/ventur-wf-001/feature-pack/manifest.json"
+}

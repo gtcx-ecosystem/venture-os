@@ -1,1 +1,9 @@
-{"providers": ["cursor"], "routes": {"p22": "../bridge-os/platform/scripts/agent-next-work.mjs"}}
+{
+  "providers": ["cursor"],
+  "routes": [
+    {
+      "id": "p22",
+      "command": "../bridge-os/platform/scripts/agent-next-work.mjs"
+    }
+  ]
+}

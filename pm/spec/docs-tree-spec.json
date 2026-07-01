@@ -67,6 +67,7 @@
       "roadmap.md"
     ],
     "roadmapRootExtra": ["roadmap-current.md"],
+    "operationsRootExtra": ["agent-work-selection.md", "cross-repo-coordination.md"],
     "everyFolder": {
       "requiresReadme": true,
       "folderSpecWhen": { "mdCountGte": 3, "orSubfolderCountGte": 1 },

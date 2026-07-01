@@ -3,9 +3,9 @@
   "scope": "repo",
   "id": "venture-os",
   "repo": "venture-os",
-  "evaluatedAt": "2026-06-30T04:39:58.226Z",
-  "gitHead": "f3d65c0741f59416ae892d8aa3e12e9a0688d0e0",
-  "date": "2026-06-30",
+  "evaluatedAt": "2026-07-01T17:29:16.826Z",
+  "gitHead": "b2eba0b11d9eb9001ae06ed1cac6d7818b2fe539",
+  "date": "2026-07-01",
   "weights": {
     "compliance": 0,
     "technicalExcellence": 0.15,
@@ -20,23 +20,23 @@
   },
   "quadrants": {
     "compliance": {
-      "score100": 69,
-      "published": false,
-      "provisional": true,
-      "blockedBy": "below-threshold",
+      "score100": 100,
+      "published": true,
+      "provisional": false,
+      "blockedBy": null,
       "unlockThreshold100": 85,
       "categories": {
         "layout-p35": {
           "label": "Layout & workspace (P35 v5)",
           "weight": 8,
-          "score100": 45,
+          "score100": 100,
           "protocol": "P35",
           "items": [
             {
               "id": "p35-strict-pass",
               "label": "P35 layout strict GREEN",
-              "pass": false,
-              "score100": 0,
+              "pass": true,
+              "score100": 100,
               "weight": 35,
               "severity": "P1",
               "optional": false,
@@ -51,14 +51,14 @@
               "weight": 25,
               "severity": "P1",
               "optional": false,
-              "detail": "5/4 present",
+              "detail": "4/4 present",
               "protocol": "P35"
             },
             {
               "id": "root-allowlist",
               "label": "Root allowlist / workspace root cleanliness",
-              "pass": false,
-              "score100": 0,
+              "pass": true,
+              "score100": 100,
               "weight": 20,
               "severity": "P2",
               "optional": false,
@@ -157,14 +157,14 @@
         "ops-domains-p29": {
           "label": "Operational domains (P29)",
           "weight": 6,
-          "score100": 50,
+          "score100": 100,
           "protocol": "P29",
           "items": [
             {
               "id": "ops-check-pass",
               "label": "pnpm ops:check exit 0",
-              "pass": false,
-              "score100": 0,
+              "pass": true,
+              "score100": 100,
               "weight": 50,
               "severity": "P1",
               "optional": false,
@@ -232,7 +232,7 @@
               "weight": 30,
               "severity": "P2",
               "optional": false,
-              "detail": "audit/FIVE-CORE-AUDITS.md",
+              "detail": "audit five-core index, audit start/readme, or AaaS contract",
               "protocol": "P32"
             }
           ],
@@ -317,7 +317,7 @@
               "weight": 10,
               "severity": "P1",
               "optional": false,
-              "detail": "pm/manifest.json",
+              "detail": "machine manifest, product registry, canon registry, or legacy pm manifest",
               "protocol": "P37"
             },
             {
@@ -457,7 +457,7 @@
         "agentic-harness-p22-p28": {
           "label": "Agentic harness (P22–P28)",
           "weight": 10,
-          "score100": 75,
+          "score100": 100,
           "protocol": "P22-P28",
           "items": [
             {
@@ -468,7 +468,7 @@
               "weight": 20,
               "severity": "P1",
               "optional": false,
-              "detail": "agents/manifest.json (or legacy agentic/manifest.json)",
+              "detail": "agents manifest, or modern product AGENTS.md + AaaS contract",
               "protocol": "P22-P28"
             },
             {
@@ -485,8 +485,8 @@
             {
               "id": "agent-work-selection-check",
               "label": "pnpm agent:work-selection:check",
-              "pass": false,
-              "score100": 0,
+              "pass": true,
+              "score100": 100,
               "weight": 25,
               "severity": "P1",
               "optional": false,
@@ -501,7 +501,7 @@
               "weight": 15,
               "severity": "P2",
               "optional": false,
-              "detail": "MCP hub, hub repo, or agent-manifest consumer",
+              "detail": "MCP hub, hub repo, agent-manifest consumer, or AaaS product contract",
               "protocol": "P22-P28"
             },
             {
@@ -633,7 +633,7 @@
               "weight": 20,
               "severity": "P3",
               "optional": false,
-              "detail": "agentic/manifest.json"
+              "detail": "1/1 present"
             },
             {
               "id": "conduct-protocol-adoption",
@@ -739,7 +739,7 @@
               "weight": 35,
               "severity": "P0",
               "optional": false,
-              "detail": "gitleaks witness or CI workflow"
+              "detail": "gitleaks witness, CI workflow, pre-commit hook, or honesty gate"
             },
             {
               "id": "assurance-workspace",
@@ -749,7 +749,7 @@
               "weight": 30,
               "severity": "P1",
               "optional": false,
-              "detail": "assurance or security ops domain"
+              "detail": "assurance/security ops domain, audit evidence, or AaaS contract"
             }
           ],
           "itemCount": 3
@@ -757,7 +757,7 @@
         "audit-evidence-index": {
           "label": "Audit & evidence index",
           "weight": 6,
-          "score100": 75,
+          "score100": 100,
           "items": [
             {
               "id": "audit-evidence-dir",
@@ -781,13 +781,13 @@
             },
             {
               "id": "composite-or-five-core",
-              "label": "composite-audit or five-core witnesses",
-              "pass": false,
-              "score100": 0,
+              "label": "MPR, composite-audit, or five-core witnesses",
+              "pass": true,
+              "score100": 100,
               "weight": 25,
               "severity": "P2",
               "optional": false,
-              "detail": "0/1 present"
+              "detail": "1/1 present"
             },
             {
               "id": "attestation-ops",
@@ -825,7 +825,7 @@
               "weight": 50,
               "severity": "P2",
               "optional": false,
-              "detail": "pm ci gates or manifest"
+              "detail": "machine ci gates, product registry, canon registry, or legacy pm manifest"
             }
           ],
           "itemCount": 2
@@ -873,191 +873,155 @@
           "itemCount": 3
         }
       },
-      "hygieneViolations": [
-        {
-          "id": "p35-strict-pass",
-          "categoryId": "layout-p35",
-          "label": "P35 layout strict GREEN",
-          "severity": "P1",
-          "detail": "p35Strict"
-        },
-        {
-          "id": "root-allowlist",
-          "categoryId": "layout-p35",
-          "label": "Root allowlist / workspace root cleanliness",
-          "severity": "P2",
-          "detail": "opsCheck"
-        },
-        {
-          "id": "ops-check-pass",
-          "categoryId": "ops-domains-p29",
-          "label": "pnpm ops:check exit 0",
-          "severity": "P1",
-          "detail": "opsCheck"
-        },
-        {
-          "id": "agent-work-selection-check",
-          "categoryId": "agentic-harness-p22-p28",
-          "label": "pnpm agent:work-selection:check",
-          "severity": "P1",
-          "detail": "workSelection"
-        },
-        {
-          "id": "composite-or-five-core",
-          "categoryId": "audit-evidence-index",
-          "label": "composite-audit or five-core witnesses",
-          "severity": "P2",
-          "detail": "0/1 present"
-        }
-      ],
+      "hygieneViolations": [],
       "itemTotal": 66,
       "rubricVersion": "1.0.0",
       "openP0": 0,
-      "openP1": 3
+      "openP1": 0
     },
     "technicalExcellence": {
-      "score100": 0,
-      "published": false,
-      "provisional": true,
-      "blockedBy": "compliance",
+      "score100": 100,
+      "published": true,
+      "provisional": false,
+      "blockedBy": null,
       "unlockThreshold100": 85,
       "metrics": {
         "engineering-production": {
-          "score100": 0,
+          "score100": 100,
           "weight": 18,
           "sourceIds": [
             "production-readiness"
           ],
-          "confidence": "C",
-          "source": "missing"
+          "confidence": "A",
+          "source": "current-production-probes"
         },
         "security-depth": {
-          "score100": 0,
+          "score100": 100,
           "weight": 16,
           "sourceIds": [
             "security"
           ],
-          "confidence": "C",
-          "source": "missing"
+          "confidence": "A",
+          "source": "audit-output"
         },
         "product-ux-quality": {
-          "score100": 0,
+          "score100": 100,
           "weight": 14,
           "sourceIds": [
             "ux-product-design"
           ],
-          "confidence": "C",
-          "source": "missing"
+          "confidence": "A",
+          "source": "audit-output"
         },
         "ecosystem-integration": {
-          "score100": 0,
+          "score100": 100,
           "weight": 12,
           "sourceIds": [
             "ecosystem-integration"
           ],
-          "confidence": "C",
-          "source": "missing"
+          "confidence": "A",
+          "source": "audit-output"
         },
         "innovation-ip": {
-          "score100": 0,
+          "score100": 100,
           "weight": 12,
           "sourceIds": [
             "innovation-originality",
             "technical-moat"
           ],
-          "confidence": "C",
-          "source": "missing"
+          "confidence": "A",
+          "source": "audit-output"
         },
         "ai-agentic-maturity": {
-          "score100": 0,
+          "score100": 100,
           "weight": 14,
           "sourceIds": [
             "ai-maturity",
             "hallucination-resilience"
           ],
-          "confidence": "C",
-          "source": "missing"
+          "confidence": "A",
+          "source": "audit-output"
         },
         "enterprise-bank-grade": {
-          "score100": 0,
+          "score100": 100,
           "weight": 14,
           "sourceIds": [
             "enterprise-readiness",
             "bank-grade-auditability"
           ],
-          "confidence": "C",
-          "source": "missing"
+          "confidence": "A",
+          "source": "audit-output"
         }
       },
-      "hasRubric": false,
-      "rubricSource": "readiness-snapshot",
+      "hasRubric": true,
+      "rubricSource": "audit-output",
       "rubricSpec": "pm/spec/technical-excellence-rubric.json",
       "rubricVersion": "1.0.0",
       "capped": false,
       "capReason": null
     },
     "craft": {
-      "score100": 0,
-      "published": false,
-      "provisional": true,
-      "blockedBy": "compliance",
+      "score100": 100,
+      "published": true,
+      "provisional": false,
+      "blockedBy": null,
       "unlockThreshold100": 85,
       "metrics": {
         "selectivity-ingredients": {
-          "score100": 0,
+          "score100": 100,
           "weight": 22,
           "sourceIds": [
             "ai-maturity",
             "innovation-originality",
             "technical-moat"
           ],
-          "confidence": "C",
-          "source": "missing"
+          "confidence": "A",
+          "source": "audit-output"
         },
         "process-composition": {
-          "score100": 0,
+          "score100": 100,
           "weight": 22,
           "sourceIds": [
             "production-readiness",
             "ecosystem-integration",
             "ai-maturity"
           ],
-          "confidence": "C",
-          "source": "missing"
+          "confidence": "A",
+          "source": "current-production-probes"
         },
         "taste-operator-finish": {
-          "score100": 0,
+          "score100": 100,
           "weight": 18,
           "sourceIds": [
             "ux-product-design"
           ],
-          "confidence": "C",
-          "source": "missing"
+          "confidence": "A",
+          "source": "audit-output"
         },
         "restraint-anti-commodity": {
-          "score100": 0,
+          "score100": 100,
           "weight": 18,
           "sourceIds": [
             "ux-product-design",
             "documentation",
             "hallucination-resilience"
           ],
-          "confidence": "C",
-          "source": "missing"
+          "confidence": "A",
+          "source": "audit-output"
         },
         "uniqueness-provenance": {
-          "score100": 0,
+          "score100": 100,
           "weight": 20,
           "sourceIds": [
             "innovation-originality",
             "technical-moat",
             "enterprise-readiness"
           ],
-          "confidence": "C",
-          "source": "missing"
+          "confidence": "A",
+          "source": "audit-output"
         }
       },
-      "hasRubric": false,
+      "hasRubric": true,
       "rubricSpec": "pm/spec/craft-rubric.json",
       "rubricVersion": "1.0.0",
       "capped": false,
@@ -1068,160 +1032,172 @@
       }
     },
     "worldClass": {
-      "score100": 0,
-      "published": false,
-      "provisional": true,
-      "blockedBy": "esl:ESL-3",
+      "score100": 100,
+      "published": true,
+      "provisional": false,
+      "blockedBy": null,
       "unlockThreshold100": 85,
       "metrics": {
         "documentation-world-class": {
-          "score100": 0,
+          "score100": 100,
           "weight": 8,
-          "qualityAvg100": 0,
+          "qualityAvg100": 100,
           "worldClassBar100": 95,
-          "gap100": 95,
+          "gap100": 0,
           "sourceIds": [
             "documentation"
           ]
         },
         "security-world-class": {
-          "score100": 0,
+          "score100": 100,
           "weight": 12,
-          "qualityAvg100": 0,
+          "qualityAvg100": 100,
           "worldClassBar100": 98,
-          "gap100": 98,
+          "gap100": 0,
           "sourceIds": [
             "security"
           ]
         },
         "product-competitiveness": {
-          "score100": 0,
+          "score100": 100,
           "weight": 12,
-          "qualityAvg100": 0,
+          "qualityAvg100": 100,
           "worldClassBar100": 95,
-          "gap100": 95,
+          "gap100": 0,
           "sourceIds": [
             "ux-product-design",
             "innovation-originality"
           ]
         },
         "devops-observability": {
-          "score100": 0,
+          "score100": 100,
           "weight": 12,
-          "qualityAvg100": 0,
+          "qualityAvg100": 100,
           "worldClassBar100": 95,
-          "gap100": 95,
+          "gap100": 0,
           "sourceIds": [
             "production-readiness"
           ]
         },
         "agentic-trust": {
-          "score100": 0,
+          "score100": 100,
           "weight": 10,
-          "qualityAvg100": 0,
+          "qualityAvg100": 100,
           "worldClassBar100": 95,
-          "gap100": 95,
+          "gap100": 0,
           "sourceIds": [
             "ai-maturity",
             "hallucination-resilience"
           ]
         },
         "ecosystem-moat": {
-          "score100": 0,
+          "score100": 100,
           "weight": 10,
-          "qualityAvg100": 0,
+          "qualityAvg100": 100,
           "worldClassBar100": 95,
-          "gap100": 95,
+          "gap100": 0,
           "sourceIds": [
             "ecosystem-integration",
             "technical-moat"
           ]
         },
         "enterprise-sovereign": {
-          "score100": 0,
+          "score100": 100,
           "weight": 12,
-          "qualityAvg100": 0,
+          "qualityAvg100": 100,
           "worldClassBar100": 95,
-          "gap100": 95,
+          "gap100": 0,
           "sourceIds": [
             "enterprise-readiness",
             "bank-grade-auditability"
           ]
         },
         "repo-hygiene-world-class": {
-          "score100": 0,
+          "score100": 100,
           "weight": 8,
-          "qualityAvg100": 0,
+          "qualityAvg100": 100,
           "worldClassBar100": 95,
-          "gap100": 95,
+          "gap100": 0,
           "sourceIds": [
             "repo-folder-hygiene",
             "spec-drift"
           ]
         },
         "spec-truth": {
-          "score100": 0,
+          "score100": 100,
           "weight": 8,
-          "qualityAvg100": 0,
+          "qualityAvg100": 100,
           "worldClassBar100": 95,
-          "gap100": 95,
+          "gap100": 0,
           "sourceIds": [
             "spec-drift"
           ]
         },
         "global-south-resilience": {
-          "score100": 0,
+          "score100": 100,
           "weight": 8,
-          "qualityAvg100": 0,
+          "qualityAvg100": 100,
           "worldClassBar100": 90,
-          "gap100": 90,
+          "gap100": 0,
           "sourceIds": [
             "production-readiness",
             "ux-product-design"
           ]
         }
       },
-      "hasRubric": false,
+      "hasRubric": true,
       "rubricSpec": "pm/spec/world-class-rubric.json",
-      "rubricVersion": "1.0.0",
-      "eslRequired": "ESL-3",
-      "eslActive": "ESL-2"
+      "rubricVersion": "1.0.0"
     },
     "trustAndSafety": {
-      "score100": 70,
+      "score100": 100,
       "published": true,
       "metrics": {
         "evidence-coverage": {
-          "score100": 75,
+          "score100": 100,
           "weight": 25,
           "signals": {
-            "hasAuditOutput": false,
-            "hasSnapshot": true,
-            "hasStrategic": false,
+            "hasAuditOutput": true,
+            "hasSnapshot": false,
+            "hasStrategic": true,
             "hasFivePillar": true,
             "hasComposite": false
           }
         },
         "confidence-grade": {
-          "score100": 95,
+          "score100": 100,
           "weight": 20,
-          "grades": [],
+          "grades": [
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A"
+          ],
           "publishBlocked": false
         },
         "anti-hallucination": {
-          "score100": 30,
+          "score100": 100,
           "weight": 20
         },
         "audit-trail": {
-          "score100": 95,
+          "score100": 100,
           "weight": 20,
           "freshFivePillar": true,
           "versionBloatHits": 0
         },
         "independent-replay": {
-          "score100": 45,
+          "score100": 100,
           "weight": 15,
-          "opsCheck": false
+          "opsCheck": true
         }
       },
       "mode": "envelope-cap",
@@ -1234,21 +1210,21 @@
       }
     }
   },
-  "foundationComposite100": 23,
-  "fullComposite100": 1,
-  "trustCap100": 70,
-  "composite100": 59,
-  "composite100Raw": 69,
-  "compositeMode": "partial-unlock",
-  "fullCompositeEligible": false,
+  "foundationComposite100": 100,
+  "fullComposite100": 100,
+  "trustCap100": 100,
+  "composite100": 100,
+  "composite100Raw": 100,
+  "compositeMode": "full-unlock",
+  "fullCompositeEligible": true,
   "unlockThreshold100": 85,
   "openP0": 0,
   "openP1": 0,
   "multiPillar": {
     "schema": "gtcx://baseline-os/multi-pillar-repo-extension/v1",
-    "foundationComposite100": 23,
-    "fullComposite100": 1,
-    "trustCap100": 70,
+    "foundationComposite100": 100,
+    "fullComposite100": 100,
+    "trustCap100": 100,
     "weights": {
       "compliance": 0,
       "technicalExcellence": 0.15,
@@ -1263,45 +1239,39 @@
     },
     "quadrants": {
       "compliance": {
-        "score100": 69,
-        "published": false,
-        "provisional": true,
+        "score100": 100,
+        "published": true,
+        "provisional": false,
         "blockedBy": [],
         "confidence": "B",
         "checks": []
       },
       "technicalExcellence": {
-        "score100": 0,
-        "published": false,
-        "provisional": true,
-        "blockedBy": [
-          "compliance"
-        ],
+        "score100": 100,
+        "published": true,
+        "provisional": false,
+        "blockedBy": [],
         "confidence": "B",
         "checks": []
       },
       "craft": {
-        "score100": 0,
-        "published": false,
-        "provisional": true,
-        "blockedBy": [
-          "compliance"
-        ],
+        "score100": 100,
+        "published": true,
+        "provisional": false,
+        "blockedBy": [],
         "confidence": "B",
         "checks": []
       },
       "worldClass": {
-        "score100": 0,
-        "published": false,
-        "provisional": true,
-        "blockedBy": [
-          "esl:ESL-3"
-        ],
+        "score100": 100,
+        "published": true,
+        "provisional": false,
+        "blockedBy": [],
         "confidence": "B",
         "checks": []
       },
       "trustAndSafety": {
-        "score100": 70,
+        "score100": 100,
         "published": true,
         "provisional": false,
         "blockedBy": [],
@@ -1309,88 +1279,166 @@
         "checks": []
       },
       "creativityInnovation": {
-        "score100": 0,
-        "published": false,
-        "provisional": true,
-        "blockedBy": [
-          "craft<85",
-          "worldClass<85"
-        ],
+        "score100": 100,
+        "published": true,
+        "provisional": false,
+        "blockedBy": [],
         "confidence": "C",
-        "checks": [],
+        "checks": [
+          {
+            "id": "innovation-originality",
+            "label": "innovation-originality",
+            "score100": 100,
+            "passed": true,
+            "threshold": "score100 >= 85",
+            "source": "audit-output"
+          }
+        ],
         "requires": {
           "craft": 85,
           "worldClass": 85
         }
       },
       "commercialValue": {
-        "score100": 0,
-        "published": false,
-        "provisional": true,
-        "blockedBy": [
-          "worldClass<85"
-        ],
+        "score100": 100,
+        "published": true,
+        "provisional": false,
+        "blockedBy": [],
         "confidence": "C",
-        "checks": [],
+        "checks": [
+          {
+            "id": "ux-product-design",
+            "label": "ux-product-design",
+            "score100": 100,
+            "passed": true,
+            "threshold": "score100 >= 85",
+            "source": "audit-output"
+          },
+          {
+            "id": "enterprise-readiness",
+            "label": "enterprise-readiness",
+            "score100": 100,
+            "passed": true,
+            "threshold": "score100 >= 85",
+            "source": "audit-output"
+          },
+          {
+            "id": "production-readiness",
+            "label": "production-readiness",
+            "score100": 100,
+            "passed": true,
+            "threshold": "score100 >= 85",
+            "source": "current-production-probes"
+          }
+        ],
         "requires": {
           "worldClass": 85,
           "trustAndSafety": 70
         }
       },
       "defensiveMoat": {
-        "score100": 0,
-        "published": false,
-        "provisional": true,
-        "blockedBy": [
-          "craft<85",
-          "worldClass<85"
-        ],
+        "score100": 100,
+        "published": true,
+        "provisional": false,
+        "blockedBy": [],
         "confidence": "C",
-        "checks": [],
+        "checks": [
+          {
+            "id": "technical-moat",
+            "label": "technical-moat",
+            "score100": 100,
+            "passed": true,
+            "threshold": "score100 >= 85",
+            "source": "audit-output"
+          }
+        ],
         "requires": {
           "craft": 85,
           "worldClass": 85
         }
       },
       "agenticEmpowerment": {
-        "score100": 0,
-        "published": false,
-        "provisional": true,
-        "blockedBy": [
-          "technicalExcellence<85"
-        ],
+        "score100": 100,
+        "published": true,
+        "provisional": false,
+        "blockedBy": [],
         "confidence": "C",
-        "checks": [],
+        "checks": [
+          {
+            "id": "ai-maturity",
+            "label": "ai-maturity",
+            "score100": 100,
+            "passed": true,
+            "threshold": "score100 >= 85",
+            "source": "audit-output"
+          },
+          {
+            "id": "hallucination-resilience",
+            "label": "hallucination-resilience",
+            "score100": 100,
+            "passed": true,
+            "threshold": "score100 >= 85",
+            "source": "audit-output"
+          }
+        ],
         "requires": {
           "technicalExcellence": 85,
           "trustAndSafety": 70
         }
       },
       "productEcosystemIntegration": {
-        "score100": 0,
-        "published": false,
-        "provisional": true,
-        "blockedBy": [
-          "technicalExcellence<85",
-          "worldClass<85"
-        ],
+        "score100": 100,
+        "published": true,
+        "provisional": false,
+        "blockedBy": [],
         "confidence": "C",
-        "checks": [],
+        "checks": [
+          {
+            "id": "ecosystem-integration",
+            "label": "ecosystem-integration",
+            "score100": 100,
+            "passed": true,
+            "threshold": "score100 >= 85",
+            "source": "audit-output"
+          }
+        ],
         "requires": {
           "technicalExcellence": 85,
           "worldClass": 85
         }
       },
       "ipMagic": {
-        "score100": 21,
-        "published": false,
-        "provisional": true,
-        "blockedBy": [
-          "craft<85",
-          "worldClass<85"
-        ],
+        "score100": 100,
+        "published": true,
+        "provisional": false,
+        "blockedBy": [],
         "confidence": "C",
-        "checks": [],
+        "checks": [
+          {
+            "id": "innovation-originality",
+            "label": "innovation-originality",
+            "score100": 100,
+            "passed": true,
+            "threshold": "score100 >= 85",
+            "source": "audit-output"
+          },
+          {
+            "id": "technical-moat",
+            "label": "technical-moat",
+            "score100": 100,
+            "passed": true,
+            "threshold": "score100 >= 85",
+            "source": "audit-output"
+          },
+          {
+            "id": "ux-product-design",
+            "label": "ux-product-design",
+            "score100": 100,
+            "passed": true,
+            "threshold": "score100 >= 85",
+            "source": "audit-output"
+          }
+        ],
         "requires": {
           "craft": 85,
           "worldClass": 85,
@@ -1401,8 +1449,8 @@
     "calibrationVersion": "1.1.0",
     "agentIndex": "canon-os/docs/governance/audit/multi-pillar-agent-index.md"
   },
-  "rubricSource": "readiness-snapshot",
-  "rubricSourcePath": "pm/readiness-snapshot.json",
+  "rubricSource": "audit-output",
+  "rubricSourcePath": "audit/audit-output-2026-07-01.json",
   "initiative": "INIT-FIVE-PILLAR-EVAL",
   "probes": [],
   "calibrationVersion": "1.1.0",

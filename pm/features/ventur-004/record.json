@@ -1,0 +1,16 @@
+{
+  "schema": "gtcx://venture-os/feature-record/v1",
+  "id": "VENTUR-004",
+  "name": "venture visibility desk",
+  "owner": "venture-os",
+  "status": "ready-for-scrum-prioritization",
+  "updated": "2026-07-01",
+  "sourceRegistry": "pm/spec/feature-registry/manifest.json",
+  "prdRef": "prd-product-charter",
+  "specRef": "pm/product/prds/prd-product-charter.md",
+  "featureTier": "competitive",
+  "featureClass": "capability",
+  "gtmCritical": false,
+  "workflowId": null,
+  "acceptanceSource": "pm/features/ventur-004/feature-pack/manifest.json"
+}

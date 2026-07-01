@@ -1,0 +1,50 @@
+{
+  "schema": "gtcx://venture-os/feature-production-package/v1",
+  "id": "VENTUR-002",
+  "title": "venture operations desk",
+  "owner": "venture-os",
+  "status": "ready-for-scrum-prioritization",
+  "updated": "2026-07-01",
+  "prdRef": "prd-product-charter",
+  "specRef": "pm/product/prds/prd-product-charter.md",
+  "machineRecord": "pm/features/ventur-002/record.json",
+  "acceptanceCriteria": [
+    "Feature record is linked to the PRD and registry shard.",
+    "Operational, GTM, security, and compliance dependencies are tracked as separate roadmap lanes and do not block product release claims.",
+    "Scrum can prioritize implementation from this pack without using backlog as source of authority."
+  ],
+  "qaTesting": [
+    {
+      "id": "qasc-feature-pack",
+      "score100": 100,
+      "command": "pnpm feature:production-package:check"
+    },
+    {
+      "id": "mpr-package",
+      "score100": 100,
+      "evidence": "pm/features/ventur-002/audits/mpr.json"
+    },
+    {
+      "id": "signal-package",
+      "score100": 100,
+      "evidence": "pm/features/ventur-002/audits/signal.json"
+    }
+  ],
+  "sprintPlans": [
+    {
+      "sprint": "next-planning",
+      "owner": "scrum",
+      "action": "Prioritize against roadmap lane capacity and product goals.",
+      "handoff": "agile/scrum/sprint-planning.md"
+    }
+  ],
+  "mprReview": {
+    "score100": 100,
+    "evidence": "pm/features/ventur-002/audits/mpr.json"
+  },
+  "signalReview": {
+    "level": "L5",
+    "score100": 100,
+    "evidence": "pm/features/ventur-002/audits/signal.json"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "gtcx://canon-os/docs-folder-spec-item/v1",
+  "level": "L2",
+  "id": "04-product",
+  "path": "docs/product/",
+  "status": "current",
+  "updated": "2026-06-28",
+  "layer": 4,
+  "title": "Product — plan + experience + demos",
+  "purpose": "Fast product plane: executable roadmap, full product experience, optional demos. Local override of canon 04-product: allowlists ux/ (sanctioned by machine/spec/docs-tree-spec.json allowedNestedDirPatterns) as the repo's current product-experience instance; canon canonical home is experience/.",
+  "authoritativePack": "machine/spec/docs-product-pack.json",
+  "structure": {
+    "mode": "closed",
+    "archiveFolder": "archive",
+    "allowedChildFolders": [
+      "roadmap",
+      "experience",
+      "demos",
+      "archive",
+      "canon",
+      "ux"
+    ],
+    "forbiddenChildFolders": [
+      "roadmaps",
+      "scrum",
+      "prds",
+      "research",
+      "publishing",
+      "go-to-market",
+      "_archive"
+    ]
+  },
+  "files": {
+    "mode": "closed",
+    "allowlist": [
+      "README.md",
+      "scorecard.md",
+      "FOLDER-SPEC.md"
+    ]
+  },
+  "primaryPillars": ["P1", "P7", "P9", "P11"]
+}

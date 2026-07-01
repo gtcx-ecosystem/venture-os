@@ -1,0 +1,20 @@
+{
+  "schema": "gtcx://bridge-os/capability-thresholds-witness/v1",
+  "repo": "venture-os",
+  "at": "2026-07-01T17:27:47.715Z",
+  "triggered": [
+    {
+      "id": "CT-AUTONOMY-01",
+      "requiredEsl": "ESL-2",
+      "authorityClass": "A"
+    },
+    {
+      "id": "CT-ASSURANCE-01",
+      "requiredEsl": "ESL-4",
+      "authorityClass": "S"
+    }
+  ],
+  "requiredCapabilityEsl": "ESL-4",
+  "activeEsl": "ESL-4",
+  "ok": true
+}

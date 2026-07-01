@@ -1,0 +1,103 @@
+{
+  "schema": "gtcx://baseline-os/signal-maturity/v1",
+  "lens": "SIGNAL",
+  "repo": "venture-os",
+  "checkedAt": "2026-07-01T17:07:39.870Z",
+  "overall": 5,
+  "overallLabel": "L5",
+  "weakestLink": "Systems Architecture",
+  "rule": "weakest-link · production-only",
+  "dimensions": [
+    {
+      "dimension": "Systems Architecture",
+      "level": 5,
+      "label": "L5",
+      "evidence": [
+        "L1: spec directory present",
+        "L2: AaaS contract pin",
+        "L3: >=3 machine specs",
+        "L4: schema-validated specs ($schema)",
+        "L5: framework design doc"
+      ],
+      "gaps": [],
+      "primaryBlocker": null,
+      "gapToNext": "at ceiling"
+    },
+    {
+      "dimension": "Tooling",
+      "level": 5,
+      "label": "L5",
+      "evidence": [
+        "L1: package scripts",
+        "L2: >=10 scripts",
+        "L3: check/audit tooling",
+        "L4: handoff synthesizer (aaas:handoff)",
+        "L5: >=30 scripts (rich automation)"
+      ],
+      "gaps": [],
+      "primaryBlocker": null,
+      "gapToNext": "at ceiling"
+    },
+    {
+      "dimension": "Process",
+      "level": 5,
+      "label": "L5",
+      "evidence": [
+        "L1: audit/ tree",
+        "L2: evidence + reports folders",
+        "L3: handoff directive folder",
+        "L4: remediation audit/reports folder",
+        "L5: lifecycle running (fresh witness)"
+      ],
+      "gaps": [],
+      "primaryBlocker": null,
+      "gapToNext": "at ceiling"
+    },
+    {
+      "dimension": "Safeguards",
+      "level": 5,
+      "label": "L5",
+      "evidence": [
+        "L1: gate/check tooling",
+        "L2: honesty gate",
+        "L3: adversarial honesty",
+        "L4: commit gates (husky/settlement)",
+        "L5: signed provenance in witnesses"
+      ],
+      "gaps": [],
+      "primaryBlocker": null,
+      "gapToNext": "at ceiling"
+    },
+    {
+      "dimension": "Monitoring",
+      "level": 5,
+      "label": "L5",
+      "evidence": [
+        "L1: evidence witnesses",
+        "L2: cadence witness",
+        "L3: witness freshness (<=7d)",
+        "L4: predictive forecast",
+        "L5: trend history (>=3 snapshots)"
+      ],
+      "gaps": [],
+      "primaryBlocker": null,
+      "gapToNext": "at ceiling"
+    },
+    {
+      "dimension": "Team & Ownership",
+      "level": 5,
+      "label": "L5",
+      "evidence": [
+        "L1: agent instructions (CLAUDE/AGENTS.md)",
+        "L2: contract pin (ownership binding)",
+        "L3: ownership codified in contract",
+        "L4: coordination docs (P24)",
+        "L5: ownership check witness"
+      ],
+      "gaps": [],
+      "primaryBlocker": null,
+      "gapToNext": "at ceiling"
+    }
+  ],
+  "primaryBlocker": null
+}

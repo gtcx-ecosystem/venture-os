@@ -1,0 +1,89 @@
+{
+  "schema": "gtcx://bridge-os/esl-assessment/v1",
+  "repo": "venture-os",
+  "repoKind": "product",
+  "at": "2026-07-01T17:27:47.715Z",
+  "activeEsl": "ESL-4",
+  "requiredCapabilityEsl": "ESL-4",
+  "baselineEsl": "ESL-2",
+  "eslSufficient": true,
+  "triggeredThresholds": [
+    {
+      "id": "CT-AUTONOMY-01",
+      "requiredEsl": "ESL-2",
+      "authorityClass": "A"
+    },
+    {
+      "id": "CT-ASSURANCE-01",
+      "requiredEsl": "ESL-4",
+      "authorityClass": "S"
+    }
+  ],
+  "pillarEslGates": {
+    "compliance": {
+      "requiredEsl": "ESL-1",
+      "met": true
+    },
+    "technicalExcellence": {
+      "requiredEsl": "ESL-1",
+      "met": true
+    },
+    "craft": {
+      "requiredEsl": "ESL-2",
+      "met": true
+    },
+    "worldClass": {
+      "requiredEsl": "ESL-3",
+      "met": true
+    },
+    "trustAndSafety": {
+      "requiredEsl": "ESL-1",
+      "met": true
+    }
+  },
+  "p28Bridge": {
+    "R": {
+      "label": "Routine",
+      "minEsl": "ESL-1",
+      "allowed": [
+        "pnpm agent:next-work",
+        "unit tests and repo gates",
+        "micro-commit and push when settlement gates pass",
+        "docs and spec edits in owner repo"
+      ],
+      "forbidden": [
+        "net-new production secrets",
+        "force push protected branches",
+        "legal or sovereign sign-off",
+        "skip hooks without Class S operator request"
+      ]
+    },
+    "A": {
+      "label": "Custody",
+      "minEsl": "ESL-2",
+      "allowed": [
+        "trust attestations after preceremony",
+        "evidence writes to protocols",
+        "authorized gh coordination posts",
+        "XR attestation runners"
+      ],
+      "requires": [
+        "preceremony gates green",
+        "ESL-2 safeguards active"
+      ]
+    },
+    "S": {
+      "label": "Sovereign",
+      "minEsl": "ESL-4",
+      "allowed": [
+        "explicit operator stop",
+        "legal sign-off",
+        "production secret issuance",
+        "prod promote when human gate artifact present"
+      ],
+      "parallelOnly": true,
+      "blocksIR": "varies — see sovereign-gate-reconciliation.json"
+    }
+  },
+  "gaps": []
+}

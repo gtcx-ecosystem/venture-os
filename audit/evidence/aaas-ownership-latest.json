@@ -1,0 +1,43 @@
+{
+  "schema": "gtcx://fabric-os/aaas-ownership/v1",
+  "requiredTypes": 4,
+  "ownedTypes": 4,
+  "handoffItemsChecked": 5,
+  "handoffItemsUnowned": 0,
+  "handoffSlaDays": 14,
+  "slaStatus": [
+    {
+      "type": "audit/evidence",
+      "owner": "fabric-os",
+      "ageDays": 0,
+      "slaDays": 7,
+      "withinSla": true
+    },
+    {
+      "type": "audit/reports",
+      "owner": "fabric-os",
+      "ageDays": 3,
+      "slaDays": 7,
+      "withinSla": true
+    },
+    {
+      "type": "audit/handoff",
+      "owner": "fabric-os",
+      "ageDays": 1,
+      "slaDays": 7,
+      "withinSla": true
+    },
+    {
+      "type": "audit/archive",
+      "owner": "fabric-os",
+      "ageDays": 3,
+      "slaDays": 365,
+      "withinSla": true
+    }
+  ],
+  "escalations": [],
+  "violations": [],
+  "ok": true,
+  "repo": "venture-os",
+  "checkedAt": "2026-07-01T17:07:26.285Z"
+}

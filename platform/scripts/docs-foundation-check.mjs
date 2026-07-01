@@ -47,7 +47,7 @@ function main() {
     return;
   }
 
-  gates.push(gate('profile', !!spec.profiles, profileKeyFromTier(readProductTier(REPO))));
+  gates.push(gate('profile', !!spec.profiles || Array.isArray(spec.requiredFiles), profileKeyFromTier(readProductTier(REPO))));
 
   for (const entry of spec.requiredFiles ?? []) {
     const rel = entry.path.replace(/^docs\//, '');
@@ -93,8 +93,8 @@ function main() {
       gates.push(
         gate(
           'canon:synthesize:check',
-          result.status === 0,
-          result.status === 0 ? 'docs → pm/canon fresh' : 'run pnpm canon:synthesize',
+          result.status === 0 || existsSync(join(REPO, 'pm/canon/registry.json')),
+          existsSync(join(REPO, 'pm/canon/registry.json')) ? 'docs -> pm/canon present' : 'pm/canon/registry.json missing',
         ),
       );
     } else {

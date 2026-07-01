@@ -28,7 +28,7 @@ export function useClientStrategy(clientId: string) {
   }, [clientId]);
 
   useEffect(() => {
-    reload();
+    void Promise.resolve().then(reload);
   }, [reload]);
 
   return { strategy, loading, error, reload };

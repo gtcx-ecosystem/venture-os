@@ -1,7 +1,7 @@
 {
   "$schema": "gtcx://ops/pm-backlog/v1",
   "repo": "venture-os",
-  "updated": "2026-06-17",
+  "updated": "2026-07-01",
   "active": null,
   "backlogClear": true,
   "roadmapPath": "pm/execution-roadmap.md",
@@ -100,5 +100,10 @@
       "owner": "venture-os",
       "note": "live https://venture-staging.gtcx.trade — witness audit/evidence/deployment-proof-latest.json"
     }
-  ]
+  ],
+  "_generated": true,
+  "generated": true,
+  "syncSource": "pm/features + agile/scrum feature-pack workflow",
+  "authority": "compatibility-output",
+  "note": "Generated compatibility mirror only. Authoritative workflow is feature PRDs -> pm machine records -> MPR/SIGNAL -> feature specs pack -> agile scrum planning."
 }

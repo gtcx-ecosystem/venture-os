@@ -1,0 +1,13 @@
+{
+  "schema": "gtcx://venture-os/jtbd-catalog/v1",
+  "repo": "venture-os",
+  "updated": "2026-06-23",
+  "jobs": [
+    {
+      "id": "jtbd-founder-command-center",
+      "title": "Triage portfolio ventures from command center",
+      "personaId": "founder-command",
+      "file": "machine/ux/jtbd/jtbd-founder-command-center.json"
+    }
+  ]
+}

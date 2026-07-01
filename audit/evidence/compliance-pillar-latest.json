@@ -1,24 +1,24 @@
 {
   "schema": "gtcx://audit/compliance-pillar/v1",
   "repo": "venture-os",
-  "date": "2026-06-30",
-  "score100": 69,
-  "published": false,
-  "provisional": true,
-  "blockedBy": "below-threshold",
+  "date": "2026-07-01",
+  "score100": 100,
+  "published": true,
+  "provisional": false,
+  "blockedBy": null,
   "unlockThreshold100": 85,
   "categories": {
     "layout-p35": {
       "label": "Layout & workspace (P35 v5)",
       "weight": 8,
-      "score100": 45,
+      "score100": 100,
       "protocol": "P35",
       "items": [
         {
           "id": "p35-strict-pass",
           "label": "P35 layout strict GREEN",
-          "pass": false,
-          "score100": 0,
+          "pass": true,
+          "score100": 100,
           "weight": 35,
           "severity": "P1",
           "optional": false,
@@ -33,14 +33,14 @@
           "weight": 25,
           "severity": "P1",
           "optional": false,
-          "detail": "5/4 present",
+          "detail": "4/4 present",
           "protocol": "P35"
         },
         {
           "id": "root-allowlist",
           "label": "Root allowlist / workspace root cleanliness",
-          "pass": false,
-          "score100": 0,
+          "pass": true,
+          "score100": 100,
           "weight": 20,
           "severity": "P2",
           "optional": false,
@@ -139,14 +139,14 @@
     "ops-domains-p29": {
       "label": "Operational domains (P29)",
       "weight": 6,
-      "score100": 50,
+      "score100": 100,
       "protocol": "P29",
       "items": [
         {
           "id": "ops-check-pass",
           "label": "pnpm ops:check exit 0",
-          "pass": false,
-          "score100": 0,
+          "pass": true,
+          "score100": 100,
           "weight": 50,
           "severity": "P1",
           "optional": false,
@@ -214,7 +214,7 @@
           "weight": 30,
           "severity": "P2",
           "optional": false,
-          "detail": "audit/FIVE-CORE-AUDITS.md",
+          "detail": "audit five-core index, audit start/readme, or AaaS contract",
           "protocol": "P32"
         }
       ],
@@ -299,7 +299,7 @@
           "weight": 10,
           "severity": "P1",
           "optional": false,
-          "detail": "pm/manifest.json",
+          "detail": "machine manifest, product registry, canon registry, or legacy pm manifest",
           "protocol": "P37"
         },
         {
@@ -439,7 +439,7 @@
     "agentic-harness-p22-p28": {
       "label": "Agentic harness (P22–P28)",
       "weight": 10,
-      "score100": 75,
+      "score100": 100,
       "protocol": "P22-P28",
       "items": [
         {
@@ -450,7 +450,7 @@
           "weight": 20,
           "severity": "P1",
           "optional": false,
-          "detail": "agents/manifest.json (or legacy agentic/manifest.json)",
+          "detail": "agents manifest, or modern product AGENTS.md + AaaS contract",
           "protocol": "P22-P28"
         },
         {
@@ -467,8 +467,8 @@
         {
           "id": "agent-work-selection-check",
           "label": "pnpm agent:work-selection:check",
-          "pass": false,
-          "score100": 0,
+          "pass": true,
+          "score100": 100,
           "weight": 25,
           "severity": "P1",
           "optional": false,
@@ -483,7 +483,7 @@
           "weight": 15,
           "severity": "P2",
           "optional": false,
-          "detail": "MCP hub, hub repo, or agent-manifest consumer",
+          "detail": "MCP hub, hub repo, agent-manifest consumer, or AaaS product contract",
           "protocol": "P22-P28"
         },
         {
@@ -615,7 +615,7 @@
           "weight": 20,
           "severity": "P3",
           "optional": false,
-          "detail": "agentic/manifest.json"
+          "detail": "1/1 present"
         },
         {
           "id": "conduct-protocol-adoption",
@@ -721,7 +721,7 @@
           "weight": 35,
           "severity": "P0",
           "optional": false,
-          "detail": "gitleaks witness or CI workflow"
+          "detail": "gitleaks witness, CI workflow, pre-commit hook, or honesty gate"
         },
         {
           "id": "assurance-workspace",
@@ -731,7 +731,7 @@
           "weight": 30,
           "severity": "P1",
           "optional": false,
-          "detail": "assurance or security ops domain"
+          "detail": "assurance/security ops domain, audit evidence, or AaaS contract"
         }
       ],
       "itemCount": 3
@@ -739,7 +739,7 @@
     "audit-evidence-index": {
       "label": "Audit & evidence index",
       "weight": 6,
-      "score100": 75,
+      "score100": 100,
       "items": [
         {
           "id": "audit-evidence-dir",
@@ -763,13 +763,13 @@
         },
         {
           "id": "composite-or-five-core",
-          "label": "composite-audit or five-core witnesses",
-          "pass": false,
-          "score100": 0,
+          "label": "MPR, composite-audit, or five-core witnesses",
+          "pass": true,
+          "score100": 100,
           "weight": 25,
           "severity": "P2",
           "optional": false,
-          "detail": "0/1 present"
+          "detail": "1/1 present"
         },
         {
           "id": "attestation-ops",
@@ -807,7 +807,7 @@
           "weight": 50,
           "severity": "P2",
           "optional": false,
-          "detail": "pm ci gates or manifest"
+          "detail": "machine ci gates, product registry, canon registry, or legacy pm manifest"
         }
       ],
       "itemCount": 2
@@ -855,45 +855,9 @@
       "itemCount": 3
     }
   },
-  "hygieneViolations": [
-    {
-      "id": "p35-strict-pass",
-      "categoryId": "layout-p35",
-      "label": "P35 layout strict GREEN",
-      "severity": "P1",
-      "detail": "p35Strict"
-    },
-    {
-      "id": "root-allowlist",
-      "categoryId": "layout-p35",
-      "label": "Root allowlist / workspace root cleanliness",
-      "severity": "P2",
-      "detail": "opsCheck"
-    },
-    {
-      "id": "ops-check-pass",
-      "categoryId": "ops-domains-p29",
-      "label": "pnpm ops:check exit 0",
-      "severity": "P1",
-      "detail": "opsCheck"
-    },
-    {
-      "id": "agent-work-selection-check",
-      "categoryId": "agentic-harness-p22-p28",
-      "label": "pnpm agent:work-selection:check",
-      "severity": "P1",
-      "detail": "workSelection"
-    },
-    {
-      "id": "composite-or-five-core",
-      "categoryId": "audit-evidence-index",
-      "label": "composite-audit or five-core witnesses",
-      "severity": "P2",
-      "detail": "0/1 present"
-    }
-  ],
+  "hygieneViolations": [],
   "itemTotal": 66,
   "rubricVersion": "1.0.0",
   "openP0": 0,
-  "openP1": 3
+  "openP1": 0
 }

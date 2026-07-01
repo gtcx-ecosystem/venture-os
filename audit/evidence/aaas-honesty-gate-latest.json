@@ -3,7 +3,7 @@
   "worstVerifiedFinding": null,
   "repo": "venture-os",
   "owner": "fabric-os",
-  "checkedAt": "2026-06-28T13:39:50.356Z",
+  "checkedAt": "2026-07-01T17:07:32.363Z",
   "registry": {
     "status": "draft",
     "capabilityCount": 0,
@@ -32,7 +32,7 @@
     },
     "contradictionReconciled": {
       "ok": true,
-      "composite100": 75,
+      "composite100": 19,
       "contradictionCeil": 85,
       "floor": 60,
       "brokenBelowFloor": [],
@@ -41,7 +41,8 @@
     "noHollowCores": {
       "ok": true,
       "hollowCeil": 85,
-      "hollowCores": []
+      "hollowCores": [],
+      "source": "mpr-quadrants"
     },
     "registryNonEmpty": {
       "ok": false,
@@ -57,5 +58,6 @@
     "coverageComplete",
     "registryNonEmpty"
   ],
+  "score100": 71,
   "ok": false
 }

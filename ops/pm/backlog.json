@@ -1,16 +1,16 @@
 {
   "$schema": "gtcx://ops/pm-backlog/v1",
   "repo": "venture-os",
-  "updated": "2026-06-17",
-  "active": "MPR-02",
-  "backlogClear": false,
+  "updated": "2026-07-01",
+  "active": null,
+  "backlogClear": true,
   "roadmapPath": "pm/execution-roadmap.md",
   "auditRef": "audit/evidence/venture-os-mpr-ui-audit-2026-06-17.json",
   "stories": [
     {
       "id": "MPR-01",
       "title": "Compliance + repo hygiene closure",
-      "status": "in_progress",
+      "status": "done",
       "owner": "venture-os",
       "pillar": "compliance",
       "priority": "P1",
@@ -19,7 +19,7 @@
     {
       "id": "MPR-02",
       "title": "UX SoR scaffold (EXR + pm/ux)",
-      "status": "todo",
+      "status": "done",
       "owner": "venture-os",
       "pillar": "worldClass",
       "priority": "P1",
@@ -55,7 +55,7 @@
     {
       "id": "MPR-06",
       "title": "World-class polish (states, metrics, a11y)",
-      "status": "todo",
+      "status": "done",
       "owner": "venture-os",
       "pillar": "worldClass",
       "priority": "P2",
@@ -64,7 +64,7 @@
     {
       "id": "MPR-07",
       "title": "Fleet ecosystem integration seams",
-      "status": "todo",
+      "status": "done",
       "owner": "venture-os",
       "pillar": "productEcosystemIntegration",
       "priority": "P2",
@@ -73,7 +73,7 @@
     {
       "id": "MPR-08",
       "title": "E2E operator golden path",
-      "status": "todo",
+      "status": "done",
       "owner": "venture-os",
       "pillar": "technicalExcellence",
       "priority": "P2",
@@ -96,9 +96,14 @@
     {
       "id": "DEPLOY-02",
       "title": "First staging deploy (AWS EKS or GCP Cloud Run)",
-      "status": "pending",
+      "status": "done",
       "owner": "venture-os",
       "note": "EKS origin live 2026-06-17 — CF DNS 525 pending"
     }
-  ]
+  ],
+  "_generated": true,
+  "generated": true,
+  "syncSource": "pm/features + agile/scrum feature-pack workflow",
+  "authority": "compatibility-output",
+  "note": "Generated compatibility mirror only. Authoritative workflow is feature PRDs -> pm machine records -> MPR/SIGNAL -> feature specs pack -> agile scrum planning."
 }
