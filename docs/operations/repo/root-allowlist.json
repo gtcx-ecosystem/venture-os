@@ -24,8 +24,7 @@
     "app",
     "clients",
     "prototype",
-    "schema",
-    "agile"
+    "schema"
   ],
   "allowed_files": [
     "LICENSE",
@@ -51,8 +50,7 @@
     "app",
     "clients",
     "prototype",
-    "schema",
-    "agile"
+    "schema"
   ],
   "allowed_dot_directories": [
     ".github",
@@ -78,13 +76,15 @@
     "audits": "Use audit/ and archive legacy audit reports.",
     "reports": "Use audit/reports/ or archive legacy reports.",
     "ops": "Use operations/ for operational records.",
-    "pm": "Use machine/ for machine-readable product management records."
+    "pm": "Use machine/ for machine-readable product management records.",
+    "agile": "Use machine/ delivery records and docs/ delivery surfaces."
   },
   "relocate_hints": {
     "agentic": "archive/legacy-agentic-2026-07-01/",
     "audits": "archive/legacy-audits-2026-07-01/",
     "reports": "archive/legacy-reports-2026-07-01/",
     "ops": "archive/_delete/ops/",
-    "pm": "archive/_delete/pm/"
+    "pm": "archive/_delete/pm/",
+    "agile": "archive/_delete/agile/"
   }
 }
