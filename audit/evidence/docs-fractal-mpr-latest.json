@@ -1,6 +1,6 @@
 {
   "schema": "gtcx://canon-os/docs-fractal-mpr-check/v1",
-  "generatedAt": "2026-07-02T14:43:53.674Z",
+  "generatedAt": "2026-07-02T14:57:17.079Z",
   "repo": "venture-os",
   "policyUpdated": "2026-06-19",
   "pass": true,
@@ -311,69 +311,9 @@
       "detail": "not active in this repo: docs/roadmap/"
     },
     {
-      "id": "layer:agile:path",
+      "id": "layer:agile:skip",
       "ok": true,
-      "detail": "agile/"
-    },
-    {
-      "id": "layer:agile:pillarContract-complete",
-      "ok": true,
-      "detail": "all 11 pillars in pack"
-    },
-    {
-      "id": "layer:agile:fractalMpr-present",
-      "ok": true,
-      "detail": "fractalMpr block present"
-    },
-    {
-      "id": "layer:agile:scorecard-exists",
-      "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/agile/scorecard.md"
-    },
-    {
-      "id": "layer:agile:scorecard-witness-link",
-      "ok": true,
-      "detail": "scorecard links layer MPR witness (not self-assessed only)"
-    },
-    {
-      "id": "layer:agile:scorecard-target",
-      "ok": true,
-      "detail": "scorecard documents target 85/100 or rollup"
-    },
-    {
-      "id": "layer:agile:scorecard-rollup-notice",
-      "ok": true,
-      "detail": "scorecard declares rollup from witness"
-    },
-    {
-      "id": "layer:agile:scorecard-eleven-pillars",
-      "ok": true,
-      "detail": "all 11 pillars listed"
-    },
-    {
-      "id": "layer:agile:layer-witness-parse",
-      "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/mpr-agile-layer-latest.json"
-    },
-    {
-      "id": "layer:agile:layer-witness-schema",
-      "ok": true,
-      "detail": "gtcx://canon-os/mpr-layer-witness-stub/v1"
-    },
-    {
-      "id": "layer:agile:layer-witness-scope",
-      "ok": true,
-      "detail": "agile layer scope"
-    },
-    {
-      "id": "layer:agile:layer-witness-target",
-      "ok": true,
-      "detail": "target 85"
-    },
-    {
-      "id": "layer:agile:layer-witness-stub",
-      "ok": true,
-      "detail": "bootstrap stub (published:false until MPR audit)"
+      "detail": "not active in this repo: agile/"
     },
     {
       "id": "layer:operations:path",

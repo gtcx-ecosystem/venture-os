@@ -3,7 +3,7 @@
   "updated": "2026-06-16",
   "initiative": "INIT-DOCS-CORE-IA-V1",
   "title": "Docs roadmap pack — venture-os",
-  "canonicalPath": "agile/roadmaps",
+  "canonicalPath": "machine/roadmap/lanes",
   "principle": "Lane narratives → agile/roadmaps/. Executable plan SoR → docs/product/roadmap/ (P57). Legacy docs/roadmap/ → pointer-only.",
   "requiredRootFiles": [
     {

@@ -2,7 +2,7 @@
   "schema": "gtcx://canon-os/docs-roadmap-check/v1",
   "repo": "venture-os",
   "profile": "product",
-  "at": "2026-07-02T14:43:53.515Z",
+  "at": "2026-07-02T14:57:16.924Z",
   "ok": true,
   "spec": {
     "localPath": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/machine/spec/docs-roadmap-pack.json",
@@ -32,69 +32,69 @@
       "detail": "product"
     },
     {
-      "id": "canonical:agile/roadmaps",
+      "id": "canonical:machine/roadmap/lanes",
       "ok": true,
-      "detail": "agile/roadmaps"
+      "detail": "machine/roadmap/lanes"
     },
     {
-      "id": "canonical-readme:agile/roadmaps/README.md",
+      "id": "canonical-readme:machine/roadmap/lanes/README.md",
       "ok": true,
-      "detail": "agile/roadmaps/README.md"
+      "detail": "machine/roadmap/lanes/README.md"
     },
     {
       "id": "lane:technical.md",
       "ok": true,
-      "detail": "agile/roadmaps/technical.md"
+      "detail": "machine/roadmap/lanes/technical.md"
     },
     {
       "id": "lane:gtm.md",
       "ok": true,
-      "detail": "agile/roadmaps/gtm.md"
+      "detail": "machine/roadmap/lanes/gtm.md"
     },
     {
       "id": "lane:legal.md",
       "ok": true,
-      "detail": "agile/roadmaps/legal.md"
+      "detail": "machine/roadmap/lanes/legal.md"
     },
     {
       "id": "lane:partnerships.md",
       "ok": true,
-      "detail": "agile/roadmaps/partnerships.md"
+      "detail": "machine/roadmap/lanes/partnerships.md"
     },
     {
       "id": "lane:ux-design.md",
       "ok": true,
-      "detail": "agile/roadmaps/ux-design.md"
+      "detail": "machine/roadmap/lanes/ux-design.md"
     },
     {
       "id": "lane:compliance.md",
       "ok": true,
-      "detail": "agile/roadmaps/compliance.md"
+      "detail": "machine/roadmap/lanes/compliance.md"
     },
     {
       "id": "no-roadmap-outside:docs/strategy",
       "ok": true,
-      "detail": "no roadmap narrative under docs/strategy/ (lanes → agile/roadmaps/)"
+      "detail": "no roadmap narrative under docs/strategy/ (lanes → machine/roadmap/lanes/)"
     },
     {
       "id": "no-roadmap-outside:docs/overview",
       "ok": true,
-      "detail": "no roadmap narrative under docs/overview/ (lanes → agile/roadmaps/)"
+      "detail": "no roadmap narrative under docs/overview/ (lanes → machine/roadmap/lanes/)"
     },
     {
       "id": "no-roadmap-outside:docs/product",
       "ok": true,
-      "detail": "no roadmap narrative under docs/product/ (lanes → agile/roadmaps/)"
+      "detail": "no roadmap narrative under docs/product/ (lanes → machine/roadmap/lanes/)"
     },
     {
       "id": "no-roadmap-outside:docs/architecture",
       "ok": true,
-      "detail": "no roadmap narrative under docs/architecture/ (lanes → agile/roadmaps/)"
+      "detail": "no roadmap narrative under docs/architecture/ (lanes → machine/roadmap/lanes/)"
     },
     {
       "id": "foundation:roadmap-pointer",
       "ok": true,
-      "detail": "docs/foundation/roadmap.md must link executive lens → agile/roadmaps/"
+      "detail": "docs/foundation/roadmap.md must link executive lens -> machine/roadmap/lanes/"
     }
   ]
 }

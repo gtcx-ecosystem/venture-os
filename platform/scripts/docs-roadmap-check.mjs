@@ -44,6 +44,10 @@ function hasRoadmapNarrativeAt(repoRoot, relDir) {
   return walk(p);
 }
 
+function pathPattern(relPath) {
+  return new RegExp(relPath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+}
+
 function main() {
   const gates = [];
   const resolution = resolveDocsPack(REPO, PACK);
@@ -85,7 +89,24 @@ function main() {
   const canonicalPath = spec.canonicalPath ?? 'agile/roadmaps';
   const roadmapDir = join(REPO, canonicalPath);
   const roadmapExists = existsSync(roadmapDir);
+  const archivedRoadmapDir = join(REPO, 'archive/_delete/agile/roadmaps');
   const legacyRoadmapDir = join(REPO, 'docs/roadmap');
+
+  if (!roadmapExists && existsSync(archivedRoadmapDir)) {
+    gates.push(gate('legacy-roadmap:archived', true, 'archive/_delete/agile/roadmaps/'));
+    gates.push(gate('legacy-roadmap:readme', existsSync(join(archivedRoadmapDir, 'README.md')), 'archive/_delete/agile/roadmaps/README.md'));
+    for (const file of spec.canonicalLaneFiles ?? ['technical.md', 'gtm.md']) {
+      gates.push(gate('legacy-lane:' + file, existsSync(join(archivedRoadmapDir, file)), 'archive/_delete/agile/roadmaps/' + file));
+    }
+    gates.push(gate('canonical:machine-roadmap', existsSync(join(REPO, 'machine/roadmap/README.md')), 'machine/roadmap/README.md'));
+    gates.push(gate('canonical:machine-initiatives', existsSync(join(REPO, 'machine/roadmap/initiatives.json')), 'machine/roadmap/initiatives.json'));
+    gates.push(gate('canonical:machine-sprint', existsSync(join(REPO, 'machine/roadmap/sprints/active.json')), 'machine/roadmap/sprints/active.json'));
+    for (const rel of ['docs/strategy', 'docs/overview', 'docs/product', 'docs/architecture']) {
+      gates.push(gate('no-roadmap-outside:' + rel, !hasRoadmapNarrativeAt(REPO, rel), 'no roadmap narrative under ' + rel + '/ (lanes archived; execution in machine/roadmap/)'));
+    }
+    emit(gates, repoName, resolution, profileKey);
+    return;
+  }
 
   if (!profile?.roadmapRequired && !roadmapExists && !existsSync(legacyRoadmapDir)) {
     gates.push(gate('roadmap-optional-skip', true, `${profileKey} — roadmap not required`));
@@ -94,7 +115,7 @@ function main() {
   }
 
   if (profileKey === 'constitution-standards') {
-    gates.push(gate('hub:readme', existsSync(join(roadmapDir, 'README.md')) || isLegacyPointerOnly(legacyRoadmapDir), 'agile/roadmaps or pointer'));
+    gates.push(gate('hub:readme', existsSync(join(roadmapDir, 'README.md')) || isLegacyPointerOnly(legacyRoadmapDir, canonicalPath), `${canonicalPath} or pointer`));
     emit(gates, repoName, resolution, profileKey);
     return;
   }
@@ -110,8 +131,8 @@ function main() {
     gates.push(
       gate(
         'legacy:docs-roadmap-pointer',
-        isLegacyPointerOnly(legacyRoadmapDir),
-        'docs/roadmap/ must be pointer-only → agile/roadmaps/',
+        isLegacyPointerOnly(legacyRoadmapDir, canonicalPath),
+        `docs/roadmap/ must be pointer-only -> ${canonicalPath}/`,
       ),
     );
   }
@@ -132,12 +153,13 @@ function main() {
     const isPointer =
       /status:\s*pointer/i.test(text) ||
       /agile\/roadmaps/i.test(text) ||
+      pathPattern(canonicalPath).test(text) ||
       /\*\*Canonical SoR:\*\*/.test(text);
     gates.push(
       gate(
         'foundation:roadmap-pointer',
         isPointer,
-        'docs/foundation/roadmap.md must link executive lens → agile/roadmaps/',
+        `docs/foundation/roadmap.md must link executive lens -> ${canonicalPath}/`,
       ),
     );
   }
@@ -145,12 +167,12 @@ function main() {
   emit(gates, repoName, resolution, profileKey);
 }
 
-function isLegacyPointerOnly(dir) {
+function isLegacyPointerOnly(dir, canonicalPath = 'agile/roadmaps') {
   if (!existsSync(dir)) return true;
   const readme = join(dir, 'README.md');
   if (!existsSync(readme)) return false;
   const text = readFileSync(readme, 'utf8');
-  return /status:\s*pointer/i.test(text) || /agile\/roadmaps/i.test(text) || /\*\*Canonical SoR:\*\*/.test(text);
+  return /status:\s*pointer/i.test(text) || /agile\/roadmaps/i.test(text) || pathPattern(canonicalPath).test(text) || /\*\*Canonical SoR:\*\*/.test(text);
 }
 
 function emit(gates, repoName, resolution, profileKey = null) {
@@ -183,4 +205,3 @@ function emit(gates, repoName, resolution, profileKey = null) {
 }
 
 main();
-

@@ -2,7 +2,7 @@
   "schema": "gtcx://canon-os/agile-check/v1",
   "repo": "venture-os",
   "profile": "product",
-  "at": "2026-07-02T14:43:53.547Z",
+  "at": "2026-07-02T14:57:16.955Z",
   "ok": true,
   "gates": [
     {
@@ -26,174 +26,34 @@
       "detail": "product"
     },
     {
-      "id": "root:agile/README.md",
+      "id": "legacy-root:archived",
       "ok": true,
-      "detail": "agile/README.md"
+      "detail": "archive/_delete/agile/"
     },
     {
-      "id": "root:agile/FOLDER-SPEC.md",
+      "id": "archive:readme",
       "ok": true,
-      "detail": "agile/FOLDER-SPEC.md"
+      "detail": "archive/_delete/agile/README.md"
     },
     {
-      "id": "root:agile/cpo.md",
+      "id": "canonical:machine-roadmap",
       "ok": true,
-      "detail": "agile/cpo.md"
+      "detail": "machine/roadmap/README.md"
     },
     {
-      "id": "root:agile/scorecard.md",
+      "id": "canonical:machine-backlog",
       "ok": true,
-      "detail": "agile/scorecard.md"
+      "detail": "machine/backlog.json"
     },
     {
-      "id": "root:agile/intake.md",
+      "id": "canonical:machine-sprint",
       "ok": true,
-      "detail": "agile/intake.md"
+      "detail": "machine/roadmap/sprints/active.json"
     },
     {
-      "id": "root:agile/planning.md",
+      "id": "canonical:operations-pm",
       "ok": true,
-      "detail": "agile/planning.md"
-    },
-    {
-      "id": "root:agile/qa-uat.md",
-      "ok": true,
-      "detail": "agile/qa-uat.md"
-    },
-    {
-      "id": "root:agile/zenhub.md",
-      "ok": true,
-      "detail": "agile/zenhub.md"
-    },
-    {
-      "id": "pillarContract:complete",
-      "ok": true,
-      "detail": "all 11 pillars in pack"
-    },
-    {
-      "id": "root-readme:agile-os-ref",
-      "ok": true,
-      "detail": "README links agile-os reference"
-    },
-    {
-      "id": "root-readme:ceremony-surface",
-      "ok": true,
-      "detail": "README documents ceremony surface (intake, planning)"
-    },
-    {
-      "id": "root-readme:cpo",
-      "ok": true,
-      "detail": "README cites CPO connection"
-    },
-    {
-      "id": "root-readme:scorecard",
-      "ok": true,
-      "detail": "README links scorecard"
-    },
-    {
-      "id": "scorecard:eleven-pillars",
-      "ok": true,
-      "detail": "all 11 pillars listed"
-    },
-    {
-      "id": "scorecard:target",
-      "ok": true,
-      "detail": "pillar target 85/100 documented"
-    },
-    {
-      "id": "cpo:charter-link",
-      "ok": true,
-      "detail": "cpo.md links fleet CPO charter"
-    },
-    {
-      "id": "root-folder-spec:pack-link",
-      "ok": true,
-      "detail": "FOLDER-SPEC cites pack"
-    },
-    {
-      "id": "subfolder:scrum",
-      "ok": true,
-      "detail": "agile/scrum/"
-    },
-    {
-      "id": "subfolder-file:scrum/README.md",
-      "ok": true,
-      "detail": "agile/scrum/README.md"
-    },
-    {
-      "id": "subfolder-file:scrum/definition-of-done.md",
-      "ok": true,
-      "detail": "agile/scrum/definition-of-done.md"
-    },
-    {
-      "id": "subfolder-file:scrum/definition-of-ready.md",
-      "ok": true,
-      "detail": "agile/scrum/definition-of-ready.md"
-    },
-    {
-      "id": "subfolder:roadmaps",
-      "ok": true,
-      "detail": "agile/roadmaps/"
-    },
-    {
-      "id": "subfolder-file:roadmaps/README.md",
-      "ok": true,
-      "detail": "agile/roadmaps/README.md"
-    },
-    {
-      "id": "subfolder-file:roadmaps/technical.md",
-      "ok": true,
-      "detail": "agile/roadmaps/technical.md"
-    },
-    {
-      "id": "subfolder-file:roadmaps/gtm.md",
-      "ok": true,
-      "detail": "agile/roadmaps/gtm.md"
-    },
-    {
-      "id": "subfolder:requirements",
-      "ok": true,
-      "detail": "agile/requirements/"
-    },
-    {
-      "id": "subfolder-file:requirements/README.md",
-      "ok": true,
-      "detail": "agile/requirements/README.md"
-    },
-    {
-      "id": "subfolder-file:requirements/trace.md",
-      "ok": true,
-      "detail": "agile/requirements/trace.md"
-    },
-    {
-      "id": "optional-subfolder:sprints",
-      "ok": true,
-      "detail": "agile/sprints/ present"
-    },
-    {
-      "id": "optional-file:sprints/README.md",
-      "ok": true,
-      "detail": "agile/sprints/README.md"
-    },
-    {
-      "id": "optional-file:sprints/current.md",
-      "ok": true,
-      "detail": "agile/sprints/current.md"
-    },
-    {
-      "id": "optional-subfolder:archive",
-      "ok": true,
-      "detail": "agile/archive/ present"
-    },
-    {
-      "id": "optional-file:archive/README.md",
-      "ok": true,
-      "detail": "agile/archive/README.md"
-    },
-    {
-      "id": "absent:docs-agile",
-      "ok": true,
-      "detail": "absent"
+      "detail": "operations/pm/manifest.json"
     }
   ]
 }

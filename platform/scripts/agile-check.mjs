@@ -103,6 +103,18 @@ function main() {
 
   const agileDir = join(REPO, spec.canonicalPath ?? 'agile');
   const agileExists = existsSync(agileDir);
+  const archivedAgileDir = join(REPO, 'archive/_delete/agile');
+
+  if (!agileExists && existsSync(archivedAgileDir)) {
+    gates.push(gate('legacy-root:archived', true, 'archive/_delete/agile/'));
+    gates.push(gate('archive:readme', existsSync(join(archivedAgileDir, 'README.md')), 'archive/_delete/agile/README.md'));
+    gates.push(gate('canonical:machine-roadmap', existsSync(join(REPO, 'machine/roadmap/README.md')), 'machine/roadmap/README.md'));
+    gates.push(gate('canonical:machine-backlog', existsSync(join(REPO, 'machine/backlog.json')), 'machine/backlog.json'));
+    gates.push(gate('canonical:machine-sprint', existsSync(join(REPO, 'machine/roadmap/sprints/active.json')), 'machine/roadmap/sprints/active.json'));
+    gates.push(gate('canonical:operations-pm', existsSync(join(REPO, 'operations/pm/manifest.json')), 'operations/pm/manifest.json'));
+    emit(gates, repoName, resolution, profileKey);
+    return;
+  }
 
   if (!profile?.agileRequired && !agileExists) {
     gates.push(gate('agile-optional-skip', true, `${profileKey} — agile not required`));

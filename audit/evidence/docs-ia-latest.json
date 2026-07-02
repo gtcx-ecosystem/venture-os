@@ -1,6 +1,6 @@
 {
   "schema": "gtcx://venture-os/docs-ia-check/v1",
-  "generatedAt": "2026-07-02T14:43:53.705Z",
+  "generatedAt": "2026-07-02T14:57:17.116Z",
   "repo": "venture-os",
   "ok": true,
   "strict": false,
@@ -48,7 +48,7 @@
       "script": "agile-check.mjs",
       "ok": true,
       "exit": 0,
-      "detail": "OK absent:docs-agile — absent |  | PASS — 38/38"
+      "detail": "OK canonical:operations-pm — operations/pm/manifest.json |  | PASS — 10/10"
     },
     {
       "gateId": "docs:operations:check",
@@ -76,7 +76,7 @@
       "script": "docs-fractal-mpr-check.mjs",
       "ok": true,
       "exit": 0,
-      "detail": "OK layer:agents:layer-witness-stub — bootstrap stub (published:false until MPR audit) |  | PASS — 100/100"
+      "detail": "OK layer:agents:layer-witness-stub — bootstrap stub (published:false until MPR audit) |  | PASS — 88/88"
     },
     {
       "gateId": "docs:pack:pillar-contract:check",
