@@ -1,6 +1,6 @@
 {
   "schema": "gtcx://fabric-os/ship-release-decision/v1",
-  "generatedAt": "2026-07-02T14:37:31.008Z",
+  "generatedAt": "2026-07-02T15:58:27.736Z",
   "date": "2026-07-02",
   "protocolId": "GTCX-SHIP-001",
   "contractVersion": "1.0.0",
@@ -9,7 +9,7 @@
   "releaseId": "REL-VENTURE-OS-001",
   "repo": "venture-os",
   "releaseClass": "internal",
-  "title": "Venture OS internal SHIP parity closeout",
+  "title": "Venture Os internal SHIP parity closeout",
   "owner": "venture-os product leadership",
   "requiredPillars": [
     "sealed",
@@ -39,7 +39,7 @@
           "evidence": [
             "audit/evidence/qasc-repo-latest.json",
             "audit/evidence/dslc-release-REL-VENTURE-OS-001-latest.json",
-            "pm/ci/shipping-status-latest.json"
+            "machine/spec/aaas-audit-contract.pin.json"
           ],
           "rationale": null,
           "approver": null,
@@ -61,8 +61,8 @@
           "authorityClass": "R",
           "status": "satisfied",
           "evidence": [
-            "pm/dslc/releases/REL-VENTURE-OS-001/manifest.json",
-            "pm/ship/releases/REL-VENTURE-OS-001/manifest.json",
+            "machine/dslc/releases/REL-VENTURE-OS-001/manifest.json",
+            "machine/ship/releases/REL-VENTURE-OS-001/manifest.json",
             "audit/evidence/qasc-repo-latest.json"
           ],
           "rationale": null,
@@ -75,10 +75,9 @@
           "status": "satisfied",
           "evidence": [
             "operator directive 2026-07-01: continue with QASC/DSLC/SHIP parity and ship all unblocked platform/app work",
-            "machine/ship/releases/REL-VENTURE-OS-001/manifest.json",
-            "pm/stories/DEPLOY-01-vercel-pilot.md"
+            "machine/ship/releases/REL-VENTURE-OS-001/manifest.json"
           ],
-          "rationale": "Internal Venture OS parity closeout only; public launch, customer activation, legal signature, and regulated-data deployment remain out of scope.",
+          "rationale": "Internal Venture Os parity closeout only; public launch, customer activation, legal signature, and regulated-data deployment remain out of scope.",
           "approver": "operator-directive-2026-07-01",
           "atBenchmark": true
         }
@@ -97,9 +96,7 @@
           "authorityClass": "R",
           "status": "satisfied",
           "evidence": [
-            "audit/evidence/qasc-repo-latest.json",
-            "audit/evidence/mpr-repo-latest.json",
-            "audit/evidence/signal-maturity-latest.json"
+            "audit/evidence/qasc-repo-latest.json"
           ],
           "rationale": null,
           "approver": null,
@@ -110,9 +107,7 @@
           "authorityClass": "R",
           "status": "satisfied",
           "evidence": [
-            "docs/operations/deploy/deployment-profile.md",
-            "docs/operations/deployment-profile.json",
-            "pm/ci/shipping-status-latest.json"
+            "machine/spec/aaas-audit-contract.pin.json"
           ],
           "rationale": null,
           "approver": null,
@@ -123,8 +118,7 @@
           "authorityClass": "A",
           "status": "satisfied",
           "evidence": [
-            "audit/evidence/qasc-repo-latest.json",
-            "pm/ci/shipping-status-latest.json"
+            "audit/evidence/qasc-repo-latest.json"
           ],
           "rationale": "No residual exceptions are accepted for public/customer activation; this release is scoped to internal delegated parity evidence only.",
           "approver": "operator-directive-2026-07-01",
@@ -154,9 +148,8 @@
           "authorityClass": "R",
           "status": "satisfied",
           "evidence": [
-            "pm/dslc/releases/REL-VENTURE-OS-001/manifest.json",
-            "pm/ship/releases/REL-VENTURE-OS-001/manifest.json",
-            "pm/spec/feature-registry/manifest.json"
+            "machine/dslc/releases/REL-VENTURE-OS-001/manifest.json",
+            "machine/ship/releases/REL-VENTURE-OS-001/manifest.json"
           ],
           "rationale": null,
           "approver": null,
@@ -168,8 +161,7 @@
           "status": "satisfied",
           "evidence": [
             "package.json",
-            "pm/canon/registry.json",
-            "pm/canon/composition/features-index.json"
+            "machine/spec/aaas-audit-contract.pin.json"
           ],
           "rationale": null,
           "approver": null,
