@@ -1,0 +1,60 @@
+{
+  "$schema": "gtcx://canon-os/docs-folder-spec-item/v1",
+  "level": "L1",
+  "id": "00-docs-root",
+  "path": "docs/",
+  "status": "current",
+  "updated": "2026-06-28",
+  "canonicalTree": "machine/spec/docs-tree-spec.json",
+  "title": "docs/ root — P48 root contract + P57 layer taxonomy",
+  "purpose": "Agent entry and machine SoR for the documentation tree. Indexes only — no narrative at docs/ root. Local override of canon 00-docs-root: allowlists repo-adopted GTM ecosystem layout slices (gtm/, legal/) sanctioned by machine/spec/docs-tree-spec.json allowedNestedDirPatterns.",
+  "structure": {
+    "mode": "closed",
+    "allowedChildFolders": [
+      "primitives",
+      "foundation",
+      "business",
+      "architecture",
+      "strategy",
+      "engineering",
+      "research",
+      "product",
+      "operations",
+      "publishing",
+      "reference",
+      "gitbook",
+      "gtm",
+      "legal",
+      "_archive"
+    ],
+    "forbiddenChildFolders": [
+      "overview",
+      "specs",
+      "roadmap",
+      "agile",
+      "agents",
+      "onboarding",
+      "api",
+      "11-legal"
+    ]
+  },
+  "rootFiles": {
+    "mode": "closed",
+    "allowlist": [
+      "README.md",
+      "INDEX.md",
+      "sor.json",
+      "conventions.md",
+      "CHANGELOG.md",
+      "FOLDER-SPEC.md"
+    ]
+  },
+  "childSpecs": [
+    "01-foundation",
+    "02-business",
+    "03-architecture",
+    "04-product",
+    "05-operations",
+    "07-reference"
+  ]
+}

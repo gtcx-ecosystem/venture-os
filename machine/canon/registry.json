@@ -1,0 +1,42 @@
+{
+  "_generated": true,
+  "_synthesisVersion": "1.1.0",
+  "_source": "docs/foundation/",
+  "$schema": "gtcx://canon-os/product-canon-registry/v1",
+  "productId": "venture-os",
+  "version": "0.1.0",
+  "status": "draft",
+  "updated": "2026-06-19",
+  "owner": "venture-os",
+  "goalsRef": "pm/canon/strategy.json",
+  "strategyRef": "pm/canon/strategy.json",
+  "milestones": [
+    {
+      "id": "M1",
+      "title": "Venture OS MVP + GTCX pilot shell",
+      "status": "in_progress",
+      "targetDate": "2026-Q3",
+      "bundleIds": [],
+      "narrativeRef": "docs/foundation/milestones.md"
+    }
+  ],
+  "composition": {
+    "features": [],
+    "services": [],
+    "infra": [],
+    "experience": [],
+    "commercial": []
+  },
+  "bundles": [],
+  "narrativeIndex": {
+    "vision": "docs/foundation/vision.md",
+    "mission": "docs/foundation/mission.md",
+    "goals": "docs/foundation/goals.md",
+    "milestones": "docs/foundation/milestones.md",
+    "roadmap": "docs/foundation/roadmap.md",
+    "uxReadme": "docs/product/ux/README.md",
+    "customersReadme": "docs/business/customers/README.md",
+    "strategyReadme": "docs/business/strategy/README.md",
+    "architectureReadme": "docs/primitives/architecture/README.md"
+  }
+}

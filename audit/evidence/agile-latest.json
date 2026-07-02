@@ -2,13 +2,13 @@
   "schema": "gtcx://canon-os/agile-check/v1",
   "repo": "venture-os",
   "profile": "product",
-  "at": "2026-07-01T17:29:01.680Z",
+  "at": "2026-07-02T14:35:23.173Z",
   "ok": true,
   "gates": [
     {
       "id": "spec:local-present",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/pm/spec/agile-pack.json"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/machine/spec/agile-pack.json"
     },
     {
       "id": "spec:not-stub",
@@ -189,11 +189,6 @@
       "id": "optional-file:archive/README.md",
       "ok": true,
       "detail": "agile/archive/README.md"
-    },
-    {
-      "id": "ops-manifest:agileDocs",
-      "ok": true,
-      "detail": "ops/pm/manifest.json local.agileDocs = agile"
     },
     {
       "id": "absent:docs-agile",

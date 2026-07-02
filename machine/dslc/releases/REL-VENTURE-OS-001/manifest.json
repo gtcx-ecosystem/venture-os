@@ -1,0 +1,92 @@
+{
+  "schema": "gtcx://fabric-os/dslc-release-manifest/v1",
+  "releaseId": "REL-VENTURE-OS-001",
+  "repo": "venture-os",
+  "releaseClass": "internal",
+  "title": "Venture OS internal protocol parity closeout",
+  "owner": "venture-os product leadership",
+  "qasc": {
+    "score100": 100,
+    "signalLevel": "L5",
+    "evidence": "audit/evidence/qasc-repo-latest.json"
+  },
+  "lanes": {
+    "deployment": {
+      "owner": "venture-os",
+      "controls": [
+        {
+          "id": "release-scope-version",
+          "status": "satisfied",
+          "evidence": ["package.json", "pm/shipping-tracks.json", "pm/ci/shipping-status-latest.json"]
+        },
+        {
+          "id": "ci-build-provenance",
+          "status": "satisfied",
+          "evidence": [
+            "audit/evidence/qasc-repo-latest.json",
+            "pm/ci/shipping-status-latest.json",
+            "pm/spec/feature-ship-gates-protocol.json"
+          ]
+        },
+        {
+          "id": "qa-qasc-acceptance",
+          "status": "satisfied",
+          "evidence": [
+            "audit/evidence/qasc-repo-latest.json",
+            "audit/evidence/mpr-repo-latest.json",
+            "audit/evidence/signal-maturity-latest.json"
+          ]
+        },
+        {
+          "id": "environment-config-migrations",
+          "status": "not-applicable",
+          "evidence": ["docs/operations/deployment-profile.json"],
+          "rationale": "Internal QASC/DSLC/SHIP parity closeout only; no production environment mutation, secret binding, or database migration is executed by this release.",
+          "approver": "operator-directive-2026-07-01"
+        },
+        {
+          "id": "release-notes-operator-runbook",
+          "status": "satisfied",
+          "evidence": [
+            "docs/operations/deploy/deployment-profile.md",
+            "docs/product/ux/narratives/pilot-onboarding.md",
+            "pm/stories/DEPLOY-01-vercel-pilot.md"
+          ]
+        },
+        {
+          "id": "deployment-rollout-rollback",
+          "status": "satisfied",
+          "evidence": [
+            "docs/operations/deploy/deployment-profile.md",
+            "docs/operations/deployment-profile.json",
+            "pm/stories/DEPLOY-01-vercel-pilot.md"
+          ],
+          "rationale": "Internal protocol parity closeout; rollout is bounded to delegated evidence and package scripts and is reversible by reverting this manifest/witness commit.",
+          "approver": "operator-directive-2026-07-01"
+        },
+        {
+          "id": "observability-alerting-slo",
+          "status": "satisfied",
+          "evidence": ["pm/ci/shipping-status-latest.json", "docs/operations/deploy/deployment-profile.md"]
+        },
+        {
+          "id": "post-deploy-verification",
+          "status": "satisfied",
+          "evidence": ["audit/evidence/qasc-repo-latest.json", "pm/ci/shipping-status-latest.json"]
+        }
+      ]
+    },
+    "sales": {
+      "owner": "commercial-ops",
+      "controls": []
+    },
+    "legal": {
+      "owner": "legal-ops",
+      "controls": []
+    },
+    "communications": {
+      "owner": "communications-ops",
+      "controls": []
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "gtcx://pm/completion-model/v1",
+  "repo": "venture-os",
+  "updated": "2026-06-17",
+  "definitionOfDone": {
+    "story": {
+      "gates": ["pnpm test", "pnpm lint", "pnpm build"],
+      "evidence": "pm/execution-roadmap.md status done"
+    },
+    "provision": {
+      "gates": ["pnpm ops:check", "pnpm agent:work-selection:check"],
+      "minComposite100": 70
+    }
+  }
+}

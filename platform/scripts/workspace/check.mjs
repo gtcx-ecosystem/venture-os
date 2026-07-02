@@ -5,7 +5,9 @@ import { join } from 'node:path';
 const root = process.cwd();
 const errors = [];
 if (!existsSync(join(root, 'config/ops.manifest.json'))) errors.push('config/ops.manifest.json missing');
-if (!existsSync(join(root, 'pm/manifest.json'))) errors.push('pm/manifest.json missing');
+if (!existsSync(join(root, 'machine/manifest.json'))) errors.push('machine/manifest.json missing');
+if (existsSync(join(root, 'pm'))) errors.push('pm/ active root forbidden');
+if (existsSync(join(root, 'ops'))) errors.push('ops/ active root forbidden');
 
 if (errors.length) {
   console.error('workspace:check FAIL — venture-os');

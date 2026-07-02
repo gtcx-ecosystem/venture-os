@@ -1,0 +1,433 @@
+{
+  "$schema": "gtcx://canon-os/docs-architecture-pack/v1",
+  "updated": "2026-06-16",
+  "initiative": "INIT-DOCS-CORE-IA-V1",
+  "title": "Docs architecture pack — venture-os",
+  "principle": "Technical truth lives under docs/architecture/. Foundation holds why; business holds market context; architecture holds how systems are built, integrated, and decided. reference/specs decomposes here.",
+  "requiredRootFiles": [
+    {
+      "path": "docs/architecture/README.md",
+      "role": "index + cross-ref table (foundation ↔ business ↔ architecture ↔ former reference)"
+    },
+    {
+      "path": "docs/architecture/FOLDER-SPEC.md",
+      "role": "repo-local provisioning mirror of this pack"
+    }
+  ],
+  "requiredSubfolders": {
+    "specs": {
+      "purpose": "System and surface specifications — backend, frontend, data, design, testing",
+      "allowedDocTypes": [
+        "architecture",
+        "surface-spec",
+        "diagram-spec"
+      ],
+      "required": [
+        "README.md",
+        "index.md"
+      ],
+      "nest": {
+        "backend": "service boundaries, APIs, data contracts",
+        "frontend": "UI architecture, screen inventory, frontend strategy",
+        "data": "data models, pipelines, retention",
+        "design": "design system, UX research tied to product surfaces",
+        "testing": "test strategy, coverage contracts",
+        "product": "technical product specs only — not GTM PRD prose"
+      },
+      "sourcePatterns": [
+        "docs/_archive/specs/",
+        "docs/engineering/system-design/"
+      ],
+      "forbidden": [
+        "loose *.md at specs/ root beyond README and index"
+      ]
+    },
+    "requirements": {
+      "purpose": "Functional and non-functional requirements catalog (system lens)",
+      "allowedDocTypes": [
+        "architecture",
+        "overview"
+      ],
+      "required": [
+        "README.md"
+      ],
+      "canonicalFiles": [
+        "functional-requirements.md",
+        "non-functional-requirements.md",
+        "accessibility.md"
+      ],
+      "forbiddenIn": [
+        "docs/product/requirements/"
+      ],
+      "sourcePatterns": [
+        "docs/product/requirements/"
+      ]
+    },
+    "decisions": {
+      "purpose": "Architecture Decision Records — ADR-* only",
+      "allowedDocTypes": [
+        "adr"
+      ],
+      "required": [
+        "README.md"
+      ],
+      "naming": "ADR-NNN-kebab-title.md",
+      "forbidden": [
+        "loose adr-*.md at docs/architecture/ root",
+        "Accepted status without human attestation"
+      ]
+    },
+    "diagrams": {
+      "purpose": "Diagram specs + static assets with narrative captions",
+      "allowedDocTypes": [
+        "diagram-spec",
+        "architecture"
+      ],
+      "required": [
+        "README.md"
+      ],
+      "optional": true
+    },
+    "integration": {
+      "purpose": "Cross-service maps, event contracts, fleet integration narratives",
+      "allowedDocTypes": [
+        "architecture"
+      ],
+      "required": [
+        "README.md"
+      ],
+      "optional": true,
+      "sourcePatterns": [
+        "docs/_archive/architecture/",
+        "docs/engineering/integration/"
+      ]
+    },
+    "security": {
+      "purpose": "Threat models, security architecture — narrative; machine evidence in ops/security/",
+      "allowedDocTypes": [
+        "architecture"
+      ],
+      "required": [
+        "README.md"
+      ],
+      "optional": true,
+      "note": "Do not duplicate ops/security/ manifests — link only",
+      "sourcePatterns": [
+        "docs/engineering/security/"
+      ]
+    },
+    "pillars": {
+      "purpose": "11-pillar repo and layer scoring narrative for audits",
+      "allowedDocTypes": [
+        "architecture",
+        "audit-evidence"
+      ],
+      "required": [
+        "README.md"
+      ],
+      "optional": true,
+      "hubNote": "canon-os hosts rubric pointers; owner repos score local tree"
+    }
+  },
+  "forbiddenAtArchitectureRoot": [
+    "Loose ADR-*.md at docs/architecture/ root — use decisions/",
+    "Market or GTM prose — belongs in docs/business/",
+    "Agent SOPs — belongs in agents/playbooks/",
+    "Protocol bodies — belongs in docs/governance/protocols/",
+    "Duplicate of docs/engineering/ without cross-link"
+  ],
+  "contentBar": {
+    "product": {
+      "minAdrFiles": 1,
+      "specNests": [
+        "backend",
+        "frontend",
+        "data",
+        "design",
+        "testing"
+      ],
+      "minNarrativeSpecFiles": 1
+    },
+    "fleet-documentation": {
+      "minAdrFiles": 1,
+      "specNests": [
+        "backend",
+        "frontend",
+        "data",
+        "design",
+        "testing"
+      ],
+      "minNarrativeSpecFiles": 1
+    },
+    "platform": {
+      "minAdrFiles": 1,
+      "specNests": [
+        "backend",
+        "frontend",
+        "data",
+        "design",
+        "testing"
+      ],
+      "minNarrativeSpecFiles": 1
+    },
+    "constitution-standards": {
+      "minAdrFiles": 0,
+      "specNests": [],
+      "minNarrativeSpecFiles": 0
+    }
+  },
+  "profiles": {
+    "constitution-standards": {
+      "architectureRequired": true,
+      "requiredSubfolders": [
+        "specs",
+        "decisions",
+        "pillars"
+      ],
+      "optionalSubfolders": [
+        "diagrams",
+        "integration",
+        "security"
+      ],
+      "note": "canon-os hub — hosts fleet rubric + normative architecture templates; product implementation stays in owner repos"
+    },
+    "product": {
+      "architectureRequired": true,
+      "requiredSubfolders": [
+        "specs",
+        "decisions",
+        "requirements"
+      ],
+      "optionalSubfolders": [
+        "diagrams",
+        "integration",
+        "security",
+        "pillars"
+      ]
+    },
+    "fleet-documentation": {
+      "architectureRequired": true,
+      "requiredSubfolders": [
+        "integration",
+        "pillars"
+      ],
+      "optionalSubfolders": [
+        "specs",
+        "decisions",
+        "diagrams"
+      ]
+    },
+    "platform": {
+      "architectureRequired": true,
+      "requiredSubfolders": [
+        "specs",
+        "decisions",
+        "requirements"
+      ],
+      "optionalSubfolders": [
+        "integration",
+        "security"
+      ]
+    }
+  },
+  "crossReference": {
+    "spec": "pm/spec/docs-layer-cross-reference.json",
+    "foundationLinks": [
+      {
+        "foundation": "goals.md",
+        "architecture": "pillars/README.md"
+      },
+      {
+        "foundation": "roadmap.md",
+        "architecture": "integration/"
+      }
+    ],
+    "businessLinks": [
+      {
+        "business": "strategy/ecosystem-integration.md",
+        "architecture": "integration/"
+      },
+      {
+        "business": "strategy/solution.md",
+        "architecture": "specs/"
+      }
+    ],
+    "referenceDecompose": {
+      "docs/_archive/specs/": "relocate → docs/architecture/specs/; pointer stub at _archive",
+      "docs/_archive/architecture/": "relocate → docs/architecture/integration/ or merge",
+      "docs/_archive/audits/": "relocate → docs/governance/audit/ (not architecture)",
+      "docs/engineering/system-design/": "cross-link from architecture/README — do not fork"
+    }
+  },
+  "sourcePriority": [
+    "docs/architecture/",
+    "docs/engineering/system-design/",
+    "docs/_archive/specs/ (until decomposed)",
+    "archive/docs-reference-legacy/"
+  ],
+  "afterMigration": {
+    "referenceSpecs": "pointer README only at docs/_archive/specs/",
+    "engineering": "retain for implementation detail; architecture/README links down"
+  },
+  "enforcement": {
+    "check": "pnpm docs:architecture:check",
+    "fleetCheck": "pnpm ecosystem:docs:architecture:fleet",
+    "decompose": "pnpm docs:_archive:decompose",
+    "witness": "audit/evidence/docs-architecture-latest.json",
+    "fleetWitness": "audit/evidence/fleet-docs-architecture-latest.json",
+    "stubPacksForbidden": true,
+    "gateSchema": "gtcx://canon-os/docs-architecture-check/v2",
+    "requiredGates": [
+      "spec:not-stub",
+      "spec:resolved-full",
+      "required subfolders per profile",
+      "no loose narrative at architecture root",
+      "_archive/specs decomposed",
+      "contentBar: adr-min, spec-nests, narrative-spec-min"
+    ]
+  },
+  "relatedSpecs": [
+    "pm/spec/docs-ia-initiative.json",
+    "pm/spec/docs-foundation-pack.json",
+    "pm/spec/docs-business-pack.json",
+    "pm/spec/docs-layer-cross-reference.json",
+    "pm/spec/reference-decomposition-matrix.json",
+    "pm/spec/docs-folder-provisioning.json"
+  ],
+  "repo": "venture-os",
+  "upstreamSpec": "../canon-os/pm/spec/docs-architecture-pack.json",
+  "pillarContract": {
+    "compliance": {
+      "primary": true,
+      "artifacts": [
+        "docs/architecture/FOLDER-SPEC.md"
+      ],
+      "gates": [
+        "pnpm docs:architecture:check"
+      ],
+      "minBar": "≥100 layer order; reference hubs 100",
+      "witness": "audit/evidence/mpr-architecture-layer-latest.json"
+    },
+    "technicalExcellence": {
+      "primary": true,
+      "artifacts": [
+        "docs/architecture/specs/",
+        "docs/architecture/decisions/"
+      ],
+      "gates": [
+        "ADR + spec nests"
+      ],
+      "minBar": "≥100 layer order; reference hubs 100",
+      "witness": "audit/evidence/mpr-architecture-layer-latest.json"
+    },
+    "craft": {
+      "secondary": true,
+      "artifacts": [
+        "docs/architecture/README.md"
+      ],
+      "gates": [
+        "no loose ADR at root"
+      ],
+      "minBar": "≥100 layer order; reference hubs 100",
+      "witness": "audit/evidence/mpr-architecture-layer-latest.json"
+    },
+    "worldClass": {
+      "secondary": true,
+      "artifacts": [
+        "docs/architecture/integration/"
+      ],
+      "gates": [
+        "ecosystem integration map"
+      ],
+      "minBar": "≥100 layer order; reference hubs 100",
+      "witness": "audit/evidence/mpr-architecture-layer-latest.json"
+    },
+    "trustAndSafety": {
+      "primary": true,
+      "artifacts": [
+        "docs/architecture/threat-models/"
+      ],
+      "gates": [
+        "threat model present"
+      ],
+      "minBar": "≥100 layer order; reference hubs 100",
+      "witness": "audit/evidence/mpr-architecture-layer-latest.json"
+    },
+    "creativityInnovation": {
+      "secondary": true,
+      "artifacts": [
+        "docs/architecture/decisions/"
+      ],
+      "gates": [
+        "novel patterns documented"
+      ],
+      "minBar": "≥100 layer order; reference hubs 100",
+      "witness": "audit/evidence/mpr-architecture-layer-latest.json"
+    },
+    "commercialValue": {
+      "secondary": true,
+      "artifacts": [
+        "docs/architecture/README.md"
+      ],
+      "gates": [
+        "capability trace"
+      ],
+      "minBar": "≥100 layer order; reference hubs 100",
+      "witness": "audit/evidence/mpr-architecture-layer-latest.json"
+    },
+    "defensiveMoat": {
+      "secondary": true,
+      "artifacts": [
+        "docs/architecture/specs/"
+      ],
+      "gates": [
+        "proprietary schemas"
+      ],
+      "minBar": "≥100 layer order; reference hubs 100",
+      "witness": "audit/evidence/mpr-architecture-layer-latest.json"
+    },
+    "agenticEmpowerment": {
+      "secondary": true,
+      "artifacts": [
+        "docs/architecture/integration/"
+      ],
+      "gates": [
+        "agent/MCP surfaces"
+      ],
+      "minBar": "≥100 layer order; reference hubs 100",
+      "witness": "audit/evidence/mpr-architecture-layer-latest.json"
+    },
+    "ecosystemIntegration": {
+      "primary": true,
+      "artifacts": [
+        "docs/architecture/integration/"
+      ],
+      "gates": [
+        "sibling repo contracts"
+      ],
+      "minBar": "≥100 layer order; reference hubs 100",
+      "witness": "audit/evidence/mpr-architecture-layer-latest.json"
+    },
+    "ipMagic": {
+      "secondary": true,
+      "artifacts": [
+        "docs/architecture/specs/"
+      ],
+      "gates": [
+        "signature technical artifacts"
+      ],
+      "minBar": "≥100 layer order; reference hubs 100",
+      "witness": "audit/evidence/mpr-architecture-layer-latest.json"
+    }
+  },
+  "fractalMpr": {
+    "policy": "pm/spec/docs-fractal-mpr-policy.json",
+    "layerWitness": "audit/evidence/mpr-architecture-layer-latest.json",
+    "scorecard": "docs/primitives/architecture/scorecard.md",
+    "rollupFrom": [
+      "file",
+      "folder"
+    ],
+    "scorecardIsReadOnlyRollup": true
+  }
+}

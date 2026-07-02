@@ -1,0 +1,39 @@
+{
+  "$schema": "gtcx://canon-os/docs-folder-spec-item/v1",
+  "level": "L2",
+  "id": "07-reference",
+  "path": "docs/reference/",
+  "status": "current",
+  "updated": "2026-06-28",
+  "title": "Reference — provisioning copy targets + repo reference corpus",
+  "purpose": "Provisioning copy targets (templates/) plus repo reference corpus. Local override of canon 07-reference: allowlists superpowers/ (implementation specs and plans — a registered reference lane per docs/reference/README.md + FOLDER-SPEC.md, status current).",
+  "structure": {
+    "mode": "closed",
+    "allowedChildFolders": [
+      "templates",
+      "guides",
+      "evaluation",
+      "gtm",
+      "legal",
+      "canon",
+      "archive",
+      "legacy-top-level",
+      "superpowers"
+    ],
+    "forbiddenChildFolders": [
+      "glossary",
+      "specs",
+      "domain",
+      "audits",
+      "product",
+      "engineering",
+      "api",
+      "_archive",
+      "legacy-layer-root"
+    ]
+  },
+  "files": {
+    "mode": "closed",
+    "allowlist": ["README.md", "FOLDER-SPEC.md", "documentation-fleet-coverage-matrix.md"]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "repo": "venture-os",
+  "sprintId": "MPR-11",
+  "title": "11PR UI hardening — Command Center",
+  "status": "active",
+  "stories": [
+    "MPR-05",
+    "MPR-03",
+    "MPR-04",
+    "MPR-01",
+    "MPR-02",
+    "MPR-06",
+    "MPR-07",
+    "MPR-08"
+  ]
+}

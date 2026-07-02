@@ -1,0 +1,6 @@
+{
+  "$schema": "gtcx://ops/compliance/v1",
+  "repo": "venture-os",
+  "updated": "2026-06-17",
+  "evidenceIndex": "ops/compliance/evidence-index.json"
+}

@@ -18,6 +18,10 @@ function gate(id, ok, detail = null) {
   return { id, ok, ...(detail ? { detail } : {}) };
 }
 
+function firstExisting(paths) {
+  return paths.find((path) => existsSync(path)) ?? null;
+}
+
 function main() {
   const gates = [];
   const resolution = resolveDocsPack(REPO, PACK);
@@ -25,7 +29,13 @@ function main() {
   const repoName = JSON.parse(readFileSync(join(REPO, 'package.json'), 'utf8')).name;
 
   gates.push(
-    gate('spec:local-present', !!resolution.localPath || existsSync(join(REPO, '../canon-os/pm/spec', PACK)), resolution.localPath ?? 'missing local pack'),
+    gate(
+      'spec:local-present',
+      !!resolution.localPath ||
+        existsSync(join(REPO, '../canon-os/machine/spec', PACK)) ||
+        existsSync(join(REPO, '../canon-os/pm/spec', PACK)),
+      resolution.localPath ?? 'missing local pack',
+    ),
   );
   gates.push(
     gate(
@@ -85,6 +95,14 @@ function main() {
     const synthScript = existsSync(CANON_SYNTH)
       ? CANON_SYNTH
       : join(REPO, 'platform/scripts/synthesize-product-canon.mjs');
+    const registryPath = firstExisting([
+      join(REPO, 'machine/canon/registry.json'),
+      join(REPO, 'pm/canon/registry.json'),
+    ]);
+    const strategyPath = firstExisting([
+      join(REPO, 'machine/canon/strategy.json'),
+      join(REPO, 'pm/canon/strategy.json'),
+    ]);
     if (existsSync(synthScript)) {
       const result = spawnSync('node', [synthScript, '--check'], {
         cwd: REPO,
@@ -93,16 +111,16 @@ function main() {
       gates.push(
         gate(
           'canon:synthesize:check',
-          result.status === 0 || existsSync(join(REPO, 'pm/canon/registry.json')),
-          existsSync(join(REPO, 'pm/canon/registry.json')) ? 'docs -> pm/canon present' : 'pm/canon/registry.json missing',
+          result.status === 0 || Boolean(registryPath),
+          registryPath ? 'docs -> machine/canon present' : 'machine/canon/registry.json missing',
         ),
       );
     } else {
       gates.push(
         gate(
           'canon:strategy-present',
-          existsSync(join(REPO, 'pm/canon/strategy.json')),
-          'pm/canon/strategy.json from canon:synthesize',
+          Boolean(strategyPath),
+          'machine/canon/strategy.json from canon:synthesize',
         ),
       );
     }

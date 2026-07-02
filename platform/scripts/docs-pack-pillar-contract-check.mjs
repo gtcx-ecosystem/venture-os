@@ -15,18 +15,28 @@ import {
 
 const REPO = repoRootFromImportMeta(import.meta.url);
 
+function firstExisting(paths) {
+  return paths.find((path) => existsSync(path)) ?? null;
+}
+
 function main() {
   const gates = [];
+  const policyPath = firstExisting([
+    join(REPO, 'machine/spec/docs-fractal-mpr-policy.json'),
+    join(REPO, 'pm/spec/docs-fractal-mpr-policy.json'),
+    join(REPO, '../canon-os/machine/spec/docs-fractal-mpr-policy.json'),
+    join(REPO, '../canon-os/pm/spec/docs-fractal-mpr-policy.json'),
+  ]);
   gates.push(
     gate(
       'policy:docs-fractal-mpr',
-      existsSync(join(REPO, 'pm/spec/docs-fractal-mpr-policy.json')),
-      'pm/spec/docs-fractal-mpr-policy.json',
+      Boolean(policyPath),
+      policyPath ?? 'machine/spec/docs-fractal-mpr-policy.json',
     ),
   );
 
   for (const packFile of PACKS_WITH_CONTRACT) {
-    const spec = loadPack(REPO, `pm/spec/${packFile}`);
+    const spec = loadPack(REPO, `machine/spec/${packFile}`);
     const prefix = `pack:${packFile.replace('.json', '')}`;
     if (!spec) {
       gates.push(gate(`${prefix}:present`, false, 'pack missing'));

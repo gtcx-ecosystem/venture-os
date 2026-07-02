@@ -2,19 +2,19 @@
   "schema": "gtcx://canon-os/docs-business-check/v2",
   "repo": "venture-os",
   "profile": "product",
-  "at": "2026-07-01T17:29:01.519Z",
+  "at": "2026-07-02T14:35:23.039Z",
   "ok": true,
   "spec": {
-    "localPath": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/pm/spec/docs-business-pack.json",
+    "localPath": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/machine/spec/docs-business-pack.json",
     "localIsStub": false,
-    "upstreamPath": "/Users/amanianai/Sites/gtcx-ecosystem/canon-os/pm/spec/docs-business-pack.json",
+    "upstreamPath": "/Users/amanianai/Sites/gtcx-ecosystem/canon-os/machine/spec/docs-business-pack.json",
     "resolvedIsFull": true
   },
   "gates": [
     {
       "id": "spec:local-present",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/pm/spec/docs-business-pack.json"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/machine/spec/docs-business-pack.json"
     },
     {
       "id": "spec:not-stub",
@@ -24,7 +24,7 @@
     {
       "id": "spec:resolved-full",
       "ok": true,
-      "detail": "resolved via /Users/amanianai/Sites/gtcx-ecosystem/canon-os/pm/spec/docs-business-pack.json"
+      "detail": "resolved via /Users/amanianai/Sites/gtcx-ecosystem/canon-os/machine/spec/docs-business-pack.json"
     },
     {
       "id": "profile",

@@ -1,0 +1,7 @@
+{
+  "$schema": "gtcx://ops/coordination/v1",
+  "repo": "venture-os",
+  "paths": {
+    "remainingWork": "ops/coordination/remaining-work.json"
+  }
+}

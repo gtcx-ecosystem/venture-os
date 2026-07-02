@@ -34,17 +34,25 @@ export function gate(id, ok, detail = null) {
 }
 
 export function loadPolicy(repoRoot) {
-  const local = join(repoRoot, 'pm/spec/docs-fractal-mpr-policy.json');
-  const canon = join(repoRoot, '../canon-os/pm/spec/docs-fractal-mpr-policy.json');
-  const path = existsSync(local) ? local : canon;
-  if (!existsSync(path)) return null;
+  const path = [
+    join(repoRoot, 'machine/spec/docs-fractal-mpr-policy.json'),
+    join(repoRoot, 'pm/spec/docs-fractal-mpr-policy.json'),
+    join(repoRoot, '../canon-os/machine/spec/docs-fractal-mpr-policy.json'),
+    join(repoRoot, '../canon-os/pm/spec/docs-fractal-mpr-policy.json'),
+  ].find((candidate) => existsSync(candidate));
+  if (!path) return null;
   return JSON.parse(readFileSync(path, 'utf8'));
 }
 
 export function loadPack(repoRoot, packRel) {
-  const local = join(repoRoot, packRel);
-  const canon = join(repoRoot, '../canon-os/pm/spec', packRel.replace(/^pm\/spec\//, ''));
-  const path = existsSync(local) ? local : existsSync(canon) ? canon : null;
+  const packName = packRel.replace(/^(pm|machine)\/spec\//, '');
+  const path = [
+    join(repoRoot, packRel),
+    join(repoRoot, 'machine/spec', packName),
+    join(repoRoot, 'pm/spec', packName),
+    join(repoRoot, '../canon-os/machine/spec', packName),
+    join(repoRoot, '../canon-os/pm/spec', packName),
+  ].find((candidate) => existsSync(candidate)) ?? null;
   if (!path) return null;
   return JSON.parse(readFileSync(path, 'utf8'));
 }

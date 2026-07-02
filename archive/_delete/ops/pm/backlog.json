@@ -1,0 +1,109 @@
+{
+  "$schema": "gtcx://ops/pm-backlog/v1",
+  "repo": "venture-os",
+  "updated": "2026-07-01",
+  "active": null,
+  "backlogClear": true,
+  "roadmapPath": "pm/execution-roadmap.md",
+  "auditRef": "audit/evidence/venture-os-mpr-ui-audit-2026-06-17.json",
+  "stories": [
+    {
+      "id": "MPR-01",
+      "title": "Compliance + repo hygiene closure",
+      "status": "done",
+      "owner": "venture-os",
+      "pillar": "compliance",
+      "priority": "P1",
+      "intake": "BL-MPR-01"
+    },
+    {
+      "id": "MPR-02",
+      "title": "UX SoR scaffold (EXR + pm/ux)",
+      "status": "done",
+      "owner": "venture-os",
+      "pillar": "worldClass",
+      "priority": "P1",
+      "intake": "BL-MPR-02"
+    },
+    {
+      "id": "MPR-03",
+      "title": "Command Center API wiring",
+      "status": "done",
+      "owner": "venture-os",
+      "pillar": "technicalExcellence",
+      "priority": "P1",
+      "intake": "BL-MPR-03"
+    },
+    {
+      "id": "MPR-04",
+      "title": "Agent orchestration + receipt envelope",
+      "status": "done",
+      "owner": "venture-os",
+      "pillar": "agenticEmpowerment",
+      "priority": "P1",
+      "intake": "BL-MPR-04"
+    },
+    {
+      "id": "MPR-05",
+      "title": "Trust envelope on cards + publish gates",
+      "status": "done",
+      "owner": "venture-os",
+      "pillar": "trustAndSafety",
+      "priority": "P0",
+      "intake": "BL-MPR-05"
+    },
+    {
+      "id": "MPR-06",
+      "title": "World-class polish (states, metrics, a11y)",
+      "status": "done",
+      "owner": "venture-os",
+      "pillar": "worldClass",
+      "priority": "P2",
+      "intake": "BL-MPR-06"
+    },
+    {
+      "id": "MPR-07",
+      "title": "Fleet ecosystem integration seams",
+      "status": "done",
+      "owner": "venture-os",
+      "pillar": "productEcosystemIntegration",
+      "priority": "P2",
+      "intake": "BL-MPR-07"
+    },
+    {
+      "id": "MPR-08",
+      "title": "E2E operator golden path",
+      "status": "done",
+      "owner": "venture-os",
+      "pillar": "technicalExcellence",
+      "priority": "P2",
+      "intake": "BL-MPR-08"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "P4-04",
+      "title": "Opportunities board",
+      "status": "done",
+      "owner": "venture-os"
+    },
+    {
+      "id": "DEPLOY-01",
+      "title": "Vercel pilot deploy wiring",
+      "status": "done",
+      "owner": "venture-os"
+    },
+    {
+      "id": "DEPLOY-02",
+      "title": "First staging deploy (AWS EKS or GCP Cloud Run)",
+      "status": "done",
+      "owner": "venture-os",
+      "note": "EKS origin live 2026-06-17 — CF DNS 525 pending"
+    }
+  ],
+  "_generated": true,
+  "generated": true,
+  "syncSource": "pm/features + agile/scrum feature-pack workflow",
+  "authority": "compatibility-output",
+  "note": "Generated compatibility mirror only. Authoritative workflow is feature PRDs -> pm machine records -> MPR/SIGNAL -> feature specs pack -> agile scrum planning."
+}

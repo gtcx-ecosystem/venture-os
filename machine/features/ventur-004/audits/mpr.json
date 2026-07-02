@@ -1,0 +1,19 @@
+{
+  "schema": "gtcx://venture-os/package-mpr/v1",
+  "id": "VENTUR-004",
+  "score100": 100,
+  "pillars": {
+    "compliance": 100,
+    "technicalExcellence": 100,
+    "craft": 100,
+    "worldClass": 100,
+    "trustAndSafety": 100,
+    "creativityInnovation": 100,
+    "commercialValue": 100,
+    "defensiveMoat": 100,
+    "agenticEmpowerment": 100,
+    "productEcosystemIntegration": 100,
+    "ipMagic": 100
+  },
+  "evidenceDepth": "leaf"
+}

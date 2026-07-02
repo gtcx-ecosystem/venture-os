@@ -1,0 +1,21 @@
+{
+  "$schema": "gtcx://ops/pm/v1",
+  "repo": "venture-os",
+  "updated": "2026-06-16",
+  "local": {
+    "executionRoadmap": "pm/execution-roadmap.md",
+    "workSelection": "docs/operations/agent-work-selection.md",
+    "autoDevState": "pm/auto-dev-state.md",
+    "nextWorkScript": "platform/scripts/agent/agent-next-work.mjs",
+    "agileDocs": "agile"
+  },
+  "sync": {
+    "output": "pm/backlog.json"
+  },
+  "agileReference": {
+    "hub": "agile-os",
+    "referenceImpl": "../agile-os/agile",
+    "fleetBacklog": "../agile-os/pm/ecosystem-sprint-backlog.json",
+    "strategy": "../agile-os/docs/business/strategy/fleet-agile-hub.md"
+  }
+}

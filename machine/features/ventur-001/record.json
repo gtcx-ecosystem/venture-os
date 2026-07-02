@@ -1,0 +1,16 @@
+{
+  "schema": "gtcx://venture-os/feature-record/v1",
+  "id": "VENTUR-001",
+  "name": "venture app intake",
+  "owner": "venture-os",
+  "status": "ready-for-scrum-prioritization",
+  "updated": "2026-07-01",
+  "sourceRegistry": "pm/spec/feature-registry/manifest.json",
+  "prdRef": "prd-product-charter",
+  "specRef": "pm/product/prds/prd-product-charter.md",
+  "featureTier": "core",
+  "featureClass": "capability",
+  "gtmCritical": true,
+  "workflowId": null,
+  "acceptanceSource": "pm/features/ventur-001/feature-pack/manifest.json"
+}

@@ -53,17 +53,29 @@ export function readJson(path) {
 
 export function resolveDocsPack(repoRoot, packName, options = {}) {
   const canonicalName =
-    packName === 'docs-agents-pack.json' && existsSync(join(repoRoot, 'pm/spec/agents-pack.json'))
+    packName === 'docs-agents-pack.json' &&
+    (existsSync(join(repoRoot, 'machine/spec/agents-pack.json')) ||
+      existsSync(join(repoRoot, 'pm/spec/agents-pack.json')))
       ? 'agents-pack.json'
       : packName === 'docs-agents-pack.json'
         ? 'agents-pack.json'
-        : packName === 'docs-agile-pack.json' && existsSync(join(repoRoot, 'pm/spec/agile-pack.json'))
+        : packName === 'docs-agile-pack.json' &&
+            (existsSync(join(repoRoot, 'machine/spec/agile-pack.json')) ||
+              existsSync(join(repoRoot, 'pm/spec/agile-pack.json')))
           ? 'agile-pack.json'
           : packName === 'docs-agile-pack.json'
             ? 'agile-pack.json'
             : packName;
-  const localPath = join(repoRoot, 'pm/spec', canonicalName);
-  const canonPath = join(repoRoot, '../canon-os/pm/spec', canonicalName);
+  const localPathCandidates = [
+    join(repoRoot, 'machine/spec', canonicalName),
+    join(repoRoot, 'pm/spec', canonicalName),
+  ];
+  const localPath = localPathCandidates.find((candidate) => existsSync(candidate)) ?? localPathCandidates[0];
+  const canonPathCandidates = [
+    join(repoRoot, '../canon-os/machine/spec', canonicalName),
+    join(repoRoot, '../canon-os/pm/spec', canonicalName),
+  ];
+  const canonPath = canonPathCandidates.find((candidate) => existsSync(candidate)) ?? canonPathCandidates[0];
   const pathsTried = [];
 
   let local = null;
@@ -138,8 +150,11 @@ export function profileKeyFromTier(tier, repoRoot = null) {
 }
 
 export function readProductTier(repoRoot) {
-  const goalsPath = join(repoRoot, 'pm/spec/product-goals.json');
-  if (!existsSync(goalsPath)) return null;
+  const goalsPath = [
+    join(repoRoot, 'machine/spec/product-goals.json'),
+    join(repoRoot, 'pm/spec/product-goals.json'),
+  ].find((candidate) => existsSync(candidate));
+  if (!goalsPath) return null;
   try {
     return JSON.parse(readFileSync(goalsPath, 'utf8')).tier ?? null;
   } catch {

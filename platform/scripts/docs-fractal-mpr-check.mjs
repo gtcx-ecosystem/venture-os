@@ -38,7 +38,7 @@ function main() {
     gate('policy:present', !!policy, policy ? policy.updated : 'missing docs-fractal-mpr-policy.json'),
   );
   if (!policy) {
-    emitFractalReport(gates, repoName, policy, WRITE, WITNESS);
+    emitFractalReport(gates, repoId, policy, WRITE, WITNESS);
     return;
   }
 

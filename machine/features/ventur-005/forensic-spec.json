@@ -1,0 +1,33 @@
+{
+  "schema": "gtcx://venture-os/forensic-feature-spec/v1",
+  "id": "VENTUR-005",
+  "status": "complete",
+  "owner": "venture-os",
+  "updated": "2026-07-01",
+  "evidence": [
+    "pm/product/prd-index.json",
+    "pm/product/prds/prd-product-charter.md"
+  ],
+  "lineage": {
+    "prd": "prd-product-charter",
+    "registry": "pm/spec/feature-registry/manifest.json",
+    "featurePack": "pm/features/ventur-005/feature-pack/manifest.json"
+  },
+  "checks": [
+    {
+      "id": "prd-linked",
+      "score100": 100,
+      "evidence": "pm/product/prds/prd-product-charter.md"
+    },
+    {
+      "id": "registry-linked",
+      "score100": 100,
+      "evidence": "pm/spec/feature-registry/manifest.json"
+    },
+    {
+      "id": "scrum-ready",
+      "score100": 100,
+      "evidence": "acceptance, QA, and sprint plan present"
+    }
+  ]
+}

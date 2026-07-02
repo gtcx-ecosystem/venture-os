@@ -4,11 +4,21 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '../..');
-const manifestPath = join(root, 'pm/spec/feature-registry/manifest.json');
 const errors = [];
 
+function resolveRepoPath(rel) {
+  const candidates = [
+    join(root, rel),
+    rel.startsWith('pm/') ? join(root, rel.replace(/^pm\//, 'machine/')) : null,
+    rel.startsWith('ops/') ? join(root, rel.replace(/^ops\//, 'operations/')) : null,
+  ].filter(Boolean);
+  return candidates.find((candidate) => existsSync(candidate)) ?? candidates[0];
+}
+
+const manifestPath = resolveRepoPath('pm/spec/feature-registry/manifest.json');
+
 function readJson(relOrAbs) {
-  const abs = relOrAbs.startsWith('/') ? relOrAbs : join(root, relOrAbs);
+  const abs = relOrAbs.startsWith('/') ? relOrAbs : resolveRepoPath(relOrAbs);
   return JSON.parse(readFileSync(abs, 'utf8'));
 }
 
@@ -20,7 +30,7 @@ function loadFeatures() {
   const manifest = readJson(manifestPath);
   const features = [];
   for (const shard of manifest.shards ?? []) {
-    const shardPath = join(root, shard);
+    const shardPath = resolveRepoPath(shard);
     if (!existsSync(shardPath)) {
       errors.push(`missing ${shard}`);
       continue;
@@ -43,7 +53,7 @@ for (const feature of features) {
   ];
 
   for (const rel of required) {
-    if (!existsSync(join(root, rel))) errors.push(`${feature.id}: missing ${rel}`);
+    if (!existsSync(resolveRepoPath(rel))) errors.push(`${feature.id}: missing ${rel}`);
   }
 
   if (!errors.some((error) => error.startsWith(`${feature.id}:`))) {

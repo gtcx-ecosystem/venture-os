@@ -2,13 +2,13 @@
   "schema": "gtcx://canon-os/docs-operations-check/v1",
   "repo": "venture-os",
   "profile": "product",
-  "at": "2026-07-01T17:29:01.725Z",
+  "at": "2026-07-02T14:35:23.204Z",
   "ok": true,
   "gates": [
     {
       "id": "spec:local-present",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/pm/spec/docs-operations-pack.json"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/machine/spec/docs-operations-pack.json"
     },
     {
       "id": "spec:not-stub",
