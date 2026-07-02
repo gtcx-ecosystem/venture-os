@@ -4,10 +4,10 @@
   "initiative": "INIT-DOCS-CORE-IA-V1",
   "title": "Docs roadmap pack — venture-os",
   "canonicalPath": "machine/roadmap/lanes",
-  "principle": "Lane narratives → agile/roadmaps/. Executable plan SoR → docs/product/roadmap/ (P57). Legacy docs/roadmap/ → pointer-only.",
+  "principle": "Lane narratives -> machine/roadmap/lanes/. Executable plan SoR -> machine/roadmap/ and machine/backlog.json. Legacy agile/roadmaps/ is preserved under archive/_delete/agile/roadmaps/.",
   "requiredRootFiles": [
     {
-      "path": "agile/roadmaps/README.md",
+      "path": "machine/roadmap/lanes/README.md",
       "role": "index + lane definitions + pointer rules"
     }
   ],
@@ -20,9 +20,9 @@
     "compliance.md"
   ],
   "legacyPointer": {
-    "path": "docs/roadmap/",
-    "canonical": "agile/roadmaps/",
-    "rule": "pointer-only README if folder exists"
+    "path": "archive/_delete/agile/roadmaps/",
+    "canonical": "machine/roadmap/lanes/",
+    "rule": "archived legacy lane narratives; active lanes live under machine/roadmap/lanes/"
   },
   "_deprecatedRequiredRootFiles": [
     "docs/roadmap/README.md",
