@@ -1,9 +1,9 @@
 {
   "$schema": "./root-allowlist.schema.json",
-  "version": "5.0.0",
-  "schema_version": "5.0.0",
-  "updated": "2026-07-01",
-  "description": "P35 v5 closed-world repo root for venture-os.",
+  "version": "5.1.0",
+  "schema_version": "5.1.0",
+  "updated": "2026-07-02",
+  "description": "P35 v5.1 closed-world repo root for venture-os with machine/operations canonical roots.",
   "migration_tier": "stable",
   "required_files": [
     "README.md",
@@ -13,15 +13,14 @@
   "required_directories": [
     "archive",
     "docs",
-    "ops",
+    "operations",
     "platform",
     "deploy",
     "audit",
     "workstream",
     "config",
     "agents",
-    "pm",
-    "agile",
+    "machine",
     "app",
     "clients",
     "prototype",
@@ -40,15 +39,14 @@
   "allowed_directories": [
     "archive",
     "docs",
-    "ops",
+    "operations",
     "platform",
     "deploy",
     "audit",
     "workstream",
     "config",
     "agents",
-    "pm",
-    "agile",
+    "machine",
     "app",
     "clients",
     "prototype",
@@ -72,17 +70,21 @@
     "tsconfig.tsbuildinfo"
   ],
   "forbidden_root_names": {
-    "01-docs": "Use docs/ + pm/ (P35 v5).",
+    "01-docs": "Use docs/ + machine/ + operations/ (P35 v5.1).",
     "03-platform": "Use platform/ (P35 v5).",
     "agentic": "Use agents/ and archive legacy agentic records.",
     "audits": "Use audit/ and archive legacy audit reports.",
-    "machine": "Use pm/ for machine-readable product management records.",
-    "reports": "Use audit/reports/ or archive legacy reports."
+    "reports": "Use audit/reports/ or archive legacy reports.",
+    "ops": "Use operations/ for operational records.",
+    "pm": "Use machine/ for machine-readable product management records.",
+    "agile": "Use machine/ delivery records and docs/ delivery surfaces."
   },
   "relocate_hints": {
     "agentic": "archive/legacy-agentic-2026-07-01/",
     "audits": "archive/legacy-audits-2026-07-01/",
-    "machine": "archive/legacy-machine-2026-07-01/",
-    "reports": "archive/legacy-reports-2026-07-01/"
+    "reports": "archive/legacy-reports-2026-07-01/",
+    "ops": "archive/_delete/ops/",
+    "pm": "archive/_delete/pm/",
+    "agile": "archive/_delete/agile/"
   }
 }
