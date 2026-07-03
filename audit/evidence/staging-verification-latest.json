@@ -1,0 +1,317 @@
+{
+  "$schema": "gtcx://venture-os/staging-verification/v1",
+  "repo": "venture-os",
+  "environment": "staging",
+  "generatedAt": "2026-07-03T16:29:30Z",
+  "operator": "codex",
+  "surface": {
+    "kind": "aws-eks",
+    "namespace": "venture-os-staging",
+    "url": "https://venture-staging.gtcx.trade",
+    "ingress": "venture-os",
+    "service": "venture-os",
+    "image": "348389439381.dkr.ecr.af-south-1.amazonaws.com/gtcx-venture-os:latest",
+    "currentRepoHead": "ca22741",
+    "appliedImageTagObserved": "latest",
+    "currentRepoHeadTagInEcr": false
+  },
+  "status": "blocked",
+  "summary": {
+    "applied": true,
+    "reachable": true,
+    "tested": "partial",
+    "seeded": false,
+    "credentialed": "partial",
+    "smoke": "partial-pass",
+    "e2e": "partial-pass",
+    "done": false
+  },
+  "liveEvidence": {
+    "kubernetes": {
+      "context": "arn:aws:eks:af-south-1:348389439381:cluster/gtcx-staging",
+      "namespace": "venture-os-staging",
+      "pod": {
+        "name": "venture-os-6c66bc6d74-kcblc",
+        "ready": "1/1",
+        "status": "Running",
+        "restarts": 0,
+        "node": "ip-10-3-97-234.af-south-1.compute.internal",
+        "ip": "10.3.96.88"
+      },
+      "deploymentResourcesObserved": {
+        "requests": {
+          "cpu": "5m",
+          "memory": "256Mi"
+        },
+        "limits": {
+          "cpu": "1",
+          "memory": "1Gi"
+        }
+      }
+    },
+    "waf": {
+      "webAcl": "gtcx-staging-waf-af-south-1",
+      "changeAppliedThisRun": "AllowVentureOSStagingWeb",
+      "ruleOrderObserved": [
+        "0:AllowHealthEndpoint",
+        "1:AllowAuditAndTradePassEndpoints",
+        "2:AllowTerraOSStagingWeb",
+        "3:AllowVentureOSStagingWeb",
+        "4:AllowMarketsAuthorityEndpoints",
+        "5:AWSManagedRulesCommonRuleSet",
+        "6:AWSManagedRulesKnownBadInputsRuleSet",
+        "7:RateLimitPerIP",
+        "8:AWSManagedRulesBotControlRuleSet"
+      ],
+      "sampledBlockBeforeFix": "AWSManagedRulesBotControlRuleSet#CategoryHttpLibrary blocked curl requests for /, /api/ready, and /api/venture/opportunities"
+    },
+    "publicProbes": [
+      {
+        "route": "/api/health",
+        "method": "GET",
+        "status": 200,
+        "bodySummary": {
+          "status": "ok",
+          "service": "venture-os",
+          "environment": "staging"
+        },
+        "observedAt": "2026-07-03T16:29:25Z"
+      },
+      {
+        "route": "/api/ready",
+        "method": "GET",
+        "status": 200,
+        "bodySummary": {
+          "status": "ok",
+          "service": "venture-os",
+          "checks": {
+            "process": "ok",
+            "memory": "ok"
+          }
+        },
+        "observedAt": "2026-07-03T16:29:25Z"
+      },
+      {
+        "route": "/",
+        "method": "GET",
+        "status": 200,
+        "bodyContains": "Founder command center",
+        "observedAt": "2026-07-03T14:40:28Z"
+      },
+      {
+        "route": "/api/venture/opportunities?clientId=terra_os",
+        "method": "GET",
+        "auth": "none",
+        "status": 401,
+        "bodySummary": {
+          "error": "Unauthorized"
+        },
+        "observedAt": "2026-07-03T14:40:28Z"
+      }
+    ],
+    "authedSmoke": [
+      {
+        "route": "/api/venture/opportunities?clientId=terra_os",
+        "method": "GET",
+        "auth": "Authorization: Bearer $VENTURE_WEBHOOK_SECRET",
+        "status": 200,
+        "bodySummary": {
+          "ok": true,
+          "clientId": "terra_os",
+          "opportunityCount": 2
+        },
+        "observedAt": "2026-07-03T14:43:32Z"
+      },
+      {
+        "route": "/api/venture/sources?clientId=terra_os",
+        "method": "GET",
+        "auth": "Authorization: Bearer $VENTURE_WEBHOOK_SECRET",
+        "status": 200,
+        "bodySummary": {
+          "ok": true,
+          "clientId": "terra_os",
+          "sources": [
+            "rss",
+            "gmail"
+          ]
+        },
+        "observedAt": "2026-07-03T14:43:34Z"
+      },
+      {
+        "route": "/api/venture/opportunities/sync",
+        "method": "POST",
+        "auth": "Authorization: Bearer $VENTURE_WEBHOOK_SECRET",
+        "status": 200,
+        "bodySummary": {
+          "ok": true,
+          "dryRun": true,
+          "clientId": "terra_os",
+          "taskCount": 2,
+          "receiptKind": "clickup_sync_dry_run"
+        },
+        "observedAt": "2026-07-03T14:43:34Z"
+      },
+      {
+        "route": "/api/venture/workflow/queue",
+        "method": "POST",
+        "auth": "none",
+        "status": 404,
+        "bodySummary": {
+          "error": "Next.js not found page from deployed image"
+        },
+        "observedAt": "2026-07-03T16:29:03Z"
+      }
+    ],
+    "liveUiE2e": {
+      "base": "https://venture-staging.gtcx.trade",
+      "observedAt": "2026-07-03T16:28:46Z",
+      "steps": [
+        {
+          "name": "home loads command center",
+          "ok": true,
+          "status": 200
+        },
+        {
+          "name": "capital filter renders one card",
+          "ok": true,
+          "count": 1
+        },
+        {
+          "name": "queue workflow from UI",
+          "ok": true,
+          "note": "No receipt text was visible; API probe separately confirms live deployed route is 404."
+        },
+        {
+          "name": "intake to brief publish gate",
+          "ok": false,
+          "error": "Timed out waiting for 'Publish blocked - approvals pending.'"
+        },
+        {
+          "name": "route /operations",
+          "ok": true,
+          "status": 200
+        },
+        {
+          "name": "route /sources",
+          "ok": true,
+          "status": 200
+        },
+        {
+          "name": "route /signals",
+          "ok": true,
+          "status": 200
+        },
+        {
+          "name": "route /opportunities",
+          "ok": true,
+          "status": 200
+        },
+        {
+          "name": "route /clients",
+          "ok": true,
+          "status": 200
+        },
+        {
+          "name": "route /tools",
+          "ok": true,
+          "status": 200
+        }
+      ]
+    }
+  },
+  "credentialsIndex": [
+    {
+      "purpose": "webhook/API smoke",
+      "vaultPath": "aws-secretsmanager://af-south-1/gtcx/venture-os/staging/api-keys#VENTURE_WEBHOOK_SECRET",
+      "kubernetesSecret": "venture-os-staging/venture-os-secrets",
+      "status": "present",
+      "secretMaterialStoredInGit": false
+    },
+    {
+      "purpose": "staging database seed",
+      "vaultPath": "aws-secretsmanager://af-south-1/gtcx/venture-os/staging/api-keys#DATABASE_URL",
+      "kubernetesSecret": "venture-os-staging/venture-os-secrets",
+      "status": "absent",
+      "secretMaterialStoredInGit": false
+    }
+  ],
+  "actionsThisRun": [
+    {
+      "id": "restore-scheduling",
+      "type": "kubectl-live-patch",
+      "result": "deployment scheduled",
+      "detail": "Changed live deployment CPU request from 100m to 5m after scheduler reported 0/2 nodes available due to insufficient CPU. No new infrastructure created."
+    },
+    {
+      "id": "restore-public-paths",
+      "type": "aws-waf-live-update",
+      "result": "public paths reachable",
+      "detail": "Added AllowVentureOSStagingWeb host allow rule before managed BotControl after sampled WAF requests showed CategoryHttpLibrary blocks."
+    },
+    {
+      "id": "attempt-current-image-deploy",
+      "type": "ecr-push",
+      "result": "blocked",
+      "detail": "Built current repo image locally with /api/venture/workflow/queue, but ECR tag ca22741 was not published after Buildx push, Buildx single-artifact push, docker push, and docker push --platform attempts stalled at layer/manifest publication."
+    }
+  ],
+  "defects": [
+    {
+      "id": "VO-STAGE-001",
+      "severity": "high",
+      "status": "mitigated-live-not-persisted",
+      "title": "venture-os pod was Pending due to exhausted staging CPU requests",
+      "evidence": "Scheduler reported 0/2 nodes available: 2 Insufficient cpu. Live request patch to 5m made pod Running 1/1.",
+      "fixThisRun": "kubectl set resources deployment venture-os -n venture-os-staging --requests=cpu=5m,memory=256Mi --limits=cpu=1,memory=1Gi",
+      "residualRisk": "fabric-os overlay still declares cpu request 100m; reapply may restore the Pending condition."
+    },
+    {
+      "id": "VO-STAGE-002",
+      "severity": "high",
+      "status": "fixed-live-not-persisted",
+      "title": "staging WAF blocked venture-os non-health routes",
+      "evidence": "WAF sampled requests showed AWSManagedRulesBotControlRuleSet#CategoryHttpLibrary blocking venture-staging.gtcx.trade /, /api/ready, and /api/venture/opportunities.",
+      "fixThisRun": "Added AllowVentureOSStagingWeb to gtcx-staging-waf-af-south-1 at priority 3.",
+      "residualRisk": "fabric-os Terraform WAF source owns the durable rule; current repo cannot persist that source change."
+    },
+    {
+      "id": "VO-STAGE-003",
+      "severity": "high",
+      "status": "blocked",
+      "title": "deployed image is stale and lacks /api/venture/workflow/queue",
+      "evidence": "Current repo build includes the route; live staging POST /api/venture/workflow/queue returns 404; ECR latest remains June 17 image lineage and ca22741 is absent.",
+      "fixAttemptedThisRun": "Built linux/amd64 current image locally and attempted ECR push through three methods.",
+      "hardBlocker": "ECR push transport from this environment stalls before publishing ca22741; exact unblock is a successful push of 348389439381.dkr.ecr.af-south-1.amazonaws.com/gtcx-venture-os:ca22741 and :latest, then rollout restart of deployment/venture-os."
+    },
+    {
+      "id": "VO-STAGE-004",
+      "severity": "medium",
+      "status": "blocked",
+      "title": "staging database cannot be seeded because no DATABASE_URL is bound",
+      "evidence": "AWS Secrets Manager secret gtcx/venture-os/staging/api-keys and K8s secret venture-os-secrets expose VENTURE_WEBHOOK_SECRET only; deployment has no DATABASE_URL or VENTURE_DATA_BACKEND=postgres.",
+      "hardBlocker": "Provide a staging Postgres DATABASE_URL in the vault and bind VENTURE_DATA_BACKEND=postgres to the deployment, then run NODE_ENV=demo pnpm db:seed:demo against that target."
+    },
+    {
+      "id": "VO-STAGE-005",
+      "severity": "medium",
+      "status": "open",
+      "title": "live UI brief publish-gate check did not show expected blocked-publish text",
+      "evidence": "Headless live e2e timed out waiting for 'Publish blocked - approvals pending.' after intake-to-brief flow.",
+      "nextDiagnostic": "Re-run after current image deploy; if still failing, inspect RollingBriefWorkspace workflow state persistence across route transition."
+    }
+  ],
+  "hardBlockers": [
+    {
+      "id": "BLOCK-ECR-PUSH",
+      "kind": "environment-or-registry-transport",
+      "specificBlocker": "Current image tag ca22741 cannot be published from this environment; ECR describe-images confirms tag absent after repeated push methods stalled.",
+      "exactUnblock": "Publish 348389439381.dkr.ecr.af-south-1.amazonaws.com/gtcx-venture-os:ca22741 and :latest to ECR, then run kubectl rollout restart deployment/venture-os -n venture-os-staging and verify /api/venture/workflow/queue returns 201."
+    },
+    {
+      "id": "BLOCK-DATABASE-URL",
+      "kind": "secret-absent-from-vault",
+      "specificBlocker": "No staging DATABASE_URL is present in aws-secretsmanager://af-south-1/gtcx/venture-os/staging/api-keys or in Kubernetes secret venture-os-secrets.",
+      "exactUnblock": "Add a staging Postgres DATABASE_URL and VENTURE_DATA_BACKEND=postgres to the vault/ExternalSecret path, restart the deployment, run migrations, and seed with NODE_ENV=demo."
+    }
+  ]
+}
