@@ -1,5 +1,8 @@
 import { listOpportunitiesForClient } from "@/lib/automation/clickup-sync";
+import { isPostgresDataBackend, listPostgresOpportunities } from "@/lib/automation/postgres-store";
 import { getClient } from "@/lib/clients";
+
+export const runtime = "nodejs";
 
 function unauthorized() {
   return Response.json({ error: "Unauthorized" }, { status: 401 });
@@ -28,6 +31,9 @@ export async function GET(request: Request) {
   return Response.json({
     ok: true,
     clientId,
-    opportunities: listOpportunitiesForClient(clientId),
+    backend: isPostgresDataBackend() ? "postgres" : "static",
+    opportunities: isPostgresDataBackend()
+      ? await listPostgresOpportunities(clientId)
+      : listOpportunitiesForClient(clientId),
   });
 }

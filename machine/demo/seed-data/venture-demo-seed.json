@@ -1,0 +1,26 @@
+{
+  "schema": "gtcx://venture-os/demo-seed/v1",
+  "repo": "venture-os",
+  "updated": "2026-07-03",
+  "classification": "synthetic-demo-grade",
+  "source": "deploy/database/seeds/demo.sql",
+  "rows": {
+    "venture_opportunities": [
+      "afdb-dpi",
+      "terra-bank-insurer",
+      "markets-pilot",
+      "fifty-four-press",
+      "compliance-standards-body"
+    ],
+    "venture_inbound_candidates": [
+      "seed-inbound-terra-dfi",
+      "seed-inbound-terminal-griot"
+    ],
+    "venture_automation_receipts": [
+      "seed-receipt-terra-dfi",
+      "seed-receipt-terminal-griot",
+      "seed-receipt-claims-withheld"
+    ]
+  },
+  "honesty": "Rows are seeded for demo and staging. They are not production data."
+}
