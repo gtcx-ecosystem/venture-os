@@ -5,24 +5,24 @@
   "owner": "venture-os",
   "updated": "2026-07-01",
   "evidence": [
-    "pm/product/prd-index.json",
-    "pm/product/prds/prd-product-charter.md"
+    "machine/product/prd-index.json",
+    "machine/product/prds/prd-product-charter.md"
   ],
   "lineage": {
     "prd": "prd-product-charter",
-    "registry": "pm/spec/feature-registry/manifest.json",
-    "featurePack": "pm/features/ventur-002/feature-pack/manifest.json"
+    "registry": "machine/spec/feature-registry/manifest.json",
+    "featurePack": "machine/features/ventur-002/feature-pack/manifest.json"
   },
   "checks": [
     {
       "id": "prd-linked",
       "score100": 100,
-      "evidence": "pm/product/prds/prd-product-charter.md"
+      "evidence": "machine/product/prds/prd-product-charter.md"
     },
     {
       "id": "registry-linked",
       "score100": 100,
-      "evidence": "pm/spec/feature-registry/manifest.json"
+      "evidence": "machine/spec/feature-registry/manifest.json"
     },
     {
       "id": "scrum-ready",

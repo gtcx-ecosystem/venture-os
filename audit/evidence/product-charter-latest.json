@@ -1,12 +1,12 @@
 {
   "schema": "gtcx://canon-os/product-charter-check/v1",
-  "at": "2026-06-24T00:38:13.648Z",
+  "at": "2026-07-03T00:14:08.300Z",
   "repo": "venture-os",
   "repoRoot": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os",
   "ok": true,
   "score": {
-    "earned": 20,
-    "possible": 20,
+    "earned": 21,
+    "possible": 21,
     "pct": 100,
     "rag": "green"
   },
@@ -22,11 +22,11 @@
     "features": 6,
     "workflowSteps": 1,
     "specGaps": 0,
-    "prdFeatures": 5,
+    "prdFeatures": 10,
     "personas": 1,
     "jtbd": 1,
     "jtbdCatalog": 1,
-    "e2eWorkflows": 1,
+    "e2eWorkflows": 4,
     "flows": 1,
     "exr": 1,
     "workflows": 0,
@@ -144,7 +144,7 @@
       "ok": true,
       "optional": false,
       "weight": 1,
-      "detail": "5 slugs"
+      "detail": "10 slugs"
     },
     {
       "id": "registry:present",
@@ -179,7 +179,7 @@
       "ok": true,
       "optional": true,
       "weight": 1,
-      "detail": "1 workflows"
+      "detail": "4 workflows"
     },
     {
       "id": "forensic:spec-impl-audit",
@@ -235,7 +235,7 @@
       "ok": true,
       "optional": true,
       "weight": 1,
-      "detail": "1 workflows"
+      "detail": "4 workflows"
     },
     {
       "id": "audit:11pr-witness",
@@ -249,7 +249,14 @@
       "ok": true,
       "optional": true,
       "weight": 1,
-      "detail": "registry 6"
+      "detail": "matrix 6"
+    },
+    {
+      "id": "forensic:feature-ship-gates",
+      "ok": true,
+      "optional": false,
+      "weight": 1,
+      "detail": "2/6 clear"
     }
   ],
   "activeMilestone": "M1",

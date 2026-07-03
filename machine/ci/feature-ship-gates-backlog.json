@@ -1,0 +1,68 @@
+{
+  "schema": "gtcx://venture-os/feature-ship-gates-backlog/v1",
+  "repo": "venture-os",
+  "generatedAt": "2026-07-03T00:13:57.792Z",
+  "openCount": 4,
+  "items": [
+    {
+      "id": "SHIP-GATE-VENTUR-001",
+      "featureId": "VENTUR-001",
+      "targetRing": "production",
+      "achievedRing": "demo",
+      "openChecks": [
+        "coverage-90",
+        "status-covered",
+        "forensic-aligned",
+        "phase-shipped"
+      ],
+      "priority": "P2",
+      "type": "ship-gate",
+      "resolve": "pnpm pm:feature-matrix:sync after fixing open checks for VENTUR-001"
+    },
+    {
+      "id": "SHIP-GATE-VENTUR-002",
+      "featureId": "VENTUR-002",
+      "targetRing": "production",
+      "achievedRing": "demo",
+      "openChecks": [
+        "coverage-90",
+        "status-covered",
+        "forensic-aligned",
+        "phase-shipped"
+      ],
+      "priority": "P2",
+      "type": "ship-gate",
+      "resolve": "pnpm pm:feature-matrix:sync after fixing open checks for VENTUR-002"
+    },
+    {
+      "id": "SHIP-GATE-VENTUR-003",
+      "featureId": "VENTUR-003",
+      "targetRing": "production",
+      "achievedRing": "demo",
+      "openChecks": [
+        "coverage-90",
+        "status-covered",
+        "forensic-aligned",
+        "phase-shipped"
+      ],
+      "priority": "P2",
+      "type": "ship-gate",
+      "resolve": "pnpm pm:feature-matrix:sync after fixing open checks for VENTUR-003"
+    },
+    {
+      "id": "SHIP-GATE-VENTUR-WF-001",
+      "featureId": "VENTUR-WF-001",
+      "targetRing": "pilot",
+      "achievedRing": "demo",
+      "openChecks": [
+        "coverage-90",
+        "status-covered",
+        "forensic-aligned",
+        "phase-shipped"
+      ],
+      "priority": "P2",
+      "type": "ship-gate",
+      "resolve": "pnpm pm:feature-matrix:sync after fixing open checks for VENTUR-WF-001"
+    }
+  ]
+}

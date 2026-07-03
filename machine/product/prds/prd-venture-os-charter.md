@@ -4,14 +4,14 @@ title: Venture OS product charter
 status: draft
 date: 2026-06-17
 owner: venture-os
-productGoalsRef: pm/spec/product-goals.json
+productGoalsRef: machine/spec/product-goals.json
 milestones: [M1]
 features: []
 ---
 
 # PRD — Venture OS
 
-> **SoR:** Product vision and shippable scope. Roadmap stories trace via `pm/product/prd-index.json`.
+> **SoR:** Product vision and shippable scope. Roadmap stories trace via `machine/product/prd-index.json`.
 
 ## Vision
 
@@ -58,7 +58,7 @@ Deliver an MVP app and operating playbooks so GTCX ecosystem repos are the first
 
 1. Next.js app — intake, operations, collateral, visibility routes
 2. Client profile schema (`schema/client.schema.json`)
-3. Product spec + execution roadmap alignment with `pm/spec/product-goals.json`
+3. Product spec + execution roadmap alignment with `machine/spec/product-goals.json`
 
 ## Success metrics
 

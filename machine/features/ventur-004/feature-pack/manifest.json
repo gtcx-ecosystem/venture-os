@@ -6,8 +6,8 @@
   "status": "ready-for-scrum-prioritization",
   "updated": "2026-07-01",
   "prdRef": "prd-product-charter",
-  "specRef": "pm/product/prds/prd-product-charter.md",
-  "machineRecord": "pm/features/ventur-004/record.json",
+  "specRef": "machine/product/prds/prd-product-charter.md",
+  "machineRecord": "machine/features/ventur-004/record.json",
   "acceptanceCriteria": [
     "Feature record is linked to the PRD and registry shard.",
     "Operational, GTM, security, and compliance dependencies are tracked as separate roadmap lanes and do not block product release claims.",
@@ -22,12 +22,12 @@
     {
       "id": "mpr-package",
       "score100": 100,
-      "evidence": "pm/features/ventur-004/audits/mpr.json"
+      "evidence": "machine/features/ventur-004/audits/mpr.json"
     },
     {
       "id": "signal-package",
       "score100": 100,
-      "evidence": "pm/features/ventur-004/audits/signal.json"
+      "evidence": "machine/features/ventur-004/audits/signal.json"
     }
   ],
   "sprintPlans": [
@@ -40,11 +40,11 @@
   ],
   "mprReview": {
     "score100": 100,
-    "evidence": "pm/features/ventur-004/audits/mpr.json"
+    "evidence": "machine/features/ventur-004/audits/mpr.json"
   },
   "signalReview": {
     "level": "L5",
     "score100": 100,
-    "evidence": "pm/features/ventur-004/audits/signal.json"
+    "evidence": "machine/features/ventur-004/audits/signal.json"
   }
 }

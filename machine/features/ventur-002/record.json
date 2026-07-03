@@ -5,12 +5,12 @@
   "owner": "venture-os",
   "status": "ready-for-scrum-prioritization",
   "updated": "2026-07-01",
-  "sourceRegistry": "pm/spec/feature-registry/manifest.json",
+  "sourceRegistry": "machine/spec/feature-registry/manifest.json",
   "prdRef": "prd-product-charter",
-  "specRef": "pm/product/prds/prd-product-charter.md",
+  "specRef": "machine/product/prds/prd-product-charter.md",
   "featureTier": "competitive",
   "featureClass": "capability",
   "gtmCritical": true,
   "workflowId": null,
-  "acceptanceSource": "pm/features/ventur-002/feature-pack/manifest.json"
+  "acceptanceSource": "machine/features/ventur-002/feature-pack/manifest.json"
 }

@@ -5,12 +5,12 @@
   "owner": "venture-os",
   "status": "ready-for-scrum-prioritization",
   "updated": "2026-07-01",
-  "sourceRegistry": "pm/spec/feature-registry/manifest.json",
+  "sourceRegistry": "machine/spec/feature-registry/manifest.json",
   "prdRef": "prd-product-charter",
-  "specRef": "pm/product/prds/prd-product-charter.md",
+  "specRef": "machine/product/prds/prd-product-charter.md",
   "featureTier": "core",
   "featureClass": "workflow-step",
   "gtmCritical": true,
-  "workflowId": "WF-VENTUR-DEMO-001",
-  "acceptanceSource": "pm/features/ventur-wf-001/feature-pack/manifest.json"
+  "workflowId": "WF-EXR-001",
+  "acceptanceSource": "machine/features/ventur-wf-001/feature-pack/manifest.json"
 }

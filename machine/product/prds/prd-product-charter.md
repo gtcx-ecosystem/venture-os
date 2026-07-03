@@ -4,7 +4,7 @@ title: Venture OS product charter
 status: active
 date: 2026-06-19
 owner: venture-os
-productGoalsRef: pm/spec/product-goals.json
+productGoalsRef: machine/spec/product-goals.json
 milestones: [M1]
 features:
   - venture-app-intake
@@ -16,7 +16,7 @@ features:
 
 # PRD — Venture OS
 
-> **SoR:** Product vision and shippable scope. Roadmap stories trace via `pm/product/prd-index.json`.
+> **SoR:** Product vision and shippable scope. Roadmap stories trace via `machine/product/prd-index.json`.
 
 ## Vision
 
@@ -42,7 +42,7 @@ Deliver an MVP app and operating playbooks so GTCX ecosystem repos are the first
 
 ## Shipping goals (assurance — not product goals)
 
-SoR: `pm/spec/product-goals.json#shippingGoals`.
+SoR: `machine/spec/product-goals.json#shippingGoals`.
 
 | ID | Metric | Target | Evidence |
 | -- | ------ | ------ | -------- |
@@ -103,6 +103,6 @@ SoR: `pm/spec/product-goals.json#shippingGoals`.
 
 ## Links
 
-- Product goals: `pm/spec/product-goals.json`
-- Legacy charter alias: `pm/product/prds/prd-venture-os-charter.md`
-- Execution roadmap: `pm/execution-roadmap.md`
+- Product goals: `machine/spec/product-goals.json`
+- Legacy charter alias: `machine/product/prds/prd-venture-os-charter.md`
+- Execution roadmap: `machine/execution-roadmap.md`

@@ -1,0 +1,14 @@
+{
+  "schema": "gtcx.uxSorPack.v1",
+  "repo": "venture-os",
+  "repoKind": "product",
+  "pilotDeep": false,
+  "ok": true,
+  "score100": 100,
+  "openP1": 0,
+  "openP2": 0,
+  "itemsPass": 8,
+  "itemsTotal": 8,
+  "violations": [],
+  "at": "2026-07-03T00:19:41.606Z"
+}

@@ -10,7 +10,7 @@
       "featureTier": "core",
       "jtbdIds": ["JTBD-VENTURE-INTAKE-001"],
       "persona": "founder",
-      "witness": "audit/evidence/demo-readiness-venture-os.json",
+      "witness": "audit/evidence/golden-path-latest.json",
       "steps": [
         { "order": 1, "action": "Open venture home", "route": "/app", "exit": "Desk loads", "impl": "app/app/page.tsx" },
         { "order": 2, "action": "Submit founder intake", "route": "/app/intake", "exit": "Intake form complete", "impl": "app/app/intake/page.tsx" },

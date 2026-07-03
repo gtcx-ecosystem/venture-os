@@ -34,7 +34,7 @@
       "title": "Governed fundraising workflows",
       "outcome": "Human-gated external sends with agent prep",
       "measure": "No autonomous external outreach; culture check PASS",
-      "witness": "bridge-os/pm/ci/product-culture-fleet-latest.json"
+      "witness": "bridge-os/machine/ci/product-culture-fleet-latest.json"
     }
   ],
   "gtmGoals": [
@@ -61,13 +61,13 @@
         "id": "SG2",
         "label": "Product culture",
         "target": "ecosystem:product-culture:check PASS",
-        "witness": "bridge-os/pm/ci/product-culture-fleet-latest.json"
+        "witness": "bridge-os/machine/ci/product-culture-fleet-latest.json"
       },
       {
         "id": "SG3",
         "label": "PRD traceability",
         "target": "100% in-flight stories → prdRef",
-        "witness": "pm/product/prd-index.json"
+        "witness": "machine/product/prd-index.json"
       }
     ]
   },
@@ -113,7 +113,7 @@
       {
         "id": "culture-check",
         "label": "ecosystem:product-culture:check PASS for venture-os",
-        "witness": "bridge-os/pm/ci/product-culture-fleet-latest.json"
+        "witness": "bridge-os/machine/ci/product-culture-fleet-latest.json"
       }
     ]
   },
@@ -130,9 +130,9 @@
     "forbidden": ["done without PRD trace", "autonomous external investor outreach"]
   },
   "productIntegrity": {
-    "prdIndex": "pm/product/prd-index.json",
-    "prdsDir": "pm/product/prds/",
-    "executionRoadmap": "pm/execution-roadmap.md",
+    "prdIndex": "machine/product/prd-index.json",
+    "prdsDir": "machine/product/prds/",
+    "executionRoadmap": "machine/execution-roadmap.md",
     "storyMustTraceTo": ["prdRef", "activeMilestone.id"]
   }
 }

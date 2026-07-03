@@ -1,0 +1,35 @@
+{
+  "schema": "gtcx://venture-os/feature-ship-gates/v1",
+  "repo": "venture-os",
+  "generatedAt": "2026-07-03T00:13:57.792Z",
+  "protocol": "machine/spec/feature-ship-gates-protocol.json",
+  "ok": false,
+  "summary": {
+    "featureCount": 6,
+    "shipGateClear": 2,
+    "shipGateOpen": 4
+  },
+  "byRing": {
+    "demo": {
+      "met": 6,
+      "open": 0
+    },
+    "pilot": {
+      "met": 0,
+      "open": 6
+    },
+    "production": {
+      "met": 0,
+      "open": 6
+    },
+    "enterprise": {
+      "met": 0,
+      "open": 6
+    },
+    "ga": {
+      "met": 0,
+      "open": 6
+    }
+  },
+  "maturityRingSpec": "machine/spec/ship-release-tiers.json"
+}

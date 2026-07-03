@@ -1,6 +1,1501 @@
 {
-  "$schema": "gtcx://pm/feature-coverage-matrix/v1",
-  "version": "1.0.0",
-  "features": [],
-  "minCoveragePercent": 90
+  "$schema": "gtcx://venture-os/feature-coverage-matrix/v2",
+  "version": "2.2.0",
+  "repo": "venture-os",
+  "updated": "2026-07-03",
+  "syncSource": "machine/spec/feature-registry/manifest.json",
+  "registrySoR": "machine/spec/feature-registry/manifest.json",
+  "registrySchema": "gtcx://venture-os/feature-registry/v1",
+  "shipGatesProtocol": "machine/spec/feature-ship-gates-protocol.json",
+  "syncCommand": "pnpm pm:feature-matrix:sync",
+  "minCoveragePercent": 90,
+  "pillarIndex": {
+    "F2": 5,
+    "F4": 6,
+    "T10": 6,
+    "T7": 1
+  },
+  "featureCount": 6,
+  "gtmCriticalCount": 4,
+  "featureTierIndex": {
+    "core": 2,
+    "competitive": 4,
+    "moat": 0,
+    "foundation": 0
+  },
+  "featureClassIndex": {
+    "capability": 5,
+    "workflow-step": 1,
+    "spec-gap": 0
+  },
+  "shipGateIndex": {
+    "clear": 2,
+    "open": 4
+  },
+  "forensicAudit": "machine/ci/forensic-feature-audit-latest.json",
+  "shipGatesWitness": "machine/ci/feature-ship-gates-latest.json",
+  "e2eCatalog": "machine/spec/workflows/e2e-catalog.json",
+  "jtbdCatalog": "machine/ux/jtbd/catalog.json",
+  "coveragePercent": 0,
+  "gtmReadyPercent": 0,
+  "features": [
+    {
+      "id": "VENTUR-001",
+      "name": "venture app intake",
+      "domain": "venture-os",
+      "featureTier": "core",
+      "featureClass": "capability",
+      "workflowId": "WF-EXR-001",
+      "workflowStep": null,
+      "jtbdIds": [
+        "JTBD-VENTURE-INTAKE-001"
+      ],
+      "plane": "product",
+      "exrRef": null,
+      "uatId": null,
+      "capabilityId": "founder-intake",
+      "status": "catalog",
+      "shipStatus": "spec-only",
+      "coveragePercent": 50,
+      "covered": false,
+      "gtmReady": false,
+      "shipGates": {
+        "protocol": "machine/spec/feature-ship-gates-protocol.json",
+        "targetRing": "production",
+        "achievedRing": "demo",
+        "shipGateClear": false,
+        "rings": {
+          "demo": {
+            "status": "met",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              }
+            ],
+            "openCount": 0
+          },
+          "pilot": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              }
+            ],
+            "openCount": 1
+          },
+          "production": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              }
+            ],
+            "openCount": 2
+          },
+          "enterprise": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              },
+              {
+                "id": "forensic-aligned",
+                "ok": false
+              }
+            ],
+            "openCount": 3
+          },
+          "ga": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              },
+              {
+                "id": "forensic-aligned",
+                "ok": false
+              },
+              {
+                "id": "phase-shipped",
+                "ok": false
+              }
+            ],
+            "openCount": 4
+          }
+        },
+        "openChecks": [
+          "coverage-90",
+          "status-covered",
+          "forensic-aligned",
+          "phase-shipped"
+        ]
+      },
+      "evidence": "machine/product/prd-index.json",
+      "implementationRef": "app/app/intake/page.tsx",
+      "specRef": "machine/product/prds/prd-product-charter.md",
+      "specDepth": "charter",
+      "apiRef": null,
+      "surfaceRoute": "/app/intake",
+      "serviceRef": null,
+      "persona": "product-engineer",
+      "pillars": [
+        "F2",
+        "F4",
+        "T10"
+      ],
+      "phase": "M1",
+      "gtmCritical": true,
+      "forensicStatus": "catalog",
+      "gapClass": null,
+      "registryRef": "VENTUR-001"
+    },
+    {
+      "id": "VENTUR-002",
+      "name": "venture operations desk",
+      "domain": "venture-os",
+      "featureTier": "competitive",
+      "featureClass": "capability",
+      "workflowId": "WF-EXR-002",
+      "workflowStep": null,
+      "jtbdIds": [
+        "JTBD-VENTURE-CAPITAL-001"
+      ],
+      "plane": "product",
+      "exrRef": null,
+      "uatId": null,
+      "capabilityId": "capital-desk",
+      "status": "catalog",
+      "shipStatus": "spec-only",
+      "coveragePercent": 50,
+      "covered": false,
+      "gtmReady": false,
+      "shipGates": {
+        "protocol": "machine/spec/feature-ship-gates-protocol.json",
+        "targetRing": "production",
+        "achievedRing": "demo",
+        "shipGateClear": false,
+        "rings": {
+          "demo": {
+            "status": "met",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              }
+            ],
+            "openCount": 0
+          },
+          "pilot": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              }
+            ],
+            "openCount": 1
+          },
+          "production": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              }
+            ],
+            "openCount": 2
+          },
+          "enterprise": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              },
+              {
+                "id": "forensic-aligned",
+                "ok": false
+              }
+            ],
+            "openCount": 3
+          },
+          "ga": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              },
+              {
+                "id": "forensic-aligned",
+                "ok": false
+              },
+              {
+                "id": "phase-shipped",
+                "ok": false
+              }
+            ],
+            "openCount": 4
+          }
+        },
+        "openChecks": [
+          "coverage-90",
+          "status-covered",
+          "forensic-aligned",
+          "phase-shipped"
+        ]
+      },
+      "evidence": "machine/product/prd-index.json",
+      "implementationRef": "app/app/capital/page.tsx",
+      "specRef": "machine/product/prds/prd-product-charter.md",
+      "specDepth": "charter",
+      "apiRef": "app/app/api/venture/opportunities/route.ts",
+      "surfaceRoute": "/app/capital",
+      "serviceRef": null,
+      "persona": "product-engineer",
+      "pillars": [
+        "F2",
+        "F4",
+        "T10"
+      ],
+      "phase": "M1",
+      "gtmCritical": true,
+      "forensicStatus": "catalog",
+      "gapClass": null,
+      "registryRef": "VENTUR-002"
+    },
+    {
+      "id": "VENTUR-003",
+      "name": "venture collateral workflows",
+      "domain": "venture-os",
+      "featureTier": "competitive",
+      "featureClass": "capability",
+      "workflowId": "WF-EXR-003",
+      "workflowStep": null,
+      "jtbdIds": [
+        "JTBD-VENTURE-COLLATERAL-001"
+      ],
+      "plane": "product",
+      "exrRef": null,
+      "uatId": null,
+      "capabilityId": "collateral-workflows",
+      "status": "catalog",
+      "shipStatus": "spec-only",
+      "coveragePercent": 50,
+      "covered": false,
+      "gtmReady": false,
+      "shipGates": {
+        "protocol": "machine/spec/feature-ship-gates-protocol.json",
+        "targetRing": "production",
+        "achievedRing": "demo",
+        "shipGateClear": false,
+        "rings": {
+          "demo": {
+            "status": "met",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              }
+            ],
+            "openCount": 0
+          },
+          "pilot": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              }
+            ],
+            "openCount": 1
+          },
+          "production": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              }
+            ],
+            "openCount": 2
+          },
+          "enterprise": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              },
+              {
+                "id": "forensic-aligned",
+                "ok": false
+              }
+            ],
+            "openCount": 3
+          },
+          "ga": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              },
+              {
+                "id": "forensic-aligned",
+                "ok": false
+              },
+              {
+                "id": "phase-shipped",
+                "ok": false
+              }
+            ],
+            "openCount": 4
+          }
+        },
+        "openChecks": [
+          "coverage-90",
+          "status-covered",
+          "forensic-aligned",
+          "phase-shipped"
+        ]
+      },
+      "evidence": "machine/product/prd-index.json",
+      "implementationRef": "app/app/collateral/page.tsx",
+      "specRef": "machine/product/prds/prd-product-charter.md",
+      "specDepth": "charter",
+      "apiRef": null,
+      "surfaceRoute": "/app/collateral",
+      "serviceRef": null,
+      "persona": "product-engineer",
+      "pillars": [
+        "F2",
+        "F4",
+        "T10"
+      ],
+      "phase": "M1",
+      "gtmCritical": true,
+      "forensicStatus": "catalog",
+      "gapClass": null,
+      "registryRef": "VENTUR-003"
+    },
+    {
+      "id": "VENTUR-004",
+      "name": "venture visibility desk",
+      "domain": "venture-os",
+      "featureTier": "competitive",
+      "featureClass": "capability",
+      "workflowId": "WF-EXR-003",
+      "workflowStep": null,
+      "jtbdIds": [
+        "JTBD-VENTURE-COLLATERAL-001"
+      ],
+      "plane": "product",
+      "exrRef": null,
+      "uatId": null,
+      "capabilityId": "visibility-desk",
+      "status": "catalog",
+      "shipStatus": "spec-only",
+      "coveragePercent": 50,
+      "covered": false,
+      "gtmReady": false,
+      "shipGates": {
+        "protocol": "machine/spec/feature-ship-gates-protocol.json",
+        "targetRing": "demo",
+        "achievedRing": "demo",
+        "shipGateClear": true,
+        "rings": {
+          "demo": {
+            "status": "met",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              }
+            ],
+            "openCount": 0
+          },
+          "pilot": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              }
+            ],
+            "openCount": 1
+          },
+          "production": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              }
+            ],
+            "openCount": 2
+          },
+          "enterprise": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              },
+              {
+                "id": "forensic-aligned",
+                "ok": false
+              }
+            ],
+            "openCount": 3
+          },
+          "ga": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              },
+              {
+                "id": "forensic-aligned",
+                "ok": false
+              },
+              {
+                "id": "phase-shipped",
+                "ok": false
+              }
+            ],
+            "openCount": 4
+          }
+        },
+        "openChecks": [
+          "coverage-90",
+          "status-covered",
+          "forensic-aligned",
+          "phase-shipped"
+        ]
+      },
+      "evidence": "machine/product/prd-index.json",
+      "implementationRef": "app/app/visibility/page.tsx",
+      "specRef": "machine/product/prds/prd-product-charter.md",
+      "specDepth": "charter",
+      "apiRef": null,
+      "surfaceRoute": "/app/visibility",
+      "serviceRef": null,
+      "persona": "product-engineer",
+      "pillars": [
+        "F2",
+        "F4",
+        "T10"
+      ],
+      "phase": "M1",
+      "gtmCritical": false,
+      "forensicStatus": "catalog",
+      "gapClass": null,
+      "registryRef": "VENTUR-004"
+    },
+    {
+      "id": "VENTUR-005",
+      "name": "venture client schema",
+      "domain": "venture-os",
+      "featureTier": "competitive",
+      "featureClass": "capability",
+      "workflowId": "WF-EXR-003",
+      "workflowStep": null,
+      "jtbdIds": [
+        "JTBD-VENTURE-COLLATERAL-001"
+      ],
+      "plane": "product",
+      "exrRef": null,
+      "uatId": null,
+      "capabilityId": "client-profile-schema",
+      "status": "catalog",
+      "shipStatus": "spec-only",
+      "coveragePercent": 50,
+      "covered": false,
+      "gtmReady": false,
+      "shipGates": {
+        "protocol": "machine/spec/feature-ship-gates-protocol.json",
+        "targetRing": "demo",
+        "achievedRing": "demo",
+        "shipGateClear": true,
+        "rings": {
+          "demo": {
+            "status": "met",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              }
+            ],
+            "openCount": 0
+          },
+          "pilot": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              }
+            ],
+            "openCount": 1
+          },
+          "production": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              }
+            ],
+            "openCount": 2
+          },
+          "enterprise": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              },
+              {
+                "id": "forensic-aligned",
+                "ok": false
+              }
+            ],
+            "openCount": 3
+          },
+          "ga": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              },
+              {
+                "id": "forensic-aligned",
+                "ok": false
+              },
+              {
+                "id": "phase-shipped",
+                "ok": false
+              }
+            ],
+            "openCount": 4
+          }
+        },
+        "openChecks": [
+          "coverage-90",
+          "status-covered",
+          "forensic-aligned",
+          "phase-shipped"
+        ]
+      },
+      "evidence": "machine/product/prd-index.json",
+      "implementationRef": "app/app/clients/page.tsx",
+      "specRef": "machine/product/prds/prd-product-charter.md",
+      "specDepth": "charter",
+      "apiRef": null,
+      "surfaceRoute": "/app/clients",
+      "serviceRef": null,
+      "persona": "product-engineer",
+      "pillars": [
+        "F2",
+        "F4",
+        "T10"
+      ],
+      "phase": "M1",
+      "gtmCritical": false,
+      "forensicStatus": "catalog",
+      "gapClass": null,
+      "registryRef": "VENTUR-005"
+    },
+    {
+      "id": "VENTUR-WF-001",
+      "name": "venture-os demo path (workflow step 1)",
+      "domain": "venture-os",
+      "featureTier": "core",
+      "featureClass": "workflow-step",
+      "workflowId": "WF-EXR-001",
+      "workflowStep": 1,
+      "jtbdIds": [
+        "JTBD-VENTURE-INTAKE-001"
+      ],
+      "plane": "product",
+      "exrRef": null,
+      "uatId": null,
+      "capabilityId": "VENTUR-001",
+      "status": "catalog",
+      "shipStatus": "spec-only",
+      "coveragePercent": 50,
+      "covered": false,
+      "gtmReady": false,
+      "shipGates": {
+        "protocol": "machine/spec/feature-ship-gates-protocol.json",
+        "targetRing": "pilot",
+        "achievedRing": "demo",
+        "shipGateClear": false,
+        "rings": {
+          "demo": {
+            "status": "met",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              }
+            ],
+            "openCount": 0
+          },
+          "pilot": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              }
+            ],
+            "openCount": 1
+          },
+          "production": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              }
+            ],
+            "openCount": 2
+          },
+          "enterprise": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              },
+              {
+                "id": "forensic-aligned",
+                "ok": false
+              }
+            ],
+            "openCount": 3
+          },
+          "ga": {
+            "status": "open",
+            "checks": [
+              {
+                "id": "spec-ref",
+                "ok": true
+              },
+              {
+                "id": "impl-ref",
+                "ok": true
+              },
+              {
+                "id": "evidence-path",
+                "ok": true
+              },
+              {
+                "id": "coverage-90",
+                "ok": false
+              },
+              {
+                "id": "workflow-or-api",
+                "ok": true
+              },
+              {
+                "id": "jtbd-linked",
+                "ok": true
+              },
+              {
+                "id": "persona-set",
+                "ok": true
+              },
+              {
+                "id": "status-covered",
+                "ok": false
+              },
+              {
+                "id": "no-blocking-gap",
+                "ok": true
+              },
+              {
+                "id": "forensic-aligned",
+                "ok": false
+              },
+              {
+                "id": "phase-shipped",
+                "ok": false
+              }
+            ],
+            "openCount": 4
+          }
+        },
+        "openChecks": [
+          "coverage-90",
+          "status-covered",
+          "forensic-aligned",
+          "phase-shipped"
+        ]
+      },
+      "evidence": "audit/evidence/golden-path-latest.json",
+      "implementationRef": "app/app/page.tsx",
+      "specRef": "machine/product/prds/prd-product-charter.md",
+      "specDepth": null,
+      "apiRef": null,
+      "surfaceRoute": "/app",
+      "serviceRef": null,
+      "persona": "product-engineer",
+      "pillars": [
+        "F4",
+        "T7",
+        "T10"
+      ],
+      "phase": "M1",
+      "gtmCritical": true,
+      "forensicStatus": "catalog",
+      "gapClass": null,
+      "registryRef": "VENTUR-WF-001"
+    }
+  ]
 }

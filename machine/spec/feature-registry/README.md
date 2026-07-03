@@ -8,5 +8,5 @@ Bootstrap: `node ../canon-os/platform/scripts/bootstrap-forensic-registry.mjs --
 
 | Shard | Contents |
 | ----- | -------- |
-| `shard-01-core-capabilities.json` | Features from `pm/product/prd-index.json` |
+| `shard-01-core-capabilities.json` | Features from `machine/product/prd-index.json` |
 | `shard-02-workflows-forensic.json` | Demo workflow step |
