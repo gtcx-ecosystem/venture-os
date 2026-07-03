@@ -11,8 +11,10 @@ review_cycle: on-change
 
 # Venture OS — demo walkthrough
 
+**Full GA demo index:** `docs/operations/runbooks/demo-index.md`
+
 **Audience:** founders, pilot operators, GTCX internal  
-**Entry:** staging `https://venture-staging.gtcx.trade` · local `http://localhost:3000`
+**Entry:** external target `https://venture.gtcx.trade` · staging `https://venture-staging.gtcx.trade` · local `http://localhost:3000`
 
 ## Production-style demo (no Next dev overlay)
 
