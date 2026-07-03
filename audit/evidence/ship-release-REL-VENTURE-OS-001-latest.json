@@ -1,7 +1,7 @@
 {
   "schema": "gtcx://fabric-os/ship-release-decision/v1",
-  "generatedAt": "2026-07-02T15:58:27.736Z",
-  "date": "2026-07-02",
+  "generatedAt": "2026-07-03T03:45:43.708Z",
+  "date": "2026-07-03",
   "protocolId": "GTCX-SHIP-001",
   "contractVersion": "1.0.0",
   "manifest": "../venture-os/machine/ship/releases/REL-VENTURE-OS-001/manifest.json",
