@@ -1,48 +1,70 @@
 {
-  "schema": "gtcx://fabric-os/documentation-audit/v1",
+  "schema": "gtcx://audit/documentation-audit/v1",
   "repo": "venture-os",
-  "generatedAt": "2026-07-01T17:28:50.188Z",
+  "repoKind": "product",
+  "date": "2026-07-03",
+  "auditType": "documentation-pillar",
   "ok": true,
-  "composite100": 100,
-  "score100": 100,
-  "source": "QASC documentation loop",
-  "commands": [
-    {
-      "command": "pnpm --dir venture-os docs:ia:check",
-      "exitCode": 0,
-      "result": "11/11"
+  "composite100": 91,
+  "pillars": {
+    "compliance": {
+      "score100": 100,
+      "openP1": 0,
+      "source": "documentation-pack"
     },
-    {
-      "command": "pnpm --dir venture-os docs:tree:check:strict",
-      "exitCode": 0,
-      "result": "85/85"
+    "technicalExcellence": {
+      "score100": 94,
+      "score100Raw": 94,
+      "packTe100": 100,
+      "capped": false,
+      "source": "pack+forensic-links"
     },
-    {
-      "command": "pnpm --dir venture-os docs:check-links",
-      "exitCode": 0,
-      "result": "0 broken"
+    "craft": {
+      "score100": 80,
+      "score100Raw": 80,
+      "capped": false,
+      "capReasons": [],
+      "craftFlags": {
+        "interchangeable": false,
+        "aiSlop": false
+      },
+      "source": "forensic-doc-standard"
+    },
+    "worldClass": {
+      "score100": 88,
+      "documentationQuality100": 84,
+      "worldClassBar100": 95,
+      "gap100": 11,
+      "gapLabel": "world-class",
+      "references": [
+        "Stripe docs",
+        "Kubernetes docs",
+        "gtcx-docs hub"
+      ],
+      "source": "documentation-quality-vs-global-bar"
     }
-  ],
-  "packs": [
-    {
-      "id": "DOCS-IA",
-      "score100": 100
-    },
-    {
-      "id": "TREE",
-      "score100": 100
-    },
-    {
-      "id": "LINKAAS",
-      "score100": 100
-    }
-  ],
+  },
   "forensic": {
+    "axes": {
+      "structural": 100,
+      "naming": 97,
+      "frontmatter": 98,
+      "links": 72,
+      "agentic": 40
+    },
+    "score100": 81,
     "signals": {
-      "brokenLinks": 0,
+      "competingRoots": [],
+      "docsHub": "docs",
+      "markdownFileCount": 223,
+      "brokenLinks": 28,
       "scaffoldFileCount": 0,
       "aiSlopFileCount": 0
     }
   },
-  "violations": []
+  "pack": {
+    "score100": 100,
+    "openP1": 0,
+    "violations": []
+  }
 }
