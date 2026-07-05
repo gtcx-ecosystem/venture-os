@@ -1,6 +1,6 @@
 {
   "schema": "gtcx://venture-os/docs-ia-check/v1",
-  "generatedAt": "2026-07-02T14:57:58.919Z",
+  "generatedAt": "2026-07-05T20:14:00.186Z",
   "repo": "venture-os",
   "ok": true,
   "strict": false,
@@ -13,35 +13,35 @@
       "script": "docs-foundation-check.mjs",
       "ok": true,
       "exit": 0,
-      "detail": " | PASS — 16/16 | witness: /Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/docs-foundation-latest.json"
+      "detail": " | PASS — 16/16 | witness: /Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/audit/evidence/docs-foundation-latest.json"
     },
     {
       "gateId": "docs:business:check",
       "script": "docs-business-check.mjs",
       "ok": true,
       "exit": 0,
-      "detail": " | PASS — 44/44 | witness: /Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/docs-business-latest.json"
+      "detail": " | PASS — 44/44 | witness: /Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/audit/evidence/docs-business-latest.json"
     },
     {
       "gateId": "docs:architecture:check",
       "script": "docs-architecture-check.mjs",
       "ok": true,
       "exit": 0,
-      "detail": " | PASS — 25/25 | witness: /Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/docs-architecture-latest.json"
+      "detail": " | PASS — 25/25 | witness: /Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/audit/evidence/docs-architecture-latest.json"
     },
     {
       "gateId": "docs:product:check",
       "script": "docs-product-check.mjs",
       "ok": true,
       "exit": 0,
-      "detail": " | PASS — 27/27 | witness: /Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/docs-product-latest.json"
+      "detail": " | PASS — 27/27 | witness: /Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/audit/evidence/docs-product-latest.json"
     },
     {
       "gateId": "docs:roadmap:check",
       "script": "docs-roadmap-check.mjs",
       "ok": true,
       "exit": 0,
-      "detail": " | PASS — 17/17 | witness: /Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/docs-roadmap-latest.json"
+      "detail": " | PASS — 17/17 | witness: /Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/audit/evidence/docs-roadmap-latest.json"
     },
     {
       "gateId": "docs:agile:check",

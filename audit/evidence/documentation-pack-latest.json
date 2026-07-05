@@ -3,9 +3,9 @@
   "repo": "venture-os",
   "repoKind": "product",
   "isPilot": false,
-  "date": "2026-06-30",
-  "ok": false,
-  "score100": 88,
+  "date": "2026-07-05",
+  "ok": true,
+  "score100": 100,
   "pillar": "compliance",
   "packs": [
     {
@@ -80,21 +80,21 @@
       "label": "Documentation jurisdiction + sor.json validity",
       "pillar": "compliance",
       "required": true,
-      "score100": 67,
+      "score100": 100,
       "items": [
         {
           "id": "sor-schema",
           "label": "docs/sor.json schema gtcx.docs.sor.v1",
           "severity": "P1",
           "pass": true,
-          "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/docs/sor.json"
+          "detail": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/docs/sor.json"
         },
         {
           "id": "no-ops-under-docs",
           "label": "No ops machine domains duplicated under docs/",
           "severity": "P1",
-          "pass": false,
-          "detail": "ops dupes under docs/: gtm, legal"
+          "pass": true,
+          "detail": "ok"
         },
         {
           "id": "canon-upstream-pointer",
@@ -124,7 +124,7 @@
           "label": "CONTRIBUTING required sections",
           "severity": "P2",
           "pass": true,
-          "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/docs/operations/repo/CONTRIBUTING.md"
+          "detail": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/docs/operations/repo/CONTRIBUTING.md"
         }
       ]
     },
@@ -179,7 +179,7 @@
           "label": "Broken internal links in docs/ ≤25",
           "severity": "P2",
           "pass": false,
-          "detail": "36 broken / 213 files"
+          "detail": "28 broken / 223 files"
         }
       ]
     },
@@ -200,14 +200,7 @@
       ]
     }
   ],
-  "violations": [
-    {
-      "packId": "JURISDICTION-SOR",
-      "itemId": "no-ops-under-docs",
-      "severity": "P1",
-      "detail": "ops dupes under docs/: gtm, legal"
-    }
-  ],
+  "violations": [],
   "openP0": 0,
-  "openP1": 1
+  "openP1": 0
 }

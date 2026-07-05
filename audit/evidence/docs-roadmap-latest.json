@@ -2,19 +2,19 @@
   "schema": "gtcx://canon-os/docs-roadmap-check/v1",
   "repo": "venture-os",
   "profile": "product",
-  "at": "2026-07-02T14:57:58.723Z",
+  "at": "2026-07-05T20:13:59.951Z",
   "ok": true,
   "spec": {
-    "localPath": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/machine/spec/docs-roadmap-pack.json",
+    "localPath": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/machine/spec/docs-roadmap-pack.json",
     "localIsStub": false,
-    "upstreamPath": "/Users/amanianai/Sites/gtcx-ecosystem/canon-os/machine/spec/docs-roadmap-pack.json",
+    "upstreamPath": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/canon-os/pm/spec/docs-roadmap-pack.json",
     "resolvedIsFull": true
   },
   "gates": [
     {
       "id": "spec:local-present",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/machine/spec/docs-roadmap-pack.json"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/machine/spec/docs-roadmap-pack.json"
     },
     {
       "id": "spec:not-stub",

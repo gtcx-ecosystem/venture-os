@@ -1,6 +1,6 @@
 {
   "schema": "gtcx://canon-os/docs-fractal-mpr-check/v1",
-  "generatedAt": "2026-07-02T14:57:58.886Z",
+  "generatedAt": "2026-07-05T20:14:00.148Z",
   "repo": "venture-os",
   "policyUpdated": "2026-06-19",
   "pass": true,
@@ -38,7 +38,7 @@
     {
       "id": "layer:foundation:scorecard-exists",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/docs/foundation/scorecard.md"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/docs/foundation/scorecard.md"
     },
     {
       "id": "layer:foundation:scorecard-witness-link",
@@ -63,7 +63,7 @@
     {
       "id": "layer:foundation:layer-witness-parse",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/mpr-foundation-layer-latest.json"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/audit/evidence/mpr-foundation-layer-latest.json"
     },
     {
       "id": "layer:foundation:layer-witness-schema",
@@ -103,7 +103,7 @@
     {
       "id": "layer:business:scorecard-exists",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/docs/business/scorecard.md"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/docs/business/scorecard.md"
     },
     {
       "id": "layer:business:scorecard-witness-link",
@@ -128,7 +128,7 @@
     {
       "id": "layer:business:layer-witness-parse",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/mpr-business-layer-latest.json"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/audit/evidence/mpr-business-layer-latest.json"
     },
     {
       "id": "layer:business:layer-witness-schema",
@@ -188,7 +188,7 @@
     {
       "id": "layer:product:scorecard-exists",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/docs/product/scorecard.md"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/docs/product/scorecard.md"
     },
     {
       "id": "layer:product:scorecard-witness-link",
@@ -213,7 +213,7 @@
     {
       "id": "layer:product:layer-witness-parse",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/mpr-product-layer-latest.json"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/audit/evidence/mpr-product-layer-latest.json"
     },
     {
       "id": "layer:product:layer-witness-schema",
@@ -253,7 +253,7 @@
     {
       "id": "layer:canon:scorecard-exists",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/docs/reference/canon/scorecard.md"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/docs/reference/canon/scorecard.md"
     },
     {
       "id": "layer:canon:scorecard-witness-link",
@@ -278,7 +278,7 @@
     {
       "id": "layer:canon:layer-witness-parse",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/mpr-canon-layer-latest.json"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/audit/evidence/mpr-canon-layer-latest.json"
     },
     {
       "id": "layer:canon:layer-witness-schema",
@@ -333,7 +333,7 @@
     {
       "id": "layer:operations:scorecard-exists",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/docs/operations/scorecard.md"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/docs/operations/scorecard.md"
     },
     {
       "id": "layer:operations:scorecard-witness-link",
@@ -358,7 +358,7 @@
     {
       "id": "layer:operations:layer-witness-parse",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/mpr-operations-layer-latest.json"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/audit/evidence/mpr-operations-layer-latest.json"
     },
     {
       "id": "layer:operations:layer-witness-schema",
@@ -398,7 +398,7 @@
     {
       "id": "layer:agents:scorecard-exists",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/agents/scorecard.md"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/agents/scorecard.md"
     },
     {
       "id": "layer:agents:scorecard-witness-link",
@@ -423,7 +423,7 @@
     {
       "id": "layer:agents:layer-witness-parse",
       "ok": true,
-      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/venture-os/audit/evidence/mpr-agents-layer-latest.json"
+      "detail": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx.infrastructure/venture-os/audit/evidence/mpr-agents-layer-latest.json"
     },
     {
       "id": "layer:agents:layer-witness-schema",
