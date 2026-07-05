@@ -1,0 +1,63 @@
+{
+  "$schema": "gtcx://bridge-os/schemas/agent-card/v1",
+  "agentId": "agent://venture-os/gtm-lead",
+  "ownerRepo": "venture-os",
+  "persona": "gtm-lead",
+  "frame": "field-operations",
+  "displayName": "Venture OS — Africa Fundraising Engine",
+  "description": "Productized GTCX fundraising engine for founders, studios, accelerators, and funds: capital desk, growth desk, visibility desk, and ecosystem repo pilot profiles.",
+  "capabilities": [
+    "capital-desk",
+    "growth-desk",
+    "visibility-desk",
+    "founder-execution-engine",
+    "ecosystem-pilot-profiles",
+    "protocol-22-work-selection",
+    "aaas-consumer"
+  ],
+  "tools": [
+    {
+      "name": "pnpm agent:next-work",
+      "provider": "venture-os",
+      "authorityClass": "R",
+      "sideEffects": ["filesystem-read"],
+      "evidencePath": "machine/spec/product-goals.json",
+      "failureModes": ["no computable work"]
+    },
+    {
+      "name": "pnpm ops:check",
+      "provider": "venture-os",
+      "authorityClass": "R",
+      "sideEffects": ["filesystem-read"],
+      "evidencePath": "audit/evidence",
+      "failureModes": ["ops harness failure"]
+    }
+  ],
+  "authorityClasses": ["R", "A", "S"],
+  "memoryScopes": ["session", "shared"],
+  "sideEffects": ["filesystem-read", "filesystem-write", "repo-write"],
+  "evidenceOutputs": [
+    {
+      "kind": "witness-json",
+      "path": "audit/evidence/*-latest.json",
+      "required": true
+    }
+  ],
+  "humanEscalation": {
+    "policy": "human-on-the-loop",
+    "approvalClasses": ["A", "S"],
+    "runbook": "../agile-os/docs/operations/runbooks/human-gate-navigation.md",
+    "owner": "venture-os"
+  },
+  "failureModes": [
+    {
+      "id": "VENTURE-FUNDRAISE-GATE",
+      "description": "Investor-facing claim without collateral or legal review.",
+      "response": "fail-closed",
+      "authorityClass": "A"
+    }
+  ],
+  "extensions": {
+    "vertical": "gtcx.infrastructure"
+  }
+}
