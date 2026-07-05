@@ -1,0 +1,9 @@
+{
+  "$schema": "gtcx://agile-os/product-team-work-loop-adoption/v1",
+  "version": "1.0.0",
+  "status": "adopted-by-reference",
+  "repo": "venture-os",
+  "authority": "agile-os/machine/spec/product-team-work-loop.json",
+  "adoptedAt": "2026-07-05",
+  "enforcement": "Owner repo operations:check + P22; hub spec is normative."
+}

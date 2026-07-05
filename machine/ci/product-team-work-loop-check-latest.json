@@ -1,0 +1,8 @@
+{
+  "schema": "gtcx://agile-os/product-team-work-loop-check/v1",
+  "generatedAt": "2026-07-05T21:46:29.662Z",
+  "repo": "venture-os",
+  "ok": true,
+  "adoptedVia": "fleet-agile-workflow-rollout",
+  "authority": "agile-os/machine/spec/product-team-work-loop.json"
+}

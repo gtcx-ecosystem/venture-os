@@ -1,0 +1,62 @@
+{
+  "$schema": "gtcx://venture-os/feature-registry-shard/v1",
+  "version": "1.0.0",
+  "updated": "2026-07-05",
+  "owner": "venture-os",
+  "features": [
+    {
+      "id": "ventur-001",
+      "name": "ventur 001",
+      "status": "current",
+      "shipStatus": "shipped",
+      "ownerRepo": "venture-os",
+      "domain": "fleet-governance",
+      "specRef": "machine/spec/feature-registry/venture-os-features.json"
+    },
+    {
+      "id": "ventur-002",
+      "name": "ventur 002",
+      "status": "current",
+      "shipStatus": "shipped",
+      "ownerRepo": "venture-os",
+      "domain": "fleet-governance",
+      "specRef": "machine/spec/feature-registry/venture-os-features.json"
+    },
+    {
+      "id": "ventur-003",
+      "name": "ventur 003",
+      "status": "current",
+      "shipStatus": "shipped",
+      "ownerRepo": "venture-os",
+      "domain": "fleet-governance",
+      "specRef": "machine/spec/feature-registry/venture-os-features.json"
+    },
+    {
+      "id": "ventur-004",
+      "name": "ventur 004",
+      "status": "current",
+      "shipStatus": "shipped",
+      "ownerRepo": "venture-os",
+      "domain": "fleet-governance",
+      "specRef": "machine/spec/feature-registry/venture-os-features.json"
+    },
+    {
+      "id": "ventur-005",
+      "name": "ventur 005",
+      "status": "current",
+      "shipStatus": "shipped",
+      "ownerRepo": "venture-os",
+      "domain": "fleet-governance",
+      "specRef": "machine/spec/feature-registry/venture-os-features.json"
+    },
+    {
+      "id": "ventur-wf-001",
+      "name": "ventur wf 001",
+      "status": "current",
+      "shipStatus": "shipped",
+      "ownerRepo": "venture-os",
+      "domain": "fleet-governance",
+      "specRef": "machine/spec/feature-registry/venture-os-features.json"
+    }
+  ]
+}
