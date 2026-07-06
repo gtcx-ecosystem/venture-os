@@ -2,7 +2,7 @@
   "schema": "gtcx://audit/documentation-audit/v1",
   "repo": "venture-os",
   "repoKind": "product",
-  "date": "2026-07-03",
+  "date": "2026-07-05",
   "auditType": "documentation-pillar",
   "ok": true,
   "composite100": 91,
@@ -49,15 +49,15 @@
       "structural": 100,
       "naming": 97,
       "frontmatter": 98,
-      "links": 72,
+      "links": 73,
       "agentic": 40
     },
-    "score100": 81,
+    "score100": 82,
     "signals": {
       "competingRoots": [],
       "docsHub": "docs",
-      "markdownFileCount": 223,
-      "brokenLinks": 28,
+      "markdownFileCount": 225,
+      "brokenLinks": 27,
       "scaffoldFileCount": 0,
       "aiSlopFileCount": 0
     }

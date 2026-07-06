@@ -3,7 +3,7 @@
   "repo": "venture-os",
   "repoKind": "product",
   "isPilot": false,
-  "date": "2026-07-05",
+  "date": "2026-07-06",
   "ok": true,
   "score100": 100,
   "pillar": "compliance",
@@ -179,7 +179,7 @@
           "label": "Broken internal links in docs/ ≤25",
           "severity": "P2",
           "pass": false,
-          "detail": "28 broken / 223 files"
+          "detail": "27 broken / 225 files"
         }
       ]
     },
