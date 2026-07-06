@@ -1,7 +1,8 @@
 ---
 title: 'scorecard — agents/'
 status: current
-date: 2026-06-16
+date: 2026-07-06
+owner: venture-os
 document_type: folder-spec
 tier: operating
 tags: ['documentation', 'multi-pillar', 'fractal-mpr']
@@ -12,8 +13,8 @@ review_cycle: on-change
 
 **Read-only rollup** — scores come from published MPR witnesses, not manual entry.
 
-- Policy: [`../../canon-os/pm/spec/docs-fractal-mpr-policy.json`](../../canon-os/pm/spec/docs-fractal-mpr-policy.json)
-- Pack: [`../../pm/spec/agents-pack.json`](../../pm/spec/agents-pack.json#pillarContract)
+- Policy: [`machine/spec/docs-fractal-mpr-policy.json`](machine/spec/docs-fractal-mpr-policy.json)
+- Pack: [`machine/spec/agents-pack.json`](machine/spec/agents-pack.json#pillarContract)
 - **Layer witness (SoR):** [`audit/evidence/mpr-agents-layer-latest.json`](audit/evidence/mpr-agents-layer-latest.json)
 
 **Composite target:** **85/100** per profile at layer audit order.
@@ -36,8 +37,5 @@ review_cycle: on-change
 
 | Scope | Witness |
 | ----- | ------- |
-| File | `audit/evidence/mpr-files/agents/*.json` (planned) |
-| Folder | child file witnesses |
 | Layer | `audit/evidence/mpr-agents-layer-latest.json` |
 | Repo | `audit/evidence/five-pillar-latest.json` |
-
