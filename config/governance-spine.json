@@ -1,0 +1,18 @@
+{
+  "schema": "gtcx.governanceSpine.v1",
+  "repo": "venture-os",
+  "syncedFrom": "../bridge-os/config/ecosystem-governance-spine.json",
+  "syncedAt": "2026-07-05",
+  "product_name": "Venture OS",
+  "spdx": "Apache-2.0",
+  "security_email": "security@gtcx.trade",
+  "communityDocs": {
+    "contributing": "docs/operations/repo/CONTRIBUTING.md",
+    "codeOfConduct": "docs/operations/repo/CODE_OF_CONDUCT.md",
+    "security": "docs/operations/repo/SECURITY.md"
+  },
+  "agentDocs": {
+    "agentsMd": "AGENTS.md",
+    "readmeGovernanceSection": "README.md#governance"
+  }
+}
