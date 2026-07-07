@@ -1,15 +1,15 @@
 {
   "schema": "gtcx://audit/technical-excellence-pillar/v1",
   "repo": "venture-os",
-  "date": "2026-07-01",
-  "score100": 100,
+  "date": "2026-07-06",
+  "score100": 96,
   "published": true,
   "provisional": false,
   "blockedBy": null,
   "unlockThreshold100": 85,
   "metrics": {
     "engineering-production": {
-      "score100": 100,
+      "score100": 80,
       "weight": 18,
       "sourceIds": [
         "production-readiness"
@@ -77,7 +77,7 @@
   },
   "hasRubric": true,
   "rubricSource": "audit-output",
-  "rubricSpec": "pm/spec/technical-excellence-rubric.json",
+  "rubricSpec": "machine/spec/technical-excellence-rubric.json",
   "rubricVersion": "1.0.0",
   "capped": false,
   "capReason": null

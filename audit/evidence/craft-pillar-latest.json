@@ -1,11 +1,11 @@
 {
   "schema": "gtcx://audit/craft-pillar/v1",
   "repo": "venture-os",
-  "date": "2026-07-01",
-  "score100": 100,
-  "published": true,
-  "provisional": false,
-  "blockedBy": null,
+  "date": "2026-07-06",
+  "score100": 98,
+  "published": false,
+  "provisional": true,
+  "blockedBy": "esl:ESL-2",
   "unlockThreshold100": 85,
   "metrics": {
     "selectivity-ingredients": {
@@ -20,7 +20,7 @@
       "source": "audit-output"
     },
     "process-composition": {
-      "score100": 100,
+      "score100": 93,
       "weight": 22,
       "sourceIds": [
         "production-readiness",
@@ -40,7 +40,7 @@
       "source": "audit-output"
     },
     "restraint-anti-commodity": {
-      "score100": 100,
+      "score100": 97,
       "weight": 18,
       "sourceIds": [
         "ux-product-design",
@@ -63,12 +63,14 @@
     }
   },
   "hasRubric": true,
-  "rubricSpec": "pm/spec/craft-rubric.json",
+  "rubricSpec": "machine/spec/craft-rubric.json",
   "rubricVersion": "1.0.0",
   "capped": false,
   "capReasons": [],
   "craftFlags": {
     "interchangeable": false,
     "aiSlop": false
-  }
+  },
+  "eslRequired": "ESL-2",
+  "eslActive": "ESL-1"
 }

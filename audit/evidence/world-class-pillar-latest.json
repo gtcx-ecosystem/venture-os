@@ -1,19 +1,19 @@
 {
   "schema": "gtcx://audit/world-class-pillar/v1",
   "repo": "venture-os",
-  "date": "2026-07-01",
-  "score100": 100,
-  "published": true,
-  "provisional": false,
-  "blockedBy": null,
+  "date": "2026-07-06",
+  "score100": 98,
+  "published": false,
+  "provisional": true,
+  "blockedBy": "esl:ESL-3",
   "unlockThreshold100": 85,
   "metrics": {
     "documentation-world-class": {
-      "score100": 100,
+      "score100": 96,
       "weight": 8,
-      "qualityAvg100": 100,
+      "qualityAvg100": 91,
       "worldClassBar100": 95,
-      "gap100": 0,
+      "gap100": 4,
       "sourceIds": [
         "documentation"
       ]
@@ -40,11 +40,11 @@
       ]
     },
     "devops-observability": {
-      "score100": 100,
+      "score100": 84,
       "weight": 12,
-      "qualityAvg100": 100,
+      "qualityAvg100": 80,
       "worldClassBar100": 95,
-      "gap100": 0,
+      "gap100": 15,
       "sourceIds": [
         "production-readiness"
       ]
@@ -106,7 +106,7 @@
     "global-south-resilience": {
       "score100": 100,
       "weight": 8,
-      "qualityAvg100": 100,
+      "qualityAvg100": 90,
       "worldClassBar100": 90,
       "gap100": 0,
       "sourceIds": [
@@ -116,6 +116,8 @@
     }
   },
   "hasRubric": true,
-  "rubricSpec": "pm/spec/world-class-rubric.json",
-  "rubricVersion": "1.0.0"
+  "rubricSpec": "machine/spec/world-class-rubric.json",
+  "rubricVersion": "1.0.0",
+  "eslRequired": "ESL-3",
+  "eslActive": "ESL-1"
 }

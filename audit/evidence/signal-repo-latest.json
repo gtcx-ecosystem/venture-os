@@ -1,0 +1,484 @@
+{
+  "schema": "gtcx://baseline-os/signal-repo-witness/v1",
+  "scope": "repo",
+  "id": "venture-os",
+  "repo": "venture-os",
+  "evaluatedAt": "2026-07-06T03:50:26.441Z",
+  "gitHead": "7e7eda5de34b0fb900870e1edd43d358c52bc1bd",
+  "date": "2026-07-06",
+  "frameworkVersion": "1.0.0",
+  "calibrationVersion": "1.0.0",
+  "overallLevel": "L1",
+  "overallScore100": 25,
+  "honesty": {
+    "schema": "gtcx://bridge-os/signal-honesty/v1",
+    "ok": true,
+    "inflated": false,
+    "surface": {
+      "overallLevel": "L1",
+      "signalP": "L1",
+      "signalE": "L1"
+    },
+    "honest": {
+      "overallLevel": "L1",
+      "signalP": "L1",
+      "signalE": "L1",
+      "evidenceGateMax": "L2",
+      "graphRagMcpCeiling": "L2"
+    },
+    "missingL5Gates": [
+      "Production traces → curated dataset evidence missing",
+      "Versioned dataset/eval/model/prompt promotion evidence missing",
+      "Shadow or canary promotion witness missing",
+      "Quality/safety/drift gate that blocks promotion missing",
+      "Governed learning-loop evidence missing"
+    ],
+    "rule": "lowest-dimension + evidenceGates + graphRagMcp ceiling — high average cannot override missing gate"
+  },
+  "evidenceGates": {
+    "maxHonestLevel": "L2",
+    "L5": {
+      "pass": false,
+      "gates": [
+        {
+          "id": "L5-1-traces-to-datasets",
+          "pass": false,
+          "evidence": [],
+          "gap": "Production traces → curated dataset evidence missing"
+        },
+        {
+          "id": "L5-2-versioned-promotion",
+          "pass": false,
+          "evidence": [],
+          "gap": "Versioned dataset/eval/model/prompt promotion evidence missing"
+        },
+        {
+          "id": "L5-3-shadow-canary",
+          "pass": false,
+          "evidence": [],
+          "gap": "Shadow or canary promotion witness missing"
+        },
+        {
+          "id": "L5-4-drift-blocks",
+          "pass": false,
+          "evidence": [],
+          "gap": "Quality/safety/drift gate that blocks promotion missing"
+        },
+        {
+          "id": "L5-5-learning-loop",
+          "pass": false,
+          "evidence": [],
+          "gap": "Governed learning-loop evidence missing"
+        }
+      ]
+    }
+  },
+  "signalP": {
+    "level": "L1",
+    "score100": 25,
+    "lowestDimension": "systemsArchitecture",
+    "surfaceLevel": "L1",
+    "honestyCapped": false,
+    "published": true,
+    "summary": "SIGNAL-P limited by systemsArchitecture."
+  },
+  "signalE": {
+    "level": "L1",
+    "score100": 25,
+    "lowestDimension": "teamOwnership",
+    "surfaceLevel": "L1",
+    "honestyCapped": false,
+    "published": true,
+    "summary": "SIGNAL-E limited by teamOwnership."
+  },
+  "dimensions": {
+    "systemsArchitecture": {
+      "signalP": {
+        "level": "L1",
+        "score100": 25,
+        "published": false,
+        "evidence": [
+          {
+            "type": "path",
+            "ref": "docs/product/README.md",
+            "label": "Product architecture evidence",
+            "status": "pass"
+          },
+          {
+            "type": "witness",
+            "ref": "audit/evidence/mpr-repo-latest.json",
+            "label": "Product architecture evidence",
+            "status": "pass"
+          }
+        ],
+        "gaps": [
+          "Product architecture evidence is incomplete"
+        ]
+      },
+      "signalE": {
+        "level": "L2",
+        "score100": 42,
+        "published": false,
+        "evidence": [
+          {
+            "type": "path",
+            "ref": "config/baseline/rag.config.json",
+            "label": "RAG config",
+            "status": "pass"
+          },
+          {
+            "type": "path",
+            "ref": "config/baseline/mcp.config.json",
+            "label": "MCP config",
+            "status": "pass"
+          },
+          {
+            "type": "path",
+            "ref": "config/baseline/graph.config.json",
+            "label": "Graph config",
+            "status": "pass"
+          },
+          {
+            "type": "path",
+            "ref": "config/baseline/eval.config.json",
+            "label": "Eval or test config",
+            "status": "pass"
+          }
+        ],
+        "gaps": [
+          "Graph/RAG/MCP/eval config or witness is incomplete"
+        ]
+      }
+    },
+    "tooling": {
+      "signalP": {
+        "level": "L1",
+        "score100": 25,
+        "published": false,
+        "evidence": [
+          {
+            "type": "path",
+            "ref": "docs/product/README.md",
+            "label": "Product tooling evidence",
+            "status": "pass"
+          }
+        ],
+        "gaps": [
+          "Product tooling, test, or RAG/MCP evidence is incomplete"
+        ]
+      },
+      "signalE": {
+        "level": "L2",
+        "score100": 42,
+        "published": false,
+        "evidence": [
+          {
+            "type": "path",
+            "ref": "config/baseline/rag.config.json",
+            "label": "RAG config",
+            "status": "pass"
+          },
+          {
+            "type": "path",
+            "ref": "config/baseline/mcp.config.json",
+            "label": "MCP config",
+            "status": "pass"
+          },
+          {
+            "type": "path",
+            "ref": "config/baseline/graph.config.json",
+            "label": "Graph config",
+            "status": "pass"
+          },
+          {
+            "type": "path",
+            "ref": "config/baseline/eval.config.json",
+            "label": "Eval or test config",
+            "status": "pass"
+          }
+        ],
+        "gaps": [
+          "Missing tests, witness, or one or more RAG/MCP/graph/eval config files"
+        ]
+      }
+    },
+    "process": {
+      "signalP": {
+        "level": "L5",
+        "score100": 100,
+        "published": true,
+        "evidence": [
+          {
+            "type": "path",
+            "ref": "docs/product/README.md",
+            "label": "Product/process evidence",
+            "status": "pass"
+          },
+          {
+            "type": "witness",
+            "ref": "audit/evidence/mpr-repo-latest.json",
+            "label": "Product/process evidence",
+            "status": "pass"
+          },
+          {
+            "type": "witness",
+            "ref": "audit/evidence/rag-eval-latest.json",
+            "label": "Product/process evidence",
+            "status": "pass"
+          }
+        ],
+        "gaps": []
+      },
+      "signalE": {
+        "level": "L5",
+        "score100": 100,
+        "published": true,
+        "evidence": [
+          {
+            "type": "path",
+            "ref": "AGENTS.md",
+            "label": "Agent/process evidence",
+            "status": "pass"
+          },
+          {
+            "type": "witness",
+            "ref": "audit/evidence/mpr-repo-latest.json",
+            "label": "Agent/process evidence",
+            "status": "pass"
+          },
+          {
+            "type": "witness",
+            "ref": "audit/evidence/rag-eval-latest.json",
+            "label": "Agent/process evidence",
+            "status": "pass"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    "safeguards": {
+      "signalP": {
+        "level": "L5",
+        "score100": 100,
+        "published": true,
+        "evidence": [
+          {
+            "type": "path",
+            "ref": "docs/operations/compliance/README.md",
+            "label": "Safeguard evidence",
+            "status": "pass"
+          },
+          {
+            "type": "witness",
+            "ref": "audit/evidence/trust-safety-pillar-latest.json",
+            "label": "Safeguard evidence",
+            "status": "pass"
+          },
+          {
+            "type": "witness",
+            "ref": "audit/evidence/mpr-repo-latest.json",
+            "label": "Safeguard evidence",
+            "status": "pass"
+          }
+        ],
+        "gaps": []
+      },
+      "signalE": {
+        "level": "L5",
+        "score100": 100,
+        "published": true,
+        "evidence": [
+          {
+            "type": "path",
+            "ref": "docs/operations/compliance/README.md",
+            "label": "Safeguard evidence",
+            "status": "pass"
+          },
+          {
+            "type": "witness",
+            "ref": "audit/evidence/trust-safety-pillar-latest.json",
+            "label": "Safeguard evidence",
+            "status": "pass"
+          },
+          {
+            "type": "witness",
+            "ref": "audit/evidence/mpr-repo-latest.json",
+            "label": "Safeguard evidence",
+            "status": "pass"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    "monitoring": {
+      "signalP": {
+        "level": "L2",
+        "score100": 42,
+        "published": false,
+        "evidence": [
+          {
+            "type": "witness",
+            "ref": "audit/evidence/rag-eval-latest.json",
+            "label": "Monitoring evidence",
+            "status": "pass"
+          },
+          {
+            "type": "witness",
+            "ref": "audit/evidence/mpr-repo-latest.json",
+            "label": "Monitoring evidence",
+            "status": "pass"
+          }
+        ],
+        "gaps": [
+          "Product trace/eval and RAG/MCP evidence is incomplete"
+        ]
+      },
+      "signalE": {
+        "level": "L2",
+        "score100": 42,
+        "published": false,
+        "evidence": [
+          {
+            "type": "witness",
+            "ref": "audit/evidence/rag-eval-latest.json",
+            "label": "Monitoring evidence",
+            "status": "pass"
+          },
+          {
+            "type": "witness",
+            "ref": "audit/evidence/mpr-repo-latest.json",
+            "label": "Monitoring evidence",
+            "status": "pass"
+          }
+        ],
+        "gaps": [
+          "Current RAG/MCP or agent trace witness is incomplete"
+        ]
+      }
+    },
+    "teamOwnership": {
+      "signalP": {
+        "level": "L1",
+        "score100": 25,
+        "published": false,
+        "evidence": [
+          {
+            "type": "path",
+            "ref": "AGENTS.md",
+            "label": "Ownership evidence",
+            "status": "pass"
+          }
+        ],
+        "gaps": [
+          "Explicit team ownership roster is incomplete"
+        ]
+      },
+      "signalE": {
+        "level": "L1",
+        "score100": 25,
+        "published": false,
+        "evidence": [
+          {
+            "type": "path",
+            "ref": "AGENTS.md",
+            "label": "Ownership evidence",
+            "status": "pass"
+          }
+        ],
+        "gaps": [
+          "Explicit AI/agentic ownership roster is incomplete"
+        ]
+      }
+    }
+  },
+  "graphRagMcp": {
+    "state": "configNoWitness",
+    "signalELevelCeiling": "L2",
+    "witnesses": [],
+    "notes": [
+      "Config present, but no current witness found"
+    ]
+  },
+  "mprRelation": {
+    "mprWitness": "audit/evidence/mpr-repo-latest.json",
+    "agenticEmpowermentCap": 25,
+    "agenticEmpowermentNote": "Use SIGNAL-E as explanatory evidence for MPR agenticEmpowerment."
+  },
+  "bottlenecks": [
+    "systemsArchitecture limits SIGNAL-P to L1",
+    "teamOwnership limits SIGNAL-E to L1",
+    "Config present, but no current witness found",
+    "L5 blocked: Production traces → curated dataset evidence missing"
+  ],
+  "nextUnlocks": [
+    "Production traces → curated dataset evidence missing",
+    "Versioned dataset/eval/model/prompt promotion evidence missing",
+    "Publish repo-local Graph/RAG/MCP/eval config and current witness",
+    "Add trace/eval evidence for representative AI-native workflows",
+    "Name AI reliability and product intelligence owners in machine/team roster"
+  ],
+  "evidence": [
+    {
+      "type": "path",
+      "ref": "AGENTS.md",
+      "label": "Agent instructions or manifest",
+      "status": "pass"
+    },
+    {
+      "type": "path",
+      "ref": "docs/product/README.md",
+      "label": "Product or business documentation",
+      "status": "pass"
+    },
+    {
+      "type": "witness",
+      "ref": "audit/evidence/mpr-repo-latest.json",
+      "label": "MPR witness",
+      "status": "pass"
+    },
+    {
+      "type": "witness",
+      "ref": "audit/evidence/trust-safety-pillar-latest.json",
+      "label": "Trust and safety witness",
+      "status": "pass"
+    },
+    {
+      "type": "path",
+      "ref": "config/baseline/rag.config.json",
+      "label": "RAG config",
+      "status": "pass"
+    },
+    {
+      "type": "path",
+      "ref": "config/baseline/mcp.config.json",
+      "label": "MCP config",
+      "status": "pass"
+    },
+    {
+      "type": "path",
+      "ref": "config/baseline/graph.config.json",
+      "label": "Graph config",
+      "status": "pass"
+    },
+    {
+      "type": "path",
+      "ref": "config/baseline/eval.config.json",
+      "label": "Eval or test config",
+      "status": "pass"
+    },
+    {
+      "type": "trace",
+      "ref": "audit/evidence/rag-eval-latest.json",
+      "label": "Trace or eval evidence",
+      "status": "pass"
+    },
+    {
+      "type": "path",
+      "ref": "docs/operations/compliance/README.md",
+      "label": "Policy or compliance controls",
+      "status": "pass"
+    }
+  ],
+  "probes": [],
+  "source": "run-signal-repo-audit"
+}

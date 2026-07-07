@@ -1,8 +1,8 @@
 {
   "schema": "gtcx://audit/compliance-pillar/v1",
   "repo": "venture-os",
-  "date": "2026-07-01",
-  "score100": 100,
+  "date": "2026-07-06",
+  "score100": 98,
   "published": true,
   "provisional": false,
   "blockedBy": null,
@@ -11,14 +11,14 @@
     "layout-p35": {
       "label": "Layout & workspace (P35 v5)",
       "weight": 8,
-      "score100": 100,
+      "score100": 65,
       "protocol": "P35",
       "items": [
         {
           "id": "p35-strict-pass",
           "label": "P35 layout strict GREEN",
-          "pass": true,
-          "score100": 100,
+          "pass": false,
+          "score100": 0,
           "weight": 35,
           "severity": "P1",
           "optional": false,
@@ -33,7 +33,7 @@
           "weight": 25,
           "severity": "P1",
           "optional": false,
-          "detail": "4/4 present",
+          "detail": "5/4 present",
           "protocol": "P35"
         },
         {
@@ -288,7 +288,7 @@
           "weight": 8,
           "severity": "P1",
           "optional": false,
-          "detail": "pm/README.md",
+          "detail": "machine/README.md",
           "protocol": "P37"
         },
         {
@@ -310,7 +310,7 @@
           "weight": 10,
           "severity": "P1",
           "optional": false,
-          "detail": "pm/completion-model.json",
+          "detail": "machine/completion-model.json",
           "protocol": "P37"
         },
         {
@@ -321,7 +321,7 @@
           "weight": 10,
           "severity": "P1",
           "optional": false,
-          "detail": "pm/shipping-tracks.json",
+          "detail": "machine/shipping-tracks.json",
           "protocol": "P37"
         },
         {
@@ -332,7 +332,7 @@
           "weight": 10,
           "severity": "P1",
           "optional": false,
-          "detail": "pm/roadmap/initiatives.json",
+          "detail": "machine/roadmap/initiatives.json",
           "protocol": "P37"
         },
         {
@@ -343,7 +343,7 @@
           "weight": 8,
           "severity": "P2",
           "optional": false,
-          "detail": "pm/roadmap/sprints/active.json",
+          "detail": "machine/roadmap/sprints/active.json",
           "protocol": "P37"
         },
         {
@@ -365,7 +365,7 @@
           "weight": 6,
           "severity": "P2",
           "optional": false,
-          "detail": "pm/ci",
+          "detail": "machine/ci",
           "protocol": "P37"
         }
       ],
@@ -515,7 +515,7 @@
           "weight": 15,
           "severity": "P2",
           "optional": false,
-          "detail": "pm/retrospectives/README.md",
+          "detail": "machine/retrospectives/README.md",
           "protocol": "T16-ci-retrospectives"
         },
         {
@@ -526,7 +526,7 @@
           "weight": 10,
           "severity": "P2",
           "optional": false,
-          "detail": "pm/retrospectives/TEMPLATE-session-retrospective.md",
+          "detail": "machine/retrospectives/TEMPLATE-session-retrospective.md",
           "protocol": "T16-ci-retrospectives"
         },
         {
@@ -537,7 +537,7 @@
           "weight": 15,
           "severity": "P2",
           "optional": false,
-          "detail": "pm/ci/gates.json",
+          "detail": "machine/ci/gates.json",
           "protocol": "T16-ci-retrospectives"
         },
         {
@@ -548,7 +548,7 @@
           "weight": 10,
           "severity": "P3",
           "optional": false,
-          "detail": "pm/ci/README.md",
+          "detail": "machine/ci/README.md",
           "protocol": "T16-ci-retrospectives"
         }
       ],
@@ -567,7 +567,7 @@
           "weight": 20,
           "severity": "P2",
           "optional": false,
-          "detail": "pm/roadmap/README.md"
+          "detail": "machine/roadmap/README.md"
         },
         {
           "id": "roadmap-initiatives-populated",
@@ -779,7 +779,7 @@
           "weight": 15,
           "severity": "P3",
           "optional": false,
-          "detail": "ops/attestation"
+          "detail": "operations/attestation"
         }
       ],
       "itemCount": 4
@@ -826,7 +826,7 @@
           "weight": 34,
           "severity": "P2",
           "optional": false,
-          "detail": "ops/legal/manifest.json",
+          "detail": "operations/legal/manifest.json",
           "protocol": "P44"
         },
         {
@@ -837,7 +837,7 @@
           "weight": 33,
           "severity": "P2",
           "optional": false,
-          "detail": "ops/gtm/manifest.json",
+          "detail": "operations/gtm/manifest.json",
           "protocol": "P44"
         },
         {
@@ -848,16 +848,24 @@
           "weight": 33,
           "severity": "P2",
           "optional": false,
-          "detail": "ops/compliance/manifest.json",
+          "detail": "operations/compliance/manifest.json",
           "protocol": "P44"
         }
       ],
       "itemCount": 3
     }
   },
-  "hygieneViolations": [],
+  "hygieneViolations": [
+    {
+      "id": "p35-strict-pass",
+      "categoryId": "layout-p35",
+      "label": "P35 layout strict GREEN",
+      "severity": "P1",
+      "detail": "p35Strict"
+    }
+  ],
   "itemTotal": 66,
   "rubricVersion": "1.0.0",
   "openP0": 0,
-  "openP1": 0
+  "openP1": 1
 }

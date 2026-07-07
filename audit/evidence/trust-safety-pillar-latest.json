@@ -1,8 +1,8 @@
 {
   "schema": "gtcx://audit/trust-safety-pillar/v1",
   "repo": "venture-os",
-  "date": "2026-07-01",
-  "score100": 100,
+  "date": "2026-07-06",
+  "score100": 99,
   "published": true,
   "metrics": {
     "evidence-coverage": {
@@ -37,7 +37,7 @@
       "publishBlocked": false
     },
     "anti-hallucination": {
-      "score100": 100,
+      "score100": 97,
       "weight": 20
     },
     "audit-trail": {
@@ -53,7 +53,7 @@
     }
   },
   "mode": "envelope-cap",
-  "rubricSpec": "pm/spec/trust-safety-rubric.json",
+  "rubricSpec": "machine/spec/trust-safety-rubric.json",
   "rubricVersion": "1.0.0",
   "publishGate": {
     "minConfidence": "B",

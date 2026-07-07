@@ -3,9 +3,9 @@
   "scope": "repo",
   "id": "venture-os",
   "repo": "venture-os",
-  "evaluatedAt": "2026-07-01T17:29:16.826Z",
-  "gitHead": "b2eba0b11d9eb9001ae06ed1cac6d7818b2fe539",
-  "date": "2026-07-01",
+  "evaluatedAt": "2026-07-06T03:50:26.431Z",
+  "gitHead": "7e7eda5de34b0fb900870e1edd43d358c52bc1bd",
+  "date": "2026-07-06",
   "weights": {
     "compliance": 0,
     "technicalExcellence": 0.15,
@@ -20,7 +20,7 @@
   },
   "quadrants": {
     "compliance": {
-      "score100": 100,
+      "score100": 98,
       "published": true,
       "provisional": false,
       "blockedBy": null,
@@ -29,14 +29,14 @@
         "layout-p35": {
           "label": "Layout & workspace (P35 v5)",
           "weight": 8,
-          "score100": 100,
+          "score100": 65,
           "protocol": "P35",
           "items": [
             {
               "id": "p35-strict-pass",
               "label": "P35 layout strict GREEN",
-              "pass": true,
-              "score100": 100,
+              "pass": false,
+              "score100": 0,
               "weight": 35,
               "severity": "P1",
               "optional": false,
@@ -51,7 +51,7 @@
               "weight": 25,
               "severity": "P1",
               "optional": false,
-              "detail": "4/4 present",
+              "detail": "5/4 present",
               "protocol": "P35"
             },
             {
@@ -306,7 +306,7 @@
               "weight": 8,
               "severity": "P1",
               "optional": false,
-              "detail": "pm/README.md",
+              "detail": "machine/README.md",
               "protocol": "P37"
             },
             {
@@ -328,7 +328,7 @@
               "weight": 10,
               "severity": "P1",
               "optional": false,
-              "detail": "pm/completion-model.json",
+              "detail": "machine/completion-model.json",
               "protocol": "P37"
             },
             {
@@ -339,7 +339,7 @@
               "weight": 10,
               "severity": "P1",
               "optional": false,
-              "detail": "pm/shipping-tracks.json",
+              "detail": "machine/shipping-tracks.json",
               "protocol": "P37"
             },
             {
@@ -350,7 +350,7 @@
               "weight": 10,
               "severity": "P1",
               "optional": false,
-              "detail": "pm/roadmap/initiatives.json",
+              "detail": "machine/roadmap/initiatives.json",
               "protocol": "P37"
             },
             {
@@ -361,7 +361,7 @@
               "weight": 8,
               "severity": "P2",
               "optional": false,
-              "detail": "pm/roadmap/sprints/active.json",
+              "detail": "machine/roadmap/sprints/active.json",
               "protocol": "P37"
             },
             {
@@ -383,7 +383,7 @@
               "weight": 6,
               "severity": "P2",
               "optional": false,
-              "detail": "pm/ci",
+              "detail": "machine/ci",
               "protocol": "P37"
             }
           ],
@@ -533,7 +533,7 @@
               "weight": 15,
               "severity": "P2",
               "optional": false,
-              "detail": "pm/retrospectives/README.md",
+              "detail": "machine/retrospectives/README.md",
               "protocol": "T16-ci-retrospectives"
             },
             {
@@ -544,7 +544,7 @@
               "weight": 10,
               "severity": "P2",
               "optional": false,
-              "detail": "pm/retrospectives/TEMPLATE-session-retrospective.md",
+              "detail": "machine/retrospectives/TEMPLATE-session-retrospective.md",
               "protocol": "T16-ci-retrospectives"
             },
             {
@@ -555,7 +555,7 @@
               "weight": 15,
               "severity": "P2",
               "optional": false,
-              "detail": "pm/ci/gates.json",
+              "detail": "machine/ci/gates.json",
               "protocol": "T16-ci-retrospectives"
             },
             {
@@ -566,7 +566,7 @@
               "weight": 10,
               "severity": "P3",
               "optional": false,
-              "detail": "pm/ci/README.md",
+              "detail": "machine/ci/README.md",
               "protocol": "T16-ci-retrospectives"
             }
           ],
@@ -585,7 +585,7 @@
               "weight": 20,
               "severity": "P2",
               "optional": false,
-              "detail": "pm/roadmap/README.md"
+              "detail": "machine/roadmap/README.md"
             },
             {
               "id": "roadmap-initiatives-populated",
@@ -797,7 +797,7 @@
               "weight": 15,
               "severity": "P3",
               "optional": false,
-              "detail": "ops/attestation"
+              "detail": "operations/attestation"
             }
           ],
           "itemCount": 4
@@ -844,7 +844,7 @@
               "weight": 34,
               "severity": "P2",
               "optional": false,
-              "detail": "ops/legal/manifest.json",
+              "detail": "operations/legal/manifest.json",
               "protocol": "P44"
             },
             {
@@ -855,7 +855,7 @@
               "weight": 33,
               "severity": "P2",
               "optional": false,
-              "detail": "ops/gtm/manifest.json",
+              "detail": "operations/gtm/manifest.json",
               "protocol": "P44"
             },
             {
@@ -866,28 +866,36 @@
               "weight": 33,
               "severity": "P2",
               "optional": false,
-              "detail": "ops/compliance/manifest.json",
+              "detail": "operations/compliance/manifest.json",
               "protocol": "P44"
             }
           ],
           "itemCount": 3
         }
       },
-      "hygieneViolations": [],
+      "hygieneViolations": [
+        {
+          "id": "p35-strict-pass",
+          "categoryId": "layout-p35",
+          "label": "P35 layout strict GREEN",
+          "severity": "P1",
+          "detail": "p35Strict"
+        }
+      ],
       "itemTotal": 66,
       "rubricVersion": "1.0.0",
       "openP0": 0,
-      "openP1": 0
+      "openP1": 1
     },
     "technicalExcellence": {
-      "score100": 100,
+      "score100": 96,
       "published": true,
       "provisional": false,
       "blockedBy": null,
       "unlockThreshold100": 85,
       "metrics": {
         "engineering-production": {
-          "score100": 100,
+          "score100": 80,
           "weight": 18,
           "sourceIds": [
             "production-readiness"
@@ -955,16 +963,16 @@
       },
       "hasRubric": true,
       "rubricSource": "audit-output",
-      "rubricSpec": "pm/spec/technical-excellence-rubric.json",
+      "rubricSpec": "machine/spec/technical-excellence-rubric.json",
       "rubricVersion": "1.0.0",
       "capped": false,
       "capReason": null
     },
     "craft": {
-      "score100": 100,
-      "published": true,
-      "provisional": false,
-      "blockedBy": null,
+      "score100": 98,
+      "published": false,
+      "provisional": true,
+      "blockedBy": "esl:ESL-2",
       "unlockThreshold100": 85,
       "metrics": {
         "selectivity-ingredients": {
@@ -979,7 +987,7 @@
           "source": "audit-output"
         },
         "process-composition": {
-          "score100": 100,
+          "score100": 93,
           "weight": 22,
           "sourceIds": [
             "production-readiness",
@@ -999,7 +1007,7 @@
           "source": "audit-output"
         },
         "restraint-anti-commodity": {
-          "score100": 100,
+          "score100": 97,
           "weight": 18,
           "sourceIds": [
             "ux-product-design",
@@ -1022,28 +1030,30 @@
         }
       },
       "hasRubric": true,
-      "rubricSpec": "pm/spec/craft-rubric.json",
+      "rubricSpec": "machine/spec/craft-rubric.json",
       "rubricVersion": "1.0.0",
       "capped": false,
       "capReasons": [],
       "craftFlags": {
         "interchangeable": false,
         "aiSlop": false
-      }
+      },
+      "eslRequired": "ESL-2",
+      "eslActive": "ESL-1"
     },
     "worldClass": {
-      "score100": 100,
-      "published": true,
-      "provisional": false,
-      "blockedBy": null,
+      "score100": 98,
+      "published": false,
+      "provisional": true,
+      "blockedBy": "esl:ESL-3",
       "unlockThreshold100": 85,
       "metrics": {
         "documentation-world-class": {
-          "score100": 100,
+          "score100": 96,
           "weight": 8,
-          "qualityAvg100": 100,
+          "qualityAvg100": 91,
           "worldClassBar100": 95,
-          "gap100": 0,
+          "gap100": 4,
           "sourceIds": [
             "documentation"
           ]
@@ -1070,11 +1080,11 @@
           ]
         },
         "devops-observability": {
-          "score100": 100,
+          "score100": 84,
           "weight": 12,
-          "qualityAvg100": 100,
+          "qualityAvg100": 80,
           "worldClassBar100": 95,
-          "gap100": 0,
+          "gap100": 15,
           "sourceIds": [
             "production-readiness"
           ]
@@ -1136,7 +1146,7 @@
         "global-south-resilience": {
           "score100": 100,
           "weight": 8,
-          "qualityAvg100": 100,
+          "qualityAvg100": 90,
           "worldClassBar100": 90,
           "gap100": 0,
           "sourceIds": [
@@ -1146,11 +1156,13 @@
         }
       },
       "hasRubric": true,
-      "rubricSpec": "pm/spec/world-class-rubric.json",
-      "rubricVersion": "1.0.0"
+      "rubricSpec": "machine/spec/world-class-rubric.json",
+      "rubricVersion": "1.0.0",
+      "eslRequired": "ESL-3",
+      "eslActive": "ESL-1"
     },
     "trustAndSafety": {
-      "score100": 100,
+      "score100": 99,
       "published": true,
       "metrics": {
         "evidence-coverage": {
@@ -1185,7 +1197,7 @@
           "publishBlocked": false
         },
         "anti-hallucination": {
-          "score100": 100,
+          "score100": 97,
           "weight": 20
         },
         "audit-trail": {
@@ -1201,7 +1213,7 @@
         }
       },
       "mode": "envelope-cap",
-      "rubricSpec": "pm/spec/trust-safety-rubric.json",
+      "rubricSpec": "machine/spec/trust-safety-rubric.json",
       "rubricVersion": "1.0.0",
       "publishGate": {
         "minConfidence": "B",
@@ -1210,21 +1222,21 @@
       }
     }
   },
-  "foundationComposite100": 100,
-  "fullComposite100": 100,
-  "trustCap100": 100,
-  "composite100": 100,
-  "composite100Raw": 100,
-  "compositeMode": "full-unlock",
-  "fullCompositeEligible": true,
+  "foundationComposite100": 98,
+  "fullComposite100": 98,
+  "trustCap100": 99,
+  "composite100": 96,
+  "composite100Raw": 96,
+  "compositeMode": "partial-unlock",
+  "fullCompositeEligible": false,
   "unlockThreshold100": 85,
   "openP0": 0,
   "openP1": 0,
   "multiPillar": {
     "schema": "gtcx://baseline-os/multi-pillar-repo-extension/v1",
-    "foundationComposite100": 100,
-    "fullComposite100": 100,
-    "trustCap100": 100,
+    "foundationComposite100": 98,
+    "fullComposite100": 98,
+    "trustCap100": 99,
     "weights": {
       "compliance": 0,
       "technicalExcellence": 0.15,
@@ -1239,7 +1251,7 @@
     },
     "quadrants": {
       "compliance": {
-        "score100": 100,
+        "score100": 98,
         "published": true,
         "provisional": false,
         "blockedBy": [],
@@ -1247,7 +1259,7 @@
         "checks": []
       },
       "technicalExcellence": {
-        "score100": 100,
+        "score100": 96,
         "published": true,
         "provisional": false,
         "blockedBy": [],
@@ -1255,23 +1267,27 @@
         "checks": []
       },
       "craft": {
-        "score100": 100,
-        "published": true,
-        "provisional": false,
-        "blockedBy": [],
+        "score100": 98,
+        "published": false,
+        "provisional": true,
+        "blockedBy": [
+          "esl:ESL-2"
+        ],
         "confidence": "B",
         "checks": []
       },
       "worldClass": {
-        "score100": 100,
-        "published": true,
-        "provisional": false,
-        "blockedBy": [],
+        "score100": 98,
+        "published": false,
+        "provisional": true,
+        "blockedBy": [
+          "esl:ESL-3"
+        ],
         "confidence": "B",
         "checks": []
       },
       "trustAndSafety": {
-        "score100": 100,
+        "score100": 99,
         "published": true,
         "provisional": false,
         "blockedBy": [],
@@ -1300,7 +1316,7 @@
         }
       },
       "commercialValue": {
-        "score100": 100,
+        "score100": 93,
         "published": true,
         "provisional": false,
         "blockedBy": [],
@@ -1325,8 +1341,8 @@
           {
             "id": "production-readiness",
             "label": "production-readiness",
-            "score100": 100,
-            "passed": true,
+            "score100": 80,
+            "passed": false,
             "threshold": "score100 >= 85",
             "source": "current-production-probes"
           }
