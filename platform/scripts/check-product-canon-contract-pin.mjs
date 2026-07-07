@@ -8,6 +8,15 @@ const REPO = repoRootFromImportMeta(import.meta.url);
 const CONTRACT_ID = 'CANON-PRODUCT-CANON-V1';
 const pinPath = join(REPO, 'config/product-canon-contract.json');
 
+function resolveRel(rel) {
+  const primary = resolve(REPO, rel);
+  if (existsSync(primary)) return primary;
+  if (typeof rel === 'string' && rel.startsWith('../canon-os/')) {
+    return resolve(REPO, rel.replace('../canon-os/', '../canon/'));
+  }
+  return primary;
+}
+
 function main() {
   if (!existsSync(pinPath)) {
     console.log('canon:contracts:check SKIP — no consumer pin');
@@ -18,7 +27,7 @@ function main() {
     console.error(`canon:contracts:check FAIL — pin contractId ${pin.contractId}`);
     process.exit(1);
   }
-  const sorAbs = resolve(REPO, pin.sor);
+  const sorAbs = resolveRel(pin.sor);
   if (!existsSync(sorAbs)) {
     console.error(`canon:contracts:check FAIL — sor not found: ${pin.sor}`);
     process.exit(1);
