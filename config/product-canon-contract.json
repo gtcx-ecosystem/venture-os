@@ -2,13 +2,13 @@
   "$schema": "gtcx://ecosystem/product-canon-contract-pin/v1",
   "contractId": "CANON-PRODUCT-CANON-V1",
   "version": "1.0.0",
-  "sor": "../canon-os/config/product-canon-contract.json",
-  "acceptedAt": "2026-07-05",
+  "sor": "../../platforms/canon-os/config/product-canon-contract.json",
+  "acceptedAt": "2026-07-08",
   "repoProfile": "product",
   "authoringRoot": "docs/product/canon/",
   "executionRoot": "machine/canon/",
-  "synthesizer": "../canon-os/platform/scripts/synthesize-product-canon.mjs",
+  "synthesizer": "../../platforms/canon-os/platform/scripts/synthesize-product-canon.mjs",
   "gate": "pnpm canon:synthesize:check",
   "writes": false,
-  "note": "Product repo — pilot-scoped gate; canon-os is provider SoR."
+  "note": "Product repo — engines/ layout; canon-os provider under platforms/canon-os."
 }
