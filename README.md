@@ -1,3 +1,15 @@
+> **ARCHIVED — migrated to monorepo**
+>
+> This repository is **read-only**. Do not open PRs or issues here.
+>
+> **Canonical:** [gtcx-ecosystem/gtcx.infrastructure](https://github.com/gtcx-ecosystem/gtcx.infrastructure)  
+> **Monorepo path:** `engines/venture-os/`  
+> **Archived:** 2026-07-08 · **Initiative:** INIT-GTCX-INFRA-MONOREPO
+>
+> See [MIGRATED.md](./MIGRATED.md) for details.
+
+---
+
 ---
 title: 'Venture OS'
 status: current
